@@ -225,15 +225,6 @@
 "start_date": "2026/12/20"
 },
 {
-"uid": "69de905c26b3242a48a9e354",
-"category": "音樂",
-"title": "金門縣閩聲愛樂協會：「琴韻飄鄉-傳唱聚落」巡迴音樂會(地點：下莊社區活動中心)",
-"performer": "(中華民國)金門縣閩聲愛樂協會",
-"description": "金門縣閩聲愛樂協會：琴韻飄鄉・傳唱聚落｜金門巡迴音樂會 溫馨登場！\r\n\r\n音樂，是最動人的故事。它能穿越時空，連結人與人，也讓每個聚落都因旋律而閃耀\r\n邀請大家走進社區，用音樂感受金門的溫度，聆聽屬於家鄉的心跳。\r\n\r\n2026年巡迴場次\r\n\r\n4月18日(六)19:30｜榜林社區活動中心\r\n5月16日(六)19:30｜蔡厝社區活動中心\r\n9月19日(六)19:30｜后豐港社區活動中心\r\n10月24日(六)19:30｜下莊社區活動中心\r\n\r\n本系列音樂會邀集金門在地優秀音樂團隊聯袂演出\r\n\r\n安琪莉莎合唱團\r\n在許瑞芬校長指揮與王立梅老師伴奏下，精選〈再回首〉、〈守著陽光守著你〉、〈白雲歌送劉十六歸山〉等多首雋永合唱曲，並帶來女聲重唱〈四季的風〉、〈無條件的愛〉，以歌聲傳遞真摯情感與人文關懷。\r\n\r\n金門絃樂室內樂團\r\n由董皓雲、董子寧、黃盈斐、何冠蓉等師生演奏，帶來〈女人香〉、〈鄉間騎士〉、〈無樂不作〉等經典作品，讓和弦與弓弦共織春夜的旋律。\r\n\r\n碧山樂團\r\n以薩克斯風吹奏〈故鄉〉、〈秋戀〉與〈Can’t Take My Eyes Off You〉等中外名曲，為巡迴音樂會增添浪漫與輕快氣息。\r\n\r\n期盼透過音樂的交流與分享，讓藝術走進社區、讓文化在生活中綻放，每一場都是鄉親共同編織的音樂篇章。",
-"web": "",
-"start_date": "2026/10/24"
-},
-{
 "uid": "69e267c426b3242a48a9e465",
 "category": "音樂",
 "title": "十方樂集30週年特別企劃：系列音樂會&講座",
@@ -439,15 +430,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2058868047100907520",
 "start_date": "2026/11/18"
-},
-{
-"uid": "6a435f1026b32427d0603f5b",
-"category": "音樂",
-"title": "王羽佳XR音樂會《羽火共舞》",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2062012882677915648",
-"start_date": "2026/10/24"
 },
 {
 "uid": "6a45485726b32427d0604019",
@@ -754,15 +736,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2076489805923938305",
 "start_date": "2026/12/11"
-},
-{
-"uid": "6a60f84026b32427d0604234",
-"category": "音樂",
-"title": "【2026嘉義民族音樂節】《時光隧道下的兩端IX》——溯",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2079031059979235329",
-"start_date": "2026/10/24"
 },
 {
 "uid": "6a6249c226b32427d0604243",
@@ -1107,13 +1080,22 @@
 "start_date": "2026/11/01"
 },
 {
+"uid": "6a6e294326b32427d0604320",
+"category": "音樂",
+"title": "2026年三秀園雅集-聽風藝術節《冬之旅》",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2077295238766981121",
+"start_date": "2027/01/09"
+},
+{
 "uid": "6a6e294526b32427d0604321",
 "category": "音樂",
 "title": "2026年三秀園雅集-聽風藝術節《慕青-迴響臺灣》",
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2077298985886871553",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6a6e294526b32427d0604323",
@@ -1132,15 +1114,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2077580038693351425",
 "start_date": "2026/11/21"
-},
-{
-"uid": "6a6e294526b32427d0604326",
-"category": "音樂",
-"title": "2026新竹縣新響藝術季－新古典室內樂團《音樂馬戲劇場-邦卡的七彩布裙》",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2080217527708028929",
-"start_date": "2026/10/24"
 },
 {
 "uid": "6a70ca6926b32427d0604333",
@@ -1302,7 +1275,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2083021294560403456",
-"start_date": "2026/10/24"
+"start_date": "2026/11/14"
 },
 {
 "uid": "6a76106626b32427d060437c",
@@ -1419,7 +1392,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2065334424462708736",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6a7b837d26b32427d06043b9",
@@ -1527,7 +1500,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2084482215968473088",
-"start_date": "2026/10/24"
+"start_date": "2026/11/08"
 },
 {
 "uid": "6a833f7626b32427d06043e9",
@@ -1611,15 +1584,6 @@
 "start_date": "2026/12/20"
 },
 {
-"uid": "6a8490f526b32427d060441c",
-"category": "音樂",
-"title": "《聽見那個年代》張林峯2026音樂會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2087818083774783489",
-"start_date": "2026/10/24"
-},
-{
 "uid": "6a8490f526b32427d060441e",
 "category": "音樂",
 "title": "《夢境之間：遙望天國》方舟藝術十週年團慶音樂會",
@@ -1638,15 +1602,6 @@
 "start_date": "2026/11/15"
 },
 {
-"uid": "6a85e27a26b32427d0604444",
-"category": "音樂",
-"title": "Silver Screen Memories電影時代—非非藝術團隊演唱會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2087082647347310593",
-"start_date": "2026/10/24"
-},
-{
 "uid": "6a85e27a26b32427d0604445",
 "category": "音樂",
 "title": "無限蘭芽合唱創作4 -《穗月》",
@@ -1663,15 +1618,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2089192717915193344",
 "start_date": "2026/11/07"
-},
-{
-"uid": "6a87330526b32427d0604450",
-"category": "音樂",
-"title": "國樂尋音－TCO市民國樂團音樂會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2087113618239275009",
-"start_date": "2026/10/24"
 },
 {
 "uid": "6a87330526b32427d0604451",
@@ -1780,15 +1726,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2078394381216837633",
 "start_date": "2026/12/28"
-},
-{
-"uid": "6a8c790426b32434f4358037",
-"category": "音樂",
-"title": "聲音的旅行-樂脈．世代．傳承",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2087091480778027009",
-"start_date": "2026/10/24"
 },
 {
 "uid": "6a8c790426b32434f4358039",
@@ -2349,15 +2286,6 @@
 "start_date": "2026/11/29"
 },
 {
-"uid": "6a9c4e3126b324165c32e36d",
-"category": "音樂",
-"title": "【節目取消】時光禮讚～室內樂音樂會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094312256004628481",
-"start_date": "2026/10/24"
-},
-{
 "uid": "6a9ef12d26b324165c32e376",
 "category": "音樂",
 "title": "“心靈的GPS~家”~屏東欣韻合唱團2026年度音樂會",
@@ -2392,15 +2320,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2092893350380863489",
 "start_date": "2026/11/07"
-},
-{
-"uid": "6a9ef12d26b324165c32e37a",
-"category": "音樂",
-"title": "古典室內樂集『雙音漫舞 雙鋼琴VS經典室內樂』音樂會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093174981168631809",
-"start_date": "2026/10/24"
 },
 {
 "uid": "6a9ef12d26b324165c32e37b",
@@ -4374,6 +4293,15 @@
 "start_date": "2027/01/08"
 },
 {
+"uid": "6adce7af26b3245efc753722",
+"category": "音樂",
+"title": "《偏離年代的幾種方式》漫漫室內樂音樂會：小提琴、大提琴、鋼琴",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2105182333352689664",
+"start_date": "2026/11/27"
+},
+{
 "uid": "68950a2f26b324477c8a1474",
 "category": "講座",
 "title": "生活工藝館-陶藝DIY手作體驗",
@@ -4959,15 +4887,6 @@
 "start_date": "2026/05/04"
 },
 {
-"uid": "6a2b06fc26b3243414ccd180",
-"category": "講座",
-"title": "115年笨港社區傳統二胡及客家歌謠暨舞蹈研習班活動 (3班)",
-"performer": "(中華民國)林采澤;(中華民國)李勝波;(中華民國)徐錦蓮",
-"description": "二胡及傳統客家歌謠研習活動/土風舞蹈及民俗舞蹈研習",
-"web": "",
-"start_date": "2026/06/04"
-},
-{
 "uid": "6a2b070926b3243414ccd1eb",
 "category": "講座",
 "title": "2026年10月【員林市立圖書館-閩南語真趣味】",
@@ -5229,15 +5148,6 @@
 "start_date": "2026/11/15"
 },
 {
-"uid": "6aa82bbc26b324165c32e3dd",
-"category": "講座",
-"title": "文化科技趨勢系列│我獨自升級：現象級神作的進化之路",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2097174179164000257",
-"start_date": "2026/10/24"
-},
-{
 "uid": "6aa82bbc26b324165c32e3de",
 "category": "講座",
 "title": "文化科技趨勢系列│AI影視革命─《金特務》特效大解密",
@@ -5272,15 +5182,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2097639842060341248",
 "start_date": "2026/10/28"
-},
-{
-"uid": "6aae2c98eb4399d01039b1e2",
-"category": "講座",
-"title": "金車文藝講堂：爿爿花手工瓷磚創辦人 黎世堯【一片瓷磚的當代轉",
-"performer": "金車文藝中心 臺北南京館",
-"description": "傳統瓷磚不只是建築裝飾，也承載著臺灣街道與日常生活的集體記憶。本講座以爿爿花的文化品牌實踐為軸線，分享團隊如何從畢業製作時期的田野觀察出發，記錄逐漸消失的傳統馬賽克磚與建築符號，並透過《爿爿花－臺灣傳統瓷磚圖鑑》的群眾募資，將文化紀錄轉化為大眾共同參與的行動。黎世堯也將談及從紀錄者走向生產者的實踐歷程，如何透過手工製磚工藝與材料研究，讓傳統圖樣進入當代生活與空間設計，並進一步思考在地文化符號面對國際設計與建築市場時的品牌定位與發展可能。",
-"web": "https://www.kingcarart.org.tw/projects-detail/213",
-"start_date": "2026/10/24"
 },
 {
 "uid": "6ab1663126b324165c32e503",
@@ -5490,24 +5391,6 @@
 "start_date": "2026/10/28"
 },
 {
-"uid": "6aaacec926b324165c32e421",
-"category": "電影",
-"title": "【女性影展】相遇皆有痕",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092212104660156416",
-"start_date": "2026/10/24"
-},
-{
-"uid": "6aaacec926b324165c32e422",
-"category": "電影",
-"title": "【女性影展】觀看我的方式",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092216225336336385",
-"start_date": "2026/10/24"
-},
-{
 "uid": "6aaaceca26b324165c32e425",
 "category": "電影",
 "title": "日光｜高雄電影節",
@@ -5517,22 +5400,13 @@
 "start_date": "2026/10/26"
 },
 {
-"uid": "6aaaceca26b324165c32e426",
-"category": "電影",
-"title": "【女性影展】她的胸罩，誰的宣告",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092224856794537985",
-"start_date": "2026/10/24"
-},
-{
 "uid": "6aaaceca26b324165c32e42e",
 "category": "電影",
 "title": "《蒙娜麗莎失竊案》｜TTXC XR DREAMLAND",
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2092794683058720768",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e42f",
@@ -5541,7 +5415,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2092829498235555841",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e430",
@@ -5550,7 +5424,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2092851308992823297",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e431",
@@ -5559,7 +5433,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2092879981204303873",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e432",
@@ -5568,7 +5442,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2092890725263478785",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e433",
@@ -5577,7 +5451,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2092895140825403393",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e434",
@@ -5586,7 +5460,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2092898268832468993",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e436",
@@ -5595,7 +5469,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2092906821878157313",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e438",
@@ -5604,7 +5478,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2092910801518632961",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e43a",
@@ -5613,7 +5487,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2092914611609497601",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e43b",
@@ -5622,7 +5496,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2092917256832552961",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e43d",
@@ -5631,7 +5505,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2092920868162805761",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e43f",
@@ -5649,7 +5523,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093177227779407873",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e441",
@@ -5676,7 +5550,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093190861084594177",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e444",
@@ -5685,7 +5559,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093213577971896321",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e445",
@@ -5694,7 +5568,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093219102645260289",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e446",
@@ -5703,7 +5577,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093221864686317568",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e447",
@@ -5712,7 +5586,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093224743564709889",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e448",
@@ -5721,7 +5595,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093230827244228609",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e449",
@@ -5730,7 +5604,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093235665821732865",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e44a",
@@ -5739,7 +5613,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093238396562501633",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e44b",
@@ -5748,7 +5622,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093242250145009664",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e44c",
@@ -5757,7 +5631,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093244680865742849",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e44d",
@@ -5766,7 +5640,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093249180020215809",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e44e",
@@ -5775,7 +5649,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093260714671738881",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e44f",
@@ -5784,7 +5658,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093264250103754752",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e450",
@@ -5793,16 +5667,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093267808720842753",
-"start_date": "2026/10/24"
-},
-{
-"uid": "6aaaceca26b324165c32e451",
-"category": "電影",
-"title": "【女性影展】給我們的阿波羅",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093268083651473409",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e454",
@@ -5811,7 +5676,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093272638042017793",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e455",
@@ -5820,7 +5685,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093276301153243137",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaaceca26b324165c32e456",
@@ -5829,7 +5694,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2093279928286277633",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaacecb26b324165c32e457",
@@ -5886,15 +5751,6 @@
 "start_date": "2026/10/26"
 },
 {
-"uid": "6aaacecb26b324165c32e45f",
-"category": "電影",
-"title": "心靈導失｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094275565423898625",
-"start_date": "2026/10/24"
-},
-{
 "uid": "6aaacecb26b324165c32e461",
 "category": "電影",
 "title": "從前有個戰萊塢｜高雄電影節",
@@ -5910,7 +5766,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2094341296840302593",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaacecb26b324165c32e465",
@@ -5920,24 +5776,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2094343989628669953",
 "start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecb26b324165c32e468",
-"category": "電影",
-"title": "森林復活記 4K修復｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094363924500783105",
-"start_date": "2026/10/24"
-},
-{
-"uid": "6aaacecb26b324165c32e46b",
-"category": "電影",
-"title": "莎翁情史｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094378211785478145",
-"start_date": "2026/10/24"
 },
 {
 "uid": "6aaacecb26b324165c32e46c",
@@ -5958,31 +5796,13 @@
 "start_date": "2026/10/25"
 },
 {
-"uid": "6aaacecb26b324165c32e473",
-"category": "電影",
-"title": "異星的我們｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094732589111980033",
-"start_date": "2026/10/24"
-},
-{
-"uid": "6aaacecb26b324165c32e474",
-"category": "電影",
-"title": "世界上最ㄅㄧㄤˋ的國家｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094733240686927872",
-"start_date": "2026/10/24"
-},
-{
 "uid": "6aaacecb26b324165c32e475",
 "category": "電影",
 "title": "Mei Mei｜高雄電影節",
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2094736309719674880",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaacecc26b324165c32e479",
@@ -6045,7 +5865,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2095071633655570432",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaacecc26b324165c32e486",
@@ -6054,7 +5874,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2095074030114516993",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaacecc26b324165c32e490",
@@ -6073,15 +5893,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2095124095247638529",
 "start_date": "2026/10/25"
-},
-{
-"uid": "6aaacecc26b324165c32e492",
-"category": "電影",
-"title": "《史瑞克》怪物村派對場｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095125008102924289",
-"start_date": "2026/10/24"
 },
 {
 "uid": "6aaacecc26b324165c32e494",
@@ -6261,7 +6072,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2095408008889311233",
-"start_date": "2026/10/24"
+"start_date": "2026/10/25"
 },
 {
 "uid": "6aaacecc26b324165c32e4ad",
@@ -6309,15 +6120,6 @@
 "start_date": "2026/10/25"
 },
 {
-"uid": "6aaacecc26b324165c32e4b6",
-"category": "電影",
-"title": "女籃巨人烏莉亞｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095436952015413249",
-"start_date": "2026/10/24"
-},
-{
 "uid": "6aaacecc26b324165c32e4ba",
 "category": "電影",
 "title": "南國幻愛：愛的鼓勵+貝果超人+那個掉屑的她｜高雄電影節",
@@ -6327,24 +6129,6 @@
 "start_date": "2026/10/26"
 },
 {
-"uid": "6aaacecc26b324165c32e4bb",
-"category": "電影",
-"title": "【女性影展】一生二命",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095456567066566657",
-"start_date": "2026/10/24"
-},
-{
-"uid": "6aaacecc26b324165c32e4c1",
-"category": "電影",
-"title": "藍色琥珀+純白艾蜜莉+紅髮男孩｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095466130181447680",
-"start_date": "2026/10/24"
-},
-{
 "uid": "6aaacecc26b324165c32e4c3",
 "category": "電影",
 "title": "孩子幻想國：小夥伴的奇蹟日常(3+)｜高雄電影節",
@@ -6352,24 +6136,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2095471894592487425",
 "start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecc26b324165c32e4c4",
-"category": "電影",
-"title": "孩子幻想國：今日也在出任務 (5+)｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095475000407695361",
-"start_date": "2026/10/24"
-},
-{
-"uid": "6aaacecc26b324165c32e4c5",
-"category": "電影",
-"title": "孩子幻想國：壞天氣退散指南 (7+)｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095475868369674241",
-"start_date": "2026/10/24"
 },
 {
 "uid": "6aaacecc26b324165c32e4c7",
@@ -6424,15 +6190,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2095761188667928577",
 "start_date": "2026/10/25"
-},
-{
-"uid": "6aaacecc26b324165c32e4cd",
-"category": "電影",
-"title": "【女性影展】台灣競賽 #6",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095766469422080000",
-"start_date": "2026/10/24"
 },
 {
 "uid": "6aaacecc26b324165c32e4db",
@@ -6532,15 +6289,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2097565579077521409",
 "start_date": "2026/11/15"
-},
-{
-"uid": "6aaacecd26b324165c32e4e7",
-"category": "電影",
-"title": "1949｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2098261746149679105",
-"start_date": "2026/10/24"
 },
 {
 "uid": "6ac7d85426b324165c32e5c8",
