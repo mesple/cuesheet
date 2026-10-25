@@ -154,6 +154,34 @@ def main():
         "電子報｜Cue Sheet", "Cue Sheet 各期電子報，月刊與特刊。", SITE + "newsletter/", "newsletter",
         (list_sub, list_main), latest.get("image")))
     print(f"首頁與電子報列表已產生，共 {len(issues)} 期")
+    build_latest(issues)
+
+
+def redirect_page(target, label):
+    return f"""<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cue Sheet｜最新一期{escape(label)}</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{SITE}newsletter/{target}/">
+<meta http-equiv="refresh" content="0; url=../{target}/">
+<script>location.replace("../{target}/" + location.hash);</script>
+<style>body{{font-family:-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;background:#F2F0EA;color:#28251D;padding:40px 16px;text-align:center}}a{{color:#01696F}}</style>
+</head><body><p>正在前往最新一期{escape(label)}……</p><p><a href="../{target}/">沒有自動跳轉請點這裡</a></p></body></html>
+"""
+
+
+def build_latest(issues):
+    """固定網址：/newsletter/latest-collector/、/newsletter/latest-news/ 指向各版最新一期（歡迎信用）。"""
+    import os
+    for key, label in (("collector", "深度聆聽版"), ("news", "配樂新訊版")):
+        cands = [it for it in issues if it.get("edition") in (key, "trial")]
+        if not cands:
+            continue
+        target = max(cands, key=lambda x: x["date"])["slug"]
+        os.makedirs(f"newsletter/latest-{key}", exist_ok=True)
+        open(f"newsletter/latest-{key}/index.html", "w", encoding="utf-8").write(redirect_page(target, label))
+        print(f"latest-{key} → {target}")
 
 
 if __name__ == "__main__":

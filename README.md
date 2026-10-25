@@ -29,3 +29,10 @@
 ## 舊網址
 
 2026-10 以前的網址在 `mesple/cuesheet-events`（https://mesple.github.io/cuesheet-events/），已改為轉址到本站；已寄出電子報引用的圖片仍保留在那裡。
+
+## 固定網址：最新一期（歡迎信用，2026-10-26 新增）
+
+- `/cuesheet/newsletter/latest-collector/` → 最新一期深度聆聽版
+- `/cuesheet/newsletter/latest-news/` → 最新一期配樂新訊版
+
+由 `build_pages.py` 依 `newsletter/issues.json` 的 `edition` 自動產生（試刊 `trial` 兩版都算）。MailerLite 歡迎信連到這兩個網址，出新一期時不用改信。

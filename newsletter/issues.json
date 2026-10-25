@@ -1,5 +1,5 @@
 {
-  "說明": "電子報各期清單（月刊與特刊同列）。新增一期：加一筆，再執行 python build_pages.py。special 為 true 時顯示「特刊」標籤。editor_note 是刊頭下方的編者的話，也用在首頁與列表頁的摘要。",
+  "說明": "電子報各期清單（深度聆聽版、配樂新訊版與特刊同列）。新增一期：加一筆，再執行 python build_pages.py。edition 填 collector（深度聆聽版）、news（配樂新訊版）、trial（試刊，兩版合刊）或 special（特刊）；special 會顯示「特刊」標籤。editor_note 是刊頭下方的編者的話，也用在首頁與列表頁的摘要。build_pages.py 也會更新 newsletter/latest-collector/ 與 latest-news/ 兩個固定網址，指向各版最新一期（試刊兩版都算）。",
   "issues": [
     {
       "slug": "2026-10",
@@ -8,7 +8,8 @@
       "title": "送別 George Fenton、世界電影音樂獎揭曉",
       "special": false,
       "editor_note": "十月，我們送走了 George Fenton。《電子情書》開場那段輕快的鋼琴，原來已經陪了我們這麼久。「世界電影音樂獎」揭曉，看看是誰接下了大師的棒子。新唱片上架、作曲家訪談...熱鬧的十月。週末有空，挑一場離你最近的電影音樂會吧。",
-      "image": "images/2026-10/share-card.jpg"
+      "image": "images/2026-10/share-card.jpg",
+      "edition": "trial"
     }
   ]
 }
