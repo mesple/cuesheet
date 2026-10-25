@@ -1,6 +1,7 @@
 """產生 Cue Sheet「近期國內電影音樂活動」欄目的 HTML 片段與預覽頁。
 
-用法：python build_section.py events.json 發刊日(YYYY-MM-DD) 天數 輸出檔 [線上活動頁網址]
+用法：python build_section.py events.json 發刊日(YYYY-MM-DD) 天數 輸出檔 [線上活動頁網址] [--slim] [--pick=uid1,uid2]
+--slim：消息版精簡版（以節目計算、每區最多 2 個節目，天數建議 30）；--pick 指定要優先放入的節目 uid
 線上活動頁網址：https://mesple.github.io/cuesheet/event/
 """
 import json
@@ -102,6 +103,44 @@ def build(events, issue_date, days):
     return rows, dropped
 
 
+def build_slim(events, issue_date, days=30, per_region=2, pick=None):
+    """消息版精簡版（編輯 2026-10-25 指定）：以節目計算，同一節目在同一地區的所有場次合成一列；
+    每區最多 per_region 個節目，預設挑日期最近的；pick 為編輯指定的 uid 清單，有指定的優先。"""
+    start, end = issue_date, issue_date + timedelta(days=days)
+    cands = {name: [] for name, _ in REGIONS}
+    for ev in events:
+        by_region = {}
+        for s in ev["shows"]:
+            t = parse(s["time"])
+            reg = region_of(s["city"])
+            if t and reg and start <= t < end:
+                by_region.setdefault(reg, []).append((t, s))
+        for reg, shows in by_region.items():
+            shows.sort(key=lambda x: x[0])
+            cands[reg].append((shows[0][0], ev, shows))
+    rows, more = {}, {}
+    pick = pick or []
+    for reg, lst in cands.items():
+        lst.sort(key=lambda r: (0 if r[1].get("uid") in pick else 1, r[0]))
+        rows[reg] = sorted(lst[:per_region], key=lambda r: r[0])
+        more[reg] = [(r[1].get("uid"), r[1]["title"], f"{r[0].month}/{r[0].day}") for r in lst[per_region:]]
+    return rows, more
+
+
+def slim_item_html(first, ev, shows):
+    lines = [f"{t.month}/{t.day}（{WEEK[t.weekday()]}）" + ("" if s.get("time_tbd") else f" {t:%H:%M}")
+             for t, s in shows]
+    if len(lines) > 3:
+        a, b = shows[0][0], shows[-1][0]
+        left = f'<div style="font-size:15px;font-weight:700;line-height:1.3;color:#28251D;">{a.month}/{a.day}–{b.month}/{b.day}</div><div style="font-size:11px;line-height:1.5;color:#7A7974;">共 {len(shows)} 場</div>'
+    else:
+        left = "".join(f'<div style="font-size:13px;font-weight:700;line-height:1.5;color:#28251D;white-space:nowrap;">{escape(x)}</div>' for x in lines)
+    html = item_html(first, ev, shows)
+    i = html.find('<td width="86"'); j = html.find("</td>", i)
+    head = html[:html.find(">", i) + 1]
+    return head + "\n" + left + html[j:]
+
+
 def item_html(first, ev, shows):
     dates = sorted({t.date() for t, _ in shows})
     if len(dates) == 1:
@@ -150,7 +189,7 @@ def item_html(first, ev, shows):
 </td></tr>"""
 
 
-def section_html(rows, issue_date, days, page_url):
+def section_html(rows, issue_date, days, page_url, slim=False):
     end = issue_date + timedelta(days=days - 1)
     parts = [f"""<!-- 11 TAIWAN EVENTS -->
 <tr><td class="pad" style="padding:24px 28px 4px 28px;">
@@ -158,6 +197,9 @@ def section_html(rows, issue_date, days, page_url):
 </td></tr>
 <tr><td class="pad" style="padding:0 28px 4px 28px;">
 <div style="font-size:14px;line-height:1.7;color:#55534C;margin-bottom:6px;">{issue_date.month}/{issue_date.day}–{end.month}/{end.day} 全台電影、動畫與遊戲音樂的音樂會與講座，依地區、日期排列。</div>"""]
+    if slim:
+        parts[-1] = parts[-1].replace("全台電影、動畫與遊戲音樂的音樂會與講座，依地區、日期排列。",
+                                      "全台電影、動畫與遊戲音樂活動精選，每區最多兩個節目，依地區、日期排列。")
     if page_url and page_url != "#":  # 線上活動頁建好才顯示；放在開頭說明下方，讓讀者先選地區（編輯 2026-10-18 指定）
         from urllib.parse import quote
         btn = ("display:inline-block;margin:6px 6px 0 0;padding:4px 12px;border:1px solid #01696F;"
@@ -173,8 +215,10 @@ def section_html(rows, issue_date, days, page_url):
             continue
         parts.append(f"""<div style="font-family:{SERIF};font-size:19px;font-weight:700;line-height:1.35;margin:18px 0 4px;color:#28251D;">{name}</div>
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">""")
-        parts += [item_html(*it) for it in items]
+        parts += [(slim_item_html if slim else item_html)(*it) for it in items]
         parts.append("</table>")
+    if slim:
+        parts.append(f'<div style="margin-top:14px;font-family:{SANS};font-size:15px;font-weight:700;line-height:1.6;"><a href="{page_url}" style="color:#01696F;text-decoration:none;">到線上版看更多精彩節目 →</a></div>')
     parts.append(f"""<div style="font-family:{SANS};font-size:11px;line-height:1.6;color:#7A7974;margin-top:12px;">活動資料來源：文化部藝文活動開放資料、各主辦單位公告與新聞報導；場次以主辦單位公告為準。</div>
 </td></tr>""")
     return "\n".join(parts)
@@ -198,6 +242,10 @@ def preview_page(section):
 
 
 if __name__ == "__main__":
+    opts = [a for a in sys.argv[1:] if a.startswith("--")]
+    sys.argv = [sys.argv[0]] + [a for a in sys.argv[1:] if not a.startswith("--")]
+    slim = "--slim" in opts
+    pick = next((o.split("=", 1)[1].split(",") for o in opts if o.startswith("--pick=")), [])
     src, issue, days, out = sys.argv[1], sys.argv[2], int(sys.argv[3]), sys.argv[4]
     data = json.load(open(src, encoding="utf-8"))
     issue_date = datetime.strptime(issue, "%Y-%m-%d")
@@ -207,8 +255,17 @@ if __name__ == "__main__":
         manual = json.load(open(manual_path, encoding="utf-8")).get("events", [])
         events = merge_manual(events, manual)
         print("manual events:", len(manual))
-    rows, dropped = build(events, issue_date, days)
-    sec = section_html(rows, issue_date, days, sys.argv[5] if len(sys.argv) > 5 else "#")
+    page = sys.argv[5] if len(sys.argv) > 5 else "https://mesple.github.io/cuesheet/event/"
+    if slim:
+        rows, more = build_slim(events, issue_date, days, pick=pick)
+        dropped = []
+        print("未選入的節目（可用 --pick=uid,... 換上）：")
+        for reg, lst in more.items():
+            for uid, title, d in lst:
+                print(f"  {reg} {d} {title} [{uid}]")
+    else:
+        rows, dropped = build(events, issue_date, days)
+    sec = section_html(rows, issue_date, days, page, slim=slim)
     open(out, "w", encoding="utf-8").write(preview_page(sec))
     open(out.replace(".html", "_section.html"), "w", encoding="utf-8").write(sec)
     print("kept:", {k: len(v) for k, v in rows.items()})
