@@ -5,12 +5,12 @@
 | 網址 | 內容 | 檔案 |
 | --- | --- | --- |
 | `/cuesheet/` | 首頁 | `index.html`（由 `build_pages.py` 產生） |
-| `/cuesheet/newsletter/` | 電子報（重度聆聽版、配樂新訊版與特刊同列） | `newsletter/index.html`（由 `build_pages.py` 產生）、各期 `newsletter/YYYY-MM/index.html` |
+| `/cuesheet/newsletter/` | 電子報（深度聆聽版、配樂新訊版與特刊同列） | `newsletter/index.html`（由 `build_pages.py` 產生）、各期 `newsletter/YYYY-MM/index.html` |
 | `/cuesheet/event/` | 近期國內電影音樂活動 | `event/index.html`，讀取根目錄的 `events.json`、`manual_events.json` |
 
 ## 新增一期電子報
 
-1. 把該期網頁版放到 `newsletter/YYYY-MM-collector/index.html`（重度聆聽版，每月 5 日）或 `newsletter/YYYY-MM-news/index.html`（配樂新訊版，每月 20 日），特刊用 `newsletter/YYYY-MM-special/`，圖片放 `images/YYYY-MM/`。
+1. 把該期網頁版放到 `newsletter/YYYY-MM-collector/index.html`（深度聆聽版，每月 5 日）或 `newsletter/YYYY-MM-news/index.html`（配樂新訊版，每月 20 日），特刊用 `newsletter/YYYY-MM-special/`，圖片放 `images/YYYY-MM/`。
 2. 在 `newsletter/issues.json` 加一筆（`editor_note` 是刊頭下方的編者的話，也是首頁與列表頁的摘要）。
 3. 執行 `python build_pages.py`，更新首頁與電子報列表。
 
