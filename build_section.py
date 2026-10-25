@@ -1,7 +1,7 @@
 """產生 Cue Sheet「近期國內電影音樂活動」欄目的 HTML 片段與預覽頁。
 
 用法：python build_section.py events.json 發刊日(YYYY-MM-DD) 天數 輸出檔 [線上活動頁網址] [--slim] [--pick=uid1,uid2]
---slim：消息版精簡版（以節目計算、每區最多 2 個節目，天數建議 30）；--pick 指定要優先放入的節目 uid
+--slim：配樂新訊版精簡版（以節目計算、每區最多 2 個節目，天數建議 30）；--pick 指定要優先放入的節目 uid
 線上活動頁網址：https://mesple.github.io/cuesheet/event/
 """
 import json
@@ -104,7 +104,7 @@ def build(events, issue_date, days):
 
 
 def build_slim(events, issue_date, days=30, per_region=2, pick=None):
-    """消息版精簡版（編輯 2026-10-25 指定）：以節目計算，同一節目在同一地區的所有場次合成一列；
+    """配樂新訊版精簡版（編輯 2026-10-25 指定）：以節目計算，同一節目在同一地區的所有場次合成一列；
     每區最多 per_region 個節目，預設挑日期最近的；pick 為編輯指定的 uid 清單，有指定的優先。"""
     start, end = issue_date, issue_date + timedelta(days=days)
     cands = {name: [] for name, _ in REGIONS}
