@@ -1,6 +1,6 @@
 {
- "說明": "新聞搜尋補漏：民間主辦、未登錄文化部開放資料的活動。格式同 events.json；source 一律為「新聞」，source_links 列出確認用的主辦頁或新聞。時間未公布的場次 time 只寫日期並加 time_tbd。編輯每期更新，過期場次由 build_section.py 自動略過。 note 會顯示在電子報與活動頁給讀者看；只給編輯看的註記寫在 internal_note。",
- "updated": "2026-10-18",
+ "說明": "新聞搜尋補漏：民間主辦、未登錄文化部開放資料的活動。格式同 events.json；source 一律為「新聞」，source_links 列出確認用的主辦頁或新聞。時間未公布的場次 time 只寫日期並加 time_tbd。編輯每期更新，過期場次由 build_section.py 自動略過。 note 會顯示在電子報與活動頁給讀者看；只給編輯看的註記寫在 internal_note。 長期展覽用 run 欄位（start、end、venue、city），shows 留空；電子報與活動頁只列一筆並顯示展期。",
+ "updated": "2026-10-27",
  "events": [
   {
    "uid": "manual-mna-twilight-new-moon-2026",
@@ -153,6 +153,32 @@
     }
    ],
    "internal_note": "編輯 10/18 補登；免費入場（已寫在標題）"
+  },
+  {
+   "uid": "manual-tfam-sakamoto-seeing-sound-2026",
+   "title": "坂本龍一｜觀音.聽時",
+   "category": "展覽",
+   "organizer": [
+    "臺北市立美術館"
+   ],
+   "performer": "坂本龍一與高谷史郎、真鍋大度、Carsten Nicolai、Apichatpong Weerasethakul、Zakkubalan 共同創作；策展人 難波祐子",
+   "web": "https://www.opentix.life/event/2105469201195143168",
+   "tickets": "https://www.opentix.life/event/2105469201195143168",
+   "note": "OPENTIX 網路預約制，每日保留少量現場候補名額；全票 30 元",
+   "internal_note": "依新聞，未經官方頁確認（鏡文學、民報；北美館官網與 OPENTIX 頁尚未讀取）。首波開放 10/31–11/29 場次，後續場次預約時間待確認。資訊另見編輯 2026-10-27 提供的 OPENTIX 截圖。",
+   "source": "新聞",
+   "source_links": [
+    "https://www.opentix.life/event/2105469201195143168",
+    "https://www.mirrormedia.mg/external/mirrorfiction_1467",
+    "https://www.peoplenews.tw/?p=59546"
+   ],
+   "run": {
+    "start": "2026/10/31",
+    "end": "2027/03/14",
+    "venue": "臺北市立美術館 展覽室 1A、1B",
+    "city": "臺北市"
+   },
+   "shows": []
   }
  ]
 }

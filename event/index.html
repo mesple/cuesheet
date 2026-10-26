@@ -77,7 +77,7 @@ footer{border-top:3px double var(--ink);margin-top:10px;padding:12px 0 30px;font
     <span class="lab">城市</span>
     <select id="city" aria-label="城市"><option value="">全部城市</option></select>
     <span class="lab" style="margin-left:6px">類型</span>
-    <select id="kind" aria-label="類型"><option value="">全部</option><option>音樂會</option><option>講座</option><option>影展活動</option></select>
+    <select id="kind" aria-label="類型"><option value="">全部</option><option>音樂會</option><option>講座</option><option>影展活動</option><option>展覽</option></select>
     <span class="count" id="count"></span>
   </div>
 </div></nav>
@@ -106,6 +106,7 @@ function parseTime(s){
   return { y:+m[1], mo:+m[2], d:+m[3], h: m[4]!=null ? +m[4] : null, mi: m[5]!=null ? +m[5] : 0 };
 }
 function kindOf(ev){
+  if (ev.category === "展覽") return "展覽";
   const t = (ev.title||"") + (ev.category||"");
   if (t.includes("講座") || t.includes("大師課") || ev.category === "講座") return "講座";
   if (t.includes("影展") || ev.category === "電影") return "影展活動";
@@ -189,6 +190,14 @@ async function load(){
     if (have.has(dayKey(t) + "|" + normVenue(s.venue))) continue;  // 同日同場館不重複
     push(ev, s);
   }
+  // 長期展覽（manual_events 的 run 欄位）：展期中只列一筆，日期取開展日與今天較晚者
+  for (const ev of ((manual && manual.events) || [])) {
+    const r = ev.run; if (!r) continue;
+    const a = parseTime(r.start), b = parseTime(r.end); if (!a || !b || dayKey(b) < todayKey) continue;
+    const t = dayKey(a) >= todayKey ? a : { y: today.getFullYear(), mo: today.getMonth()+1, d: today.getDate(), h: null, mi: 0 };
+    const city = r.city || ""; const region = regionOf(city); if (!region) continue;
+    SHOWS.push({ ev, show: { time: r.start, venue: r.venue, city, _t: t, _run: [a, b] }, city, region, kind: kindOf(ev) });
+  }
   SHOWS.sort((a,b) => (dayKey(a.show._t) + pad(a.show._t.h ?? 99) + pad(a.show._t.mi)).localeCompare(dayKey(b.show._t) + pad(b.show._t.h ?? 99) + pad(b.show._t.mi)));
   if (main && main.updated) document.getElementById("updated").textContent = "資料更新：" + main.updated.replace("T"," ").slice(0,16) + "（每日自動更新）";
   readUrl(); buildControls(); render();
@@ -249,16 +258,19 @@ function render(){
     const org = Array.isArray(x.ev.organizer) ? x.ev.organizer.filter(Boolean).join("、") : (x.ev.organizer || "");
     const who = org ? `主辦：${esc(org)}` : (x.ev.performer ? `演出：${esc(x.ev.performer)}` : "");
     const link = x.ev.tickets || x.ev.web;
+    const run = x.show._run;
+    const dateHtml = run ? `${run[0].mo}/${run[0].d}–${run[1].mo}/${run[1].d}<small>展期</small>`
+                         : `${t.mo}/${t.d}<small>（${wd}）${time}</small>`;
     html += `<article class="item">
-      <div class="date">${t.mo}/${t.d}<small>（${wd}）${time}</small></div>
+      <div class="date">${dateHtml}</div>
       <div>
         <h3 class="name">${esc(x.ev.title)}</h3>
         <div class="meta"><span class="tag">${x.kind}</span>${esc(x.city.slice(0,2))}・${esc(x.show.venue || "場地未標示")}${who ? " · " + who : ""}</div>
         ${x.ev.note ? `<div class="note">${esc(x.ev.note)}</div>` : ""}
         <div class="acts">
-          ${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">購票／詳情</a>` : ""}
-          <a href="${esc(googleLink(x.ev, x.show))}" target="_blank" rel="noopener">加入 Google 日曆</a>
-          <button type="button" data-i="${i}">下載行事曆檔（Apple／Outlook）</button>
+          ${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">${run ? "預約／詳情" : "購票／詳情"}</a>` : ""}
+          ${run ? "" : `<a href="${esc(googleLink(x.ev, x.show))}" target="_blank" rel="noopener">加入 Google 日曆</a>
+          <button type="button" data-i="${i}">下載行事曆檔（Apple／Outlook）</button>`}
         </div>
       </div></article>`;
   });

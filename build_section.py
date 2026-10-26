@@ -40,6 +40,8 @@ def parse(s):
 
 
 def kind(ev):
+    if ev.get("category") == "展覽":
+        return "展覽"
     t = ev["title"] + ev.get("category", "")
     if "講座" in t or "大師課" in t or ev.get("category") == "講座":
         return "講座"
@@ -56,6 +58,25 @@ def norm_venue(v):
     return (v or "").replace("臺", "台").replace(" ", "").replace("國家音樂廳", "音樂廳")
 
 
+def run_shows(ev, start, end):
+    """長期展覽（manual_events 的 run 欄位，編輯 2026-10-27 新增）：展期和視窗重疊時，
+    當成一個場次，日期取「展覽開始日」與「視窗開始日」較晚者。"""
+    r = ev.get("run")
+    if not r:
+        return []
+    a, b = parse(r["start"]), parse(r["end"])
+    if not a or not b or b < start or a >= end:
+        return []
+    t = max(a, start)
+    return [(t, {"time": t.strftime("%Y/%m/%d"), "venue": r.get("venue", ""),
+                 "city": r.get("city", ""), "run": True})]
+
+
+def run_label(ev):
+    a, b = parse(ev["run"]["start"]), parse(ev["run"]["end"])
+    return f"{a.month}/{a.day}–{b.month}/{b.day}"
+
+
 def merge_manual(events, manual):
     """把新聞補漏的活動併入：同一天、同場館已在開放資料中的場次不重複列。"""
     have = {(parse(s["time"]).date(), norm_venue(s["venue"]))
@@ -64,7 +85,7 @@ def merge_manual(events, manual):
     for ev in manual:
         shows = [s for s in ev["shows"]
                  if (parse(s["time"]).date(), norm_venue(s["venue"])) not in have]
-        if shows:
+        if shows or ev.get("run"):
             merged.append(dict(ev, shows=shows))
     return merged
 
@@ -82,6 +103,9 @@ def build(events, issue_date, days):
             if not t or not reg or not (start <= t < end):
                 continue
             by_region.setdefault(reg, []).append((t, s))
+        for t, s in run_shows(ev, start, end):
+            if region_of(s["city"]):
+                by_region.setdefault(region_of(s["city"]), []).append((t, s))
         if not by_region:
             dropped.append(ev["title"])
             continue
@@ -103,7 +127,7 @@ def build(events, issue_date, days):
     return rows, dropped
 
 
-def build_slim(events, issue_date, days=30, per_region=2, pick=None):
+def build_slim(events, issue_date, days=30, per_region=2, pick=None, skip=None):
     """配樂新訊版精簡版（編輯 2026-10-25 指定）：以節目計算，同一節目在同一地區的所有場次合成一列；
     每區最多 per_region 個節目，預設挑日期最近的；pick 為編輯指定的 uid 清單，有指定的優先。"""
     start, end = issue_date, issue_date + timedelta(days=days)
@@ -115,6 +139,11 @@ def build_slim(events, issue_date, days=30, per_region=2, pick=None):
             reg = region_of(s["city"])
             if t and reg and start <= t < end:
                 by_region.setdefault(reg, []).append((t, s))
+        if ev.get("uid") in (skip or []):
+            continue
+        for t, s in run_shows(ev, start, end):
+            if region_of(s["city"]):
+                by_region.setdefault(region_of(s["city"]), []).append((t, s))
         for reg, shows in by_region.items():
             shows.sort(key=lambda x: x[0])
             cands[reg].append((shows[0][0], ev, shows))
@@ -128,6 +157,8 @@ def build_slim(events, issue_date, days=30, per_region=2, pick=None):
 
 
 def slim_item_html(first, ev, shows):
+    if ev.get("run"):
+        return item_html(first, ev, shows)
     lines = [f"{t.month}/{t.day}（{WEEK[t.weekday()]}）" + ("" if s.get("time_tbd") else f" {t:%H:%M}")
              for t, s in shows]
     if len(lines) > 3:
@@ -143,7 +174,9 @@ def slim_item_html(first, ev, shows):
 
 def item_html(first, ev, shows):
     dates = sorted({t.date() for t, _ in shows})
-    if len(dates) == 1:
+    if ev.get("run"):
+        date_txt, sub = run_label(ev), "展期"
+    elif len(dates) == 1:
         d = dates[0]
         date_txt = f"{d.month}/{d.day}"
         if any(s.get("time_tbd") for _, s in shows):
@@ -246,6 +279,7 @@ if __name__ == "__main__":
     sys.argv = [sys.argv[0]] + [a for a in sys.argv[1:] if not a.startswith("--")]
     slim = "--slim" in opts
     pick = next((o.split("=", 1)[1].split(",") for o in opts if o.startswith("--pick=")), [])
+    skip = next((o.split("=", 1)[1].split(",") for o in opts if o.startswith("--skip=")), [])
     src, issue, days, out = sys.argv[1], sys.argv[2], int(sys.argv[3]), sys.argv[4]
     data = json.load(open(src, encoding="utf-8"))
     issue_date = datetime.strptime(issue, "%Y-%m-%d")
@@ -257,9 +291,9 @@ if __name__ == "__main__":
         print("manual events:", len(manual))
     page = sys.argv[5] if len(sys.argv) > 5 else "https://mesple.github.io/cuesheet/event/"
     if slim:
-        rows, more = build_slim(events, issue_date, days, pick=pick)
+        rows, more = build_slim(events, issue_date, days, pick=pick, skip=skip)
         dropped = []
-        print("未選入的節目（可用 --pick=uid,... 換上）：")
+        print("未選入的節目（可用 --pick=uid,... 換上；--skip=uid,... 拿掉）：")
         for reg, lst in more.items():
             for uid, title, d in lst:
                 print(f"  {reg} {d} {title} [{uid}]")
