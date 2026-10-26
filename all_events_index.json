@@ -171,15 +171,6 @@
 "start_date": "2026/12/28"
 },
 {
-"uid": "69c1723f26b3242a48a9dd7b",
-"category": "音樂",
-"title": "跨樂鋼琴三重奏 她的樂語",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2032338803290832897",
-"start_date": "2026/10/26"
-},
-{
 "uid": "69c6b85726b3242a48a9dea6",
 "category": "音樂",
 "title": "布拉姆斯：迷情單簧管",
@@ -513,15 +504,6 @@
 "start_date": "2026/11/07"
 },
 {
-"uid": "6a4fd45e26b32427d060416e",
-"category": "音樂",
-"title": "2026 王昱翔薩克斯風獨奏會-法國作品集 II",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2074437015481688065",
-"start_date": "2026/10/26"
-},
-{
 "uid": "6a5125ec26b32427d060417c",
 "category": "音樂",
 "title": "時代的軌跡–扎斯拉夫斯基獨奏",
@@ -843,7 +825,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2069705340555059200",
-"start_date": "2026/10/26"
+"start_date": "2026/10/27"
 },
 {
 "uid": "6a68e15526b32427d06042d1",
@@ -1878,7 +1860,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2082672074705481729",
-"start_date": "2026/10/26"
+"start_date": "2026/11/01"
 },
 {
 "uid": "6a97065526b32434f435809f",
@@ -1986,7 +1968,7 @@
 "performer": "長笛、中音長笛、導聆：陳惠湄、吉他：蘇孟風",
 "description": "",
 "web": "",
-"start_date": "2026/10/26"
+"start_date": "2026/11/01"
 },
 {
 "uid": "6a9857dd26b32434f43580b8",
@@ -2833,15 +2815,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2099794023431028737",
 "start_date": "2026/11/11"
-},
-{
-"uid": "6abaa0b326b324165c32e543",
-"category": "音樂",
-"title": "市民樂團的私房菜六~聲聲不息",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2102669943934492673",
-"start_date": "2026/10/26"
 },
 {
 "uid": "6abb68abeb4399d01039b1f7",
@@ -4203,6 +4176,33 @@
 "start_date": "2026/12/02"
 },
 {
+"uid": "6adf8abf26b3245efc753725",
+"category": "音樂",
+"title": "何婕榕小提琴獨奏會Sincere",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2104830405003649025",
+"start_date": "2026/12/26"
+},
+{
+"uid": "6adf8abf26b3245efc753726",
+"category": "音樂",
+"title": "《合唱天籟》沐樂管樂團與師友合唱團",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2110192327783841793",
+"start_date": "2026/12/05"
+},
+{
+"uid": "6adf8ac026b3245efc753727",
+"category": "音樂",
+"title": "力晶美學藝堂 巴伐利亞廣播交響樂團 樂團首席 Thomas Reif 小提琴大師班",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2110280678484385792",
+"start_date": "2026/11/17"
+},
+{
 "uid": "68950a2f26b324477c8a1474",
 "category": "講座",
 "title": "生活工藝館-陶藝DIY手作體驗",
@@ -5040,24 +5040,6 @@
 "start_date": "2026/11/15"
 },
 {
-"uid": "6aa82bbc26b324165c32e3e0",
-"category": "講座",
-"title": "AI 驅動的虛擬製作：生成式影像 × 3DGS",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2097295250578354177",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aa82bbc26b324165c32e3e1",
-"category": "講座",
-"title": "Wētā 大師講堂：虛擬製作專題",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2097299622090956801",
-"start_date": "2026/10/26"
-},
-{
 "uid": "6aa82bbc26b324165c32e3e4",
 "category": "講座",
 "title": "講座《台灣同運怎麼走到今天— 同志運動史回顧》",
@@ -5074,15 +5056,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2085282535454633985",
 "start_date": "2026/11/22"
-},
-{
-"uid": "6ab1dfddeb4399d01039b1ed",
-"category": "講座",
-"title": "廟語心聲：松山霞海城隍廟 | 閱讀建築・閱讀文化・閱讀人生",
-"performer": "薪展新創文化",
-"description": "活動理念：\r\n\r\n 一座廟，就是一本立體的文化故事書\r\n我們經常走進廟宇祈求平安、健康、財富與姻緣，卻很少停下腳步，好好看看眼前的建築。\r\n\r\n屋脊上的人物在說什麼故事？龍柱、石雕與剪黏藏著什麼寓意？不同神明為什麼會出現在這裡？一代又一代的人，又為什麼把自己的願望寄託在信仰之中？\r\n\r\n其實，廟宇從來不只是祭祀神明的場所，它保存了建築工藝、民間信仰、地方記憶，也承載著臺灣人對善惡、平安、富足、人際關係與人生的理解。\r\n\r\n《廟語心聲》不是帶你「看一間廟」，而是邀請你學會「讀一間廟」。\r\n\r\n這一次，我們走進松山霞海城隍廟，從建築、圖騰、神祇與民間故事出發，把看似熟悉的廟宇重新打開。\r\n\r\n我們希望透過一小時的文化閱讀，讓廟宇成為一座沒有圍牆的文化教室。\r\n\r\n🔍活動特色：\r\n\r\n① 閱讀建築｜看懂廟宇裡的文化密碼\r\n廟宇為什麼雕龍畫鳳？屋脊上的人物、石雕、剪黏、花鳥瑞獸又代表什麼？\r\n\r\n從建築格局、傳統工藝到裝飾圖騰，帶你從「看熱鬧」走向「看門道」，發現匠師如何將故事、祝福與人生智慧藏進建築之中。\r\n\r\n② 閱讀文化｜從神明故事理解臺灣人的生活\r\n為什麼城隍爺被視為地方守護者？人們為什麼向財神祈求富足？月老與和合二仙，又寄託著什麼樣的情感願望？\r\n\r\n從松山霞海城隍廟的信仰文化出發，不只認識神明，更理解信仰如何回應人們對平安、正義、財富、人際關係與幸福的期待。\r\n\r\n③ 閱讀人生｜古老故事，其實離我們並不遠\r\n廟宇裡談的不只是神明，也有人生。\r\n\r\n善惡與責任、得到與失去、人與人的關係，以及每個人對平安幸福的追求，都是跨越時代仍然存在的生命課題。\r\n\r\n👉活動規劃：\r\n\r\n📅活動時間 | 2026年10月26日(日)下午15:00-16:00（請提前10分鐘報到）\r\n\r\n🚩集合地點 | 松山霞海城隍廟 (台北市松山區八德路四段439號 )\r\n\r\n📢主辦單位 | 松山霞海城隍廟\r\n \r\n📢執行單位 | 薪展新創文化有限公司（美遊記）",
-"web": "https://www.accupass.com/event/2608250728484011067760",
-"start_date": "2026/10/26"
 },
 {
 "uid": "6abb647d647a795d9251e637",
@@ -5220,24 +5193,6 @@
 "start_date": "2026/10/29"
 },
 {
-"uid": "6a8490fc26b32427d0604437",
-"category": "電影",
-"title": "【府中15】紀錄片放映院《寶貝對不起》",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2086023920662102016",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6a8490fc26b32427d0604439",
-"category": "電影",
-"title": "【府中15】紀錄片放映院《你是不會當樹嗎》",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2086025514670149633",
-"start_date": "2026/10/26"
-},
-{
 "uid": "6aa82bbd26b324165c32e3f9",
 "category": "電影",
 "title": "關鳳",
@@ -5263,402 +5218,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2097897859226570753",
 "start_date": "2026/10/28"
-},
-{
-"uid": "6aaaceca26b324165c32e425",
-"category": "電影",
-"title": "日光｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092224229817393153",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e42e",
-"category": "電影",
-"title": "《蒙娜麗莎失竊案》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092794683058720768",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e42f",
-"category": "電影",
-"title": "《看見幻貓又何妨》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092829498235555841",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e430",
-"category": "電影",
-"title": "《紐約地下世界》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092851308992823297",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e431",
-"category": "電影",
-"title": "《Nox：長夜將盡》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092879981204303873",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e432",
-"category": "電影",
-"title": "《超越黑色：皮耶·蘇拉吉》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092890725263478785",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e433",
-"category": "電影",
-"title": "《列》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092895140825403393",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e434",
-"category": "電影",
-"title": "《畢卡索：格爾尼卡的蛻變》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092898268832468993",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e436",
-"category": "電影",
-"title": "《極限飛行》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092906821878157313",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e438",
-"category": "電影",
-"title": "《蜂嘲男孩》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092910801518632961",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e43a",
-"category": "電影",
-"title": "《媽媽走了，或許是昨天》+《靈魂出竅後》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092914611609497601",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e43b",
-"category": "電影",
-"title": "《亞馬遜聖洞的秘密》+《矽利克》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092917256832552961",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e43d",
-"category": "電影",
-"title": "《反未來迷幻音樂祭》+《亡靈電陰派對》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2092920868162805761",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e440",
-"category": "電影",
-"title": "《漫長的告別》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093177227779407873",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e443",
-"category": "電影",
-"title": "《眾人之城：阿姆斯特丹1652》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093190861084594177",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e444",
-"category": "電影",
-"title": "《快樂鳥拾光》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093213577971896321",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e445",
-"category": "電影",
-"title": "《虛擬化身大作戰》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093219102645260289",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e446",
-"category": "電影",
-"title": "《拉拉LAND模擬器》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093221864686317568",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e447",
-"category": "電影",
-"title": "《清醒夢》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093224743564709889",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e448",
-"category": "電影",
-"title": "《我的時光機》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093230827244228609",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e449",
-"category": "電影",
-"title": "《艾娜的書房》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093235665821732865",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e44a",
-"category": "電影",
-"title": "《幻影狂想曲》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093238396562501633",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e44b",
-"category": "電影",
-"title": "《煙硝下的雪夜》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093242250145009664",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e44c",
-"category": "電影",
-"title": "《花嘿盆》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093244680865742849",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e44d",
-"category": "電影",
-"title": "《大水淹沒的世界》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093249180020215809",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e44e",
-"category": "電影",
-"title": "《前往力馬卡伍得》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093260714671738881",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e44f",
-"category": "電影",
-"title": "《貝殼島》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093264250103754752",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e450",
-"category": "電影",
-"title": "《一起跳舞吧》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093267808720842753",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e454",
-"category": "電影",
-"title": "《暗室》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093272638042017793",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e455",
-"category": "電影",
-"title": "《阿提米絲：登月任務》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093276301153243137",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaaceca26b324165c32e456",
-"category": "電影",
-"title": "《世紀首登：聖母峰1953》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093279928286277633",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecb26b324165c32e457",
-"category": "電影",
-"title": "時候：第1-2集｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093285391477641217",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecb26b324165c32e458",
-"category": "電影",
-"title": "長壽街的猴囡仔：第1-2集｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2093289324405231617",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecb26b324165c32e45a",
-"category": "電影",
-"title": "金法尤物 4K修復｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094258931067273217",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecb26b324165c32e45c",
-"category": "電影",
-"title": "男人的野心 4K修復｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094265099213549568",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecb26b324165c32e45d",
-"category": "電影",
-"title": "瑪儂的復仇 4K修復｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094265864492322817",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecb26b324165c32e461",
-"category": "電影",
-"title": "從前有個戰萊塢｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094333246179020801",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecb26b324165c32e464",
-"category": "電影",
-"title": "《三麗鷗虛擬音樂祭》｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094341296840302593",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecb26b324165c32e465",
-"category": "電影",
-"title": "巴霍巴利王：王者再臨｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094343989628669953",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecb26b324165c32e46c",
-"category": "電影",
-"title": "佩比、露西、朋｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2094701118196297729",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecc26b324165c32e47e",
-"category": "電影",
-"title": "深深腥紅 導演版｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095065264933101569",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecc26b324165c32e47f",
-"category": "電影",
-"title": "極道恐怖大劇場：牛頭 4K修復｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095065980882386945",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecc26b324165c32e486",
-"category": "電影",
-"title": "在世界的盡頭迴盪愛情｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095074030114516993",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecc26b324165c32e490",
-"category": "電影",
-"title": "心機：第1-2集｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095118625724227585",
-"start_date": "2026/10/26"
 },
 {
 "uid": "6aaacecc26b324165c32e494",
@@ -5832,24 +5391,6 @@
 "start_date": "2026/11/15"
 },
 {
-"uid": "6aaacecc26b324165c32e4ba",
-"category": "電影",
-"title": "南國幻愛：愛的鼓勵+貝果超人+那個掉屑的她｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095456553872465921",
-"start_date": "2026/10/26"
-},
-{
-"uid": "6aaacecc26b324165c32e4c3",
-"category": "電影",
-"title": "孩子幻想國：小夥伴的奇蹟日常(3+)｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095471894592487425",
-"start_date": "2026/10/26"
-},
-{
 "uid": "6aaacecc26b324165c32e4c8",
 "category": "電影",
 "title": "游牧人生",
@@ -5911,24 +5452,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2097206460897038337",
 "start_date": "2026/11/22"
-},
-{
-"uid": "6aaacecc26b324165c32e4e0",
-"category": "電影",
-"title": "2026 極度影癡套票｜高雄電影節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2097284519051038721",
-"start_date": "2026/09/19"
-},
-{
-"uid": "6aaacecc26b324165c32e4e1",
-"category": "電影",
-"title": "XR組合套票｜TTXC XR DREAMLAND",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2097298366478225409",
-"start_date": "2026/10/09"
 },
 {
 "uid": "6aaacecc26b324165c32e4e2",
