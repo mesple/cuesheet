@@ -20,7 +20,7 @@
 - `manual_events.json`：新聞補漏與編輯補登的場次（民間主辦、未登錄開放資料者）。`note` 會顯示給讀者，只給編輯看的註記寫在 `internal_note`。
 - 抓取防護：某類別筆數低於基準 50% 時沿用上次資料；失敗會自動重試。
 - `build_section.py`：把活動資料排成電子報最後一欄的 HTML。例：`python build_section.py events.json 2026-11-16 60 preview.html https://mesple.github.io/cuesheet/event/`
-- 長期展覽（2026-10-27 新增）：在 `manual_events.json` 用 `category: "展覽"` 加 `run`（`start`、`end`、`venue`、`city`），`shows` 留空。電子報與活動頁只列一筆、顯示展期，標「展覽」，不提供加入行事曆；精簡版會佔該區一個名額，不想放時用 `--skip=uid`。
+- 長期展覽（2026-10-27 新增）：在 `manual_events.json` 用 `category: "展覽"` 加 `run`（`start`、`end`、`venue`、`city`），`shows` 留空。電子報與活動頁只列一筆、顯示展期，標「展覽」，不提供加入行事曆。只放在開展的那個月：活動頁列在開展日、該月過完就不列；電子報只放開展後的第一期配樂新訊版（不想放時用 `--skip=uid`）。展覽由編輯手動補登，不抓文化部「展覽」類。
 - 文化部「電影」類一律標「影展活動」；電子報中同一部片在同一地區的放映合併成一列。
 - 配樂新訊版用精簡版：`python build_section.py events.json 2026-11-20 30 preview.html --slim`。以節目計算、每區最多 2 個節目（預設日期最近），欄末連到活動頁「到線上版看更多精彩節目」；終端機會列出未選入的節目，可用 `--pick=uid1,uid2` 換上。
 - `.github/workflows/keepalive.yml`：每月 1 日檢查，40 天沒有提交時留一筆紀錄，避免 GitHub 停用排程。

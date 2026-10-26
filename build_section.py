@@ -59,13 +59,14 @@ def norm_venue(v):
 
 
 def run_shows(ev, start, end):
-    """長期展覽（manual_events 的 run 欄位，編輯 2026-10-27 新增）：展期和視窗重疊時，
-    當成一個場次，日期取「展覽開始日」與「視窗開始日」較晚者。"""
+    """長期展覽（manual_events 的 run 欄位，編輯 2026-10-27 新增）：只放在開展後的第一期
+    （開展日落在本期視窗內，或本期發刊前 30 天內），之後各期不再列；
+    日期取「展覽開始日」與「視窗開始日」較晚者。"""
     r = ev.get("run")
     if not r:
         return []
     a, b = parse(r["start"]), parse(r["end"])
-    if not a or not b or b < start or a >= end:
+    if not a or not b or b < start or a >= end or a < start - timedelta(days=30):
         return []
     t = max(a, start)
     return [(t, {"time": t.strftime("%Y/%m/%d"), "venue": r.get("venue", ""),

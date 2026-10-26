@@ -190,11 +190,13 @@ async function load(){
     if (have.has(dayKey(t) + "|" + normVenue(s.venue))) continue;  // 同日同場館不重複
     push(ev, s);
   }
-  // 長期展覽（manual_events 的 run 欄位）：展期中只列一筆，日期取開展日與今天較晚者
+  // 長期展覽（manual_events 的 run 欄位）：只列一筆，排在開展日；開展那個月過完就不再列（編輯 2026-10-27 指定）
+  const monthKey = `${today.getFullYear()}${pad(today.getMonth()+1)}`;
   for (const ev of ((manual && manual.events) || [])) {
     const r = ev.run; if (!r) continue;
     const a = parseTime(r.start), b = parseTime(r.end); if (!a || !b || dayKey(b) < todayKey) continue;
-    const t = dayKey(a) >= todayKey ? a : { y: today.getFullYear(), mo: today.getMonth()+1, d: today.getDate(), h: null, mi: 0 };
+    if (`${a.y}${pad(a.mo)}` < monthKey) continue;
+    const t = a;
     const city = r.city || ""; const region = regionOf(city); if (!region) continue;
     SHOWS.push({ ev, show: { time: r.start, venue: r.venue, city, _t: t, _run: [a, b] }, city, region, kind: kindOf(ev) });
   }
