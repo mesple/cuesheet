@@ -1,0 +1,674 @@
+{
+ "說明": "作曲家對照表。代號用於單則的 composers 欄與日後的作曲家頁網址；display 是網站顯示名（華人用中文、日本人有漢字用漢字）；imdb 待逐位補上。",
+ "composers": {
+  "adam-hochstatter": {
+   "display": "Adam Hochstatter",
+   "name": "Adam Hochstatter",
+   "aliases": [],
+   "imdb": []
+  },
+  "alan-silvestri": {
+   "display": "Alan Silvestri",
+   "name": "Alan Silvestri",
+   "aliases": [
+    "Silvestri"
+   ],
+   "imdb": []
+  },
+  "alexandre-desplat": {
+   "display": "Alexandre Desplat",
+   "name": "Alexandre Desplat",
+   "aliases": [
+    "Desplat"
+   ],
+   "imdb": []
+  },
+  "ari-balouzian": {
+   "display": "Ari Balouzian",
+   "name": "Ari Balouzian",
+   "aliases": [],
+   "imdb": []
+  },
+  "arturo-cardelus": {
+   "display": "Arturo Cardelús",
+   "name": "Arturo Cardelús",
+   "aliases": [],
+   "imdb": []
+  },
+  "atticus-ross": {
+   "display": "Atticus Ross",
+   "name": "Atticus Ross",
+   "aliases": [
+    "Ross"
+   ],
+   "imdb": [
+    "nm1589604"
+   ]
+  },
+  "austin-wintory": {
+   "display": "Austin Wintory",
+   "name": "Austin Wintory",
+   "aliases": [],
+   "imdb": []
+  },
+  "basil-poledouris": {
+   "display": "Basil Poledouris",
+   "name": "Basil Poledouris",
+   "aliases": [
+    "Poledouris"
+   ],
+   "imdb": []
+  },
+  "beatriz-lopez-nogales": {
+   "display": "Beatriz López-Nogales",
+   "name": "Beatriz López-Nogales",
+   "aliases": [],
+   "imdb": []
+  },
+  "brandon-roberts": {
+   "display": "Brandon Roberts",
+   "name": "Brandon Roberts",
+   "aliases": [],
+   "imdb": []
+  },
+  "christopher-benstead": {
+   "display": "Christopher Benstead",
+   "name": "Christopher Benstead",
+   "aliases": [],
+   "imdb": []
+  },
+  "cosmo-sheldrake": {
+   "display": "Cosmo Sheldrake",
+   "name": "Cosmo Sheldrake",
+   "aliases": [],
+   "imdb": [
+    "nm5117478"
+   ]
+  },
+  "daniel-pemberton": {
+   "display": "Daniel Pemberton",
+   "name": "Daniel Pemberton",
+   "aliases": [],
+   "imdb": []
+  },
+  "daniel-rojas": {
+   "display": "Daniel Rojas",
+   "name": "Daniel Rojas",
+   "aliases": [],
+   "imdb": []
+  },
+  "dave-porter": {
+   "display": "Dave Porter",
+   "name": "Dave Porter",
+   "aliases": [],
+   "imdb": []
+  },
+  "david-fleming": {
+   "display": "David Fleming",
+   "name": "David Fleming",
+   "aliases": [],
+   "imdb": []
+  },
+  "david-shire": {
+   "display": "David Shire",
+   "name": "David Shire",
+   "aliases": [],
+   "imdb": []
+  },
+  "duncan-sheik": {
+   "display": "Duncan Sheik",
+   "name": "Duncan Sheik",
+   "aliases": [],
+   "imdb": []
+  },
+  "emily-bear": {
+   "display": "Emily Bear",
+   "name": "Emily Bear",
+   "aliases": [],
+   "imdb": []
+  },
+  "fabio-massimo-capogrosso": {
+   "display": "Fabio Massimo Capogrosso",
+   "name": "Fabio Massimo Capogrosso",
+   "aliases": [],
+   "imdb": []
+  },
+  "federico-jusid": {
+   "display": "Federico Jusid",
+   "name": "Federico Jusid",
+   "aliases": [
+    "Jusid"
+   ],
+   "imdb": []
+  },
+  "finneas": {
+   "display": "Finneas",
+   "name": "Finneas O'Connell",
+   "aliases": [
+    "FINNEAS"
+   ],
+   "imdb": []
+  },
+  "fu-duo-ma": {
+   "display": "福多瑪",
+   "name": "",
+   "aliases": [],
+   "imdb": []
+  },
+  "gabriel-yared": {
+   "display": "Gabriel Yared",
+   "name": "Gabriel Yared",
+   "aliases": [],
+   "imdb": []
+  },
+  "george-fenton": {
+   "display": "George Fenton",
+   "name": "George Fenton",
+   "aliases": [],
+   "imdb": [
+    "nm0006070"
+   ]
+  },
+  "halfdan-e": {
+   "display": "Halfdan E.",
+   "name": "Halfdan E.",
+   "aliases": [],
+   "imdb": []
+  },
+  "hanan-townshend": {
+   "display": "Hanan Townshend",
+   "name": "Hanan Townshend",
+   "aliases": [],
+   "imdb": []
+  },
+  "hannah-peel": {
+   "display": "Hannah Peel",
+   "name": "Hannah Peel",
+   "aliases": [],
+   "imdb": []
+  },
+  "hans-zimmer": {
+   "display": "Hans Zimmer",
+   "name": "Hans Zimmer",
+   "aliases": [
+    "Zimmer"
+   ],
+   "imdb": [
+    "nm0001877"
+   ]
+  },
+  "harry-gregson-williams": {
+   "display": "Harry Gregson-Williams",
+   "name": "Harry Gregson-Williams",
+   "aliases": [],
+   "imdb": []
+  },
+  "hays-holladay": {
+   "display": "Hays Holladay",
+   "name": "Hays Holladay",
+   "aliases": [],
+   "imdb": []
+  },
+  "henry-jackman": {
+   "display": "Henry Jackman",
+   "name": "Henry Jackman",
+   "aliases": [
+    "Jackman"
+   ],
+   "imdb": []
+  },
+  "ho-chien-liang": {
+   "display": "何堅良",
+   "name": "",
+   "aliases": [],
+   "imdb": []
+  },
+  "hou-chih-chien": {
+   "display": "侯志堅",
+   "name": "",
+   "aliases": [],
+   "imdb": []
+  },
+  "howard-shore": {
+   "display": "Howard Shore",
+   "name": "Howard Shore",
+   "aliases": [],
+   "imdb": []
+  },
+  "huang-wei-che": {
+   "display": "黃偉哲",
+   "name": "",
+   "aliases": [],
+   "imdb": []
+  },
+  "iris-hond": {
+   "display": "Iris Hond",
+   "name": "Iris Hond",
+   "aliases": [],
+   "imdb": []
+  },
+  "isabel-latorre": {
+   "display": "Isabel Latorre",
+   "name": "Isabel Latorre",
+   "aliases": [
+    "Isabel Latorre Sáez"
+   ],
+   "imdb": [
+    "nm4944090"
+   ]
+  },
+  "james-horner": {
+   "display": "James Horner",
+   "name": "James Horner",
+   "aliases": [],
+   "imdb": [
+    "nm0000035"
+   ]
+  },
+  "james-newton-howard": {
+   "display": "James Newton Howard",
+   "name": "James Newton Howard",
+   "aliases": [],
+   "imdb": []
+  },
+  "jan-miserre": {
+   "display": "Jan Miserre",
+   "name": "Jan Miserre",
+   "aliases": [],
+   "imdb": []
+  },
+  "jean-claude-petit": {
+   "display": "Jean-Claude Petit",
+   "name": "Jean-Claude Petit",
+   "aliases": [],
+   "imdb": []
+  },
+  "jeff-cardoni": {
+   "display": "Jeff Cardoni",
+   "name": "Jeff Cardoni",
+   "aliases": [],
+   "imdb": []
+  },
+  "jeff-russo": {
+   "display": "Jeff Russo",
+   "name": "Jeff Russo",
+   "aliases": [],
+   "imdb": []
+  },
+  "jerry-goldsmith": {
+   "display": "Jerry Goldsmith",
+   "name": "Jerry Goldsmith",
+   "aliases": [],
+   "imdb": []
+  },
+  "john-barry": {
+   "display": "John Barry",
+   "name": "John Barry",
+   "aliases": [],
+   "imdb": []
+  },
+  "john-gurtler": {
+   "display": "John Gürtler",
+   "name": "John Gürtler",
+   "aliases": [],
+   "imdb": []
+  },
+  "john-paesano": {
+   "display": "John Paesano",
+   "name": "John Paesano",
+   "aliases": [],
+   "imdb": []
+  },
+  "john-williams": {
+   "display": "John Williams",
+   "name": "John Williams",
+   "aliases": [],
+   "imdb": []
+  },
+  "kao-min-lun": {
+   "display": "高敏倫",
+   "name": "",
+   "aliases": [],
+   "imdb": []
+  },
+  "katharina-nuttall": {
+   "display": "Katharina Nuttall",
+   "name": "Katharina Nuttall",
+   "aliases": [],
+   "imdb": []
+  },
+  "kazuo-shinoda": {
+   "display": "信田かずお",
+   "name": "Kazuo Shinoda",
+   "aliases": [
+    "Kazuo Shinoda"
+   ],
+   "imdb": []
+  },
+  "kevin-smithers": {
+   "display": "Kevin Smithers",
+   "name": "Kevin Smithers",
+   "aliases": [],
+   "imdb": []
+  },
+  "koji-endo": {
+   "display": "遠藤浩二",
+   "name": "Koji Endo",
+   "aliases": [
+    "Koji Endo"
+   ],
+   "imdb": []
+  },
+  "laura-karpman": {
+   "display": "Laura Karpman",
+   "name": "Laura Karpman",
+   "aliases": [],
+   "imdb": []
+  },
+  "leo-birenberg": {
+   "display": "Leo Birenberg",
+   "name": "Leo Birenberg",
+   "aliases": [],
+   "imdb": []
+  },
+  "lim-giong": {
+   "display": "林強",
+   "name": "Lim Giong",
+   "aliases": [
+    "Lim Giong",
+    "Giong Lim"
+   ],
+   "imdb": [
+    "nm0510533",
+    "nm15585293"
+   ]
+  },
+  "liu-huan": {
+   "display": "劉歡",
+   "name": "Liu Huan",
+   "aliases": [
+    "Liu Huan",
+    "Huan Liu"
+   ],
+   "imdb": [
+    "nm3232216"
+   ]
+  },
+  "lukas-frank": {
+   "display": "Lukas Frank",
+   "name": "Lukas Frank",
+   "aliases": [],
+   "imdb": []
+  },
+  "marcin-przybylowicz": {
+   "display": "Marcin Przybyłowicz",
+   "name": "Marcin Przybyłowicz",
+   "aliases": [],
+   "imdb": []
+  },
+  "marco-beltrami": {
+   "display": "Marco Beltrami",
+   "name": "Marco Beltrami",
+   "aliases": [],
+   "imdb": []
+  },
+  "margaret-hermant": {
+   "display": "Margaret Hermant",
+   "name": "Margaret Hermant",
+   "aliases": [],
+   "imdb": []
+  },
+  "max-aruj": {
+   "display": "Max Aruj",
+   "name": "Max Aruj",
+   "aliases": [],
+   "imdb": []
+  },
+  "max-richter": {
+   "display": "Max Richter",
+   "name": "Max Richter",
+   "aliases": [
+    "Richter"
+   ],
+   "imdb": [
+    "nm2068037"
+   ]
+  },
+  "michael-abels": {
+   "display": "Michael Abels",
+   "name": "Michael Abels",
+   "aliases": [
+    "Abels"
+   ],
+   "imdb": []
+  },
+  "michael-giacchino": {
+   "display": "Michael Giacchino",
+   "name": "Michael Giacchino",
+   "aliases": [
+    "Giacchino"
+   ],
+   "imdb": []
+  },
+  "michael-kamen": {
+   "display": "Michael Kamen",
+   "name": "Michael Kamen",
+   "aliases": [
+    "Kamen"
+   ],
+   "imdb": []
+  },
+  "michel-berger": {
+   "display": "Michel Berger",
+   "name": "Michel Berger",
+   "aliases": [],
+   "imdb": []
+  },
+  "michel-fano": {
+   "display": "Michel Fano",
+   "name": "Michel Fano",
+   "aliases": [],
+   "imdb": []
+  },
+  "michel-legrand": {
+   "display": "Michel Legrand",
+   "name": "Michel Legrand",
+   "aliases": [],
+   "imdb": []
+  },
+  "nami-melumad": {
+   "display": "Nami Melumad",
+   "name": "Nami Melumad",
+   "aliases": [],
+   "imdb": []
+  },
+  "nick-glennie-smith": {
+   "display": "Nick Glennie-Smith",
+   "name": "Nick Glennie-Smith",
+   "aliases": [],
+   "imdb": []
+  },
+  "nicolas-garcia": {
+   "display": "Nicolas Garcia",
+   "name": "Nicolas Garcia",
+   "aliases": [],
+   "imdb": []
+  },
+  "olivier-arson": {
+   "display": "Olivier Arson",
+   "name": "Olivier Arson",
+   "aliases": [],
+   "imdb": []
+  },
+  "olivier-deriviere": {
+   "display": "Olivier Derivière",
+   "name": "Olivier Derivière",
+   "aliases": [
+    "Olivier Deriviere"
+   ],
+   "imdb": []
+  },
+  "patrick-doyle": {
+   "display": "Patrick Doyle",
+   "name": "Patrick Doyle",
+   "aliases": [],
+   "imdb": []
+  },
+  "philip-glass": {
+   "display": "Philip Glass",
+   "name": "Philip Glass",
+   "aliases": [],
+   "imdb": []
+  },
+  "philippe-rombi": {
+   "display": "Philippe Rombi",
+   "name": "Philippe Rombi",
+   "aliases": [],
+   "imdb": []
+  },
+  "pinar-toprak": {
+   "display": "Pinar Toprak",
+   "name": "Pinar Toprak",
+   "aliases": [],
+   "imdb": []
+  },
+  "ricky-ho": {
+   "display": "何國杰",
+   "name": "Ricky Ho",
+   "aliases": [
+    "Ricky Ho"
+   ],
+   "imdb": [
+    "nm0387369"
+   ]
+  },
+  "robert-glasper": {
+   "display": "Robert Glasper",
+   "name": "Robert Glasper",
+   "aliases": [],
+   "imdb": []
+  },
+  "rupert-gregson-williams": {
+   "display": "Rupert Gregson-Williams",
+   "name": "Rupert Gregson-Williams",
+   "aliases": [],
+   "imdb": []
+  },
+  "ryan-holladay": {
+   "display": "Ryan Holladay",
+   "name": "Ryan Holladay",
+   "aliases": [],
+   "imdb": []
+  },
+  "ryota-katayama": {
+   "display": "片山凉太",
+   "name": "Ryota Katayama",
+   "aliases": [
+    "Ryota Katayama"
+   ],
+   "imdb": [],
+   "note": "IMDb nm14729708 待確認是否同一人"
+  },
+  "semin-son": {
+   "display": "Semin Son",
+   "name": "Semin Son",
+   "aliases": [],
+   "imdb": []
+  },
+  "simon-rhodes": {
+   "display": "Simon Rhodes",
+   "name": "Simon Rhodes",
+   "aliases": [],
+   "imdb": [],
+   "note": "IMDb nm0722529 待確認（有兩位同名）"
+  },
+  "singeetam-srinivasa-rao": {
+   "display": "Singeetam Srinivasa Rao",
+   "name": "Singeetam Srinivasa Rao",
+   "aliases": [],
+   "imdb": []
+  },
+  "terence-blanchard": {
+   "display": "Terence Blanchard",
+   "name": "Terence Blanchard",
+   "aliases": [],
+   "imdb": []
+  },
+  "the-newton-brothers": {
+   "display": "The Newton Brothers",
+   "name": "The Newton Brothers",
+   "aliases": [],
+   "imdb": []
+  },
+  "tony-gatlif": {
+   "display": "Tony Gatlif",
+   "name": "Tony Gatlif",
+   "aliases": [],
+   "imdb": []
+  },
+  "trent-reznor": {
+   "display": "Trent Reznor",
+   "name": "Trent Reznor",
+   "aliases": [
+    "Reznor"
+   ],
+   "imdb": [
+    "nm0722153"
+   ]
+  },
+  "trevor-jones": {
+   "display": "Trevor Jones",
+   "name": "Trevor Jones",
+   "aliases": [],
+   "imdb": []
+  },
+  "tyler-bates": {
+   "display": "Tyler Bates",
+   "name": "Tyler Bates",
+   "aliases": [],
+   "imdb": []
+  },
+  "volker-bertelmann": {
+   "display": "Volker Bertelmann",
+   "name": "Volker Bertelmann",
+   "aliases": [
+    "Hauschka"
+   ],
+   "imdb": [
+    "nm2890617"
+   ]
+  },
+  "wf-smith-leithart": {
+   "display": "W.F. Smith Leithart",
+   "name": "W.F. Smith Leithart",
+   "aliases": [],
+   "imdb": []
+  },
+  "will-van-de-crommert": {
+   "display": "Will Van de Crommert",
+   "name": "Will Van de Crommert",
+   "aliases": [],
+   "imdb": []
+  },
+  "yang-yi-hsiu": {
+   "display": "楊易修",
+   "name": "",
+   "aliases": [],
+   "imdb": []
+  },
+  "yoko-shimomura": {
+   "display": "下村陽子",
+   "name": "Yoko Shimomura",
+   "aliases": [
+    "Yoko Shimomura"
+   ],
+   "imdb": []
+  },
+  "zach-robinson": {
+   "display": "Zach Robinson",
+   "name": "Zach Robinson",
+   "aliases": [],
+   "imdb": []
+  }
+ }
+}

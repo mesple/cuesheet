@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>樂評｜Cue Sheet</title>
+<meta name="description" content="Cue Sheet 的樂評：原聲帶與配樂評論摘要。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="樂評｜Cue Sheet">
+<meta property="og:description" content="Cue Sheet 的樂評：原聲帶與配樂評論摘要。">
+<meta property="og:url" content="https://mesple.github.io/cuesheet/category/reviews/">
+<meta property="og:locale" content="zh_TW">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F0EA; --paper:#FBFAF6; --ink:#28251D; --muted:#7A7974; --soft:#55534C;
+  --line:#D4D1CA; --teal:#01696F; --teal-bg:#EEF4F3;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1B1A16; --paper:#24221D; --ink:#EDEBE4; --muted:#A3A19A; --soft:#C9C6BE;
+    --line:#3B3932; --teal:#4FB3B8; --teal-bg:#1E3233;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1B1A16; --paper:#24221D; --ink:#EDEBE4; --muted:#A3A19A; --soft:#C9C6BE;
+  --line:#3B3932; --teal:#4FB3B8; --teal-bg:#1E3233;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC",-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.6}
+a{color:var(--teal)}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+header.mast{background:var(--paper);border-bottom:5px solid var(--ink)}
+header.mast .wrap{padding-top:18px;padding-bottom:16px}
+.topnav{display:flex;gap:16px;font-size:13px;margin:0 0 14px}
+.topnav a{color:var(--soft);text-decoration:none}
+.topnav a[aria-current="page"]{color:var(--ink);font-weight:700}
+.topnav a:hover{color:var(--teal)}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.title{font-family:Georgia,"Noto Serif TC",serif;font-size:56px;font-weight:700;letter-spacing:-.04em;line-height:.95;margin:8px 0 0}
+.title a{color:inherit;text-decoration:none}
+.sub{font-size:15px;color:var(--soft);margin:12px 0 0;max-width:40em}
+main .wrap{padding-top:8px;padding-bottom:40px}
+.sec{font-size:13px;font-weight:700;letter-spacing:.08em;margin:30px 0 12px;padding-top:8px;border-top:1px solid var(--ink)}
+.sec span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:8px}
+.latest{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;background:var(--paper);border:1px solid var(--line);padding:18px}
+.latest img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.label{font-size:12px;letter-spacing:.08em;color:var(--muted)}
+.tag{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:11px;padding:0 6px;margin-left:6px;line-height:1.6;vertical-align:1px}
+.issue-title{font-family:Georgia,"Noto Serif TC",serif;font-size:22px;font-weight:700;line-height:1.35;margin:4px 0 8px}
+.issue-title a{color:var(--ink);text-decoration:none}
+.issue-title a:hover{color:var(--teal)}
+.note{font-size:15px;line-height:1.75;color:var(--soft);margin:0 0 10px}
+.more{font-size:14px;font-weight:700;text-decoration:none}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{display:block;background:var(--paper);border:1px solid var(--line);padding:16px;text-decoration:none;color:var(--ink)}
+.card:hover{border-color:var(--teal)}
+.card b{display:block;font-size:17px;margin-bottom:4px}
+.card small{display:block;font-size:13px;color:var(--soft)}
+.list .row{padding:16px 0;border-top:1px dotted var(--line)}
+.list .row:first-child{border-top:none}
+footer{border-top:3px double var(--ink);margin-top:10px;padding:12px 0 30px;font-size:12px;color:var(--muted)}
+@media (max-width:600px){
+  .title{font-size:40px}
+  .latest{grid-template-columns:1fr;padding:14px}
+  .cards{grid-template-columns:1fr}
+}
+
+.crumb{font-size:13px;color:var(--muted);margin:22px 0 0}
+.crumb a{color:var(--soft);text-decoration:none}
+.crumb a:hover{color:var(--teal)}
+.pills{margin:14px 0 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pill{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:12px;padding:1px 8px;line-height:1.6;text-decoration:none}
+.pill.solid{background:var(--teal);color:var(--paper)}
+.pill.plain{border-color:var(--line);color:var(--soft)}
+article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.01em}
+.byline{font-size:15px;color:var(--soft);margin:0 0 4px}
+.dateline{font-size:13px;color:var(--muted);margin:0 0 18px}
+.deck{font-size:18px;line-height:1.6;color:var(--soft);margin:0 0 8px}
+.lead{font-size:18px;line-height:1.85;margin:0 0 18px}
+.body{font-size:16px;line-height:1.9}
+.body h2{font-family:Georgia,"Noto Serif TC",serif;font-size:21px;margin:30px 0 8px}
+.body ul{padding-left:22px}
+.body li{margin:4px 0}
+.media{display:grid;gap:14px;margin:6px 0 22px}
+.media.multi{grid-template-columns:repeat(3,minmax(0,1fr))}
+.media figure{margin:0}
+.media img{display:block;width:100%;height:auto;border:1px solid var(--line);background:var(--paper)}
+.media.single img{max-width:360px}
+.media.single.wide img{max-width:100%}
+.media figcaption{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
+.yt{display:block;max-width:480px;text-decoration:none;color:#FBFAF6}
+.yt span{display:block;background:#28251D;color:#FBFAF6;font-size:13px;padding:6px 10px}
+.box{background:var(--paper);border:1px solid var(--line);padding:14px 16px;margin:22px 0 0;font-size:14px}
+.box b{display:block;font-size:12px;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;font-weight:700}
+.box ul{margin:0;padding-left:20px}
+.box li{margin:3px 0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--bg);font-size:13px;padding:1px 8px}
+.rel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
+.rel a{display:block;background:var(--paper);border:1px solid var(--line);padding:12px 14px;text-decoration:none;color:var(--ink)}
+.rel a:hover{border-color:var(--teal)}
+.rel small{display:block;font-size:12px;color:var(--muted)}
+.rel b{display:block;font-size:15px;line-height:1.45;margin-top:2px}
+.items .it{display:grid;grid-template-columns:88px minmax(0,1fr);gap:14px;padding:16px 0;border-top:1px dotted var(--line)}
+.items .it:first-child{border-top:none}
+.items .it.noimg{grid-template-columns:minmax(0,1fr)}
+.items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.items .meta{font-size:12px;color:var(--muted)}
+.items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
+.items h3{font-size:17px;line-height:1.45;margin:4px 0 2px}
+.items h3 a{color:var(--ink);text-decoration:none}
+.items h3 a:hover{color:var(--teal)}
+.items .by{font-size:13px;color:var(--soft)}
+.items p{font-size:14px;line-height:1.7;color:var(--soft);margin:4px 0 0}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
+.filters button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--soft);padding:3px 10px;cursor:pointer}
+.filters button[aria-pressed="true"]{border-color:var(--teal);background:var(--teal);color:var(--paper)}
+.types{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.type-card{background:var(--paper);border:1px solid var(--line);padding:16px}
+.type-card h3{margin:0;font-size:18px}
+.type-card h3 a{color:var(--ink);text-decoration:none}
+.type-card h3 a:hover{color:var(--teal)}
+.type-card h3 small{font-size:12px;color:var(--muted);font-weight:400;margin-left:6px}
+.type-card p{font-size:13px;color:var(--soft);margin:4px 0 8px}
+.type-card ul{margin:0;padding-left:18px;font-size:14px}
+.type-card li{margin:3px 0}
+.type-card li a{color:var(--ink);text-decoration:none}
+.type-card li a:hover{color:var(--teal)}
+@media (max-width:600px){
+  article h2.item-title{font-size:25px}
+  .lead{font-size:17px}
+  .media.multi{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rel,.types{grid-template-columns:1fr}
+  .items .it{grid-template-columns:64px minmax(0,1fr)}
+  .items .thumb img{width:64px}
+}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <nav class="topnav" aria-label="網站"><a href="../../">首頁</a><a href="../../newsletter/">電子報</a><a href="../../category/" aria-current="page">分類</a><a href="../../event/">活動</a></nav>
+  <div class="kicker">Cue Sheet · Reviews</div>
+  <h1 class="title"><a href="../../">Cue Sheet</a></h1>
+  <p class="sub">原聲帶與配樂評論摘要，共 13 則，依日期由新到舊。</p>
+</div></header>
+<main><div class="wrap">
+<p class="crumb"><a href="../">分類</a> › 樂評</p><div class="sec">樂評<span>Reviews</span></div><div class="items"><div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-029/"><img src="https://mesple.github.io/cuesheet/images/2026-10/clear-sky.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月號　·　北美</div>
+<h3><a href="../../item/2026-10-029/">Clear Sky</a></h3><div class="by">Hanan Townshend</div>
+<p>紀錄片主角是對抗成癮的加拿大 Anishinaabe 男子。Southall 欣賞 Townshend（Terrence Malick 的固定合作者）貼合畫面的詩意：平靜沉思，…</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-028/"><img src="https://mesple.github.io/cuesheet/images/2026-10/centurion.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月號　·　歐洲</div>
+<h3><a href="../../item/2026-10-028/">Centurion: The Dancing Stallion</a></h3><div class="by">Arturo Cardelús</div>
+<p>Movie Wave 的 Southall 說它「絕對迷人——溫暖、旋律性強、充滿情感」，鋼琴引出、管弦擴大的主題兼具喜悅與悲傷，令他想起 Debney 早年的家庭劇配樂，唯一…</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-027/"><img src="https://mesple.github.io/cuesheet/images/2026-10/resonance.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月號　·　歐洲</div>
+<h3><a href="../../item/2026-10-027/">Resonance: A Plague Tale Legacy（遊戲）</a></h3><div class="by">Olivier Derivière</div>
+<p>Derivière 部分擺脫系列前作的陰暗，引入地中海與古老音樂的影響。獨唱人聲、合唱與傳統音色帶來近乎儀式的神秘感，史詩、親密與悲劇交織；沉思段落的憂鬱之美與動作、懸疑段落形…</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-026/"><img src="https://mesple.github.io/cuesheet/images/2026-10/africa-earths-wild-home.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月號　·　全球</div>
+<h3><a href="../../item/2026-10-026/">África: El corazón salvaje de la Tierra</a></h3><div class="by">Pinar Toprak</div>
+<p>為史詩而抒情的紀錄片所寫，主題多樣，交替使用交響與民族色彩的音樂：壯麗的管弦樂時刻，與描寫各物種的較親密段落交錯。寫法偏描述性，同時也是對大自然的致敬，對觀眾沉浸於影集呈現的風…</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-025/"><img src="https://mesple.github.io/cuesheet/images/2026-10/east-of-eden.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月號　·　北美</div>
+<h3><a href="../../item/2026-10-025/">East of Eden</a></h3><div class="by">Laura Karpman</div>
+<p>Florence Pugh 主演的 Netflix 七集影集，原聲 10/2 由 Netflix Music 上架。配樂戲劇性而抒情、典雅精緻，圍繞三個主要主題：代表家族羈絆的…</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-024/"><img src="https://mesple.github.io/cuesheet/images/2026-10/les-enfants-de-la-resistance.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月號　·　歐洲</div>
+<h3><a href="../../item/2026-10-024/">Les enfants de la Résistance</a></h3><div class="by">Philippe Rombi</div>
+<p>寬廣、溫暖而感性的交響配樂。主題高貴、帶希望，以管弦樂搭配童聲合唱，寫的是年輕主角的勇氣、友誼與理想，遠離戰爭凱旋式的調子；以此展開豐富而一致的主題織體。納粹佔領下的黑暗段落用…</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-023/"><img src="https://mesple.github.io/cuesheet/images/2026-10/hope.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月號　·　亞洲</div>
+<h3><a href="../../item/2026-10-023/">Hope</a></h3><div class="by">Michael Abels</div>
+<p>Abels 對這部集懸疑、恐怖、史詩與荒誕幽默於一身的電影投入很深。配樂用不安的質地、不協和的和聲與壓迫氛圍，營造從地方危機走向未知對抗的持續威脅感；隨劇情推進，音樂逐漸從恐怖…</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-022/"><img src="https://mesple.github.io/cuesheet/images/2026-10/digger.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月號　·　北美</div>
+<h3><a href="../../item/2026-10-022/">Digger</a></h3><div class="by">Cosmo Sheldrake</div>
+<p>伊納利圖新片，Sheldrake 的劇情長片首作（WaterTower，24 軌）。配樂用來強化諷刺、荒謬幽默與底層不安，野心大、帶點狂妄，多半達成了美學上的企圖；但各種想法堆…</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-020/"><img src="https://mesple.github.io/cuesheet/images/2026-10/verity.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月 6 日　·　北美</div>
+<h3><a href="../../item/2026-10-020/">Verity</a></h3><div class="by">Volker Bertelmann</div>
+<p>評者認為配樂在心理驚悚、愛情劇與情慾三種調性之間搖擺，沒有任何一邊做到位：張力不夠強、情感不夠深，標榜情慾的段落顯得冰冷。主題旋律本身有發展潛力，卻幾乎沒有開展；整體像是刻意用…</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-021/"><img src="https://mesple.github.io/cuesheet/images/2026-10/medora.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 9 月 15 日　·　北美</div>
+<h3><a href="../../item/2026-10-021/">Medora: Empress of the Badlands</a></h3><div class="by">Will Van de Crommert</div>
+<p>幾乎無人知曉的西部片。MMUK 認為這是一份旋律毫不保留、主題豐富的西部配樂，向類型經典致敬又自成一格，稱它是今年最令人驚喜的發現之一。</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-017/"><img src="https://mesple.github.io/cuesheet/images/2026-10/skyward-spirit.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 9 月 8 日　·　全球</div>
+<h3><a href="../../item/2026-10-017/">Skyward Spirit</a></h3><div class="by">James Horner、Simon Rhodes（補完）</div>
+<p>Horner 為雷鳥飛行隊寫的遺作，由 Rhodes 依四頁手稿補完。MMUK 稱是今年最佳，聽到招牌四音動機當場落淚；Movie Wave 指出它與《Flight》結構相近，…</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-019/"><img src="https://mesple.github.io/cuesheet/images/2026-10/explorers.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 9 月　·　北美</div>
+<h3><a href="../../item/2026-10-019/">Explorers（2CD）</a></h3><div class="by">Jerry Goldsmith</div>
+<p>史上最完整版本，取自原始母帶。評者認為 Goldsmith 把合成器寫成樂團裡的另一個聲部，終段〈Gifts / Home Flight〉收攏所有主題，是全作高峰。</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-018/"><img src="https://mesple.github.io/cuesheet/images/2026-10/disclosure-day.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 9 月　·　北美</div>
+<h3><a href="../../item/2026-10-018/">Disclosure Day</a></h3><div class="by">John Williams</div>
+<p>Spielberg 與 Williams 第 30 次合作，風格比史詩型 Williams 收斂；評者找出《春之祭》、佛漢威廉斯與馬勒的引用，視為向師承致意的成熟之作。</p></div></div></div>
+</div></main>
+<footer><div class="wrap">Cue Sheet 為非營利樂迷刊物，文字為編輯摘要與評論，圖片版權屬原權利人，連結皆指向原始來源。</div></footer>
+</body>
+</html>

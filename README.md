@@ -6,6 +6,8 @@
 | --- | --- | --- |
 | `/cuesheet/` | 首頁 | `index.html`（由 `build_pages.py` 產生） |
 | `/cuesheet/newsletter/` | 電子報（深度聆聽版、配樂新訊版與特刊同列） | `newsletter/index.html`（由 `build_pages.py` 產生）、各期 `newsletter/YYYY-MM/index.html` |
+| `/cuesheet/category/` | 分類瀏覽：新聞、樂評、發行、訪談、試聽、訃聞、社群 | `category/`（由 `build_items.py` 產生） |
+| `/cuesheet/item/<id>/` | 單則頁，例 `/item/2026-10-001/` | `item/`（由 `build_items.py` 產生） |
 | `/cuesheet/event/` | 近期國內電影音樂活動 | `event/index.html`，讀取根目錄的 `events.json`、`manual_events.json` |
 
 ## 新增一期電子報
@@ -37,3 +39,11 @@
 - `/cuesheet/newsletter/latest-news/` → 最新一期配樂新訊版
 
 由 `build_pages.py` 依 `newsletter/issues.json` 的 `edition` 自動產生（試刊 `trial` 兩版都算）。MailerLite 歡迎信連到這兩個網址，出新一期時不用改信。
+
+## 單則資料與分類頁（2026-10-28 新增）
+
+- `items/YYYY-MM.json`：每期的單則，一則一筆（欄位見專案檔案庫 `site/cue_sheet_資料欄位草案.md`）。`web`：`true` 上網站、`false` 不上、`null` 待編輯決定；只有 `true` 會產生頁面。`internal_note` 只給編輯看。
+- `issues/YYYY-MM.json`：該期刊頭、編者的話、每欄放哪幾則、週末cue一下。
+- `composers.json`：作曲家代號與顯示名（華人用中文、日本人有漢字用漢字），單則頁會把原刊寫法換成顯示名。
+- 改完資料執行 `python build_items.py`，重建 `item/` 與 `category/`；首頁、列表有變動再執行 `python build_pages.py`。
+- 10 月號試刊是從已排版的 HTML 拆出來的（`tools/split_2026-10.py`、`tools/assemble_2026-10.py`，一次性）；之後各期直接寫成單則資料。
