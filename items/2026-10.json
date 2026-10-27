@@ -1723,8 +1723,8 @@
     }
    ],
    "split": "D3",
-   "web": null,
-   "internal_note": "date 待確認（原刊未寫日期），暫用發刊日；來源是 OnTheScore 首頁，補到單篇網址後再上網站（編輯 10/25 決定）"
+   "web": false,
+   "internal_note": "date 待確認（原刊未寫日期），暫用發刊日；來源是 OnTheScore 首頁，原刊只有一句帶過，編輯 10/28 決定不上網站"
   },
   {
    "id": "2026-10-060",
@@ -1744,8 +1744,8 @@
     }
    ],
    "split": "D4",
-   "web": null,
-   "internal_note": "date 待確認（原刊未寫日期），暫用發刊日；來源是 OnTheScore 首頁，補到單篇網址後再上網站（編輯 10/25 決定）"
+   "web": false,
+   "internal_note": "date 待確認（原刊未寫日期），暫用發刊日；來源是 OnTheScore 首頁，原刊只有一句帶過，編輯 10/28 決定不上網站"
   },
   {
    "id": "2026-10-061",

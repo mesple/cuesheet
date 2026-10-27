@@ -304,11 +304,11 @@ for section, d in raw:
     if section == "interview" and t.startswith("Rupert"):
         src_ = d["sources"]
         add(section, {"title": "Rupert Gregson-Williams 談《Practical Magic 2》", "summary": "OnTheScore「Film Music Live!」影音訪談。", "sources": src_},
-            dict(type="訪談", region="北美", composers=["rupert-gregson-williams"]), split="D3", web=None,
-            internal_note="來源是 OnTheScore 首頁，補到單篇網址後再上網站（編輯 10/25 決定）")
+            dict(type="訪談", region="北美", composers=["rupert-gregson-williams"]), split="D3", web=False,
+            internal_note="來源是 OnTheScore 首頁，原刊只有一句帶過，編輯 10/28 決定不上網站")
         add(section, {"title": "Terence Blanchard 與導演 Elegance Bratton 談《By Any Means》", "summary": "OnTheScore「Film Music Live!」同節目另一集影音訪談。", "sources": src_},
-            dict(type="訪談", region="北美", composers=["terence-blanchard"]), split="D4", web=None,
-            internal_note="來源是 OnTheScore 首頁，補到單篇網址後再上網站（編輯 10/25 決定）")
+            dict(type="訪談", region="北美", composers=["terence-blanchard"]), split="D4", web=False,
+            internal_note="來源是 OnTheScore 首頁，原刊只有一句帶過，編輯 10/28 決定不上網站")
         continue
     if section == "eurasia_h3" and t.startswith("金馬獎"):
         add(section, {"title": t,
