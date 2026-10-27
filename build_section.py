@@ -213,7 +213,8 @@ def item_html(first, ev, shows):
         org_html = ""
     if ev.get("note"):  # note 會顯示給讀者；內部註記請寫在 internal_note
         org_html += f" · {escape(ev['note'])}"
-    return f"""<tr>
+    last = (parse(ev["run"]["end"]).date() if ev.get("run") else max(dates)).isoformat()  # 網站版據此標「已結束」
+    return f"""<tr data-end="{last}">
 <td width="86" valign="top" style="padding:10px 12px 10px 0;border-top:1px dotted #D4D1CA;font-family:{SANS};">
 <div style="font-size:17px;font-weight:700;line-height:1.2;color:#28251D;">{date_txt}</div>
 <div style="font-size:11px;line-height:1.5;color:#7A7974;">{sub}</div></td>

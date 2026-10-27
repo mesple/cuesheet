@@ -12,7 +12,7 @@
 
 ## 新增一期電子報
 
-1. 把該期網頁版放到 `newsletter/YYYY-MM-collector/index.html`（深度聆聽版，每月 5 日）或 `newsletter/YYYY-MM-news/index.html`（配樂新訊版，每月 20 日），特刊用 `newsletter/YYYY-MM-special/`，圖片放 `images/YYYY-MM/`。
+1. 用 `python tools/web_version.py 電子報版.html newsletter/YYYY-MM-xxx/index.html` 由電子報版產生網站版（拿掉網頁版連結與退訂，活動欄加「已結束」標示），放到 `newsletter/YYYY-MM-collector/index.html`（深度聆聽版，每月 5 日）或 `newsletter/YYYY-MM-news/index.html`（配樂新訊版，每月 20 日），特刊用 `newsletter/YYYY-MM-special/`，圖片放 `images/YYYY-MM/`。
 2. 在 `newsletter/issues.json` 加一筆（`editor_note` 是刊頭下方的編者的話，也是首頁與列表頁的摘要）。
 3. 執行 `python build_pages.py`，更新首頁與電子報列表。
 
@@ -47,3 +47,9 @@
 - `composers.json`：作曲家代號與顯示名（華人用中文、日本人有漢字用漢字），單則頁會把原刊寫法換成顯示名。
 - 改完資料執行 `python build_items.py`，重建 `item/` 與 `category/`；首頁、列表有變動再執行 `python build_pages.py`。
 - 10 月號試刊是從已排版的 HTML 拆出來的（`tools/split_2026-10.py`、`tools/assemble_2026-10.py`，一次性）；之後各期直接寫成單則資料。
+
+## 網站版的「已結束」標示（2026-10-28 新增）
+
+- `build_section.py` 在每列活動加上 `data-end`（該列最後一場的日期）。電子報版不受影響。
+- `tools/web_version.py` 在網站版活動欄開頭加一行說明，並附一小段程式：讀者打開頁面時，依臺北時間比對 `data-end`，已結束的場次變淡、標「已結束」。
+- 10 月號試刊已補上（舊刊沒有 `data-end` 時，程式會從左欄日期推算）。
