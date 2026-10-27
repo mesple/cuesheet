@@ -4,6 +4,11 @@
 用法：python tools/split_2026-10.py
 """
 import json
+import os
+import sys
+
+if os.path.exists("items/2026-10.json") and "--force" not in sys.argv:
+    sys.exit("items/2026-10.json 已存在，而且編輯過（以資料檔為準）。真的要從 HTML 重拆並覆蓋，請加 --force。")
 import re
 from bs4 import BeautifulSoup, NavigableString, Tag
 

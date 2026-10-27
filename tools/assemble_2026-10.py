@@ -335,8 +335,8 @@ for section, d in raw:
             dict(type=N, tags=["獎項"], region="歐洲", date="2026-10-01", composers=["semin-son", "gabriel-yared"]))
         continue
     if section == "interview" and t.startswith("Olivier"):
-        add(section, d, meta_for(t), web=None,
-            internal_note="來源是 The Film Scorer 訪談分類頁，不是單篇；和 D3、D4 同樣的問題，補到單篇網址再上網站")
+        add(section, d, meta_for(t), web=True,
+            internal_note="來源是 The Film Scorer 訪談分類頁，不是單篇；和 D3、D4 同樣的問題，編輯 10/28 決定先上，看起來單薄再拿掉")
         continue
     m = meta_for(t)
     if section == "bite" and t.startswith("The Social Reckoning"):
