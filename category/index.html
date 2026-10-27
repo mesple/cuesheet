@@ -54,7 +54,7 @@ main .wrap{padding-top:8px;padding-bottom:40px}
 .issue-title a:hover{color:var(--teal)}
 .note{font-size:15px;line-height:1.75;color:var(--soft);margin:0 0 10px}
 .more{font-size:14px;font-weight:700;text-decoration:none}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .card{display:block;background:var(--paper);border:1px solid var(--line);padding:16px;text-decoration:none;color:var(--ink)}
 .card:hover{border-color:var(--teal)}
 .card b{display:block;font-size:17px;margin-bottom:4px}
@@ -75,7 +75,7 @@ footer{border-top:3px double var(--ink);margin-top:10px;padding:12px 0 30px;font
 .pill{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:12px;padding:1px 8px;line-height:1.6;text-decoration:none}
 .pill.solid{background:var(--teal);color:var(--paper)}
 .pill.plain{border-color:var(--line);color:var(--soft)}
-article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.01em}
+h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.01em}
 .byline{font-size:15px;color:var(--soft);margin:0 0 4px}
 .dateline{font-size:13px;color:var(--muted);margin:0 0 18px}
 .deck{font-size:18px;line-height:1.6;color:var(--soft);margin:0 0 8px}
@@ -98,7 +98,10 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 .box ul{margin:0;padding-left:20px}
 .box li{margin:3px 0}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{border:1px solid var(--line);background:var(--bg);font-size:13px;padding:1px 8px}
+.chip{border:1px solid var(--line);background:var(--bg);font-size:13px;padding:1px 8px;color:var(--ink);text-decoration:none}
+a.chip:hover{border-color:var(--teal);color:var(--teal)}
+.chip small{color:var(--muted);margin-left:4px}
+.alias{font-size:14px;color:var(--muted);margin:4px 0 0}
 .rel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
 .rel a{display:block;background:var(--paper);border:1px solid var(--line);padding:12px 14px;text-decoration:none;color:var(--ink)}
 .rel a:hover{border-color:var(--teal)}
@@ -130,7 +133,7 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 .type-card li a{color:var(--ink);text-decoration:none}
 .type-card li a:hover{color:var(--teal)}
 @media (max-width:600px){
-  article h2.item-title{font-size:25px}
+  h2.item-title{font-size:25px}
   .lead{font-size:17px}
   .media.multi{grid-template-columns:repeat(2,minmax(0,1fr))}
   .rel,.types{grid-template-columns:1fr}
@@ -141,7 +144,7 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 </head>
 <body>
 <header class="mast"><div class="wrap">
-  <nav class="topnav" aria-label="網站"><a href="../">首頁</a><a href="../newsletter/">電子報</a><a href="../category/" aria-current="page">分類</a><a href="../event/">活動</a></nav>
+  <nav class="topnav" aria-label="網站"><a href="../">首頁</a><a href="../newsletter/">電子報</a><a href="../category/" aria-current="page">分類</a><a href="../composer/">作曲家</a><a href="../event/">活動</a></nav>
   <div class="kicker">Monthly film music newsletter</div>
   <h1 class="title"><a href="../">Cue Sheet</a></h1>
   <p class="sub">電子報刊出的每一則，依類型整理。共 77 則。</p>

@@ -38,7 +38,7 @@ EXTRA_CSS = """
 .pill{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:12px;padding:1px 8px;line-height:1.6;text-decoration:none}
 .pill.solid{background:var(--teal);color:var(--paper)}
 .pill.plain{border-color:var(--line);color:var(--soft)}
-article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.01em}
+h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.01em}
 .byline{font-size:15px;color:var(--soft);margin:0 0 4px}
 .dateline{font-size:13px;color:var(--muted);margin:0 0 18px}
 .deck{font-size:18px;line-height:1.6;color:var(--soft);margin:0 0 8px}
@@ -61,7 +61,10 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 .box ul{margin:0;padding-left:20px}
 .box li{margin:3px 0}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{border:1px solid var(--line);background:var(--bg);font-size:13px;padding:1px 8px}
+.chip{border:1px solid var(--line);background:var(--bg);font-size:13px;padding:1px 8px;color:var(--ink);text-decoration:none}
+a.chip:hover{border-color:var(--teal);color:var(--teal)}
+.chip small{color:var(--muted);margin-left:4px}
+.alias{font-size:14px;color:var(--muted);margin:4px 0 0}
 .rel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
 .rel a{display:block;background:var(--paper);border:1px solid var(--line);padding:12px 14px;text-decoration:none;color:var(--ink)}
 .rel a:hover{border-color:var(--teal)}
@@ -93,7 +96,7 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 .type-card li a{color:var(--ink);text-decoration:none}
 .type-card li a:hover{color:var(--teal)}
 @media (max-width:600px){
-  article h2.item-title{font-size:25px}
+  h2.item-title{font-size:25px}
   .lead{font-size:17px}
   .media.multi{grid-template-columns:repeat(2,minmax(0,1fr))}
   .rel,.types{grid-template-columns:1fr}
@@ -231,7 +234,7 @@ def item_page(it, by_id, composers, labels, features):
             more_media = '<div class="sec">圖片<span>Gallery</span></div>' + media_html(rest, title)
     boxes = []
     if codes:
-        chips = "".join(f'<span class="chip">{escape(composers[c]["display"])}</span>' for c in codes if c in composers)
+        chips = "".join(f'<a class="chip" href="../../composer/{c}/">{escape(composers[c]["display"])}</a>' for c in codes if c in composers)
         boxes.append(f'<div class="box"><b>作曲家</b><div class="chips">{chips}</div></div>')
     if it.get("upcoming"):
         lis = []
@@ -347,6 +350,37 @@ def main():
     html = page("分類｜Cue Sheet", "依類型瀏覽 Cue Sheet 刊出的新聞、樂評、新唱片、訪談、試聽、訃聞與社群話題。", f"{SITE}category/", "category",
                 (f'<p class="sub">電子報刊出的每一則，依類型整理。共 {len(shown)} 則。</p>', idx), depth=1)
     open("category/index.html", "w", encoding="utf-8").write(html.replace("</style>", EXTRA_CSS + "</style>", 1))
+
+    # 作曲家頁
+    if os.path.isdir("composer"):
+        shutil.rmtree("composer")
+    by_c = {}
+    for it in shown:
+        for c in it.get("composers", []):
+            by_c.setdefault(c, []).append(it)
+    for c, rows in by_c.items():
+        info = composers[c]
+        other = [n for n in [info.get("name")] + info.get("aliases", []) if n and n != info["display"]]
+        alias = f'<p class="alias">{escape("、".join(dict.fromkeys(other)))}</p>' if other else ""
+        main_html = (f'<p class="crumb"><a href="../">作曲家</a> › {escape(info["display"])}</p>'
+                     f'<h2 class="item-title">{escape(info["display"])}</h2>{alias}'
+                     f'<div class="sec">Cue Sheet 刊出的相關內容<span>{len(rows)} 則</span></div><div class="items">'
+                     + "\n".join(row_html(it, composers, labels, 2) for it in rows) + "</div>")
+        os.makedirs(f"composer/{c}", exist_ok=True)
+        html = page(f"{info['display']}｜Cue Sheet", f"Cue Sheet 刊出與 {info['display']} 相關的 {len(rows)} 則內容。",
+                    f"{SITE}composer/{c}/", "composer", ("", main_html), depth=2, kicker="Cue Sheet · Composers")
+        open(f"composer/{c}/index.html", "w", encoding="utf-8").write(html.replace("</style>", EXTRA_CSS + "</style>", 1))
+    order = sorted(by_c, key=lambda c: (-len(by_c[c]), composers[c]["name"] or composers[c]["display"]))
+    multi = [c for c in order if len(by_c[c]) >= 2]
+    rest = sorted([c for c in order if len(by_c[c]) < 2], key=lambda c: (composers[c]["name"] or composers[c]["display"]).lower())
+    chip = lambda c: f'<a class="chip" href="{c}/">{escape(composers[c]["display"])}<small>{len(by_c[c])}</small></a>'
+    idx = (f'<div class="sec">出現兩次以上<span>{len(multi)} 位</span></div><div class="chips">' + "".join(chip(c) for c in multi) + "</div>"
+           f'<div class="sec">其他作曲家<span>{len(rest)} 位</span></div><div class="chips">' + "".join(chip(c) for c in rest) + "</div>")
+    html = page("作曲家｜Cue Sheet", "依作曲家瀏覽 Cue Sheet 刊出的新聞、樂評、新唱片、訪談與訃聞。", f"{SITE}composer/", "composer",
+                (f'<p class="sub">點作曲家，看 Cue Sheet 刊過的所有相關內容。共 {len(by_c)} 位，數字是則數。</p>', idx), depth=1,
+                kicker="Cue Sheet · Composers")
+    open("composer/index.html", "w", encoding="utf-8").write(html.replace("</style>", EXTRA_CSS + "</style>", 1))
+    print(f"作曲家頁 {len(by_c)} 位（兩則以上 {len(multi)} 位）")
 
     hidden = [it for it in items if it.get("web") is not True]
     print(f"單則頁 {len(shown)} 則；未上網站 {len(hidden)} 則：" + "、".join(f'{it["id"]}（{"待定" if it.get("web") is None else "不上"}）' for it in hidden))

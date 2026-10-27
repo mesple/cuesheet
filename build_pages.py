@@ -50,7 +50,7 @@ main .wrap{padding-top:8px;padding-bottom:40px}
 .issue-title a:hover{color:var(--teal)}
 .note{font-size:15px;line-height:1.75;color:var(--soft);margin:0 0 10px}
 .more{font-size:14px;font-weight:700;text-decoration:none}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .card{display:block;background:var(--paper);border:1px solid var(--line);padding:16px;text-decoration:none;color:var(--ink)}
 .card:hover{border-color:var(--teal)}
 .card b{display:block;font-size:17px;margin-bottom:4px}
@@ -66,7 +66,7 @@ footer{border-top:3px double var(--ink);margin-top:10px;padding:12px 0 30px;font
 """
 
 
-NAV = [("home", "首頁", ""), ("newsletter", "電子報", "newsletter/"), ("category", "分類", "category/"), ("event", "活動", "event/")]
+NAV = [("home", "首頁", ""), ("newsletter", "電子報", "newsletter/"), ("category", "分類", "category/"), ("composer", "作曲家", "composer/"), ("event", "活動", "event/")]
 
 
 def page(title, desc, url, nav, body, image=None, depth=None, kicker="Monthly film music newsletter"):
@@ -136,6 +136,7 @@ def main():
 <div class="cards">
   <a class="card" href="newsletter/"><b>電子報</b><small>每月一期，加上不定期特刊，全部在這裡。</small></a>
   <a class="card" href="category/"><b>分類瀏覽</b><small>新聞、樂評、新唱片、訪談、試聽、訃聞與社群話題，依類型找。</small></a>
+  <a class="card" href="composer/"><b>作曲家</b><small>點一位作曲家，看 Cue Sheet 刊過的所有相關內容。</small></a>
   <a class="card" href="event/"><b>近期國內電影音樂活動</b><small>全台電影、動畫與遊戲音樂的音樂會與講座，選地區、加入行事曆。</small></a>
 </div>"""
     home_sub = '<p class="sub">給電影配樂樂迷的中文電子報。新聞、樂評、新唱片與作曲家訪談，加上全台的電影音樂活動。</p>'

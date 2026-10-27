@@ -55,7 +55,7 @@ main .wrap{padding-top:8px;padding-bottom:40px}
 .issue-title a:hover{color:var(--teal)}
 .note{font-size:15px;line-height:1.75;color:var(--soft);margin:0 0 10px}
 .more{font-size:14px;font-weight:700;text-decoration:none}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .card{display:block;background:var(--paper);border:1px solid var(--line);padding:16px;text-decoration:none;color:var(--ink)}
 .card:hover{border-color:var(--teal)}
 .card b{display:block;font-size:17px;margin-bottom:4px}
@@ -76,7 +76,7 @@ footer{border-top:3px double var(--ink);margin-top:10px;padding:12px 0 30px;font
 .pill{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:12px;padding:1px 8px;line-height:1.6;text-decoration:none}
 .pill.solid{background:var(--teal);color:var(--paper)}
 .pill.plain{border-color:var(--line);color:var(--soft)}
-article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.01em}
+h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.01em}
 .byline{font-size:15px;color:var(--soft);margin:0 0 4px}
 .dateline{font-size:13px;color:var(--muted);margin:0 0 18px}
 .deck{font-size:18px;line-height:1.6;color:var(--soft);margin:0 0 8px}
@@ -99,7 +99,10 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 .box ul{margin:0;padding-left:20px}
 .box li{margin:3px 0}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{border:1px solid var(--line);background:var(--bg);font-size:13px;padding:1px 8px}
+.chip{border:1px solid var(--line);background:var(--bg);font-size:13px;padding:1px 8px;color:var(--ink);text-decoration:none}
+a.chip:hover{border-color:var(--teal);color:var(--teal)}
+.chip small{color:var(--muted);margin-left:4px}
+.alias{font-size:14px;color:var(--muted);margin:4px 0 0}
 .rel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
 .rel a{display:block;background:var(--paper);border:1px solid var(--line);padding:12px 14px;text-decoration:none;color:var(--ink)}
 .rel a:hover{border-color:var(--teal)}
@@ -131,7 +134,7 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 .type-card li a{color:var(--ink);text-decoration:none}
 .type-card li a:hover{color:var(--teal)}
 @media (max-width:600px){
-  article h2.item-title{font-size:25px}
+  h2.item-title{font-size:25px}
   .lead{font-size:17px}
   .media.multi{grid-template-columns:repeat(2,minmax(0,1fr))}
   .rel,.types{grid-template-columns:1fr}
@@ -142,7 +145,7 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 </head>
 <body>
 <header class="mast"><div class="wrap">
-  <nav class="topnav" aria-label="網站"><a href="../../">首頁</a><a href="../../newsletter/">電子報</a><a href="../../category/" aria-current="page">分類</a><a href="../../event/">活動</a></nav>
+  <nav class="topnav" aria-label="網站"><a href="../../">首頁</a><a href="../../newsletter/">電子報</a><a href="../../category/" aria-current="page">分類</a><a href="../../composer/">作曲家</a><a href="../../event/">活動</a></nav>
   <div class="kicker">Cue Sheet · In memoriam</div>
   <h1 class="title"><a href="../../">Cue Sheet</a></h1>
   
@@ -175,7 +178,7 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 <p>Movie Wave 的 James Southall 在 10/10–11 連發六篇 Fenton 舊作評論：《電子情書》《愛在戰火蔓延時》《致命分析》《White Palace》《Mary Reilly》《Dangerous Beauty》。他特別指出，《電子情書》開場曲〈Butterflies in the Subway〉以滾動的鋼琴和輕快的爵士伴奏取代過去甜膩的弦樂，此後多年的浪漫喜劇配樂幾乎都朝這個方向走；他形容這份配樂無可挑剔，甚至可能是史上最好的浪漫喜劇配樂。Film Music Reporter 的讀者留言則感嘆，他是黃金年代所剩不多的大師之一，近年卻少有機會發揮。</p>
 <p><strong>從哪裡開始聽：</strong>《電子情書》〈Butterflies in the Subway〉、《奇幻城市》、《今天暫時停止》、《藍色星球》主題、《我是布萊克》。</p></div>
 <div class="sec">圖片<span>Gallery</span></div><div class="media multi"><figure><img src="https://mesple.github.io/cuesheet/images/2026-10/youve-got-mail.jpg" alt="《電子情書》" loading="lazy"><figcaption>《電子情書》　圖片來源：<a href="https://www.movie-wave.net/youve-got-mail/">Movie Wave</a></figcaption></figure><figure><img src="https://mesple.github.io/cuesheet/images/2026-10/the-blue-planet.jpg" alt="《藍色星球》" loading="lazy"><figcaption>《藍色星球》　圖片來源：<a href="https://www.movie-wave.net/the-blue-planet/">Movie Wave</a></figcaption></figure><figure><img src="https://mesple.github.io/cuesheet/images/2026-10/frozen-planet.jpg" alt="《冰凍星球》" loading="lazy"><figcaption>《冰凍星球》　圖片來源：<a href="https://www.movie-wave.net/frozen-planet/">Movie Wave</a></figcaption></figure><figure><img src="https://mesple.github.io/cuesheet/images/2026-10/dangerous-beauty.jpg" alt="《Dangerous Beauty》" loading="lazy"><figcaption>《Dangerous Beauty》　圖片來源：<a href="https://www.movie-wave.net/dangerous-beauty/">Movie Wave</a></figcaption></figure><figure><img src="https://mesple.github.io/cuesheet/images/2026-10/mary-reilly.jpg" alt="《Mary Reilly》" loading="lazy"><figcaption>《Mary Reilly》　圖片來源：<a href="https://www.movie-wave.net/mary-reilly/">Movie Wave</a></figcaption></figure><figure><img src="https://mesple.github.io/cuesheet/images/2026-10/in-love-and-war.jpg" alt="《愛在戰火蔓延時》" loading="lazy"><figcaption>《愛在戰火蔓延時》　圖片來源：<a href="https://www.movie-wave.net/in-love-and-war/">Movie Wave</a></figcaption></figure></div>
-<div class="box"><b>作曲家</b><div class="chips"><span class="chip">George Fenton</span></div></div><div class="box"><b>來源</b><ul><li><a href="https://filmmusicreporter.com/2026/10/05/george-fenton-1949-2026/">Film Music Reporter</a></li><li><a href="https://moviemusicuk.us/2026/10/05/george-fenton-1949-2026/">Movie Music UK</a></li><li><a href="https://www.movie-wave.net/youve-got-mail/">Movie Wave（You&#x27;ve Got Mail）</a></li><li><a href="https://www.movie-wave.net/">Movie Wave（全部評論）</a></li></ul></div>
+<div class="box"><b>作曲家</b><div class="chips"><a class="chip" href="../../composer/george-fenton/">George Fenton</a></div></div><div class="box"><b>來源</b><ul><li><a href="https://filmmusicreporter.com/2026/10/05/george-fenton-1949-2026/">Film Music Reporter</a></li><li><a href="https://moviemusicuk.us/2026/10/05/george-fenton-1949-2026/">Movie Music UK</a></li><li><a href="https://www.movie-wave.net/youve-got-mail/">Movie Wave（You&#x27;ve Got Mail）</a></li><li><a href="https://www.movie-wave.net/">Movie Wave（全部評論）</a></li></ul></div>
 </article>
 <div class="sec">相關內容<span>Related</span></div><div class="rel"><a href="../2026-10-002/"><small>新聞</small><b>Daniel Pemberton 二度封王：第 26 屆世界電影音樂獎揭曉</b></a></div>
 </div></main>

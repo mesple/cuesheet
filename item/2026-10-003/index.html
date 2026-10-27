@@ -54,7 +54,7 @@ main .wrap{padding-top:8px;padding-bottom:40px}
 .issue-title a:hover{color:var(--teal)}
 .note{font-size:15px;line-height:1.75;color:var(--soft);margin:0 0 10px}
 .more{font-size:14px;font-weight:700;text-decoration:none}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .card{display:block;background:var(--paper);border:1px solid var(--line);padding:16px;text-decoration:none;color:var(--ink)}
 .card:hover{border-color:var(--teal)}
 .card b{display:block;font-size:17px;margin-bottom:4px}
@@ -75,7 +75,7 @@ footer{border-top:3px double var(--ink);margin-top:10px;padding:12px 0 30px;font
 .pill{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:12px;padding:1px 8px;line-height:1.6;text-decoration:none}
 .pill.solid{background:var(--teal);color:var(--paper)}
 .pill.plain{border-color:var(--line);color:var(--soft)}
-article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.01em}
+h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.01em}
 .byline{font-size:15px;color:var(--soft);margin:0 0 4px}
 .dateline{font-size:13px;color:var(--muted);margin:0 0 18px}
 .deck{font-size:18px;line-height:1.6;color:var(--soft);margin:0 0 8px}
@@ -98,7 +98,10 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 .box ul{margin:0;padding-left:20px}
 .box li{margin:3px 0}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{border:1px solid var(--line);background:var(--bg);font-size:13px;padding:1px 8px}
+.chip{border:1px solid var(--line);background:var(--bg);font-size:13px;padding:1px 8px;color:var(--ink);text-decoration:none}
+a.chip:hover{border-color:var(--teal);color:var(--teal)}
+.chip small{color:var(--muted);margin-left:4px}
+.alias{font-size:14px;color:var(--muted);margin:4px 0 0}
 .rel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
 .rel a{display:block;background:var(--paper);border:1px solid var(--line);padding:12px 14px;text-decoration:none;color:var(--ink)}
 .rel a:hover{border-color:var(--teal)}
@@ -130,7 +133,7 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 .type-card li a{color:var(--ink);text-decoration:none}
 .type-card li a:hover{color:var(--teal)}
 @media (max-width:600px){
-  article h2.item-title{font-size:25px}
+  h2.item-title{font-size:25px}
   .lead{font-size:17px}
   .media.multi{grid-template-columns:repeat(2,minmax(0,1fr))}
   .rel,.types{grid-template-columns:1fr}
@@ -141,7 +144,7 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 </head>
 <body>
 <header class="mast"><div class="wrap">
-  <nav class="topnav" aria-label="網站"><a href="../../">首頁</a><a href="../../newsletter/">電子報</a><a href="../../category/" aria-current="page">分類</a><a href="../../event/">活動</a></nav>
+  <nav class="topnav" aria-label="網站"><a href="../../">首頁</a><a href="../../newsletter/">電子報</a><a href="../../category/" aria-current="page">分類</a><a href="../../composer/">作曲家</a><a href="../../event/">活動</a></nav>
   <div class="kicker">Cue Sheet · News</div>
   <h1 class="title"><a href="../../">Cue Sheet</a></h1>
   
@@ -158,7 +161,7 @@ article h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;l
 <p class="lead">Tony Gilroy 以洛杉磯配樂圈為題的新片，音樂署名「The Behemoth! Collective」，由 Silvestri、James Newton Howard、Giacchino、Jackman、Abels、Brandon Roberts、Nami Melumad、Emily Bear、Lukas Frank 九人各寫一部片中虛構作品的配樂。10/2 首映後，Variety 的 Jazz Tangcay 稱九人配樂是一大勝利，World of Reel 彙整評價「多數正面、部分褒貶互見」，並推論奧斯卡署名上限三人、本片配樂可能不具資格（影藝學院未表態）。12/4 美國上映，原聲帶尚未公告。</p>
 
 
-<div class="box"><b>作曲家</b><div class="chips"><span class="chip">Alan Silvestri</span><span class="chip">James Newton Howard</span><span class="chip">Michael Giacchino</span><span class="chip">Henry Jackman</span><span class="chip">Michael Abels</span><span class="chip">Brandon Roberts</span><span class="chip">Nami Melumad</span><span class="chip">Emily Bear</span><span class="chip">Lukas Frank</span></div></div><div class="box"><b>接下來</b><ul><li>12/4　《Behemoth!》美國上映</li></ul></div><div class="box"><b>來源</b><ul><li><a href="https://filmmusicreporter.com/2026/10/01/multi-composer-approach-for-tony-gilroys-behemoth-revealed/">FMR</a></li><li><a href="https://www.joblo.com/behemoth-first-reactions-pedro-pascal-film/">JoBlo</a></li><li><a href="https://www.worldofreel.com/blog/2026/10/2/behemoth-lands-mixed-reviews-at-nyff">World of Reel</a></li><li><a href="https://www.news4jax.com/entertainment/2026/10/05/tony-gilroy-on-leaving-the-politics-of-andor-behind-for-his-9-composer-music-drama-behemoth/">美聯社</a></li></ul></div>
+<div class="box"><b>作曲家</b><div class="chips"><a class="chip" href="../../composer/alan-silvestri/">Alan Silvestri</a><a class="chip" href="../../composer/james-newton-howard/">James Newton Howard</a><a class="chip" href="../../composer/michael-giacchino/">Michael Giacchino</a><a class="chip" href="../../composer/henry-jackman/">Henry Jackman</a><a class="chip" href="../../composer/michael-abels/">Michael Abels</a><a class="chip" href="../../composer/brandon-roberts/">Brandon Roberts</a><a class="chip" href="../../composer/nami-melumad/">Nami Melumad</a><a class="chip" href="../../composer/emily-bear/">Emily Bear</a><a class="chip" href="../../composer/lukas-frank/">Lukas Frank</a></div></div><div class="box"><b>接下來</b><ul><li>12/4　《Behemoth!》美國上映</li></ul></div><div class="box"><b>來源</b><ul><li><a href="https://filmmusicreporter.com/2026/10/01/multi-composer-approach-for-tony-gilroys-behemoth-revealed/">FMR</a></li><li><a href="https://www.joblo.com/behemoth-first-reactions-pedro-pascal-film/">JoBlo</a></li><li><a href="https://www.worldofreel.com/blog/2026/10/2/behemoth-lands-mixed-reviews-at-nyff">World of Reel</a></li><li><a href="https://www.news4jax.com/entertainment/2026/10/05/tony-gilroy-on-leaving-the-politics-of-andor-behind-for-his-9-composer-music-drama-behemoth/">美聯社</a></li></ul></div>
 </article>
 
 </div></main>
