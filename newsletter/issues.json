@@ -10,6 +10,15 @@
       "editor_note": "十月，我們送走了 George Fenton。《電子情書》開場那段輕快的鋼琴，原來已經陪了我們這麼久。「世界電影音樂獎」揭曉，看看是誰接下了大師的棒子。新唱片上架、作曲家訪談...熱鬧的十月。週末有空，挑一場離你最近的電影音樂會吧。",
       "image": "images/2026-10/share-card.jpg",
       "edition": "trial"
+    },
+    {
+      "slug": "2026-10-special",
+      "label": "2026 金馬影展特刊",
+      "date": "2026-10-28",
+      "title": "看片之前，先聽配樂：2026 金馬影展原聲帶指南",
+      "special": true,
+      "editor_note": "2026 台北金馬影展（11/6–11/22）原聲帶指南：42 部影片的配樂與主題曲，附 Spotify、YouTube 收聽連結。",
+      "edition": "special"
     }
   ]
 }
