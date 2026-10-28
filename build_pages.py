@@ -140,7 +140,7 @@ def main():
   <a class="card" href="composer/"><b>作曲家</b><small>點一位作曲家，看 Cue Sheet 刊過的所有相關內容。</small></a>
   <a class="card" href="event/"><b>近期國內電影音樂活動</b><small>全台電影、動畫與遊戲音樂的音樂會與講座，選地區、加入行事曆。</small></a>
 </div>"""
-    home_sub = '<p class="sub">給電影配樂樂迷的中文電子報。新聞、樂評、新唱片與作曲家訪談，加上全台的電影音樂活動。</p>'
+    home_sub = '<p class="sub">配樂迷做給配樂迷的電影音樂電子報，新聞、樂評、新唱片與作曲家訪談，還收錄全台電影音樂活動。</p>'
     open("index.html", "w", encoding="utf-8").write(page(
         "Cue Sheet｜中文電影配樂電子報", latest["editor_note"], SITE, "home",
         (home_sub, home_main), latest.get("image")))
