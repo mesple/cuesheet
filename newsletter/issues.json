@@ -1,5 +1,5 @@
 {
-  "說明": "電子報各期清單（深度聆聽版、配樂新訊版與特刊同列）。新增一期：加一筆，再執行 python build_pages.py。edition 填 collector（深度聆聽版）、news（配樂新訊版）、trial（試刊，兩版合刊）或 special（特刊）；special 會顯示「特刊」標籤。editor_note 是刊頭下方的編者的話，也用在首頁與列表頁的摘要。build_pages.py 也會更新 newsletter/latest-collector/ 與 latest-news/ 兩個固定網址，指向各版最新一期（試刊兩版都算）。",
+  "說明": "電子報各期清單（深度聆聽版、配樂新訊版與特刊同列）。新增一期：加一筆，再執行 python build_pages.py。edition 填 collector（深度聆聽版）、news（配樂新訊版）、trial（試刊，兩版合刊）或 special（特刊）；special 會顯示「特刊」標籤。editor_note 是刊頭下方的編者的話，也用在首頁與列表頁的摘要。build_pages.py 也會更新 newsletter/latest-collector/ 與 latest-news/ 兩個固定網址，指向各版最新一期（試刊兩版都算）。 首頁「最新一期」的圖用 cover（純圖片，不放電子報或分享圖截圖），可加 cover_credit 圖說；image 是轉貼預覽用的分享圖。",
   "issues": [
     {
       "slug": "2026-10",
@@ -19,7 +19,9 @@
       "special": true,
       "editor_note": "2026 台北金馬影展 11 月 6 日開幕，到 22 日為止。我們把影展 171 部片逐一查過，整理出 42 部已經可以線上收聽的原聲帶、配樂曲目與主題曲，依影展單元排列，每部附上收聽連結。",
       "edition": "special",
-      "image": "images/2026-10/special-share-card.jpg"
+      "image": "images/2026-10/special-share-card.jpg",
+      "cover": "images/2026-10/special-cover.jpg",
+      "cover_credit": "圖片來源：金馬獎官網（2026 台北金馬影展主視覺）"
     }
   ]
 }

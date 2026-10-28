@@ -43,6 +43,7 @@ main .wrap{padding-top:8px;padding-bottom:40px}
 .sec span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:8px}
 .latest{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;background:var(--paper);border:1px solid var(--line);padding:18px}
 .latest.noimg{grid-template-columns:1fr}
+.latest .credit{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.5}
 .latest img{width:100%;height:auto;display:block;border:1px solid var(--line)}
 .label{font-size:12px;letter-spacing:.08em;color:var(--muted)}
 .tag{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:11px;padding:0 6px;margin-left:6px;line-height:1.6;vertical-align:1px}
@@ -122,7 +123,10 @@ def main():
     latest = issues[0]
 
     # 首頁
-    img = f'<a href="newsletter/{latest["slug"]}/"><img src="{latest["image"]}" alt="{escape(latest["label"])}封面"></a>' if latest.get("image") else ""
+    # 首頁圖：優先用 cover（純圖片，不含刊頭文字）；image 是轉貼預覽用的分享圖，沒有 cover 才退回用它
+    cover = latest.get("cover") or latest.get("image")
+    credit = f'<div class="credit">{escape(latest["cover_credit"])}</div>' if latest.get("cover") and latest.get("cover_credit") else ""
+    img = f'<a href="newsletter/{latest["slug"]}/"><img src="{cover}" alt="{escape(latest["label"])}封面"></a>{credit}' if cover else ""
     home_main = f"""<div class="sec">最新一期<span>Latest Issue</span></div>
 <div class="latest{'' if img else ' noimg'}">
   {'<div>' + img + '</div>' if img else ''}
