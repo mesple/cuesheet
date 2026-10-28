@@ -42,6 +42,7 @@ main .wrap{padding-top:8px;padding-bottom:40px}
 .sec{font-size:13px;font-weight:700;letter-spacing:.08em;margin:30px 0 12px;padding-top:8px;border-top:1px solid var(--ink)}
 .sec span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:8px}
 .latest{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;background:var(--paper);border:1px solid var(--line);padding:18px}
+.latest.noimg{grid-template-columns:1fr}
 .latest img{width:100%;height:auto;display:block;border:1px solid var(--line)}
 .label{font-size:12px;letter-spacing:.08em;color:var(--muted)}
 .tag{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:11px;padding:0 6px;margin-left:6px;line-height:1.6;vertical-align:1px}
@@ -123,8 +124,8 @@ def main():
     # 首頁
     img = f'<a href="newsletter/{latest["slug"]}/"><img src="{latest["image"]}" alt="{escape(latest["label"])}封面"></a>' if latest.get("image") else ""
     home_main = f"""<div class="sec">最新一期<span>Latest Issue</span></div>
-<div class="latest">
-  <div>{img}</div>
+<div class="latest{'' if img else ' noimg'}">
+  {'<div>' + img + '</div>' if img else ''}
   <div>
     {issue_meta(latest)}
     <div class="issue-title"><a href="newsletter/{latest['slug']}/">{escape(latest['title'])}</a></div>
