@@ -648,15 +648,6 @@
 "start_date": "2026/11/04"
 },
 {
-"uid": "6a57bdb526b32427d06041b7",
-"category": "音樂",
-"title": "聖光煉焰～托馬許．卡米耶尼亞克2026台灣音樂會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2073325986027565057",
-"start_date": "2026/10/29"
-},
-{
 "uid": "6a57bdb526b32427d06041bb",
 "category": "音樂",
 "title": "《光影與詩》馬利歐．凡薩戈、帕斯卡．羅傑與NSO-2026苗北藝術節",
@@ -798,7 +789,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2068984452018319361",
-"start_date": "2026/10/29"
+"start_date": "2026/10/30"
 },
 {
 "uid": "6a68e15526b32427d06042d0",
@@ -1042,15 +1033,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2080549427189858305",
 "start_date": "2026/11/04"
-},
-{
-"uid": "6a70ca6926b32427d0604336",
-"category": "音樂",
-"title": "浮生詩境－謝維庭2026鋼琴獨奏會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2082315899354886144",
-"start_date": "2026/10/29"
 },
 {
 "uid": "6a70ca6926b32427d0604338",
@@ -3312,15 +3294,6 @@
 "start_date": "2026/11/12"
 },
 {
-"uid": "6ac3dafe26b324165c32e59a",
-"category": "音樂",
-"title": "唱彈詩與樂 合唱音樂會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2105220235260489728",
-"start_date": "2026/10/29"
-},
-{
 "uid": "6ac3dafe26b324165c32e59b",
 "category": "音樂",
 "title": "CA．MA音樂廚房-簧格Punch・歲末派對",
@@ -4293,6 +4266,42 @@
 "start_date": "2026/12/27"
 },
 {
+"uid": "6ae37f3326b3245efc753742",
+"category": "音樂",
+"title": "《四季》2026台北青管系列音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2112038520336478209",
+"start_date": "2026/12/29"
+},
+{
+"uid": "6ae37f3326b3245efc753743",
+"category": "音樂",
+"title": "賽門．拉圖爵士與巴伐利亞廣播交響樂團開放彩排教育活動",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2108147849766019073",
+"start_date": "2026/11/15"
+},
+{
+"uid": "6ae37f3326b3245efc753744",
+"category": "音樂",
+"title": "行過山河 ‧ 遇見星空",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2114001967207419904",
+"start_date": "2027/01/07"
+},
+{
+"uid": "6ae37f3326b3245efc753745",
+"category": "音樂",
+"title": "立陶宛Vilnius國家合唱團-首度訪台音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2114926880582537216",
+"start_date": "2026/12/15"
+},
+{
 "uid": "68950a2f26b324477c8a1474",
 "category": "講座",
 "title": "生活工藝館-陶藝DIY手作體驗",
@@ -5254,15 +5263,6 @@
 "description": "2026年12月【和美鎮立圖書館-電影欣賞】\r\n地點：本館一樓嬰幼兒區\r\n時間：12月6日星期日  上午10:00",
 "web": "https://www.facebook.com/profile.php?id=100064506377025",
 "start_date": "2026/12/06"
-},
-{
-"uid": "6a8490fc26b32427d0604436",
-"category": "電影",
-"title": "【府中15】紀錄片放映院《畫外謎踪》",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2086022869536436225",
-"start_date": "2026/10/29"
 },
 {
 "uid": "6aaacecc26b324165c32e494",

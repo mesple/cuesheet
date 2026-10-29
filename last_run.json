@@ -1,9 +1,9 @@
 {
- "run_at": "2026-10-29T07:44:11+08:00",
+ "run_at": "2026-10-30T07:44:33+08:00",
  "categories": {
   "音樂": {
-   "fetched": 477,
-   "baseline": 477,
+   "fetched": 478,
+   "baseline": 478,
    "attempts": 1,
    "error": null
   },
@@ -14,8 +14,8 @@
    "error": null
   },
   "電影": {
-   "fetched": 93,
-   "baseline": 93,
+   "fetched": 92,
+   "baseline": 92,
    "attempts": 1,
    "error": null
   },
