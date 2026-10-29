@@ -1,4 +1,5 @@
-"""產生 Cue Sheet 網站的首頁（index.html）與電子報列表頁（newsletter/index.html）。
+"""產生 Cue Sheet 網站的電子報列表頁（newsletter/index.html），並呼叫 build_items.build_home() 產生首頁。
+共用的版型（刊頭、導覽、CSS）也在這裡：page()。
 
 資料：newsletter/issues.json（月刊與特刊同列）。
 用法：python build_pages.py
@@ -8,10 +9,14 @@ from html import escape
 
 SITE = "https://mesple.github.io/cuesheet/"
 
+# 訂閱表單網址（MailerLite）。留空時刊頭只顯示標語、不顯示「訂閱」連結。
+SUBSCRIBE_URL = ""
+TAGLINE = "一份給配樂迷的電影音樂刊物"
+
 CSS = """
 :root{
-  --bg:#F2F0EA; --paper:#FBFAF6; --ink:#28251D; --muted:#7A7974; --soft:#55534C;
-  --line:#D4D1CA; --teal:#01696F; --teal-bg:#EEF4F3;
+  --bg:#F4F1E8; --paper:#FBFAF6; --ink:#1F1D18; --muted:#625E55; --soft:#4B4840;
+  --line:#CFC9BA; --teal:#01696F; --teal-bg:#E6EEEC;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -27,59 +32,74 @@ CSS = """
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:"Noto Sans TC",-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.6}
 a{color:var(--teal)}
-.wrap{max-width:820px;margin:0 auto;padding:0 16px}
-header.mast{background:var(--paper);border-bottom:5px solid var(--ink)}
-header.mast .wrap{padding-top:18px;padding-bottom:16px}
-.topnav{display:flex;gap:16px;font-size:13px;margin:0 0 14px}
-.topnav a{color:var(--soft);text-decoration:none}
-.topnav a[aria-current="page"]{color:var(--ink);font-weight:700}
-.topnav a:hover{color:var(--teal)}
-.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.title{font-family:Georgia,"Noto Serif TC",serif;font-size:56px;font-weight:700;letter-spacing:-.04em;line-height:.95;margin:8px 0 0}
+.serif{font-family:"Noto Serif TC",Georgia,serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.narrow{max-width:780px;margin:0 auto}
+header.mast .strip{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font-size:12px;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--ink)}
+header.mast .strip a{color:var(--teal);font-weight:700;text-decoration:none}
+header.mast .brand{text-align:center;padding:18px 0 10px}
+.title{font-family:"Noto Serif TC",Georgia,serif;font-size:84px;line-height:1;margin:0;letter-spacing:-.03em;font-weight:900}
 .title a{color:inherit;text-decoration:none}
-.sub{font-size:15px;color:var(--soft);margin:12px 0 0;max-width:40em}
-main .wrap{padding-top:8px;padding-bottom:40px}
-.sec{font-size:13px;font-weight:700;letter-spacing:.08em;margin:30px 0 12px;padding-top:8px;border-top:1px solid var(--ink)}
-.sec span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:8px}
-.latest{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;background:var(--paper);border:1px solid var(--line);padding:18px}
-.latest.noimg{grid-template-columns:1fr}
-.latest .credit{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.5}
-.latest img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.kicker{margin:8px 0 0;font-size:13px;letter-spacing:.2em;color:var(--muted)}
+.topnav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 26px;border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;font-size:15px;font-weight:700}
+.topnav a{color:var(--ink);text-decoration:none}
+.topnav a:hover{color:var(--teal)}
+.topnav a[aria-current="page"]{color:var(--teal)}
+.intro{font-size:15px;color:var(--soft);margin:22px 0 0}
+main .wrap{padding-top:4px;padding-bottom:40px}
+.sec{font-size:13px;font-weight:700;letter-spacing:.14em;margin:30px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.sec span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:8px;font-weight:700}
+.sec .more-r{float:right;font-size:12px;letter-spacing:.04em;text-transform:none;color:var(--teal);text-decoration:none;margin:0}
+.band{margin-top:34px;border-top:3px double var(--ink);padding-top:14px}
+.band > .sec:first-child{margin-top:0}
 .label{font-size:12px;letter-spacing:.08em;color:var(--muted)}
 .tag{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:11px;padding:0 6px;margin-left:6px;line-height:1.6;vertical-align:1px}
-.issue-title{font-family:Georgia,"Noto Serif TC",serif;font-size:22px;font-weight:700;line-height:1.35;margin:4px 0 8px}
+.issue-title{font-family:"Noto Serif TC",Georgia,serif;font-size:22px;font-weight:700;line-height:1.35;margin:4px 0 8px}
 .issue-title a{color:var(--ink);text-decoration:none}
 .issue-title a:hover{color:var(--teal)}
 .note{font-size:15px;line-height:1.75;color:var(--soft);margin:0 0 10px}
 .more{font-size:14px;font-weight:700;text-decoration:none}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.card{display:block;background:var(--paper);border:1px solid var(--line);padding:16px;text-decoration:none;color:var(--ink)}
-.card:hover{border-color:var(--teal)}
-.card b{display:block;font-size:17px;margin-bottom:4px}
-.card small{display:block;font-size:13px;color:var(--soft)}
-.list .row{padding:16px 0;border-top:1px dotted var(--line)}
+.list .row{padding:18px 0;border-top:1px solid var(--line)}
 .list .row:first-child{border-top:none}
-footer{border-top:3px double var(--ink);margin-top:10px;padding:12px 0 30px;font-size:12px;color:var(--muted)}
-@media (max-width:600px){
-  .title{font-size:40px}
-  .latest{grid-template-columns:1fr;padding:14px}
-  .cards{grid-template-columns:1fr}
+footer{border-top:3px double var(--ink);margin-top:16px;padding:14px 0 34px;font-size:12px;color:var(--muted);text-align:center}
+footer b{font-family:"Noto Serif TC",Georgia,serif;color:var(--ink);font-size:14px}
+@media (max-width:760px){
+  .title{font-size:52px}
+  .topnav{justify-content:flex-start;gap:6px 16px;font-size:14px}
 }
 """
 
 
-NAV = [("home", "首頁", ""), ("newsletter", "電子報", "newsletter/"), ("category", "分類", "category/"), ("composer", "作曲家", "composer/"), ("event", "活動", "event/")]
+NAV = [("newsletter", "電子報", "newsletter/"), ("news", "新聞", "category/news/"), ("reviews", "樂評", "category/reviews/"),
+       ("releases", "新唱片", "category/releases/"), ("interviews", "訪談", "category/interviews/"),
+       ("community", "社群", "category/community/"), ("composer", "作曲家", "composer/"), ("event", "活動", "event/"),
+       ("category", "全部分類", "category/")]
+
+DATE_JS = """<script>(function(){try{var d=new Date(Date.now()+8*3600e3),w="日一二三四五六";
+document.getElementById("today").textContent=d.getUTCFullYear()+" 年 "+(d.getUTCMonth()+1)+" 月 "+d.getUTCDate()+" 日 星期"+w[d.getUTCDay()];}catch(e){}})();</script>"""
 
 
-def page(title, desc, url, nav, body, image=None, depth=None, kicker="Monthly film music newsletter"):
-    """depth：頁面在網站根目錄下第幾層（首頁 0、newsletter/ 1、item/<id>/ 2）。"""
+def masthead(prefix, nav):
+    up = prefix if prefix != "./" else ""
+    navhtml = "".join(
+        f'<a href="{up}{path}"' + (' aria-current="page"' if k == nav else "") + f'>{n}</a>' for k, n, path in NAV)
+    sub = f' · <a href="{SUBSCRIBE_URL}">訂閱</a>' if SUBSCRIBE_URL else ""
+    return f"""<header class="mast"><div class="wrap">
+  <div class="strip"><span id="today">Cue Sheet</span><span>{TAGLINE}{sub}</span></div>
+  <div class="brand"><h1 class="title"><a href="{prefix}">Cue Sheet</a></h1><p class="kicker">FILM MUSIC NEWSLETTER</p></div>
+  <nav class="topnav" aria-label="網站">{navhtml}</nav>
+</div></header>"""
+
+
+def page(title, desc, url, nav, body, image=None, depth=None, kicker=None, wide=False):
+    """depth：頁面在網站根目錄下第幾層（首頁 0、newsletter/ 1、item/<id>/ 2）。
+    body：(頁首說明, 主內容)。wide=True 用整頁寬（首頁），其餘頁面主內容置中 780px。"""
     if depth is None:
         depth = {"home": 0}.get(nav, 1)
     prefix = "../" * depth or "./"
-    navhtml = "".join(
-        f'<a href="{prefix if not path else ("../" * depth) + path}"' + (' aria-current="page"' if k == nav else "") + f'>{n}</a>'
-        for k, n, path in NAV)
     og_img = f'<meta property="og:image" content="{SITE}{image}">\n' if image else ""
+    intro = body[0].replace('class="sub"', 'class="intro"') if body[0] else ""
+    inner = f"{intro}\n{body[1]}" if wide else f'<div class="narrow">{intro}\n{body[1]}</div>'
     return f"""<!doctype html>
 <html lang="zh-Hant">
 <head>
@@ -93,20 +113,16 @@ def page(title, desc, url, nav, body, image=None, depth=None, kicker="Monthly fi
 <meta property="og:url" content="{url}">
 {og_img}<meta property="og:locale" content="zh_TW">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
 <style>{CSS}</style>
 </head>
 <body>
-<header class="mast"><div class="wrap">
-  <nav class="topnav" aria-label="網站">{navhtml}</nav>
-  <div class="kicker">{escape(kicker)}</div>
-  <h1 class="title"><a href="{prefix}">Cue Sheet</a></h1>
-  {body[0]}
-</div></header>
+{masthead(prefix, nav)}
 <main><div class="wrap">
-{body[1]}
+{inner}
 </div></main>
-<footer><div class="wrap">Cue Sheet 為非營利樂迷刊物，文字為編輯摘要與評論，圖片版權屬原權利人，連結皆指向原始來源。</div></footer>
+<footer><div class="wrap"><b>Cue Sheet</b><br>每月 5 日深度聆聽版、20 日配樂新訊版<br>Cue Sheet 為非營利樂迷刊物，文字為編輯摘要與評論，圖片版權屬原權利人，連結皆指向原始來源。</div></footer>
+{DATE_JS}
 </body>
 </html>
 """
@@ -122,33 +138,6 @@ def main():
     issues = sorted(data["issues"], key=lambda x: x["date"], reverse=True)
     latest = issues[0]
 
-    # 首頁
-    # 首頁圖：優先用 cover（純圖片，不含刊頭文字）；image 是轉貼預覽用的分享圖，沒有 cover 才退回用它
-    cover = latest.get("cover") or latest.get("image")
-    credit = f'<div class="credit">{escape(latest["cover_credit"])}</div>' if latest.get("cover") and latest.get("cover_credit") else ""
-    img = f'<a href="newsletter/{latest["slug"]}/"><img src="{cover}" alt="{escape(latest["label"])}封面"></a>{credit}' if cover else ""
-    home_main = f"""<div class="sec">最新一期<span>Latest Issue</span></div>
-<div class="latest{'' if img else ' noimg'}">
-  {'<div>' + img + '</div>' if img else ''}
-  <div>
-    {issue_meta(latest)}
-    <div class="issue-title"><a href="newsletter/{latest['slug']}/">{escape(latest['title'])}</a></div>
-    <p class="note">{escape(latest['editor_note'])}</p>
-    <a class="more" href="newsletter/{latest['slug']}/">閱讀本期 →</a>
-  </div>
-</div>
-<div class="sec">逛逛<span>Explore</span></div>
-<div class="cards">
-  <a class="card" href="newsletter/"><b>電子報</b><small>每月一期，加上不定期特刊，全部在這裡。</small></a>
-  <a class="card" href="category/"><b>分類瀏覽</b><small>新聞、樂評、新唱片、訪談、試聽、訃聞與社群話題，依類型找。</small></a>
-  <a class="card" href="composer/"><b>作曲家</b><small>點一位作曲家，看 Cue Sheet 刊過的所有相關內容。</small></a>
-  <a class="card" href="event/"><b>近期國內電影音樂活動</b><small>全台電影、動畫與遊戲音樂的音樂會與講座，選地區、加入行事曆。</small></a>
-</div>"""
-    home_sub = '<p class="sub">配樂迷做給配樂迷的電影音樂電子報，新聞、樂評、新唱片與作曲家訪談，還收錄全台電影音樂活動。</p>'
-    open("index.html", "w", encoding="utf-8").write(page(
-        "Cue Sheet｜中文電影配樂電子報", latest["editor_note"], SITE, "home",
-        (home_sub, home_main), latest.get("image")))
-
     # 電子報列表
     rows = []
     for it in issues:
@@ -163,8 +152,10 @@ def main():
     open("newsletter/index.html", "w", encoding="utf-8").write(page(
         "電子報｜Cue Sheet", "Cue Sheet 各期電子報，月刊與特刊。", SITE + "newsletter/", "newsletter",
         (list_sub, list_main), latest.get("image")))
-    print(f"首頁與電子報列表已產生，共 {len(issues)} 期")
+    print(f"電子報列表已產生，共 {len(issues)} 期")
     build_latest(issues)
+    from build_items import build_home
+    build_home()
 
 
 def redirect_page(target, label):
@@ -176,7 +167,7 @@ def redirect_page(target, label):
 <link rel="canonical" href="{SITE}newsletter/{target}/">
 <meta http-equiv="refresh" content="0; url=../{target}/">
 <script>location.replace("../{target}/" + location.hash);</script>
-<style>body{{font-family:-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;background:#F2F0EA;color:#28251D;padding:40px 16px;text-align:center}}a{{color:#01696F}}</style>
+<style>body{{font-family:-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;background:#F4F1E8;color:#1F1D18;padding:40px 16px;text-align:center}}a{{color:#01696F}}</style>
 </head><body><p>正在前往最新一期{escape(label)}……</p><p><a href="../{target}/">沒有自動跳轉請點這裡</a></p></body></html>
 """
 

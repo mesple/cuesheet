@@ -38,13 +38,13 @@ EXTRA_CSS = """
 .pill{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:12px;padding:1px 8px;line-height:1.6;text-decoration:none}
 .pill.solid{background:var(--teal);color:var(--paper)}
 .pill.plain{border-color:var(--line);color:var(--soft)}
-h2.item-title{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.01em}
+h2.item-title{font-family:"Noto Serif TC",Georgia,serif;font-size:32px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.01em}
 .byline{font-size:15px;color:var(--soft);margin:0 0 4px}
 .dateline{font-size:13px;color:var(--muted);margin:0 0 18px}
 .deck{font-size:18px;line-height:1.6;color:var(--soft);margin:0 0 8px}
 .lead{font-size:18px;line-height:1.85;margin:0 0 18px}
 .body{font-size:16px;line-height:1.9}
-.body h2{font-family:Georgia,"Noto Serif TC",serif;font-size:21px;margin:30px 0 8px}
+.body h2{font-family:"Noto Serif TC",Georgia,serif;font-size:21px;margin:30px 0 8px}
 .body ul{padding-left:22px}
 .body li{margin:4px 0}
 .media{display:grid;gap:14px;margin:6px 0 22px}
@@ -269,7 +269,7 @@ def item_page(it, by_id, composers, labels, features):
 </article>
 {rel_html}"""
     desc = summary if len(summary) <= 120 else summary[:118] + "…"
-    html = page(f"{title}｜Cue Sheet", desc, f"{SITE}item/{it['id']}/", "category", ("", article),
+    html = page(f"{title}｜Cue Sheet", desc, f"{SITE}item/{it['id']}/", slug, ("", article),
                 depth=2, kicker=f"Cue Sheet · {dict((t, e) for t, _, e, _ in TYPES)[it['type']]}")
     img = first_image(it)
     if img:
@@ -338,7 +338,7 @@ def main():
                      + "\n".join(row_html(it, composers, labels, 2) for it in rows) + "</div>"
                      + (FILTER_JS if filters else ""))
         os.makedirs(f"category/{slug}", exist_ok=True)
-        html = page(f"{t}｜Cue Sheet", f"Cue Sheet 的{t}：{desc}。", f"{SITE}category/{slug}/", "category",
+        html = page(f"{t}｜Cue Sheet", f"Cue Sheet 的{t}：{desc}。", f"{SITE}category/{slug}/", slug,
                     (f'<p class="sub">{desc}，共 {len(rows)} 則，依日期由新到舊。</p>', main_html), depth=2,
                     kicker=f"Cue Sheet · {en}")
         open(f"category/{slug}/index.html", "w", encoding="utf-8").write(html.replace("</style>", EXTRA_CSS + "</style>", 1))
@@ -382,8 +382,202 @@ def main():
     open("composer/index.html", "w", encoding="utf-8").write(html.replace("</style>", EXTRA_CSS + "</style>", 1))
     print(f"作曲家頁 {len(by_c)} 位（兩則以上 {len(multi)} 位）")
 
+    build_home()
     hidden = [it for it in items if it.get("web") is not True]
     print(f"單則頁 {len(shown)} 則；未上網站 {len(hidden)} 則：" + "、".join(f'{it["id"]}（{"待定" if it.get("web") is None else "不上"}）' for it in hidden))
+
+
+
+HOME_CSS = """
+.h-grid{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(0,1fr);margin-top:22px}
+.h-lead{padding-right:24px;border-right:1px solid var(--ink)}
+.h-side{padding-left:24px}
+.h-side .sec:first-child{margin-top:0}
+.h-head{font-family:"Noto Serif TC",Georgia,serif;font-size:40px;line-height:1.2;margin:0 0 10px;font-weight:900}
+.h-head a{color:var(--ink);text-decoration:none}.h-head a:hover{color:var(--teal)}
+.h-deck{font-size:18px;color:var(--soft);margin:0 0 16px;line-height:1.6}
+.h-pics{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:8px}
+.h-pics img{width:100%;height:220px;object-fit:cover;display:block}
+.h-pics.n1{grid-template-columns:minmax(0,1fr)}.h-pics.n1 img{height:380px}
+.h-pics.n2{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.h-credit{font-size:12px;color:var(--muted);margin-top:6px}
+.h-credit a{color:var(--muted)}
+.h-body{font-size:15px;line-height:1.85;margin-top:14px;columns:2;column-gap:24px;column-rule:1px solid var(--line)}
+.h-body p{margin:0 0 .8em}
+.h-read{display:inline-block;margin-top:6px;font-size:15px;font-weight:700;text-decoration:none}
+.h-row{display:block;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.h-row b{display:block;font-family:"Noto Serif TC",Georgia,serif;font-size:17px;line-height:1.4}
+.h-row:hover b{color:var(--teal)}
+.h-row span{font-size:13px;color:var(--muted)}
+.h-ev{display:grid;grid-template-columns:54px minmax(0,1fr);gap:8px;padding:8px 0;border-bottom:1px dotted var(--line);font-size:14px;color:var(--ink);text-decoration:none}
+.h-ev:hover{color:var(--teal)}
+.h-ev .d{font-family:Georgia,serif;font-weight:700;font-size:18px}
+.h-ev small{display:block;color:var(--muted);font-size:12px}
+.h-ev-more{display:inline-block;margin-top:10px;font-size:14px;font-weight:700;text-decoration:none}
+.h-four{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.h-cover{display:block;text-decoration:none;color:var(--ink)}
+.h-cover img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:var(--paper)}
+.h-cover b{display:block;font-family:"Noto Serif TC",Georgia,serif;font-size:18px;margin:8px 0 2px;line-height:1.35}
+.h-cover:hover b{color:var(--teal)}
+.h-cover .by{font-size:13px;color:var(--teal)}
+.h-cover p{font-size:14px;line-height:1.7;margin:6px 0 0;color:var(--soft)}
+.h-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.h-talk{display:block;text-decoration:none;color:var(--ink)}
+.h-talk b{display:block;font-family:"Noto Serif TC",Georgia,serif;font-size:18px;line-height:1.4;margin-bottom:6px}
+.h-talk:hover b{color:var(--teal)}
+.h-talk span{display:block;font-size:14px;line-height:1.75;color:var(--soft)}
+.h-talk small{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
+.h-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.h-two > div > .sec:first-child{margin-top:0}
+.h-rel{display:grid;grid-template-columns:70px minmax(0,1fr);gap:12px;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.h-rel img{width:70px;height:70px;object-fit:cover;display:block}
+.h-rel b{font-size:16px}.h-rel:hover b{color:var(--teal)}
+.h-rel span span,.h-obit span{display:block;margin-top:2px;font-size:13px;color:var(--muted)}
+.h-obit{display:block;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.h-obit b{font-size:16px}.h-obit:hover b{color:var(--teal)}
+@media (max-width:760px){
+  .h-grid,.h-two,.h-three{grid-template-columns:minmax(0,1fr)}
+  .h-lead{padding-right:0;border-right:none}
+  .h-side{padding-left:0;margin-top:28px}
+  .h-pics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .h-pics img:first-child{grid-column:span 2}
+  .h-pics.n1 img{height:260px}
+  .h-head{font-size:28px}
+  .h-body{columns:1}
+  .h-four{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .h-two > div + div > .sec:first-child{margin-top:30px}
+}
+"""
+
+HOME_EVENTS_JS = """<script>
+(function(){
+  var REGIONS=["臺北市","新北市","基隆市","桃園市","新竹市","新竹縣","宜蘭縣","苗栗縣","臺中市","彰化縣","南投縣","雲林縣","嘉義市","嘉義縣","臺南市","高雄市","屏東縣","花蓮縣","臺東縣","澎湖縣","金門縣","連江縣"];
+  function pt(s){var m=(s||"").trim().match(/^(\\d{4})\\/(\\d{1,2})\\/(\\d{1,2})(?:\\s+(\\d{1,2}):(\\d{2}))?/);return m?{y:+m[1],mo:+m[2],d:+m[3],h:m[4]!=null?+m[4]:99,mi:m[5]!=null?+m[5]:0}:null;}
+  function p2(n){return String(n).padStart(2,"0");}
+  function key(t){return ""+t.y+p2(t.mo)+p2(t.d)+p2(t.h)+p2(t.mi);}
+  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+  var box=document.getElementById("h-events"); if(!box) return;
+  var now=new Date(Date.now()+8*3600e3), today=""+now.getUTCFullYear()+p2(now.getUTCMonth()+1)+p2(now.getUTCDate());
+  var bust="?t="+new Date().toISOString().slice(0,13);
+  function get(u){return fetch(u+bust).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}
+  Promise.all([get("events.json"),get("manual_events.json")]).then(function(r){
+    var evs=((r[0]&&r[0].events)||[]).concat((r[1]&&r[1].events)||[]), best={};
+    evs.forEach(function(ev){(ev.shows||[]).forEach(function(s){
+      var t=pt(s.time); if(!t||key(t).slice(0,8)<today||REGIONS.indexOf(s.city||"")<0) return;
+      var k=(ev.title||"").replace(/\\s/g,"");
+      if(!best[k]||key(t)<best[k].k) best[k]={k:key(t),t:t,ev:ev,s:s};
+    });});
+    var rows=Object.keys(best).map(function(k){return best[k];}).sort(function(a,b){return a.k<b.k?-1:1;}).slice(0,4);
+    if(!rows.length){box.innerHTML='<p style="font-size:14px;color:var(--muted)">近期沒有新場次，看看活動頁的完整列表。</p>';return;}
+    box.innerHTML=rows.map(function(x){
+      var city=(x.s.city||"").replace(/[市縣]$/,""), url=x.ev.tickets||x.ev.web||"event/";
+      return '<a class="h-ev" href="'+esc(url)+'"><span class="d">'+x.t.mo+'/'+x.t.d+'</span><span>'+esc((x.ev.title||"").replace(/^20\\d\\d/,""))+'<small>'+esc(city)+'・'+esc(x.s.venue||"")+'</small></span></a>';
+    }).join("");
+  });
+})();
+</script>"""
+
+
+def _first_sentence(text, limit):
+    s = text.split("。")[0]
+    s = s + "。" if len(s) < len(text) else s
+    return s if len(s) <= limit else s[:limit - 1] + "…"
+
+
+def _plain(md):
+    return re.sub(r"[*_`#>\\[\\]]", "", md).strip()
+
+
+def build_home():
+    """首頁（A 版報紙風，編輯 2026-10-30 定案）：頭條＋電子報／新聞／活動、樂評、社群雷達、新唱片＋In memoriam。
+    內容從最新一期的單則資料自動取；活動由瀏覽器即時讀 events.json，每天自動更新。"""
+    items, composers, labels, features = load()
+    shown = sorted([it for it in items if it.get("web") is True], key=sort_key, reverse=True)
+    by_id = {it["id"]: it for it in shown}
+    issue_files = sorted((json.load(open(f, encoding="utf-8")) for f in glob.glob("issues/*.json")), key=lambda d: d["date"])
+    lead = None
+    for d in reversed(issue_files):
+        for fid in d.get("feature", []):
+            if fid in by_id:
+                lead = by_id[fid]
+                break
+        if lead:
+            break
+    used = {lead["id"]} if lead else set()
+    nm = lambda it, text: escape(show_name(text, composers, it.get("composers")))
+
+    def pick(t, n):
+        rows = [it for it in shown if it["type"] == t and it["id"] not in used][:n]
+        used.update(it["id"] for it in rows)
+        return rows
+
+    # 頭條
+    lead_html = ""
+    if lead:
+        imgs = [m for m in (lead.get("media") or []) if m["kind"] == "image"][:3]
+        pics = "".join(f'<img src="{escape(m["url"])}" alt="{escape(m.get("caption", ""))}" loading="lazy">' for m in imgs)
+        credit = "、".join(
+            escape(m.get("caption", "")) + (f'（圖：<a href="{escape(m["credit_url"])}">{escape(m["credit"])}</a>）' if m.get("credit_url") else (f'（圖：{escape(m["credit"])}）' if m.get("credit") else ""))
+            for m in imgs)
+        body = (lead.get("body") or lead["summary"]).split("\n\n")[0]
+        lead_html = f"""<article class="h-lead">
+<h2 class="h-head"><a href="item/{lead['id']}/">{nm(lead, lead['title'])}</a></h2>
+<p class="h-deck">{nm(lead, lead['summary'])}</p>
+{f'<div class="h-pics n{len(imgs)}">{pics}</div><div class="h-credit">{credit}</div>' if imgs else ''}
+<div class="h-body"><p>{nm(lead, _plain(body))}</p></div>
+<a class="h-read" href="item/{lead['id']}/">閱讀全文 →</a>
+</article>"""
+
+    # 側欄：電子報、新聞、活動
+    nl = sorted(labels.values(), key=lambda x: x["date"], reverse=True)[:2]
+    nl_html = "".join(f'<a class="h-row" href="newsletter/{i["slug"]}/"><b>{escape(i["title"])}</b><span>{escape(i["label"])}</span></a>' for i in nl)
+    news = pick("新聞", 4)
+    news_html = "".join(
+        f'<a class="h-row" href="item/{it["id"]}/"><b>{nm(it, it["title"])}</b><span>{escape("・".join(it.get("tags", [])[:1] + [it["region"]]))}</span></a>'
+        for it in news)
+    side = f"""<aside class="h-side">
+<div class="sec">電子報<a class="more-r" href="newsletter/">各期 →</a></div>{nl_html}
+<div class="sec">新聞<a class="more-r" href="category/news/">更多 →</a></div>{news_html}
+<div class="sec">近期國內活動</div>
+<div id="h-events"><p style="font-size:14px;color:var(--muted)">載入中…</p></div>
+<a class="h-ev-more" href="event/">全部場次 →</a>
+</aside>"""
+
+    def cover(it, with_note=True):
+        img = first_image(it) or ""
+        by = f'<span class="by">{nm(it, it["byline"])}</span>' if it.get("byline") else ""
+        note = f'<p>{nm(it, _first_sentence(it["summary"], 46))}</p>' if with_note else ""
+        return f'<a class="h-cover" href="item/{it["id"]}/"><img src="{escape(img)}" alt="{escape(it["title"])} 專輯封面" loading="lazy"><b>{nm(it, it["title"])}</b>{by}{note}</a>'
+
+    reviews = pick("樂評", 4)
+    talk = pick("社群", 3)
+    rels = pick("發行", 4)
+    obits = pick("訃聞", 4)
+    talk_html = "".join(
+        f'<a class="h-talk" href="item/{it["id"]}/"><b>{nm(it, it["title"])}</b><span>{nm(it, _first_sentence(it["summary"], 70))}</span>'
+        f'<small>{escape("、".join(s["name"] for s in it.get("sources", [])[:2]))}</small></a>' for it in talk)
+    rel_html = "".join(
+        f'<a class="h-rel" href="item/{it["id"]}/"><img src="{escape(first_image(it) or "")}" alt="{escape(it["title"])} 專輯封面" loading="lazy">'
+        f'<span><b>{nm(it, it["title"])}</b><span>{nm(it, (it.get("byline") or "") + "｜" + it["summary"].split("｜")[0].split("。")[0])}</span></span></a>' for it in rels)
+    obit_html = "".join(
+        f'<a class="h-obit" href="item/{it["id"]}/"><b>{nm(it, it["title"].split("：")[0])}</b><span>{nm(it, _first_sentence(it["summary"], 40))}</span></a>' for it in obits)
+
+    main_html = f"""<div class="h-grid">
+{lead_html}
+{side}
+</div>
+{f'<section class="band"><div class="sec">樂評<a class="more-r" href="category/reviews/">全部樂評 →</a></div><div class="h-four">' + "".join(cover(it) for it in reviews) + '</div></section>' if reviews else ''}
+{f'<section class="band"><div class="sec">社群雷達<a class="more-r" href="category/community/">更多 →</a></div><div class="h-three">' + talk_html + '</div></section>' if talk else ''}
+<section class="band h-two">
+<div><div class="sec">新唱片<a class="more-r" href="category/releases/">更多 →</a></div>{rel_html}</div>
+<div><div class="sec">In memoriam<a class="more-r" href="category/obituaries/">更多 →</a></div>{obit_html}</div>
+</section>
+{HOME_EVENTS_JS}"""
+    latest = nl[0] if nl else {}
+    html = page("Cue Sheet｜中文電影配樂電子報", latest.get("editor_note", "給配樂迷的電影音樂刊物"), SITE, "home",
+                ("", main_html), latest.get("image"), wide=True)
+    open("index.html", "w", encoding="utf-8").write(html.replace("</style>", HOME_CSS + "</style>", 1))
+    print(f"首頁已產生；頭條：{lead['title'] if lead else '（無）'}")
 
 
 if __name__ == "__main__":
