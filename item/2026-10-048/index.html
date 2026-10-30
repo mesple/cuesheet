@@ -110,6 +110,7 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it{display:grid;grid-template-columns:88px minmax(0,1fr);gap:14px;padding:16px 0;border-top:1px dotted var(--line)}
 .items .it:first-child{border-top:none}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
+.items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
 .items .meta{font-size:12px;color:var(--muted)}
 .items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
