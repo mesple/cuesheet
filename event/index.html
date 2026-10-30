@@ -69,9 +69,9 @@ footer{border-top:3px double var(--ink);margin-top:10px;padding:12px 0 30px;font
 <header class="mast"><div class="mwrap">
   <div class="strip"><span id="today">Cue Sheet</span><span>一份給配樂迷的電影音樂刊物 · <a href="https://preview.mailerlite.io/forms/2740876/202321965174752394/share">訂閱</a></span></div>
   <div class="brand"><h1 class="title"><a href="../">Cue Sheet</a></h1><p class="kicker">FILM MUSIC NEWSLETTER</p></div>
-  <nav class="topnav" aria-label="網站"><a href="../newsletter/">電子報</a><a href="../category/news/">新聞</a><a href="../category/reviews/">樂評</a><a href="../category/releases/">新唱片</a><a href="../category/interviews/">訪談</a><a href="../category/community/">社群</a><a href="../composer/">作曲家</a><a href="../event/" aria-current="page">活動</a><a href="../category/">全部分類</a></nav>
+  <nav class="topnav" aria-label="網站"><a href="../category/news/">新聞</a><a href="../category/reviews/">樂評</a><a href="../category/releases/">唱片架/試聽</a><a href="../category/interviews/">訪談</a><a href="../category/community/">社群</a><a href="../composer/">作曲家</a><a href="../event/" aria-current="page">國內活動</a><a href="../newsletter/">電子報</a></nav>
 </div></header>
-<div class="wrap"><h2 class="pagehead">近期國內電影音樂活動</h2><p class="sub">全台電影、動畫與遊戲音樂的音樂會與講座。選你所在的地區或城市，挑好場次直接加入行事曆。</p></div>
+<div class="wrap"><h2 class="pagehead">近期國內電影音樂活動</h2><p class="sub">今天起 60 天內，全台電影、動畫與遊戲音樂的音樂會與講座。選你所在的地區或城市，挑好場次直接加入行事曆。</p></div>
 
 <nav class="filters" aria-label="篩選"><div class="wrap">
   <div class="row" id="regions" role="group" aria-label="地區"><span class="lab">地區</span></div>
@@ -177,9 +177,13 @@ async function load(){
   const events = (main && main.events) || [];
   const have = new Set();
   const today = new Date(); const todayKey = `${today.getFullYear()}${pad(today.getMonth()+1)}${pad(today.getDate())}`;
+  const RANGE_DAYS = 60;                         // 只列今天起 60 天內的場次（編輯 2026-10-30 指定）
+  const lim = new Date(today.getFullYear(), today.getMonth(), today.getDate() + RANGE_DAYS - 1);
+  const limitKey = `${lim.getFullYear()}${pad(lim.getMonth()+1)}${pad(lim.getDate())}`;
   const push = (ev, s) => {
     const t = parseTime(s.time); if (!t) return;
     if (dayKey(t) < todayKey) return;            // 已結束的場次不列
+    if (dayKey(t) > limitKey) return;            // 60 天以後的場次不列
     const city = s.city || ""; const region = regionOf(city); if (!region) return;
     SHOWS.push({ ev, show: Object.assign({}, s, { _t: t }), city, region, kind: kindOf(ev) });
   };
@@ -198,6 +202,7 @@ async function load(){
     const r = ev.run; if (!r) continue;
     const a = parseTime(r.start), b = parseTime(r.end); if (!a || !b || dayKey(b) < todayKey) continue;
     if (`${a.y}${pad(a.mo)}` < monthKey) continue;
+    if (dayKey(a) > limitKey) continue;
     const t = a;
     const city = r.city || ""; const region = regionOf(city); if (!region) continue;
     SHOWS.push({ ev, show: { time: r.start, venue: r.venue, city, _t: t, _run: [a, b] }, city, region, kind: kindOf(ev) });

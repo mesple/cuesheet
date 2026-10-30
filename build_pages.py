@@ -70,10 +70,10 @@ footer b{font-family:"Noto Serif TC",Georgia,serif;color:var(--ink);font-size:14
 """
 
 
-NAV = [("newsletter", "電子報", "newsletter/"), ("news", "新聞", "category/news/"), ("reviews", "樂評", "category/reviews/"),
-       ("releases", "新唱片", "category/releases/"), ("interviews", "訪談", "category/interviews/"),
-       ("community", "社群", "category/community/"), ("composer", "作曲家", "composer/"), ("event", "活動", "event/"),
-       ("category", "全部分類", "category/")]
+NAV = [("news", "新聞", "category/news/"), ("reviews", "樂評", "category/reviews/"),
+       ("releases", "唱片架/試聽", "category/releases/"), ("interviews", "訪談", "category/interviews/"),
+       ("community", "社群", "category/community/"), ("composer", "作曲家", "composer/"), ("event", "國內活動", "event/"),
+       ("newsletter", "電子報", "newsletter/")]  # 電子報放最右（編輯 2026-10-30 指定）；「全部分類」已拿掉
 
 DATE_JS = """<script>(function(){try{var d=new Date(Date.now()+8*3600e3),w="日一二三四五六";
 document.getElementById("today").textContent=d.getUTCFullYear()+" 年 "+(d.getUTCMonth()+1)+" 月 "+d.getUTCDate()+" 日 星期"+w[d.getUTCDay()];}catch(e){}})();</script>"""
