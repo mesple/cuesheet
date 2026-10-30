@@ -36,15 +36,6 @@
 "start_date": "2026/12/11"
 },
 {
-"uid": "6929d60b26b32445dce6f3f8",
-"category": "音樂",
-"title": "【2026 TSO 大師系列】殷巴爾、齊柏絲坦與TSO",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/1993266721322434561",
-"start_date": "2026/10/30"
-},
-{
 "uid": "6929d60b26b32445dce6f3f9",
 "category": "音樂",
 "title": "【2026 TSO 大師系列】殷巴爾與TSO之馬勒第九號",
@@ -789,16 +780,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2068984452018319361",
-"start_date": "2026/10/30"
-},
-{
-"uid": "6a68e15526b32427d06042d0",
-"category": "音樂",
-"title": "玉山音樂饗宴—維也納少年合唱團",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2069705340555059200",
-"start_date": "2026/10/30"
+"start_date": "2026/10/31"
 },
 {
 "uid": "6a68e15526b32427d06042d1",
@@ -1152,15 +1134,6 @@
 "start_date": "2026/11/21"
 },
 {
-"uid": "6a76106626b32427d0604378",
-"category": "音樂",
-"title": "2026藝術節-SPIDERHORSE A Cappella瘋台灣巡迴音樂會-宜蘭場",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2083002657423384577",
-"start_date": "2026/10/30"
-},
-{
 "uid": "6a76106626b32427d0604379",
 "category": "音樂",
 "title": "2026台灣國際重唱藝術節-台灣盃現代阿卡貝拉大賽",
@@ -1206,15 +1179,6 @@
 "start_date": "2026/11/08"
 },
 {
-"uid": "6a7a04f126b32427d0604397",
-"category": "音樂",
-"title": "《弦語・心聲》張群2026小提琴獨奏會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2077604197323137025",
-"start_date": "2026/10/30"
-},
-{
 "uid": "6a7a04f126b32427d060439c",
 "category": "音樂",
 "title": "國際大師系列《Zoltán Pad與台北室內合唱團——匈牙利當代人聲之夜》",
@@ -1231,15 +1195,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2085244131569651713",
 "start_date": "2026/11/15"
-},
-{
-"uid": "6a7a04f226b32427d06043a0",
-"category": "音樂",
-"title": "2026台灣國際重唱藝術節-樂齡新生代音樂會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2083033745511133185",
-"start_date": "2026/10/30"
 },
 {
 "uid": "6a7a04f226b32427d06043a1",
@@ -1293,7 +1248,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2079884436521492480",
-"start_date": "2026/10/30"
+"start_date": "2026/10/31"
 },
 {
 "uid": "6a7f4afa26b32427d06043d4",
@@ -1917,15 +1872,6 @@
 "start_date": "2026/12/05"
 },
 {
-"uid": "6a9857dd26b32434f43580ba",
-"category": "音樂",
-"title": "笛韻萬象-2026吹笛人室內樂團秋季音樂會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2090624058785767425",
-"start_date": "2026/10/30"
-},
-{
 "uid": "6a9857dd26b32434f43580bb",
 "category": "音樂",
 "title": "來自心中的那首歌~校園民歌集錦暨曾維民作品發表音樂會",
@@ -2475,15 +2421,6 @@
 "start_date": "2026/12/04"
 },
 {
-"uid": "6aac204026b324165c32e4ea",
-"category": "音樂",
-"title": "樂光之夜-2026陳筠雲長笛音樂會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2100098960512372736",
-"start_date": "2026/10/30"
-},
-{
 "uid": "6aad71c426b324165c32e4ed",
 "category": "音樂",
 "title": "『廿廿不忘』－2026 Rubato 陶笛音樂會",
@@ -2644,15 +2581,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2097504190905114625",
 "start_date": "2026/12/23"
-},
-{
-"uid": "6ab4092f26b324165c32e525",
-"category": "音樂",
-"title": "第12屆台北東區 秋季爵士音樂節",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2099757618971582465",
-"start_date": "2026/10/30"
 },
 {
 "uid": "6ab55ab226b324165c32e530",
@@ -3274,15 +3202,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2101979205227089920",
 "start_date": "2026/12/11"
-},
-{
-"uid": "6ac3dafe26b324165c32e598",
-"category": "音樂",
-"title": "台灣第29屆視障藝術季  G世代四潮女",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2102235541513379840",
-"start_date": "2026/10/30"
 },
 {
 "uid": "6ac3dafe26b324165c32e599",
@@ -4302,6 +4221,114 @@
 "start_date": "2026/12/15"
 },
 {
+"uid": "6ae4d18026b3245efc753746",
+"category": "音樂",
+"title": "律動薩克斯風-從經典到無限",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2112365012388167680",
+"start_date": "2026/12/01"
+},
+{
+"uid": "6ae4d18126b3245efc753747",
+"category": "音樂",
+"title": "《眾聲匯聚》米特菁英培訓計畫年度音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2108120765902880769",
+"start_date": "2027/01/03"
+},
+{
+"uid": "6ae4d18126b3245efc753748",
+"category": "音樂",
+"title": "2027 女高音蔣啟真獨唱會-《美聲的藝術》",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2110586520541667329",
+"start_date": "2027/01/30"
+},
+{
+"uid": "6ae4d18126b3245efc753749",
+"category": "音樂",
+"title": "福爾摩沙指揮選粹系列II-脈動Pulse",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2110639893261393921",
+"start_date": "2027/01/02"
+},
+{
+"uid": "6ae4d18126b3245efc75374a",
+"category": "音樂",
+"title": "欣響室內管樂團『聖誕音樂嘉年華II』",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2111029306841710593",
+"start_date": "2026/12/20"
+},
+{
+"uid": "6ae4d18126b3245efc75374b",
+"category": "音樂",
+"title": "【骰子】劉泑汝揚琴獨奏會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2112009007235543040",
+"start_date": "2027/01/30"
+},
+{
+"uid": "6ae4d18126b3245efc75374c",
+"category": "音樂",
+"title": "南臺灣法國號重奏團・起點",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2112024879532777472",
+"start_date": "2026/12/06"
+},
+{
+"uid": "6ae4d18126b3245efc75374d",
+"category": "音樂",
+"title": "聲聲不息—台大校友管樂團第二十九季音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2112823512247214081",
+"start_date": "2026/12/05"
+},
+{
+"uid": "6ae4d18126b3245efc75374e",
+"category": "音樂",
+"title": "It’s Musical Time",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2113186316375109633",
+"start_date": "2027/01/03"
+},
+{
+"uid": "6ae4d18126b3245efc75374f",
+"category": "音樂",
+"title": "國立臺南藝術大學音樂系明日之星音樂會《拾光樂紀》",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2115350068958519297",
+"start_date": "2026/11/18"
+},
+{
+"uid": "6ae4d18126b3245efc753750",
+"category": "音樂",
+"title": "福爾摩沙合唱團2026系列音樂會之四《聖誕音樂會》",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2115452157771276288",
+"start_date": "2026/12/23"
+},
+{
+"uid": "6ae4d18126b3245efc753751",
+"category": "音樂",
+"title": "2026嘉大樂集-歲末慶典",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2115713402716119041",
+"start_date": "2026/12/03"
+},
+{
 "uid": "68950a2f26b324477c8a1474",
 "category": "講座",
 "title": "生活工藝館-陶藝DIY手作體驗",
@@ -4788,15 +4815,6 @@
 "start_date": "2026/03/24"
 },
 {
-"uid": "69e1334126b3242a48a9e40b",
-"category": "講座",
-"title": "排舞班研習",
-"performer": "(中華民國)陳銘椒",
-"description": "辦理排舞課程，提升藝文氣息。\r\n",
-"web": "",
-"start_date": "2026/03/13"
-},
-{
 "uid": "69ebd96026b3242a48a9e6b5",
 "category": "講座",
 "title": "新瓦屋【Mr. One Cajon】親子共創 X 木箱鼓講座",
@@ -4867,15 +4885,6 @@
 "description": "【研習時間】\r\n115年7月24日起陸續開課\r\n(依實際上課時間為準，中秋節、國慶日、光復節連假停課一次)。遇天然災害如颱風等，依行政院人事行政總處或臺中市政府所發布之公告為停復課依據，不另通知。停課則課程順延。\r\n\r\n【報名及繳費方式】\r\n《第1階段網路報名》115年6月23日(星期二)9:00起至115年6月24日(星期三)24:00止\r\n★繳費方式★\r\n1：網路報名錄取3日內（含錄取當日、假日及例假日）完成繳費， (衍生之手續費皆由學員自行負擔) 。\r\n2：網路報名錄取3日內（含錄取當日、假日及例假日）至中心服務台完成繳費。\r\n《第2階段現場報名》115年7月4日(六)起至每堂開課後一週止，每日9:00~17:30（週一休館不受理），至本中心展覽廳服務臺現場報名，現金繳交費用。\r\n【優待辦法】詳見網址\r\n【其他事項】詳見網址\r\n\r\n1.墨池常潤書法A 9/1-12/8 9:40-11:40(15次)\r\n2.長笛 9/1-12/8 10:00-12:00(15次)\r\n3.墨池常潤書法B 9/1-12/8 13:00-15:00(15次)\r\n4.箏心琴藝-進階 9/1-12/8 19:00-21:00(15次)\r\n5.基礎瑜珈A 9/1-12/8 19:00-19:50(15次)\r\n6.基礎瑜珈B 9/1-12/8 20:00-20:50(15次)\r\n7.陶雕技藝 8/26、9/9、9/23、 10/7、10/21、 11/4、11/18、12/2 9:00-16:00(8次)\r\n8.鉤針編織 9/2-12/9 14:00-16:00(15次)\r\n9.行書-日常的書寫A 9/2-12/9 9:00-11:00(15次)\r\n10.行書-日常的書寫B 9/2-12/9 19:00-21:00(15次)\r\n11.箏心琴藝-初階 9/2-12/9 19:00-21:00(15次)\r\n12.脊椎調衡器皮拉提斯ARC Pilates-初階 8/5-12/16 18:00-18:50(20次) \r\n13.【身心醒覺】多元輔具皮拉提斯 8/5-12/16 19:20-21:00(20次)\r\n14.墨池常潤書法C 9/3-12/10 13:30-15:30(15次)\r\n15.小兒童美術 A (週四班) 9/3-12/10 19:00-21:00(15次)\r\n16.中華花藝 9/3、9/17、10/1、10/15、10/29、11/12、11/26、12/10(時間暫訂) 19:00-21:00(8次)\r\n17.舒緩瑜珈 9/3-12/10 17:30-18:20(15次)\r\n18.基礎瑜珈C 9/3-12/10 19:00-19:50(15次)\r\n19.基礎瑜珈D 9/3-12/10 20:00-20:50(15次)\r\n20.數位單眼攝影 9/3-12/10 19:00-21:00(15次)\r\n21.茶席與生活美學 9/3-12/10 18:30-21:30(15次)\r\n22.大兒童美術A 8/28-12/18 19:00-21:00(15次)\r\n23.炭筆素描初階 8/28-12/18 19:00-21:00(15次)\r\n24.熟齡核心保健皮拉提斯-初階 7/24-12/18 18:00-18:50(20次)\r\n25.熟齡核心保健皮拉提斯-進階 7/24-12/18 19:20-21:00(20次)\r\n26.水墨畫初階 8/22-12/19 9:00-12:00(15次)\r\n27.水墨畫進階 8/22-12/19 13:30-16:30(15次)\r\n28.揚琴研習 8/22-12/19 10:00-12:00(15次)\r\n29.油畫 8/22-12/19 13:30-16:30(15次)\r\n30.大兒童美術B 8/22-12/19 10:00-12:00(15次)\r\n31.快樂學陶笛 8/22-12/19 13:00-15:00(15次)\r\n32.小兒童美術B 8/22-12/19 15:10-17:10(15次)\r\n33.基礎瑜珈E 8/22-12/19 9:30-10:20(15次)\r\n34.基礎瑜珈F 8/22-12/19 10:30-11:20(15次)\r\n35.素描藝術 8/22-12/19 18:30-21:30(15次)\r\n36.水彩專門研習 8/23-12/20 9:30-12:30(15次)\r\n37.素描速寫 8/23-12/20 14:00-17:00(15次)\r\n38.水彩畫趣 8/23-12/20 18:00-21:00(15次)\r\n39.創意生活木工 8/23、9/6、9/19(六)、10/11、11/1、11/22、11/29、12/13 9:00-16:00(8次)",
 "web": "https://tcsac.taichung.gov.tw/Activity/Activity_More?id=81bc2ff98bd4407aa40d1aeaca3be0b3",
 "start_date": "2026/07/24"
-},
-{
-"uid": "6a28645026b3243414ccd0a1",
-"category": "講座",
-"title": "舞蹈班",
-"performer": "(中華民國)徐金燕;(中華民國)楊瑞芳",
-"description": "辦理排舞及民俗舞蹈教學課程，推動文藝氣息。\r\n",
-"web": "",
-"start_date": "2026/05/04"
 },
 {
 "uid": "6a2b070926b3243414ccd1ec",
@@ -5227,6 +5236,15 @@
 "description": "",
 "web": "https://www.opentix.life/program/2110579050302840833",
 "start_date": "2027/01/23"
+},
+{
+"uid": "6ae4d18826b3245efc753753",
+"category": "講座",
+"title": "Vox Nova《韓德爾-彌賽亞選粹》系列導聆",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2109898373781938177",
+"start_date": "2026/11/29"
 },
 {
 "uid": "6920ec3b26b32445dce6f17a",
@@ -5901,7 +5919,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3O0",
-"start_date": "2026/11/06"
+"start_date": "2026/11/11"
 },
 {
 "uid": "6ad7bb5f26b3245efc7536f2",
@@ -5928,7 +5946,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3OL",
-"start_date": "2026/11/07"
+"start_date": "2026/11/06"
 },
 {
 "uid": "6ad91d1d26b3245efc7536ff",
