@@ -42,11 +42,14 @@ header.mast .brand{text-align:center;padding:18px 0 10px}
 .title a{color:inherit;text-decoration:none}
 .kicker{margin:8px 0 0;font-size:13px;letter-spacing:.2em;color:var(--muted)}
 .topnav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 26px;border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;font-size:15px;font-weight:700}
-.topnav a{color:var(--ink);text-decoration:none}
+.topnav a{color:var(--ink);text-decoration:none;display:flex;flex-direction:column;align-items:center;line-height:1.35}
+.topnav a small{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--muted);margin-top:1px}
+.topnav a:hover small,.topnav a[aria-current="page"] small{color:var(--teal)}
 .topnav a:hover{color:var(--teal)}
 .topnav a[aria-current="page"]{color:var(--teal)}
 .intro{font-size:15px;color:var(--soft);margin:22px 0 0}
 main .wrap{padding-top:4px;padding-bottom:40px}
+.toppad{height:22px}
 .sec{font-size:13px;font-weight:700;letter-spacing:.14em;margin:30px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
 .sec span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:8px;font-weight:700}
 .sec .more-r{float:right;font-size:12px;letter-spacing:.04em;text-transform:none;color:var(--teal);text-decoration:none;margin:0}
@@ -65,15 +68,17 @@ footer{border-top:3px double var(--ink);margin-top:16px;padding:14px 0 34px;font
 footer b{font-family:"Noto Serif TC",Georgia,serif;color:var(--ink);font-size:14px}
 @media (max-width:760px){
   .title{font-size:52px}
-  .topnav{justify-content:flex-start;gap:6px 16px;font-size:14px}
+  .topnav{justify-content:flex-start;gap:8px 16px;font-size:14px}
+  .topnav a{align-items:flex-start}
+  .topnav a small{font-size:9px;letter-spacing:.1em}
 }
 """
 
 
-NAV = [("news", "新聞", "category/news/"), ("reviews", "樂評", "category/reviews/"),
-       ("releases", "唱片架/試聽", "category/releases/"), ("interviews", "訪談", "category/interviews/"),
-       ("community", "社群", "category/community/"), ("composer", "作曲家", "composer/"), ("event", "國內活動", "event/"),
-       ("newsletter", "電子報", "newsletter/")]  # 電子報放最右（編輯 2026-10-30 指定）；「全部分類」已拿掉
+NAV = [("news", "新聞", "NEWS", "category/news/"), ("reviews", "樂評", "REVIEWS", "category/reviews/"),
+       ("releases", "唱片架/試聽", "NEW RELEASES", "category/releases/"), ("interviews", "訪談", "INTERVIEWS", "category/interviews/"),
+       ("community", "社群", "COMMUNITY", "category/community/"), ("composer", "作曲家", "COMPOSERS", "composer/"),
+       ("event", "國內活動", "EVENTS", "event/"), ("newsletter", "電子報", "NEWSLETTER", "newsletter/")]  # 電子報放最右（編輯 2026-10-30 指定）；「全部分類」已拿掉
 
 DATE_JS = """<script>(function(){try{var d=new Date(Date.now()+8*3600e3),w="日一二三四五六";
 document.getElementById("today").textContent=d.getUTCFullYear()+" 年 "+(d.getUTCMonth()+1)+" 月 "+d.getUTCDate()+" 日 星期"+w[d.getUTCDay()];}catch(e){}})();</script>"""
@@ -82,7 +87,7 @@ document.getElementById("today").textContent=d.getUTCFullYear()+" 年 "+(d.getUT
 def masthead(prefix, nav):
     up = prefix if prefix != "./" else ""
     navhtml = "".join(
-        f'<a href="{up}{path}"' + (' aria-current="page"' if k == nav else "") + f'>{n}</a>' for k, n, path in NAV)
+        f'<a href="{up}{path}"' + (' aria-current="page"' if k == nav else "") + f'>{n}<small>{en}</small></a>' for k, n, en, path in NAV)
     sub = f' · <a href="{SUBSCRIBE_URL}">訂閱</a>' if SUBSCRIBE_URL else ""
     return f"""<header class="mast"><div class="wrap">
   <div class="strip"><span id="today">Cue Sheet</span><span>{TAGLINE}{sub}</span></div>
@@ -147,8 +152,8 @@ def main():
   <p class="note">{escape(it['editor_note'])}</p>
   <a class="more" href="{it['slug']}/">閱讀 →</a>
 </div>""")
-    list_main = f'<div class="sec">各期電子報<span>All Issues</span></div>\n<div class="list">\n' + "\n".join(rows) + "\n</div>"
-    list_sub = '<p class="sub">月刊與特刊，依時間由新到舊。</p>'
+    list_main = f'<div class="toppad"></div>\n<div class="list">\n' + "\n".join(rows) + "\n</div>"
+    list_sub = ""
     open("newsletter/index.html", "w", encoding="utf-8").write(page(
         "電子報｜Cue Sheet", "Cue Sheet 各期電子報，月刊與特刊。", SITE + "newsletter/", "newsletter",
         (list_sub, list_main), latest.get("image")))

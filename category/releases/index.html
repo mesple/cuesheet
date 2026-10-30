@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>發行｜Cue Sheet</title>
-<meta name="description" content="Cue Sheet 的發行：新唱片、重發與實體版。">
+<title>唱片架/試聽｜Cue Sheet</title>
+<meta name="description" content="Cue Sheet 的唱片架/試聽：新唱片、重發、實體版，以及官方釋出的配樂音軌與影片。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="發行｜Cue Sheet">
-<meta property="og:description" content="Cue Sheet 的發行：新唱片、重發與實體版。">
+<meta property="og:title" content="唱片架/試聽｜Cue Sheet">
+<meta property="og:description" content="Cue Sheet 的唱片架/試聽：新唱片、重發、實體版，以及官方釋出的配樂音軌與影片。">
 <meta property="og:url" content="https://mesple.github.io/cuesheet/category/releases/">
 <meta property="og:locale" content="zh_TW">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,11 +41,14 @@ header.mast .brand{text-align:center;padding:18px 0 10px}
 .title a{color:inherit;text-decoration:none}
 .kicker{margin:8px 0 0;font-size:13px;letter-spacing:.2em;color:var(--muted)}
 .topnav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 26px;border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;font-size:15px;font-weight:700}
-.topnav a{color:var(--ink);text-decoration:none}
+.topnav a{color:var(--ink);text-decoration:none;display:flex;flex-direction:column;align-items:center;line-height:1.35}
+.topnav a small{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--muted);margin-top:1px}
+.topnav a:hover small,.topnav a[aria-current="page"] small{color:var(--teal)}
 .topnav a:hover{color:var(--teal)}
 .topnav a[aria-current="page"]{color:var(--teal)}
 .intro{font-size:15px;color:var(--soft);margin:22px 0 0}
 main .wrap{padding-top:4px;padding-bottom:40px}
+.toppad{height:22px}
 .sec{font-size:13px;font-weight:700;letter-spacing:.14em;margin:30px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
 .sec span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:8px;font-weight:700}
 .sec .more-r{float:right;font-size:12px;letter-spacing:.04em;text-transform:none;color:var(--teal);text-decoration:none;margin:0}
@@ -64,7 +67,9 @@ footer{border-top:3px double var(--ink);margin-top:16px;padding:14px 0 34px;font
 footer b{font-family:"Noto Serif TC",Georgia,serif;color:var(--ink);font-size:14px}
 @media (max-width:760px){
   .title{font-size:52px}
-  .topnav{justify-content:flex-start;gap:6px 16px;font-size:14px}
+  .topnav{justify-content:flex-start;gap:8px 16px;font-size:14px}
+  .topnav a{align-items:flex-start}
+  .topnav a small{font-size:9px;letter-spacing:.1em}
 }
 
 .crumb{font-size:13px;color:var(--muted);margin:22px 0 0}
@@ -118,6 +123,11 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items h3 a:hover{color:var(--teal)}
 .items .by{font-size:13px;color:var(--soft)}
 .items p{font-size:14px;line-height:1.7;color:var(--soft);margin:4px 0 0}
+.twocol{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 40px}
+.twocol .col + .col{border-left:1px solid var(--line);padding-left:40px}
+.colhead{font-size:13px;font-weight:700;letter-spacing:.14em;padding-bottom:6px;border-bottom:2px solid var(--ink);margin-bottom:2px}
+.colhead span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:8px}
+@media (max-width:760px){.twocol{grid-template-columns:1fr}.twocol .col + .col{border-left:none;padding-left:0;margin-top:28px}}
 .filters{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
 .filters button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--soft);padding:3px 10px;cursor:pointer}
 .filters button[aria-pressed="true"]{border-color:var(--teal);background:var(--teal);color:var(--paper)}
@@ -146,11 +156,11 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <header class="mast"><div class="wrap">
   <div class="strip"><span id="today">Cue Sheet</span><span>一份給配樂迷的電影音樂刊物 · <a href="https://preview.mailerlite.io/forms/2740876/202321965174752394/share">訂閱</a></span></div>
   <div class="brand"><h1 class="title"><a href="../../">Cue Sheet</a></h1><p class="kicker">FILM MUSIC NEWSLETTER</p></div>
-  <nav class="topnav" aria-label="網站"><a href="../../category/news/">新聞</a><a href="../../category/reviews/">樂評</a><a href="../../category/releases/" aria-current="page">唱片架/試聽</a><a href="../../category/interviews/">訪談</a><a href="../../category/community/">社群</a><a href="../../composer/">作曲家</a><a href="../../event/">國內活動</a><a href="../../newsletter/">電子報</a></nav>
+  <nav class="topnav" aria-label="網站"><a href="../../category/news/">新聞<small>NEWS</small></a><a href="../../category/reviews/">樂評<small>REVIEWS</small></a><a href="../../category/releases/" aria-current="page">唱片架/試聽<small>NEW RELEASES</small></a><a href="../../category/interviews/">訪談<small>INTERVIEWS</small></a><a href="../../category/community/">社群<small>COMMUNITY</small></a><a href="../../composer/">作曲家<small>COMPOSERS</small></a><a href="../../event/">國內活動<small>EVENTS</small></a><a href="../../newsletter/">電子報<small>NEWSLETTER</small></a></nav>
 </div></header>
 <main><div class="wrap">
-<div class="narrow"><p class="intro">新唱片、重發與實體版，共 18 則，依日期由新到舊。</p>
-<p class="crumb"><a href="../">分類</a> › 發行</p><div class="sec">發行<span>Releases</span></div><div class="items"><div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-031/"><img src="https://mesple.github.io/cuesheet/images/2026-10/four-in-the-morning.jpg" alt="" loading="lazy"></a><div>
+
+<div class="toppad"></div><div class="twocol"><div class="col"><div class="colhead">唱片架<span>Record Shelf</span></div><div class="items"><div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-031/"><img src="https://mesple.github.io/cuesheet/images/2026-10/four-in-the-morning.jpg" alt="" loading="lazy"></a><div>
 <div class="meta">2026 年 10 月號　·　歐洲</div>
 <h3><a href="../../item/2026-10-031/">Four in the Morning / The L-Shaped Room / Dutchman</a></h3><div class="by">John Barry</div>
 <p>Quartet Records｜限量 1,000 張 CD。</p></div></div>
@@ -221,7 +231,30 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-045/"><img src="https://i.scdn.co/image/ab67616d00001e02e0a04035885f737faea4a45f" alt="" loading="lazy"></a><div>
 <div class="meta">2026 年 9 月 4 日　·　北美</div>
 <h3><a href="../../item/2026-10-045/">The Girl in the River</a></h3><div class="by">Max Aruj、W.F. Smith Leithart</div>
-<p>驚悚片原聲｜9/4 數位上架。</p></div></div></div></div>
+<p>驚悚片原聲｜9/4 數位上架。</p></div></div></div></div><div class="col"><div class="colhead">精選試聽<span>Take a Bite</span></div><div class="items"><div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-051/"><img src="https://img.youtube.com/vi/uZf2jkCI6Fo/hqdefault.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月號　·　歐洲</div>
+<h3><a href="../../item/2026-10-051/">Now We Can Sing（Max Richter）</a></h3>
+<p>新專輯《While The Flood Rages》首支單曲，素材來自芭蕾《MaddAddam》。</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-053/"><img src="https://img.youtube.com/vi/OSdQnT_FhAs/hqdefault.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月 2 日　·　北美</div>
+<h3><a href="../../item/2026-10-053/">Draw You Out（Noah Kahan）</a></h3>
+<p>《飢餓遊戲：收割之日》首支單曲，由 Kahan 與 Aaron Dessner 合寫。</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-052/"><img src="https://img.youtube.com/vi/I06sOxEQekM/hqdefault.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月 1 日　·　北美</div>
+<h3><a href="../../item/2026-10-052/">East of Eden（Laura Karpman）</a></h3>
+<p>官方發布的整張原聲。</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-049/"><img src="https://img.youtube.com/vi/rYLUu6PmziU/hqdefault.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 10 月 1 日　·　北美</div>
+<h3><a href="../../item/2026-10-049/">Avian Elegy（Digger）</a></h3>
+<p>Cosmo Sheldrake 的首支曲目，鳥鳴般的音色是他的招牌。</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-050/"><img src="https://img.youtube.com/vi/MxThbfaKXQU/hqdefault.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 9 月 30 日　·　北美</div>
+<h3><a href="../../item/2026-10-050/">Guile&#x27;s Theme（Street Fighter 電影版）</a></h3>
+<p>Leo Birenberg &amp; Zach Robinson 重製下村陽子 1991 年的經典遊戲曲。</p></div></div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-048/"><img src="https://img.youtube.com/vi/t5-aXT8DZUA/hqdefault.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 9 月 30 日　·　北美</div>
+<h3><a href="../../item/2026-10-048/">The Social Reckoning（Desplat）</a></h3>
+<p>官方音軌先行釋出，聽 Desplat 怎麼讓「語言」主導一部配樂。</p></div></div></div></div></div>
 </div></main>
 <footer><div class="wrap"><b>Cue Sheet</b><br>每月 5 日深度聆聽版、20 日配樂新訊版<br>Cue Sheet 為非營利樂迷刊物，文字為編輯摘要與評論，圖片版權屬原權利人，連結皆指向原始來源。</div></footer>
 <script>(function(){try{var d=new Date(Date.now()+8*3600e3),w="日一二三四五六";

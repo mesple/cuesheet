@@ -82,6 +82,11 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items h3 a:hover{color:var(--teal)}
 .items .by{font-size:13px;color:var(--soft)}
 .items p{font-size:14px;line-height:1.7;color:var(--soft);margin:4px 0 0}
+.twocol{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 40px}
+.twocol .col + .col{border-left:1px solid var(--line);padding-left:40px}
+.colhead{font-size:13px;font-weight:700;letter-spacing:.14em;padding-bottom:6px;border-bottom:2px solid var(--ink);margin-bottom:2px}
+.colhead span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:8px}
+@media (max-width:760px){.twocol{grid-template-columns:1fr}.twocol .col + .col{border-left:none;padding-left:0;margin-top:28px}}
 .filters{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
 .filters button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--soft);padding:3px 10px;cursor:pointer}
 .filters button[aria-pressed="true"]{border-color:var(--teal);background:var(--teal);color:var(--paper)}
@@ -254,7 +259,10 @@ def item_page(it, by_id, composers, labels, features):
     if rel:
         cards = "".join(f'<a href="../{r["id"]}/"><small>{r["type"]}</small><b>{escape(r["title"])}</b></a>' for r in rel)
         rel_html = f'<div class="sec">相關內容<span>Related</span></div><div class="rel">{cards}</div>'
-    crumb = f'<p class="crumb"><a href="../../category/">分類</a> › <a href="../../category/{slug}/">{it["type"]}</a></p>'
+    if it["type"] in ("發行", "試聽"):
+        crumb = f'<p class="crumb"><a href="../../category/releases/">唱片架/試聽</a> › {"唱片架" if it["type"] == "發行" else "精選試聽"}</p>'
+    else:
+        crumb = f'<p class="crumb"><a href="../../category/{slug}/">{it["type"]}</a></p>'
     article = f"""{crumb}
 <article>
 <div class="pills">{"".join(pills)}</div>
@@ -323,28 +331,40 @@ def main():
         os.makedirs(f"item/{it['id']}", exist_ok=True)
         open(f"item/{it['id']}/index.html", "w", encoding="utf-8").write(item_page(it, by_id, composers, labels, features))
 
-    # 各類型列表
+    # 各類型列表（編輯 2026-10-30：選單下方不放說明、則數與欄名；發行與試聽合併成「唱片架/試聽」兩欄）
     cards = []
     for t, slug, en, desc in TYPES:
         rows = [it for it in shown if it["type"] == t]
         if not rows:
             continue
-        filters = ""
-        if t == "新聞":
-            tags = [x for x in ("獎項", "音樂活動", "新案", "新片", "其他") if any(x in it.get("tags", []) for it in rows)]
-            filters = '<div class="filters"><button type="button" data-tag="" aria-pressed="true">全部</button>' + "".join(
-                f'<button type="button" data-tag="{x}" aria-pressed="false">{x}</button>' for x in tags) + "</div>"
-        main_html = (f'<p class="crumb"><a href="../">分類</a> › {t}</p>'
-                     f'<div class="sec">{t}<span>{en}</span></div>{filters}<div class="items">'
-                     + "\n".join(row_html(it, composers, labels, 2) for it in rows) + "</div>"
-                     + (FILTER_JS if filters else ""))
-        os.makedirs(f"category/{slug}", exist_ok=True)
-        html = page(f"{t}｜Cue Sheet", f"Cue Sheet 的{t}：{desc}。", f"{SITE}category/{slug}/", slug,
-                    (f'<p class="sub">{desc}，共 {len(rows)} 則，依日期由新到舊。</p>', main_html), depth=2,
-                    kicker=f"Cue Sheet · {en}")
-        open(f"category/{slug}/index.html", "w", encoding="utf-8").write(html.replace("</style>", EXTRA_CSS + "</style>", 1))
-        latest = "".join(f'<li><a href="{slug}/../../item/{it["id"]}/">{escape(it["title"])}</a></li>' for it in rows[:3])
-        latest = latest.replace(f'{slug}/../../', "../")
+        if t == "試聽":   # 併入唱片架/試聽頁；舊網址轉址
+            os.makedirs("category/listen", exist_ok=True)
+            open("category/listen/index.html", "w", encoding="utf-8").write(
+                '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">'
+                '<link rel="canonical" href="' + SITE + 'category/releases/"><meta http-equiv="refresh" content="0; url=../releases/">'
+                '<script>location.replace("../releases/")</script><a href="../releases/">唱片架/試聽</a>')
+        else:
+            filters = ""
+            if t == "新聞":
+                tags = [x for x in ("獎項", "音樂活動", "新案", "新片", "其他") if any(x in it.get("tags", []) for it in rows)]
+                filters = '<div class="filters"><button type="button" data-tag="" aria-pressed="true">全部</button>' + "".join(
+                    f'<button type="button" data-tag="{x}" aria-pressed="false">{x}</button>' for x in tags) + "</div>"
+            if t == "發行":
+                listen = [it for it in shown if it["type"] == "試聽"]
+                col = lambda name, rs: (f'<div class="col"><div class="colhead">{name}</div><div class="items">'
+                                        + "\n".join(row_html(it, composers, labels, 2) for it in rs) + "</div></div>")
+                body = f'<div class="toppad"></div><div class="twocol">{col("唱片架<span>Record Shelf</span>", rows)}{col("精選試聽<span>Take a Bite</span>", listen)}</div>'
+                ptitle, pdesc, wide = "唱片架/試聽", "新唱片、重發、實體版，以及官方釋出的配樂音軌與影片", True
+            else:
+                body = (f'<div class="toppad"></div>{filters}<div class="items">'
+                        + "\n".join(row_html(it, composers, labels, 2) for it in rows) + "</div>"
+                        + (FILTER_JS if filters else ""))
+                ptitle, pdesc, wide = t, desc, False
+            os.makedirs(f"category/{slug}", exist_ok=True)
+            html = page(f"{ptitle}｜Cue Sheet", f"Cue Sheet 的{ptitle}：{pdesc}。", f"{SITE}category/{slug}/", slug,
+                        ("", body), depth=2, wide=wide)
+            open(f"category/{slug}/index.html", "w", encoding="utf-8").write(html.replace("</style>", EXTRA_CSS + "</style>", 1))
+        latest = "".join(f'<li><a href="../item/{it["id"]}/">{escape(it["title"])}</a></li>' for it in rows[:3])
         cards.append(f'<div class="type-card"><h3><a href="{slug}/">{t}</a><small>{len(rows)} 則</small></h3><p>{desc}</p><ul>{latest}</ul></div>')
 
     idx = f'<div class="sec">依類型瀏覽<span>Browse</span></div><div class="types">{"".join(cards)}</div>'
@@ -378,7 +398,7 @@ def main():
     idx = (f'<div class="sec">出現兩次以上<span>{len(multi)} 位</span></div><div class="chips">' + "".join(chip(c) for c in multi) + "</div>"
            f'<div class="sec">其他作曲家<span>{len(rest)} 位</span></div><div class="chips">' + "".join(chip(c) for c in rest) + "</div>")
     html = page("作曲家｜Cue Sheet", "依作曲家瀏覽 Cue Sheet 刊出的新聞、樂評、新唱片、訪談與訃聞。", f"{SITE}composer/", "composer",
-                (f'<p class="sub">點作曲家，看 Cue Sheet 刊過的所有相關內容。共 {len(by_c)} 位，數字是則數。</p>', idx), depth=1,
+                ('<div class="toppad"></div>', idx), depth=1,
                 kicker="Cue Sheet · Composers")
     open("composer/index.html", "w", encoding="utf-8").write(html.replace("</style>", EXTRA_CSS + "</style>", 1))
     print(f"作曲家頁 {len(by_c)} 位（兩則以上 {len(multi)} 位）")

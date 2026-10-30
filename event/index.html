@@ -35,7 +35,9 @@ header.mast .brand{text-align:center;padding:18px 0 10px}
 .title a{color:inherit;text-decoration:none}
 .kicker{margin:8px 0 0;font-size:13px;letter-spacing:.2em;color:var(--muted)}
 .topnav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 26px;border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;font-size:15px;font-weight:700}
-.topnav a{color:var(--ink);text-decoration:none}
+.topnav a{color:var(--ink);text-decoration:none;display:flex;flex-direction:column;align-items:center;line-height:1.35}
+.topnav a small{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--muted);margin-top:1px}
+.topnav a:hover small,.topnav a[aria-current="page"] small{color:var(--teal)}
 .topnav a:hover,.topnav a[aria-current="page"]{color:var(--teal)}
 .pagehead{font-family:"Noto Serif TC",Georgia,serif;font-size:28px;font-weight:700;margin:22px 0 0}
 .sub{font-size:15px;color:var(--soft);margin:6px 0 14px}
@@ -61,7 +63,7 @@ main .wrap{padding-top:8px;padding-bottom:40px}
 .acts a,.acts button{color:var(--teal);background:none;border:none;padding:0;font:inherit;font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
 .empty{padding:40px 0;text-align:center;color:var(--muted)}
 footer{border-top:3px double var(--ink);margin-top:10px;padding:12px 0 30px;font-size:12px;color:var(--muted)}
-@media (max-width:760px){.title{font-size:52px}.topnav{justify-content:flex-start;gap:6px 16px;font-size:14px}}
+@media (max-width:760px){.title{font-size:52px}.topnav{justify-content:flex-start;gap:8px 16px;font-size:14px}.topnav a{align-items:flex-start}.topnav a small{font-size:9px;letter-spacing:.1em}}
 @media (max-width:540px){.item{grid-template-columns:64px 1fr}.date{font-size:18px}}
 </style>
 </head>
@@ -69,9 +71,9 @@ footer{border-top:3px double var(--ink);margin-top:10px;padding:12px 0 30px;font
 <header class="mast"><div class="mwrap">
   <div class="strip"><span id="today">Cue Sheet</span><span>一份給配樂迷的電影音樂刊物 · <a href="https://preview.mailerlite.io/forms/2740876/202321965174752394/share">訂閱</a></span></div>
   <div class="brand"><h1 class="title"><a href="../">Cue Sheet</a></h1><p class="kicker">FILM MUSIC NEWSLETTER</p></div>
-  <nav class="topnav" aria-label="網站"><a href="../category/news/">新聞</a><a href="../category/reviews/">樂評</a><a href="../category/releases/">唱片架/試聽</a><a href="../category/interviews/">訪談</a><a href="../category/community/">社群</a><a href="../composer/">作曲家</a><a href="../event/" aria-current="page">國內活動</a><a href="../newsletter/">電子報</a></nav>
+  <nav class="topnav" aria-label="網站"><a href="../category/news/">新聞<small>NEWS</small></a><a href="../category/reviews/">樂評<small>REVIEWS</small></a><a href="../category/releases/">唱片架/試聽<small>NEW RELEASES</small></a><a href="../category/interviews/">訪談<small>INTERVIEWS</small></a><a href="../category/community/">社群<small>COMMUNITY</small></a><a href="../composer/">作曲家<small>COMPOSERS</small></a><a href="../event/" aria-current="page">國內活動<small>EVENTS</small></a><a href="../newsletter/">電子報<small>NEWSLETTER</small></a></nav>
 </div></header>
-<div class="wrap"><h2 class="pagehead">近期國內電影音樂活動</h2><p class="sub">今天起 60 天內，全台電影、動畫與遊戲音樂的音樂會與講座。選你所在的地區或城市，挑好場次直接加入行事曆。</p></div>
+<div class="wrap" style="height:14px"></div>
 
 <nav class="filters" aria-label="篩選"><div class="wrap">
   <div class="row" id="regions" role="group" aria-label="地區"><span class="lab">地區</span></div>
