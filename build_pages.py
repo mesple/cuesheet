@@ -10,7 +10,7 @@ from html import escape
 SITE = "https://mesple.github.io/cuesheet/"
 
 # 訂閱表單網址（MailerLite）。留空時刊頭只顯示標語、不顯示「訂閱」連結。
-SUBSCRIBE_URL = ""
+SUBSCRIBE_URL = "https://preview.mailerlite.io/forms/2740876/202321965174752394/share"
 TAGLINE = "一份給配樂迷的電影音樂刊物"
 
 CSS = """
