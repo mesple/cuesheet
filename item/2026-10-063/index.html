@@ -117,6 +117,12 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
+.twocol .items .thumb img{width:110px}
+.items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
+.items .by a:hover{color:var(--teal)}
+.items .src{font-size:12px;color:var(--muted);margin-top:4px}
+.items .src a{color:var(--teal);text-decoration:none}
 .items .meta{font-size:12px;color:var(--muted)}
 .items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
 .items h3{font-size:17px;line-height:1.45;margin:4px 0 2px}
@@ -150,6 +156,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .rel,.types{grid-template-columns:1fr}
   .items .it{grid-template-columns:64px minmax(0,1fr)}
   .items .thumb img{width:64px}
+  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
+  .twocol .items .thumb img{width:80px}
 }
 </style>
 </head>
@@ -163,11 +171,11 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <div class="narrow">
 <p class="crumb"><a href="../../category/news/">新聞</a></p>
 <article>
-<div class="pills"><a class="pill solid" href="../../category/news/">新聞</a><a class="pill" href="../../category/news/?tag=獎項">獎項</a><span class="pill plain">歐洲</span></div>
+<div class="pills"><a class="pill solid" href="../../category/news/">新聞</a><a class="pill" href="../../category/news/?tag=獎項">獎項</a></div>
 <h2 class="item-title">蘇黎世金眼獎：韓國作曲家 Semin Son 奪冠</h2>
 
 
-<p class="dateline">2026 年 10 月 1 日　·　首次刊出：<a href="../../newsletter/2026-10/">Cue Sheet 2026 年 10 月號</a></p>
+<p class="dateline">2026 年 10 月 1 日</p>
 <div class="media single wide"><figure><img src="https://mesple.github.io/cuesheet/images/2026-10/semin-son.jpg" alt="Semin Son" loading="lazy"><figcaption>Semin Son　圖片來源：<a href="https://filmmusikwettbewerb.ch/">Filmmusikwettbewerb</a></figcaption></figure></div>
 <p class="lead">10 月 1 日在蘇黎世音樂廳揭曉的「2026 最佳國際電影音樂」金眼獎（獎金一萬瑞郎）由南韓的 Semin Son 拿下。今年考題是為九分鐘短片《The Shyness of Trees》寫交響樂團配樂，共收到 36 國 146 件作品，另兩位決選者為 Carl Falkenau（瑞典）與 Brendan Galvin（美國／紐西蘭）。評審團主席 Gabriel Yared 當晚也獲頒蘇黎世影展終身成就獎，Frank Strobel 指揮蘇黎世音樂廳管弦樂團演出三位決選作品與 Yared 的作品。</p>
 

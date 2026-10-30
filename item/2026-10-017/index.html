@@ -117,6 +117,12 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
+.twocol .items .thumb img{width:110px}
+.items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
+.items .by a:hover{color:var(--teal)}
+.items .src{font-size:12px;color:var(--muted);margin-top:4px}
+.items .src a{color:var(--teal);text-decoration:none}
 .items .meta{font-size:12px;color:var(--muted)}
 .items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
 .items h3{font-size:17px;line-height:1.45;margin:4px 0 2px}
@@ -150,6 +156,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .rel,.types{grid-template-columns:1fr}
   .items .it{grid-template-columns:64px minmax(0,1fr)}
   .items .thumb img{width:64px}
+  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
+  .twocol .items .thumb img{width:80px}
 }
 </style>
 </head>
@@ -163,18 +171,18 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <div class="narrow">
 <p class="crumb"><a href="../../category/reviews/">樂評</a></p>
 <article>
-<div class="pills"><a class="pill solid" href="../../category/reviews/">樂評</a><span class="pill plain">全球</span></div>
+<div class="pills"><a class="pill solid" href="../../category/reviews/">樂評</a></div>
 <h2 class="item-title">Skyward Spirit</h2>
 
 <p class="byline">James Horner、Simon Rhodes（補完）</p>
-<p class="dateline">2026 年 9 月 8 日　·　首次刊出：<a href="../../newsletter/2026-10/">Cue Sheet 2026 年 10 月號</a></p>
+
 <div class="media single"><figure><img src="https://mesple.github.io/cuesheet/images/2026-10/skyward-spirit.jpg" alt="專輯封面" loading="lazy"></figure></div>
 <p class="lead">Horner 為雷鳥飛行隊寫的遺作，由 Rhodes 依四頁手稿補完。MMUK 稱是今年最佳，聽到招牌四音動機當場落淚；Movie Wave 指出它與《Flight》結構相近，仍深受感動。</p>
 
 
 <div class="box"><b>作曲家</b><div class="chips"><a class="chip" href="../../composer/james-horner/">James Horner</a><a class="chip" href="../../composer/simon-rhodes/">Simon Rhodes</a></div></div><div class="box"><b>來源</b><ul><li><a href="https://moviemusicuk.us/2026/09/08/skyward-spirit-james-horner-simon-rhodes/">Movie Music UK</a></li><li><a href="https://www.movie-wave.net/skyward-spirit/">Movie Wave</a></li></ul></div>
 </article>
-<div class="sec">相關內容<span>Related</span></div><div class="rel"><a href="../2026-10-032/"><small>發行</small><b>Aliens（40 週年黑膠）</b></a></div></div>
+</div>
 </div></main>
 <footer><div class="wrap"><b>Cue Sheet</b><br>每月 5 日深度聆聽版、20 日配樂新訊版<br>Cue Sheet 為非營利樂迷刊物，文字為編輯摘要與評論，圖片版權屬原權利人，連結皆指向原始來源。</div></footer>
 <script>(function(){try{var d=new Date(Date.now()+8*3600e3),w="日一二三四五六";

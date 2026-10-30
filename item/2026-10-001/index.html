@@ -117,6 +117,12 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
+.twocol .items .thumb img{width:110px}
+.items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
+.items .by a:hover{color:var(--teal)}
+.items .src{font-size:12px;color:var(--muted);margin-top:4px}
+.items .src a{color:var(--teal);text-decoration:none}
 .items .meta{font-size:12px;color:var(--muted)}
 .items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
 .items h3{font-size:17px;line-height:1.45;margin:4px 0 2px}
@@ -150,6 +156,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .rel,.types{grid-template-columns:1fr}
   .items .it{grid-template-columns:64px minmax(0,1fr)}
   .items .thumb img{width:64px}
+  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
+  .twocol .items .thumb img{width:80px}
 }
 </style>
 </head>
@@ -163,11 +171,11 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <div class="narrow">
 <p class="crumb"><a href="../../category/obituaries/">訃聞</a></p>
 <article>
-<div class="pills"><a class="pill solid" href="../../category/obituaries/">訃聞</a><span class="pill plain">歐洲</span><a class="pill plain" href="../../newsletter/2026-10/">2026 年 10 月號本月專題</a></div>
+<div class="pills"><a class="pill solid" href="../../category/obituaries/">訃聞</a><a class="pill plain" href="../../newsletter/2026-10/">2026 年 10 月號本月專題</a></div>
 <h2 class="item-title">George Fenton（1949–2026）：從《甘地》到《藍色星球》的英國聲音</h2>
 <p class="deck">五度入圍奧斯卡的作曲家 10 月 5 日在倫敦驟逝，享壽 76 歲。</p>
 
-<p class="dateline">2026 年 10 月 5 日　·　首次刊出：<a href="../../newsletter/2026-10/">Cue Sheet 2026 年 10 月號</a></p>
+<p class="dateline">2026 年 10 月 5 日</p>
 <div class="media single"><figure><img src="https://mesple.github.io/cuesheet/images/2026-10/george-fenton-bmi.jpg" alt="George Fenton" loading="lazy"><figcaption>George Fenton　圖片來源：<a href="https://moviemusicuk.us/2026/10/05/george-fenton-1949-2026/">Movie Music UK</a></figcaption></figure></div>
 
 <div class="body"><p>英國作曲家 George Fenton 10 月 5 日在倫敦驟逝，享壽 76 歲，距離他 77 歲生日只差兩週。他的作品橫跨劇場、電視、電影與自然紀錄片超過五十年：五度入圍奧斯卡，三度贏得 BAFTA，替 Richard Attenborough、Stephen Frears、Terry Gilliam、肯洛區等導演寫過配樂，也是 David Attenborough 一系列 BBC 自然紀錄片的音樂代言人。上個月在多倫多影展首映的《Up Against It》，成了他的遺作。</p>

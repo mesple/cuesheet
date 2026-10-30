@@ -117,6 +117,12 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
+.twocol .items .thumb img{width:110px}
+.items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
+.items .by a:hover{color:var(--teal)}
+.items .src{font-size:12px;color:var(--muted);margin-top:4px}
+.items .src a{color:var(--teal);text-decoration:none}
 .items .meta{font-size:12px;color:var(--muted)}
 .items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
 .items h3{font-size:17px;line-height:1.45;margin:4px 0 2px}
@@ -150,6 +156,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .rel,.types{grid-template-columns:1fr}
   .items .it{grid-template-columns:64px minmax(0,1fr)}
   .items .thumb img{width:64px}
+  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
+  .twocol .items .thumb img{width:80px}
 }
 </style>
 </head>
@@ -163,11 +171,11 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <div class="narrow">
 <p class="crumb"><a href="../../category/news/">新聞</a></p>
 <article>
-<div class="pills"><a class="pill solid" href="../../category/news/">新聞</a><a class="pill" href="../../category/news/?tag=獎項">獎項</a><span class="pill plain">臺灣</span></div>
+<div class="pills"><a class="pill solid" href="../../category/news/">新聞</a><a class="pill" href="../../category/news/?tag=獎項">獎項</a></div>
 <h2 class="item-title">金馬獎第 63 屆：配樂入圍名單</h2>
 <p class="deck">片山凉太以《黑潮》同時入圍最佳原創電影音樂與最佳原創電影歌曲兩項；頒獎典禮 11 月 22 日晚間在臺北流行音樂中心舉行。</p>
 
-<p class="dateline">2026 年 10 月 1 日　·　首次刊出：<a href="../../newsletter/2026-10/">Cue Sheet 2026 年 10 月號</a></p>
+<p class="dateline">2026 年 10 月 1 日</p>
 <div class="media single wide"><figure><img src="https://mesple.github.io/cuesheet/images/2026-10/golden-horse-63.jpg" alt="金馬 63 主視覺" loading="lazy"><figcaption>金馬 63 主視覺　圖片來源：<a href="https://www.gvm.com.tw/article/133306">遠見</a></figcaption></figure></div>
 
 <div class="body"><h2>最佳原創電影音樂</h2>
@@ -189,7 +197,7 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 
 <div class="box"><b>作曲家</b><div class="chips"><a class="chip" href="../../composer/ricky-ho/">何國杰</a><a class="chip" href="../../composer/isabel-latorre/">Isabel Latorre</a><a class="chip" href="../../composer/lim-giong/">林強</a><a class="chip" href="../../composer/hou-chih-chien/">侯志堅</a><a class="chip" href="../../composer/yang-yi-hsiu/">楊易修</a><a class="chip" href="../../composer/kao-min-lun/">高敏倫</a><a class="chip" href="../../composer/huang-wei-che/">黃偉哲</a><a class="chip" href="../../composer/ho-chien-liang/">何堅良</a><a class="chip" href="../../composer/fu-duo-ma/">福多瑪</a><a class="chip" href="../../composer/ryota-katayama/">片山凉太</a></div></div><div class="box"><b>接下來</b><ul><li>11/22　第 63 屆金馬獎頒獎</li></ul></div><div class="box"><b>來源</b><ul><li><a href="https://www.cna.com.tw/news/amov/202610015003.aspx">中央社</a></li><li><a href="https://variety.com/2026/film/awards/sabus-arrested-memory-golden-horse-awards-nominations-1236894708/">Variety</a></li></ul></div>
 </article>
-<div class="sec">相關內容<span>Related</span></div><div class="rel"><a href="../2026-10-037/"><small>發行</small><b>The Violinist</b></a></div></div>
+</div>
 </div></main>
 <footer><div class="wrap"><b>Cue Sheet</b><br>每月 5 日深度聆聽版、20 日配樂新訊版<br>Cue Sheet 為非營利樂迷刊物，文字為編輯摘要與評論，圖片版權屬原權利人，連結皆指向原始來源。</div></footer>
 <script>(function(){try{var d=new Date(Date.now()+8*3600e3),w="日一二三四五六";

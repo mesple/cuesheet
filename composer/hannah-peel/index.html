@@ -116,6 +116,12 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
+.twocol .items .thumb img{width:110px}
+.items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
+.items .by a:hover{color:var(--teal)}
+.items .src{font-size:12px;color:var(--muted);margin-top:4px}
+.items .src a{color:var(--teal);text-decoration:none}
 .items .meta{font-size:12px;color:var(--muted)}
 .items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
 .items h3{font-size:17px;line-height:1.45;margin:4px 0 2px}
@@ -149,6 +155,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .rel,.types{grid-template-columns:1fr}
   .items .it{grid-template-columns:64px minmax(0,1fr)}
   .items .thumb img{width:64px}
+  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
+  .twocol .items .thumb img{width:80px}
 }
 </style>
 </head>
@@ -161,11 +169,11 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <main><div class="wrap">
 <div class="narrow">
 <p class="crumb"><a href="../">作曲家</a> › Hannah Peel</p><h2 class="item-title">Hannah Peel</h2><div class="sec">Cue Sheet 刊出的相關內容<span>2 則</span></div><div class="items"><div class="it" data-tags="獎項"><a class="thumb" href="../../item/2026-10-002/"><img src="https://mesple.github.io/cuesheet/images/2026-10/wsa-2026-winners.jpg" alt="" loading="lazy"></a><div>
-<div class="meta"><span class="pill">獎項</span>2026 年 10 月 10 日　·　歐洲</div>
+<div class="meta"><span class="pill">獎項</span>2026 年 10 月 10 日</div>
 <h3><a href="../../item/2026-10-002/">Daniel Pemberton 二度封王：第 26 屆世界電影音樂獎揭曉</a></h3>
 <p>10/10 根特頒獎，Jeff Russo 三度入圍終於得獎，Hannah Peel 獲新人獎。</p></div></div>
 <div class="it noimg" data-tags="新案"><div>
-<div class="meta"><span class="pill">新案</span>2026 年 9 月 30 日　·　歐洲</div>
+<div class="meta"><span class="pill">新案</span>2026 年 9 月 30 日</div>
 <h3><a href="../../item/2026-10-072/">Hannah Peel 為 Netflix 真人版《Assassin&#x27;s Creed》配樂</a></h3>
 <p>同期拿下世界電影音樂獎新人獎的 Hannah Peel，將為 Netflix 真人影集《Assassin&#x27;s Creed》配樂。</p></div></div></div></div>
 </div></main>

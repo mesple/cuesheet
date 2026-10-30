@@ -1019,8 +1019,10 @@
    "media": [
     {
      "kind": "image",
-     "url": "https://mesple.github.io/cuesheet/images/2026-10/the-social-reckoning.jpg",
-     "caption": "專輯封面"
+     "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02bd6dfc92dd98e307bb87480f",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/6El985JZ5HPJHkoVCXCY2I",
+     "hosting": "spotify"
     }
    ],
    "web": true,
@@ -1049,8 +1051,10 @@
    "media": [
     {
      "kind": "image",
-     "url": "https://mesple.github.io/cuesheet/images/2026-10/animals.jpg",
-     "caption": "專輯封面"
+     "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02acf5256a92d96097255670ed",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/2mUfnZ9RwhEbTp4SwwmdU3",
+     "hosting": "spotify"
     }
    ],
    "web": true
@@ -1076,8 +1080,10 @@
    "media": [
     {
      "kind": "image",
-     "url": "https://mesple.github.io/cuesheet/images/2026-10/carrie.jpg",
-     "caption": "專輯封面"
+     "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e021b960558b6aafa57494d63af",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/2YacK7RBiRqKZkIgYq96Qc",
+     "hosting": "spotify"
     }
    ],
    "web": true,

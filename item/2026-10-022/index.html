@@ -117,6 +117,12 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
+.twocol .items .thumb img{width:110px}
+.items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
+.items .by a:hover{color:var(--teal)}
+.items .src{font-size:12px;color:var(--muted);margin-top:4px}
+.items .src a{color:var(--teal);text-decoration:none}
 .items .meta{font-size:12px;color:var(--muted)}
 .items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
 .items h3{font-size:17px;line-height:1.45;margin:4px 0 2px}
@@ -150,6 +156,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .rel,.types{grid-template-columns:1fr}
   .items .it{grid-template-columns:64px minmax(0,1fr)}
   .items .thumb img{width:64px}
+  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
+  .twocol .items .thumb img{width:80px}
 }
 </style>
 </head>
@@ -163,18 +171,18 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <div class="narrow">
 <p class="crumb"><a href="../../category/reviews/">樂評</a></p>
 <article>
-<div class="pills"><a class="pill solid" href="../../category/reviews/">樂評</a><span class="pill plain">北美</span></div>
+<div class="pills"><a class="pill solid" href="../../category/reviews/">樂評</a></div>
 <h2 class="item-title">Digger</h2>
 
 <p class="byline">Cosmo Sheldrake</p>
-<p class="dateline">首次刊出：<a href="../../newsletter/2026-10/">Cue Sheet 2026 年 10 月號</a></p>
+
 <div class="media single"><figure><img src="https://mesple.github.io/cuesheet/images/2026-10/digger.jpg" alt="專輯封面" loading="lazy"></figure></div>
 <p class="lead">伊納利圖新片，Sheldrake 的劇情長片首作（WaterTower，24 軌）。配樂用來強化諷刺、荒謬幽默與底層不安，野心大、帶點狂妄，多半達成了美學上的企圖；但各種想法堆疊過多，後段在自己的過度之中失衡、停滯，完成度不均。</p>
 
 
 <div class="box"><b>作曲家</b><div class="chips"><a class="chip" href="../../composer/cosmo-sheldrake/">Cosmo Sheldrake</a></div></div><div class="box"><b>來源</b><ul><li><a href="https://www.mundobso.com/bso/digger">MundoBSO</a></li></ul></div>
 </article>
-<div class="sec">相關內容<span>Related</span></div><div class="rel"><a href="../2026-10-049/"><small>試聽</small><b>Avian Elegy（Digger）</b></a></div></div>
+</div>
 </div></main>
 <footer><div class="wrap"><b>Cue Sheet</b><br>每月 5 日深度聆聽版、20 日配樂新訊版<br>Cue Sheet 為非營利樂迷刊物，文字為編輯摘要與評論，圖片版權屬原權利人，連結皆指向原始來源。</div></footer>
 <script>(function(){try{var d=new Date(Date.now()+8*3600e3),w="日一二三四五六";

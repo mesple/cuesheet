@@ -116,6 +116,12 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
+.twocol .items .thumb img{width:110px}
+.items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
+.items .by a:hover{color:var(--teal)}
+.items .src{font-size:12px;color:var(--muted);margin-top:4px}
+.items .src a{color:var(--teal);text-decoration:none}
 .items .meta{font-size:12px;color:var(--muted)}
 .items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
 .items h3{font-size:17px;line-height:1.45;margin:4px 0 2px}
@@ -149,6 +155,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .rel,.types{grid-template-columns:1fr}
   .items .it{grid-template-columns:64px minmax(0,1fr)}
   .items .thumb img{width:64px}
+  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
+  .twocol .items .thumb img{width:80px}
 }
 </style>
 </head>
@@ -161,13 +169,13 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <main><div class="wrap">
 <div class="narrow">
 <p class="crumb"><a href="../">作曲家</a> › Isabel Latorre</p><h2 class="item-title">Isabel Latorre</h2><p class="alias">Isabel Latorre Sáez</p><div class="sec">Cue Sheet 刊出的相關內容<span>2 則</span></div><div class="items"><div class="it" data-tags="獎項"><a class="thumb" href="../../item/2026-10-062/"><img src="https://mesple.github.io/cuesheet/images/2026-10/golden-horse-63.jpg" alt="" loading="lazy"></a><div>
-<div class="meta"><span class="pill">獎項</span>2026 年 10 月 1 日　·　臺灣</div>
+<div class="meta"><span class="pill">獎項</span>2026 年 10 月 1 日</div>
 <h3><a href="../../item/2026-10-062/">金馬獎第 63 屆：配樂入圍名單</a></h3>
 <p>片山凉太以《黑潮》同時入圍最佳原創電影音樂與最佳原創電影歌曲兩項；頒獎典禮 11 月 22 日晚間在臺北流行音樂中心舉行。</p></div></div>
-<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-037/"><img src="https://mesple.github.io/cuesheet/images/2026-10/the-violinist.jpg" alt="" loading="lazy"></a><div>
-<div class="meta">2026 年 9 月 25 日　·　亞洲</div>
-<h3><a href="../../item/2026-10-037/">The Violinist</a></h3><div class="by">何國杰、Isabel Latorre</div>
-<p>Milan｜9/25 上架，29 軌。新加坡金馬獎作曲家與西班牙作曲家合寫，安錫影展得獎動畫，故事橫跨日據時期的新加坡與馬來亞。</p></div></div></div></div>
+<div class="it" data-tags=""><a class="thumb" href="https://milanrecords.com/the-violinist-original-motion-picture-soundtrack-out-now/" target="_blank" rel="noopener"><img src="https://mesple.github.io/cuesheet/images/2026-10/the-violinist.jpg" alt="" loading="lazy"></a><div>
+
+<h3><a href="https://milanrecords.com/the-violinist-original-motion-picture-soundtrack-out-now/" target="_blank" rel="noopener">The Violinist</a></h3><div class="by"><a href="../../composer/ricky-ho/">何國杰</a>、<a href="../../composer/isabel-latorre/">Isabel Latorre</a></div>
+<p>Milan｜9/25 上架，29 軌。新加坡金馬獎作曲家與西班牙作曲家合寫，安錫影展得獎動畫，故事橫跨日據時期的新加坡與馬來亞。</p><div class="src">來源：<a href="https://milanrecords.com/the-violinist-original-motion-picture-soundtrack-out-now/" target="_blank" rel="noopener">Milan Records</a></div></div></div></div></div>
 </div></main>
 <footer><div class="wrap"><b>Cue Sheet</b><br>每月 5 日深度聆聽版、20 日配樂新訊版<br>Cue Sheet 為非營利樂迷刊物，文字為編輯摘要與評論，圖片版權屬原權利人，連結皆指向原始來源。</div></footer>
 <script>(function(){try{var d=new Date(Date.now()+8*3600e3),w="日一二三四五六";

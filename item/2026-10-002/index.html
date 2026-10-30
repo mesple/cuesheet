@@ -117,6 +117,12 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
+.twocol .items .thumb img{width:110px}
+.items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
+.items .by a:hover{color:var(--teal)}
+.items .src{font-size:12px;color:var(--muted);margin-top:4px}
+.items .src a{color:var(--teal);text-decoration:none}
 .items .meta{font-size:12px;color:var(--muted)}
 .items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
 .items h3{font-size:17px;line-height:1.45;margin:4px 0 2px}
@@ -150,6 +156,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .rel,.types{grid-template-columns:1fr}
   .items .it{grid-template-columns:64px minmax(0,1fr)}
   .items .thumb img{width:64px}
+  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
+  .twocol .items .thumb img{width:80px}
 }
 </style>
 </head>
@@ -163,11 +171,11 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <div class="narrow">
 <p class="crumb"><a href="../../category/news/">新聞</a></p>
 <article>
-<div class="pills"><a class="pill solid" href="../../category/news/">新聞</a><a class="pill" href="../../category/news/?tag=獎項">獎項</a><span class="pill plain">歐洲</span><a class="pill plain" href="../../newsletter/2026-10/">2026 年 10 月號本月專題</a></div>
+<div class="pills"><a class="pill solid" href="../../category/news/">新聞</a><a class="pill" href="../../category/news/?tag=獎項">獎項</a><a class="pill plain" href="../../newsletter/2026-10/">2026 年 10 月號本月專題</a></div>
 <h2 class="item-title">Daniel Pemberton 二度封王：第 26 屆世界電影音樂獎揭曉</h2>
 <p class="deck">10/10 根特頒獎，Jeff Russo 三度入圍終於得獎，Hannah Peel 獲新人獎。</p>
 
-<p class="dateline">2026 年 10 月 10 日　·　首次刊出：<a href="../../newsletter/2026-10/">Cue Sheet 2026 年 10 月號</a></p>
+<p class="dateline">2026 年 10 月 10 日</p>
 <div class="media single wide"><figure><img src="https://mesple.github.io/cuesheet/images/2026-10/wsa-2026-winners.jpg" alt="第 26 屆世界電影音樂獎得主" loading="lazy"><figcaption>第 26 屆世界電影音樂獎得主　圖片來源：<a href="https://www.worldsoundtrackawards.com/daniel-pemberton-hannah-peel-and-jeff-russo-among-the-winners-at-the-26th-world-soundtrack-awards">World Soundtrack Awards</a></figcaption></figure></div>
 
 <div class="body"><p>第 26 屆 World Soundtrack Awards 10 月 10 日在比利時根特 De Bijloke 音樂中心頒發。年度電影作曲家由英國的 Daniel Pemberton 拿下，憑藉的是一整年的多樣作品：《極限返航》（Project Hail Mary）的有機科幻聲響、《抓馬戀人》（The Drama）的極簡主義配樂、《The Bad Guys 2》的放克，以及《Masters of the Universe》的華麗搖滾。這是他繼 2021 年後第二次獲得此獎，2014 年他也曾拿下新人獎。同組入圍者是 Alexandre Desplat、Jonny Greenwood、Hildur Guðnadóttir 與 Max Richter——其中 Greenwood 與 Richter 正是今年奧斯卡入圍者。</p>
@@ -190,7 +198,7 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 
 <div class="box"><b>作曲家</b><div class="chips"><a class="chip" href="../../composer/daniel-pemberton/">Daniel Pemberton</a><a class="chip" href="../../composer/jeff-russo/">Jeff Russo</a><a class="chip" href="../../composer/hannah-peel/">Hannah Peel</a><a class="chip" href="../../composer/trevor-jones/">Trevor Jones</a><a class="chip" href="../../composer/nicolas-garcia/">Nicolas Garcia</a><a class="chip" href="../../composer/kevin-smithers/">Kevin Smithers</a><a class="chip" href="../../composer/margaret-hermant/">Margaret Hermant</a></div></div><div class="box"><b>來源</b><ul><li><a href="https://www.worldsoundtrackawards.com/daniel-pemberton-hannah-peel-and-jeff-russo-among-the-winners-at-the-26th-world-soundtrack-awards">WSA 得獎公告</a></li><li><a href="https://www.worldsoundtrackawards.com/these-are-the-nominees-for-the-26th-world-soundtrack-awards-2026">WSA 入圍名單</a></li><li><a href="https://www.screendaily.com/news/sirat-project-hail-mary-kpop-demon-hunters-among-second-wave-of-world-soundtrack-awards-nominees/5219732.article">Screen Daily（第二波入圍）</a></li><li><a href="https://www.worldsoundtrackawards.com/film-music-days-programme-announced">WSA 節目公告</a></li></ul></div>
 </article>
-<div class="sec">相關內容<span>Related</span></div><div class="rel"><a href="../2026-10-001/"><small>訃聞</small><b>George Fenton（1949–2026）：從《甘地》到《藍色星球》的英國聲音</b></a><a href="../2026-10-038/"><small>發行</small><b>Philip Glass: Music for Film</b></a><a href="../2026-10-072/"><small>新聞</small><b>Hannah Peel 為 Netflix 真人版《Assassin&#x27;s Creed》配樂</b></a></div></div>
+<div class="sec">相關內容<span>Related</span></div><div class="rel"><a href="../2026-10-001/"><small>訃聞</small><b>George Fenton（1949–2026）：從《甘地》到《藍色星球》的英國聲音</b></a><a href="../2026-10-072/"><small>新聞</small><b>Hannah Peel 為 Netflix 真人版《Assassin&#x27;s Creed》配樂</b></a></div></div>
 </div></main>
 <footer><div class="wrap"><b>Cue Sheet</b><br>每月 5 日深度聆聽版、20 日配樂新訊版<br>Cue Sheet 為非營利樂迷刊物，文字為編輯摘要與評論，圖片版權屬原權利人，連結皆指向原始來源。</div></footer>
 <script>(function(){try{var d=new Date(Date.now()+8*3600e3),w="日一二三四五六";

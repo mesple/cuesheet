@@ -75,6 +75,12 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
+.twocol .items .thumb img{width:110px}
+.items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
+.items .by a:hover{color:var(--teal)}
+.items .src{font-size:12px;color:var(--muted);margin-top:4px}
+.items .src a{color:var(--teal);text-decoration:none}
 .items .meta{font-size:12px;color:var(--muted)}
 .items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
 .items h3{font-size:17px;line-height:1.45;margin:4px 0 2px}
@@ -108,6 +114,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .rel,.types{grid-template-columns:1fr}
   .items .it{grid-template-columns:64px minmax(0,1fr)}
   .items .thumb img{width:64px}
+  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
+  .twocol .items .thumb img{width:80px}
 }
 """
 
@@ -197,10 +205,41 @@ def media_html(it, title):
     return f'<div class="media {cls}">' + "".join(figs) + "</div>"
 
 
+NO_PAGE_TYPES = ("發行", "試聽")   # 唱片架、精選試聽：資訊少，不另做單則頁（編輯 2026-10-31 指定）
+PAGE_MIN_CHARS = 200              # 這兩類若內文達 200 字以上，才做單則頁
+
+
+NO_DATE_TYPES = ("樂評", "發行", "試聽")
+
+
+def has_page(it):
+    if it["type"] not in NO_PAGE_TYPES:
+        return True
+    return len(it.get("summary", "")) + len(it.get("body") or "") >= PAGE_MIN_CHARS
+
+
+def ext_link(it):
+    """沒有單則頁的條目，點圖或標題直接去哪：YouTube 影片 > Spotify 專輯 > 第一個來源。"""
+    for m in it.get("media") or []:
+        if m["kind"] == "youtube":
+            return f"https://www.youtube.com/watch?v={m['id']}"
+        if m.get("link"):
+            return m["link"]
+    src = it.get("sources") or []
+    return src[0]["url"] if src else ""
+
+
+def item_href(it, up):
+    """回傳 (網址, 是否外部連結)。"""
+    if has_page(it):
+        return f'{up}item/{it["id"]}/', False
+    return ext_link(it), True
+
+
 def first_image(it):
     for m in it.get("media") or []:
         if m["kind"] == "youtube":
-            return yt_thumb(m["id"])
+            return f"https://img.youtube.com/vi/{m['id']}/mqdefault.jpg"   # 16:9、無黑邊
         return m["url"]
     return None
 
@@ -216,14 +255,13 @@ def item_page(it, by_id, composers, labels, features):
     pills = [f'<a class="pill solid" href="../../category/{slug}/">{it["type"]}</a>']
     for t in it.get("tags", []):
         pills.append(f'<a class="pill" href="../../category/{slug}/?tag={escape(t)}">{escape(t)}</a>')
-    pills.append(f'<span class="pill plain">{escape(it["region"])}</span>')
     if it["id"] in features:
         pills.append(f'<a class="pill plain" href="../../newsletter/{features[it["id"]]}/">{escape(issue_label(labels, features[it["id"]]))}本月專題</a>')
     byline = ""
     if it.get("byline"):
         byline = f'<p class="byline">{escape(show_name(it["byline"], composers, codes))}</p>'
-    date = fmt_date(it)
-    dateline = f'<p class="dateline">{date + "　·　" if date else ""}首次刊出：<a href="../../newsletter/{it["issue"]}/">Cue Sheet {escape(issue_label(labels, it["issue"]))}</a></p>'
+    date = "" if it["type"] in NO_DATE_TYPES else fmt_date(it)
+    dateline = f'<p class="dateline">{date}</p>' if date else ""
     summary = show_name(it["summary"], composers, codes)
     body = ""
     if it.get("body"):
@@ -254,7 +292,7 @@ def item_page(it, by_id, composers, labels, features):
     if it.get("sources"):
         lis = "".join(f'<li><a href="{escape(s["url"])}">{escape(s["name"])}</a></li>' for s in it["sources"])
         boxes.append(f'<div class="box"><b>來源</b><ul>{lis}</ul></div>')
-    rel = [by_id[r] for r in it.get("related", []) if r in by_id]
+    rel = [by_id[r] for r in it.get("related", []) if r in by_id and has_page(by_id[r])]
     rel_html = ""
     if rel:
         cards = "".join(f'<a href="../{r["id"]}/"><small>{r["type"]}</small><b>{escape(r["title"])}</b></a>' for r in rel)
@@ -288,23 +326,36 @@ def item_page(it, by_id, composers, labels, features):
 
 
 def row_html(it, composers, labels, depth, show_date=True):
+    """分類頁的一列。前台不顯示地區；樂評、唱片架、試聽不顯示日期（編輯 2026-10-31 指定）。
+    沒有單則頁的條目（唱片架、試聽）：圖與標題直接連外，作曲家連作曲家頁，最後一行列來源。"""
     up = "../" * depth
+    href, external = item_href(it, up)
+    tgt = ' target="_blank" rel="noopener"' if external else ""
     img = first_image(it)
-    thumb = f'<a class="thumb" href="{up}item/{it["id"]}/"><img src="{img}" alt="" loading="lazy"></a>' if img else ""
+    thumb = f'<a class="thumb" href="{escape(href)}"{tgt}><img src="{img}" alt="" loading="lazy"></a>' if img else ""
     tags = "".join(f'<span class="pill">{escape(t)}</span>' for t in it.get("tags", []))
-    date = fmt_date(it) or f'{escape(issue_label(labels, it["issue"]))}'
-    if not show_date:   # 唱片架/試聽頁不放日期（編輯 2026-10-30 指定）
-        date = ""
-    by = f'<div class="by">{escape(show_name(it["byline"], composers, it.get("composers")))}</div>' if it.get("byline") else ""
+    date = "" if (not show_date or it["type"] in NO_DATE_TYPES) else fmt_date(it)
+    meta = f'<div class="meta">{tags}{date}</div>' if (tags or date) else ""
+    codes = [c for c in (it.get("composers") or []) if c in composers]
+    if external and codes:
+        by = '<div class="by">' + "、".join(
+            f'<a href="{up}composer/{c}/">{escape(composers[c]["display"])}</a>' for c in codes) + "</div>"
+    elif it.get("byline"):
+        by = f'<div class="by">{escape(show_name(it["byline"], composers, it.get("composers")))}</div>'
+    else:
+        by = ""
     s = show_name(it["summary"], composers, it.get("composers"))
-    s = s if len(s) <= 90 else s[:88] + "…"
+    if not external:
+        s = s if len(s) <= 90 else s[:88] + "…"
+    src = ""
+    if external and it.get("sources"):
+        src = '<div class="src">來源：' + "・".join(
+            f'<a href="{escape(x["url"])}" target="_blank" rel="noopener">{escape(x["name"])}</a>' for x in it["sources"]) + "</div>"
     data_tags = escape(" ".join(it.get("tags", [])))
-    # 唱片架/試聽頁：片名、作曲家、資訊三行，不放日期與地區（編輯 2026-10-30 指定）
-    meta = f'<div class="meta">{tags}{date}　·　{escape(it["region"])}</div>' if show_date else ""
     return f"""<div class="it{'' if img else ' noimg'}" data-tags="{data_tags}">{thumb}<div>
 {meta}
-<h3><a href="{up}item/{it["id"]}/">{escape(it["title"])}</a></h3>{by}
-<p>{escape(s)}</p></div></div>"""
+<h3><a href="{escape(href)}"{tgt}>{escape(it["title"])}</a></h3>{by}
+<p>{escape(s)}</p>{src}</div></div>"""
 
 
 FILTER_JS = """<script>
@@ -332,6 +383,8 @@ def main():
     if os.path.isdir("item"):
         shutil.rmtree("item")
     for it in shown:
+        if not has_page(it):
+            continue
         os.makedirs(f"item/{it['id']}", exist_ok=True)
         open(f"item/{it['id']}/index.html", "w", encoding="utf-8").write(item_page(it, by_id, composers, labels, features))
 
@@ -371,10 +424,10 @@ def main():
         latest = "".join(f'<li><a href="../item/{it["id"]}/">{escape(it["title"])}</a></li>' for it in rows[:3])
         cards.append(f'<div class="type-card"><h3><a href="{slug}/">{t}</a><small>{len(rows)} 則</small></h3><p>{desc}</p><ul>{latest}</ul></div>')
 
-    idx = f'<div class="sec">依類型瀏覽<span>Browse</span></div><div class="types">{"".join(cards)}</div>'
-    html = page("分類｜Cue Sheet", "依類型瀏覽 Cue Sheet 刊出的新聞、樂評、新唱片、訪談、試聽、訃聞與社群話題。", f"{SITE}category/", "category",
-                (f'<p class="sub">電子報刊出的每一則，依類型整理。共 {len(shown)} 則。</p>', idx), depth=1)
-    open("category/index.html", "w", encoding="utf-8").write(html.replace("</style>", EXTRA_CSS + "</style>", 1))
+    # 「全部分類」頁已從選單拿掉（編輯 2026-10-30），舊網址轉到首頁
+    open("category/index.html", "w", encoding="utf-8").write(
+        '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">'
+        '<meta http-equiv="refresh" content="0; url=../"><script>location.replace("../")</script><a href="../">Cue Sheet</a>')
 
     # 作曲家頁
     if os.path.isdir("composer"):
@@ -585,7 +638,7 @@ def build_home():
     nl_html = "".join(f'<a class="h-row" href="newsletter/{i["slug"]}/"><b>{escape(i["title"])}</b><span>{escape(i["label"])}</span></a>' for i in nl)
     news = pick("新聞", 4)
     news_html = "".join(
-        f'<a class="h-row" href="item/{it["id"]}/"><b>{nm(it, it["title"])}</b><span>{escape("・".join(it.get("tags", [])[:1] + [it["region"]]))}</span></a>'
+        f'<a class="h-row" href="item/{it["id"]}/"><b>{nm(it, it["title"])}</b><span>{escape("・".join(it.get("tags", [])[:1]))}</span></a>'
         for it in news)
     side = f"""<aside class="h-side">
 <div class="sec">電子報<a class="more-r" href="newsletter/">各期 →</a></div>{nl_html}
@@ -609,7 +662,7 @@ def build_home():
         f'<a class="h-talk" href="item/{it["id"]}/"><b>{nm(it, it["title"])}</b><span>{nm(it, _first_sentence(it["summary"], 70))}</span>'
         f'<small>{escape("、".join(s["name"] for s in it.get("sources", [])[:2]))}</small></a>' for it in talk)
     rel_html = "".join(
-        f'<a class="h-rel" href="item/{it["id"]}/"><img src="{escape(first_image(it) or "")}" alt="{escape(it["title"])} 專輯封面" loading="lazy">'
+        f'<a class="h-rel" href="{escape(item_href(it, "")[0])}"' + (' target="_blank" rel="noopener"' if item_href(it, "")[1] else "") + f'><img src="{escape(first_image(it) or "")}" alt="{escape(it["title"])} 專輯封面" loading="lazy">'
         f'<span><b>{nm(it, it["title"])}</b><span>{nm(it, (it.get("byline") or "") + "｜" + it["summary"].split("｜")[0].split("。")[0])}</span></span></a>' for it in rels)
     obit_html = "".join(
         f'<a class="h-obit" href="item/{it["id"]}/"><b>{nm(it, it["title"].split("：")[0])}</b><span>{nm(it, _first_sentence(it["summary"], 40))}</span></a>' for it in obits)

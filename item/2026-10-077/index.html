@@ -117,6 +117,12 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
+.twocol .items .thumb img{width:110px}
+.items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
+.items .by a:hover{color:var(--teal)}
+.items .src{font-size:12px;color:var(--muted);margin-top:4px}
+.items .src a{color:var(--teal);text-decoration:none}
 .items .meta{font-size:12px;color:var(--muted)}
 .items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
 .items h3{font-size:17px;line-height:1.45;margin:4px 0 2px}
@@ -150,6 +156,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .rel,.types{grid-template-columns:1fr}
   .items .it{grid-template-columns:64px minmax(0,1fr)}
   .items .thumb img{width:64px}
+  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
+  .twocol .items .thumb img{width:80px}
 }
 </style>
 </head>
@@ -163,11 +171,11 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <div class="narrow">
 <p class="crumb"><a href="../../category/obituaries/">訃聞</a></p>
 <article>
-<div class="pills"><a class="pill solid" href="../../category/obituaries/">訃聞</a><span class="pill plain">歐洲</span></div>
+<div class="pills"><a class="pill solid" href="../../category/obituaries/">訃聞</a></div>
 <h2 class="item-title">Jean-Paul Rappeneau（1932–2026）</h2>
 
 
-<p class="dateline">2026 年 9 月 1 日　·　首次刊出：<a href="../../newsletter/2026-10/">Cue Sheet 2026 年 10 月號</a></p>
+<p class="dateline">2026 年 9 月 1 日</p>
 <div class="media single"><figure><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Rappeneau.jpg/330px-Rappeneau.jpg" alt="Jean-Paul Rappeneau 肖像" loading="lazy"><figcaption>Jean-Paul Rappeneau 肖像　<a href="https://commons.wikimedia.org/wiki/File:Rappeneau.jpg">Julienmorvan · 公有領域 · Wikimedia Commons</a></figcaption></figure></div>
 <p class="lead">法國導演，9 月 1 日於巴黎辭世，享年 94。他自己不作曲，但八部長片的配樂版圖本身就是一部法國電影音樂小史：《Cyrano de Bergerac》找 Jean-Claude Petit，把巴洛克與威爾第揉進亞歷山大體詩句，Petit 在 Guillaume Tell 錄音棚舉起指揮棒時，八十位樂手「手按胸口喊著 Jean-Claude」；他從《城堡裡的生活》起與 Michel Legrand 合作（「我在 Legrand 身上學到音樂在電影裡的力量」），《Tout feu, tout flamme》交給 Michel Berger，《Bon Voyage》則是 Gabriel Yared。法國電影資料館將於 10 月 24 日至 11 月 3 日舉辦回顧展。</p>
 

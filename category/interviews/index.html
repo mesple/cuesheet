@@ -116,6 +116,12 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
+.twocol .items .thumb img{width:110px}
+.items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
+.items .by a:hover{color:var(--teal)}
+.items .src{font-size:12px;color:var(--muted);margin-top:4px}
+.items .src a{color:var(--teal);text-decoration:none}
 .items .meta{font-size:12px;color:var(--muted)}
 .items .meta .pill{font-size:11px;padding:0 6px;margin-right:4px}
 .items h3{font-size:17px;line-height:1.45;margin:4px 0 2px}
@@ -149,6 +155,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .rel,.types{grid-template-columns:1fr}
   .items .it{grid-template-columns:64px minmax(0,1fr)}
   .items .thumb img{width:64px}
+  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
+  .twocol .items .thumb img{width:80px}
 }
 </style>
 </head>
@@ -161,19 +169,19 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <main><div class="wrap">
 <div class="narrow">
 <div class="toppad"></div><div class="items"><div class="it noimg" data-tags=""><div>
-<div class="meta">2026 年 10 月號　·　北美</div>
+
 <h3><a href="../../item/2026-10-061/">Austin Wintory</a></h3>
 <p>GDC podcast 拆解他的協作式作曲流程。</p></div></div>
 <div class="it noimg" data-tags=""><div>
-<div class="meta">2026 年 10 月號　·　北美</div>
+
 <h3><a href="../../item/2026-10-056/">Daniel Rojas（Netflix《Best of the Best》）</a></h3>
 <p>「我們很確定不要大編制管弦樂團。」他用柔和的合成器、木吉他與弦樂，讓音樂「先服務電影」。</p></div></div>
 <div class="it noimg" data-tags=""><div>
-<div class="meta">2026 年 10 月號　·　全球</div>
+
 <h3><a href="../../item/2026-10-055/">Hans Zimmer 與 HBO《哈利波特》</a></h3>
 <p>他明說新劇音樂會「盡可能遠離」電影版：「我寫不出 John Williams 那樣的音樂，但就算我寫得出來，我也會盡量避開」。</p></div></div>
-<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-054/"><img src="https://img.youtube.com/vi/whH1xeCYPnE/hqdefault.jpg" alt="" loading="lazy"></a><div>
-<div class="meta">2026 年 9 月 21 日　·　歐洲</div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-054/"><img src="https://img.youtube.com/vi/whH1xeCYPnE/mqdefault.jpg" alt="" loading="lazy"></a><div>
+<div class="meta">2026 年 9 月 21 日</div>
 <h3><a href="../../item/2026-10-054/">Olivier Derivière 談一年兩部大作</a></h3>
 <p>The Film Scorer 9 月 21 日專訪這位法國遊戲作曲家，聚焦他近一年的《Dying Light: The Beast》與《Resonance: A Plague…</p></div></div></div></div>
 </div></main>
