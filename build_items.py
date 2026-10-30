@@ -287,18 +287,22 @@ def item_page(it, by_id, composers, labels, features):
     return html.replace("</style>", EXTRA_CSS + "</style>", 1)
 
 
-def row_html(it, composers, labels, depth):
+def row_html(it, composers, labels, depth, show_date=True):
     up = "../" * depth
     img = first_image(it)
     thumb = f'<a class="thumb" href="{up}item/{it["id"]}/"><img src="{img}" alt="" loading="lazy"></a>' if img else ""
     tags = "".join(f'<span class="pill">{escape(t)}</span>' for t in it.get("tags", []))
     date = fmt_date(it) or f'{escape(issue_label(labels, it["issue"]))}'
+    if not show_date:   # 唱片架/試聽頁不放日期（編輯 2026-10-30 指定）
+        date = ""
     by = f'<div class="by">{escape(show_name(it["byline"], composers, it.get("composers")))}</div>' if it.get("byline") else ""
     s = show_name(it["summary"], composers, it.get("composers"))
     s = s if len(s) <= 90 else s[:88] + "…"
     data_tags = escape(" ".join(it.get("tags", [])))
+    # 唱片架/試聽頁：片名、作曲家、資訊三行，不放日期與地區（編輯 2026-10-30 指定）
+    meta = f'<div class="meta">{tags}{date}　·　{escape(it["region"])}</div>' if show_date else ""
     return f"""<div class="it{'' if img else ' noimg'}" data-tags="{data_tags}">{thumb}<div>
-<div class="meta">{tags}{date}　·　{escape(it["region"])}</div>
+{meta}
 <h3><a href="{up}item/{it["id"]}/">{escape(it["title"])}</a></h3>{by}
 <p>{escape(s)}</p></div></div>"""
 
@@ -352,7 +356,7 @@ def main():
             if t == "發行":
                 listen = [it for it in shown if it["type"] == "試聽"]
                 col = lambda name, rs: (f'<div class="col"><div class="colhead">{name}</div><div class="items">'
-                                        + "\n".join(row_html(it, composers, labels, 2) for it in rs) + "</div></div>")
+                                        + "\n".join(row_html(it, composers, labels, 2, show_date=False) for it in rs) + "</div></div>")
                 body = f'<div class="toppad"></div><div class="twocol">{col("唱片架<span>Record Shelf</span>", rows)}{col("精選試聽<span>Take a Bite</span>", listen)}</div>'
                 ptitle, pdesc, wide = "唱片架/試聽", "新唱片、重發、實體版，以及官方釋出的配樂音軌與影片", True
             else:

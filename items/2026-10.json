@@ -1433,8 +1433,8 @@
    "type": "試聽",
    "region": "北美",
    "date": "2026-09-30",
-   "title": "The Social Reckoning（Desplat）",
-   "summary": "官方音軌先行釋出，聽 Desplat 怎麼讓「語言」主導一部配樂。",
+   "title": "The Social Reckoning",
+   "summary": "官方音軌先行釋出，聽 Alexandre Desplat 怎麼讓「語言」主導一部配樂。",
    "composers": [
     "alexandre-desplat"
    ],
@@ -1453,7 +1453,8 @@
    "web": true,
    "related": [
     "2026-10-034"
-   ]
+   ],
+   "byline": "Alexandre Desplat"
   },
   {
    "id": "2026-10-049",
@@ -1462,7 +1463,7 @@
    "region": "北美",
    "date": "2026-10-01",
    "title": "Avian Elegy（Digger）",
-   "summary": "Cosmo Sheldrake 的首支曲目，鳥鳴般的音色是他的招牌。",
+   "summary": "《Digger》原聲的首支曲目，鳥鳴般的音色是他的招牌。",
    "composers": [
     "cosmo-sheldrake"
    ],
@@ -1481,7 +1482,8 @@
    "web": true,
    "related": [
     "2026-10-022"
-   ]
+   ],
+   "byline": "Cosmo Sheldrake"
   },
   {
    "id": "2026-10-050",
@@ -1490,7 +1492,7 @@
    "region": "北美",
    "date": "2026-09-30",
    "title": "Guile's Theme（Street Fighter 電影版）",
-   "summary": "Leo Birenberg & Zach Robinson 重製下村陽子 1991 年的經典遊戲曲。",
+   "summary": "重製下村陽子 1991 年的經典遊戲曲。",
    "composers": [
     "leo-birenberg",
     "zach-robinson",
@@ -1508,7 +1510,8 @@
      "id": "MxThbfaKXQU"
     }
    ],
-   "web": true
+   "web": true,
+   "byline": "Leo Birenberg & Zach Robinson"
   },
   {
    "id": "2026-10-051",
@@ -1516,7 +1519,7 @@
    "type": "試聽",
    "region": "歐洲",
    "date": "2026-10-12",
-   "title": "Now We Can Sing（Max Richter）",
+   "title": "Now We Can Sing",
    "summary": "新專輯《While The Flood Rages》首支單曲，素材來自芭蕾《MaddAddam》。",
    "composers": [
     "max-richter"
@@ -1537,7 +1540,8 @@
    "internal_note": "date 待確認（DG 網址沒有日期），暫用發刊日",
    "related": [
     "2026-10-066"
-   ]
+   ],
+   "byline": "Max Richter"
   },
   {
    "id": "2026-10-052",
@@ -1545,7 +1549,7 @@
    "type": "試聽",
    "region": "北美",
    "date": "2026-10-01",
-   "title": "East of Eden（Laura Karpman）",
+   "title": "East of Eden",
    "summary": "官方發布的整張原聲。",
    "composers": [
     "laura-karpman"
@@ -1565,7 +1569,8 @@
    "web": true,
    "related": [
     "2026-10-025"
-   ]
+   ],
+   "byline": "Laura Karpman"
   },
   {
    "id": "2026-10-053",
@@ -1573,7 +1578,7 @@
    "type": "試聽",
    "region": "北美",
    "date": "2026-10-02",
-   "title": "Draw You Out（Noah Kahan）",
+   "title": "Draw You Out",
    "summary": "《飢餓遊戲：收割之日》首支單曲，由 Kahan 與 Aaron Dessner 合寫。",
    "sources": [
     {
@@ -1590,7 +1595,8 @@
    "web": true,
    "related": [
     "2026-10-040"
-   ]
+   ],
+   "byline": "Noah Kahan"
   },
   {
    "id": "2026-10-054",
