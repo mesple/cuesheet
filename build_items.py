@@ -252,7 +252,7 @@ def item_page(it, by_id, composers, labels, features):
     title = it["title"]
     codes = it.get("composers", [])
     slug = SLUG[it["type"]]
-    pills = [f'<a class="pill solid" href="../../category/{slug}/">{it["type"]}</a>']
+    pills = []   # 類別已顯示在選單上，不再重複（編輯 2026-10-31 指定）
     for t in it.get("tags", []):
         pills.append(f'<a class="pill" href="../../category/{slug}/?tag={escape(t)}">{escape(t)}</a>')
     if it["id"] in features:
@@ -271,7 +271,7 @@ def item_page(it, by_id, composers, labels, features):
     top_media, more_media = media_html(it, title), ""
     if it.get("body"):
         # 長文：摘要當副標，第一張圖放上面，其餘圖放文末
-        deck, lead = f'<p class="deck">{escape(summary)}</p>', ""
+        deck, lead = ("" if it["type"] in ("樂評", "訪談") else f'<p class="deck">{escape(summary)}</p>'), ""
         if len(it.get("media") or []) > 1:
             rest = dict(it, media=it["media"][1:])
             top_media = media_html(dict(it, media=it["media"][:1]), title)
@@ -301,9 +301,9 @@ def item_page(it, by_id, composers, labels, features):
         crumb = f'<p class="crumb"><a href="../../category/releases/">唱片架/試聽</a> › {"唱片架" if it["type"] == "發行" else "精選試聽"}</p>'
     else:
         crumb = f'<p class="crumb"><a href="../../category/{slug}/">{it["type"]}</a></p>'
-    article = f"""{crumb}
+    article = f"""<div class="toppad"></div>
 <article>
-<div class="pills">{"".join(pills)}</div>
+{f'<div class="pills">{"".join(pills)}</div>' if pills else ""}
 <h2 class="item-title">{escape(title)}</h2>
 {deck}
 {byline}
@@ -325,7 +325,7 @@ def item_page(it, by_id, composers, labels, features):
     return html.replace("</style>", EXTRA_CSS + "</style>", 1)
 
 
-def row_html(it, composers, labels, depth, show_date=True):
+def row_html(it, composers, labels, depth, show_date=True, show_by=True):
     """分類頁的一列。前台不顯示地區；樂評、唱片架、試聽不顯示日期（編輯 2026-10-31 指定）。
     沒有單則頁的條目（唱片架、試聽）：圖與標題直接連外，作曲家連作曲家頁，最後一行列來源。"""
     up = "../" * depth
@@ -343,6 +343,8 @@ def row_html(it, composers, labels, depth, show_date=True):
     elif it.get("byline"):
         by = f'<div class="by">{escape(show_name(it["byline"], composers, it.get("composers")))}</div>'
     else:
+        by = ""
+    if not show_by:   # 作曲家頁：每則不再重複寫作曲家名
         by = ""
     s = show_name(it["summary"], composers, it.get("composers"))
     if not external:
@@ -440,10 +442,9 @@ def main():
         info = composers[c]
         other = [n for n in [info.get("name")] + info.get("aliases", []) if n and n != info["display"]]
         alias = f'<p class="alias">{escape("、".join(dict.fromkeys(other)))}</p>' if other else ""
-        main_html = (f'<p class="crumb"><a href="../">作曲家</a> › {escape(info["display"])}</p>'
-                     f'<h2 class="item-title">{escape(info["display"])}</h2>{alias}'
-                     f'<div class="sec">Cue Sheet 刊出的相關內容<span>{len(rows)} 則</span></div><div class="items">'
-                     + "\n".join(row_html(it, composers, labels, 2) for it in rows) + "</div>")
+        main_html = (f'<div class="toppad"></div><h2 class="item-title">{escape(info["display"])}</h2>{alias}'
+                     f'<div class="items" style="margin-top:14px">'
+                     + "\n".join(row_html(it, composers, labels, 2, show_by=False) for it in rows) + "</div>")
         os.makedirs(f"composer/{c}", exist_ok=True)
         html = page(f"{info['display']}｜Cue Sheet", f"Cue Sheet 刊出與 {info['display']} 相關的 {len(rows)} 則內容。",
                     f"{SITE}composer/{c}/", "composer", ("", main_html), depth=2, kicker="Cue Sheet · Composers")
@@ -674,7 +675,7 @@ def build_home():
 {f'<section class="band"><div class="sec">樂評<a class="more-r" href="category/reviews/">全部樂評 →</a></div><div class="h-four">' + "".join(cover(it) for it in reviews) + '</div></section>' if reviews else ''}
 {f'<section class="band"><div class="sec">社群雷達<a class="more-r" href="category/community/">更多 →</a></div><div class="h-three">' + talk_html + '</div></section>' if talk else ''}
 <section class="band h-two">
-<div><div class="sec">新唱片<a class="more-r" href="category/releases/">更多 →</a></div>{rel_html}</div>
+<div><div class="sec">唱片架/試聽<a class="more-r" href="category/releases/">更多 →</a></div>{rel_html}</div>
 <div><div class="sec">In memoriam<a class="more-r" href="category/obituaries/">更多 →</a></div>{obit_html}</div>
 </section>
 {HOME_EVENTS_JS}"""
