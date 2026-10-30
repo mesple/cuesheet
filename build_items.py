@@ -405,6 +405,13 @@ HOME_CSS = """
 .h-body{font-size:15px;line-height:1.85;margin-top:14px;columns:2;column-gap:24px;column-rule:1px solid var(--line)}
 .h-body p{margin:0 0 .8em}
 .h-read{display:inline-block;margin-top:6px;font-size:15px;font-weight:700;text-decoration:none}
+.h-second{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:22px;margin-top:26px;padding-top:22px;border-top:1px solid var(--ink)}
+.h-second.noimg{grid-template-columns:minmax(0,1fr)}
+.h-second img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.h-head2{font-family:"Noto Serif TC",Georgia,serif;font-size:26px;line-height:1.3;margin:0 0 8px;font-weight:900}
+.h-head2 a{color:var(--ink);text-decoration:none}.h-head2 a:hover{color:var(--teal)}
+.h-deck2{font-size:16px;color:var(--soft);margin:0 0 10px;line-height:1.6}
+.h-body2{font-size:15px;line-height:1.85;margin:0 0 4px}
 .h-row{display:block;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
 .h-row b{display:block;font-family:"Noto Serif TC",Georgia,serif;font-size:17px;line-height:1.4}
 .h-row:hover b{color:var(--teal)}
@@ -444,6 +451,8 @@ HOME_CSS = """
   .h-pics.n1 img{height:260px}
   .h-head{font-size:28px}
   .h-body{columns:1}
+  .h-second{grid-template-columns:minmax(0,1fr);gap:12px}
+  .h-head2{font-size:22px}
   .h-four{grid-template-columns:repeat(2,minmax(0,1fr))}
   .h-two > div + div > .sec:first-child{margin-top:30px}
 }
@@ -495,21 +504,38 @@ def build_home():
     shown = sorted([it for it in items if it.get("web") is True], key=sort_key, reverse=True)
     by_id = {it["id"]: it for it in shown}
     issue_files = sorted((json.load(open(f, encoding="utf-8")) for f in glob.glob("issues/*.json")), key=lambda d: d["date"])
-    lead = None
+    feats = []
     for d in reversed(issue_files):
-        for fid in d.get("feature", []):
-            if fid in by_id:
-                lead = by_id[fid]
-                break
-        if lead:
+        feats = [by_id[f] for f in d.get("feature", []) if f in by_id]
+        if feats:
             break
-    used = {lead["id"]} if lead else set()
+    lead = feats[0] if feats else None
+    second = feats[1] if len(feats) > 1 else None
+    used = {f["id"] for f in feats[:2]}
     nm = lambda it, text: escape(show_name(text, composers, it.get("composers")))
 
     def pick(t, n):
         rows = [it for it in shown if it["type"] == t and it["id"] not in used][:n]
         used.update(it["id"] for it in rows)
         return rows
+
+    # 第二專題：放在頭條下方填滿左欄（左圖右文）；本期只有一個專題時，改從新聞補一則
+    if not second:
+        rest = [it for it in shown if it["type"] == "新聞" and it["id"] not in used and first_image(it)]
+        second = rest[0] if rest else None
+        if second:
+            used.add(second["id"])
+    second_html = ""
+    if second:
+        img2 = first_image(second)
+        body2 = _plain((second.get("body") or second["summary"]).split("\n\n")[0])
+        body2 = body2 if len(body2) <= 150 else body2[:148] + "…"
+        pic2 = f'<a href="item/{second["id"]}/"><img src="{escape(img2)}" alt="{escape(second["title"])}" loading="lazy"></a>' if img2 else ""
+        second_html = f"""<div class="h-second{'' if img2 else ' noimg'}">{pic2}<div>
+<h3 class="h-head2"><a href="item/{second['id']}/">{nm(second, second['title'])}</a></h3>
+<p class="h-deck2">{nm(second, second['summary'])}</p>
+<p class="h-body2">{nm(second, body2)}</p>
+<a class="h-read" href="item/{second['id']}/">閱讀全文 →</a></div></div>"""
 
     # 頭條
     lead_html = ""
@@ -526,6 +552,7 @@ def build_home():
 {f'<div class="h-pics n{len(imgs)}">{pics}</div><div class="h-credit">{credit}</div>' if imgs else ''}
 <div class="h-body"><p>{nm(lead, _plain(body))}</p></div>
 <a class="h-read" href="item/{lead['id']}/">閱讀全文 →</a>
+{second_html}
 </article>"""
 
     # 側欄：電子報、新聞、活動
