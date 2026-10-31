@@ -332,7 +332,11 @@ def item_page(it, by_id, composers, labels, features):
             lis.append(f"<li>{d}　{escape(u['label'])}</li>")
         boxes.append('<div class="box"><b>接下來</b><ul>' + "".join(lis) + "</ul></div>")
     if it.get("sources"):
-        lis = "".join(f'<li><a href="{escape(s["url"])}">{escape(s["name"])}</a></li>' for s in it["sources"])
+        srcs = [(x["name"], x["url"]) for x in it["sources"]]
+        # 有 Spotify 專輯就在來源最後加上（編輯 2026-10-31 指定）
+        if it.get("spotify") and not any("open.spotify.com/album" in u for _, u in srcs):
+            srcs.append(("Spotify", it["spotify"]))
+        lis = "".join(f'<li><a href="{escape(u)}">{escape(n)}</a></li>' for n, u in srcs)
         boxes.append(f'<div class="box"><b>來源</b><ul>{lis}</ul></div>')
     rel = [by_id[r] for r in it.get("related", []) if r in by_id and has_page(by_id[r])]
     rel_html = ""
