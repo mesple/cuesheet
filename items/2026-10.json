@@ -1041,7 +1041,8 @@
    "web": true,
    "related": [
     "2026-10-048"
-   ]
+   ],
+   "spotify": "https://open.spotify.com/album/6El985JZ5HPJHkoVCXCY2I"
   },
   {
    "id": "2026-10-035",
@@ -1070,7 +1071,8 @@
      "hosting": "spotify"
     }
    ],
-   "web": true
+   "web": true,
+   "spotify": "https://open.spotify.com/album/2mUfnZ9RwhEbTp4SwwmdU3"
   },
   {
    "id": "2026-10-036",
@@ -1102,7 +1104,8 @@
    "web": true,
    "related": [
     "2026-10-007"
-   ]
+   ],
+   "spotify": "https://open.spotify.com/album/2YacK7RBiRqKZkIgYq96Qc"
   },
   {
    "id": "2026-10-037",
@@ -1133,7 +1136,8 @@
    "web": true,
    "related": [
     "2026-10-062"
-   ]
+   ],
+   "spotify": "https://open.spotify.com/album/2N6690MjnjzUz2pMKHhkEI"
   },
   {
    "id": "2026-10-038",
@@ -1167,7 +1171,8 @@
    "web": true,
    "related": [
     "2026-10-002"
-   ]
+   ],
+   "spotify": "https://open.spotify.com/album/6ZLyDQhHpadUMcltoWgCeM"
   },
   {
    "id": "2026-10-039",
@@ -1201,7 +1206,9 @@
      "caption": "專輯封面"
     }
    ],
-   "web": true
+   "web": true,
+   "spotify": "https://open.spotify.com/album/5NsZRxx4oTXW5x3nfuhxre",
+   "internal_note": "Spotify 連到數位版專輯（本則是 CD 版，曲目同一張原聲）"
   },
   {
    "id": "2026-10-040",
@@ -1298,7 +1305,8 @@
      "hosting": "spotify"
     }
    ],
-   "web": true
+   "web": true,
+   "spotify": "https://open.spotify.com/album/7pOlkJ9hloPJci6Zt36LKq"
   },
   {
    "id": "2026-10-043",
@@ -1327,7 +1335,8 @@
      "hosting": "spotify"
     }
    ],
-   "web": true
+   "web": true,
+   "spotify": "https://open.spotify.com/album/3UH0veiWGseyRPiwniyX5g"
   },
   {
    "id": "2026-10-044",
@@ -1356,7 +1365,8 @@
      "hosting": "spotify"
     }
    ],
-   "web": true
+   "web": true,
+   "spotify": "https://open.spotify.com/album/6e3kiA5X3UVLHOSfGCScHY"
   },
   {
    "id": "2026-10-045",
@@ -1386,7 +1396,8 @@
      "hosting": "spotify"
     }
    ],
-   "web": true
+   "web": true,
+   "spotify": "https://open.spotify.com/album/5OCYNsLXzjiN4LsfOLiJNA"
   },
   {
    "id": "2026-10-046",
@@ -1415,7 +1426,8 @@
      "hosting": "spotify"
     }
    ],
-   "web": true
+   "web": true,
+   "spotify": "https://open.spotify.com/album/5umPklMWf8wIL4VgA3TLNd"
   },
   {
    "id": "2026-10-047",
@@ -1444,7 +1456,8 @@
      "hosting": "spotify"
     }
    ],
-   "web": true
+   "web": true,
+   "spotify": "https://open.spotify.com/album/3IOtkRLNMQvNKURniV5yi6"
   },
   {
    "id": "2026-10-048",

@@ -241,7 +241,11 @@ def has_page(it):
 
 
 def ext_link(it):
-    """沒有單則頁的條目，點圖或標題直接去哪：YouTube 影片 > Spotify 專輯 > 第一個來源。"""
+    """沒有單則頁的條目，點圖或標題直接去哪：YouTube 影片 > Spotify 專輯 > 第一個來源。
+    唱片架：Spotify 有這張專輯就連 Spotify，沒有就連來源頁（編輯 2026-10-31 指定）。"""
+    if it["type"] == "發行":
+        src = it.get("sources") or []
+        return it.get("spotify") or (src[0]["url"] if src else "")
     for m in it.get("media") or []:
         if m["kind"] == "youtube":
             return f"https://www.youtube.com/watch?v={m['id']}"
@@ -387,8 +391,12 @@ def row_html(it, composers, labels, depth, show_date=True, show_by=True, show_co
         s = s if len(s) <= 90 else s[:88] + "…"
     src = ""
     if external and it.get("sources"):
+        links = [(x["name"], x["url"]) for x in it["sources"]]
+        # 唱片架：Spotify 有這張專輯，來源最後加「Spotify」（編輯 2026-10-31 指定）
+        if it.get("spotify") and not any("open.spotify.com/album" in u for _, u in links):
+            links.append(("Spotify", it["spotify"]))
         src = '<div class="src">來源：' + "・".join(
-            f'<a href="{escape(x["url"])}" target="_blank" rel="noopener">{escape(x["name"])}</a>' for x in it["sources"]) + "</div>"
+            f'<a href="{escape(u)}" target="_blank" rel="noopener">{escape(n)}</a>' for n, u in links) + "</div>"
     data_tags = escape(" ".join(it.get("tags", [])))
     video = " video" if img and any(m["kind"] == "youtube" for m in it.get("media") or []) and it["type"] == "訪談" else ""
     return f"""<div class="it{'' if img else ' noimg'}{video}" data-tags="{data_tags}">{thumb}<div>
@@ -548,6 +556,10 @@ def main():
                 filters = '<div class="filters"><button type="button" data-tag="" aria-pressed="true">全部</button>' + "".join(
                     f'<button type="button" data-tag="{x}" aria-pressed="false">{x}</button>' for x in tags) + "</div>"
             if t == "發行":
+                # 唱片架置頂：issues/*.json 的 releases_first 依序排最前（編輯 2026-10-31 指定）
+                first = [f for d in sorted((json.load(open(f, encoding="utf-8")) for f in glob.glob("issues/*.json")), key=lambda d: d["date"], reverse=True)
+                         for f in d.get("releases_first", [])]
+                rows = sorted(rows, key=lambda it: first.index(it["id"]) if it["id"] in first else len(first))
                 listen = [it for it in shown if it["type"] == "試聽"]
                 col = lambda name, rs: (f'<div class="col"><div class="colhead">{name}</div><div class="items">'
                                         + "\n".join(row_html(it, composers, labels, 2, show_date=False) for it in rs) + "</div></div>")
