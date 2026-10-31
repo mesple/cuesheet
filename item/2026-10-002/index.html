@@ -95,8 +95,9 @@ h2.item-title{font-family:"Noto Serif TC",Georgia,serif;font-size:32px;line-heig
 .media img{display:block;width:100%;height:auto;border:1px solid var(--line);background:var(--paper)}
 .media.single img{max-width:360px}
 .media.single.wide img{max-width:100%}
-.media.sq figure{max-width:300px}
-.media.sq img{width:300px;height:auto;max-width:100%}   /* 新聞單則頁圖片寬 300、高度依原圖比例（編輯 2026-10-31 指定） */
+.media.sq figure{width:fit-content;max-width:100%}
+.media.sq img{height:300px;width:auto;max-width:100%;object-fit:contain}   /* 新聞單則頁圖片高 300、寬度依原圖比例（編輯 2026-10-31 指定） */
+@media (max-width:600px){.media.sq img{height:auto}}   /* 手機上寬圖放不下時改依寬度縮小，避免變形 */
 .byline a{color:var(--teal);text-decoration:none}.byline a:hover{text-decoration:underline}
 .items .pill.col{background:var(--teal);color:var(--paper)}
 .items p.sum{font-size:15px;line-height:1.85;color:var(--ink)}
