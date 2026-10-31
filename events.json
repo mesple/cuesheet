@@ -1,99 +1,7 @@
 {
- "updated": "2026-10-31T07:43:14+08:00",
+ "updated": "2026-11-01T07:41:31+08:00",
  "source": "文化部藝文活動開放資料（政府資料開放授權條款）",
  "events": [
-  {
-   "uid": "68b5d5f926b32440a8964233",
-   "title": "2026風動室內樂團《無限》宮崎駿動畫音樂精選",
-   "category": "音樂",
-   "start_date": "2026/10/31",
-   "end_date": "2026/12/13",
-   "organizer": [],
-   "performer": "",
-   "description": "",
-   "image": null,
-   "web": "https://www.opentix.life/program/1955833404180180992",
-   "tickets": "https://www.opentix.life/program/1955833404180180992",
-   "source_site": "OPENTIX兩廳院文化生活",
-   "cities": [
-    "桃園市",
-    "臺北市"
-   ],
-   "shows": [
-    {
-     "time": "2026/10/31 14:30:00",
-     "end_time": "2026/10/31 16:10:00",
-     "venue": "桃園展演中心展演廳",
-     "address": "桃園市桃園區中正路1188號",
-     "city": "桃園市",
-     "lat": "25.0175106",
-     "lng": "121.2986658",
-     "on_sale": "Y",
-     "price": ""
-    },
-    {
-     "time": "2026/12/13 14:30:00",
-     "end_time": "2026/12/13 16:10:00",
-     "venue": "臺北表演藝術中心 大劇院",
-     "address": "臺北市士林區劍潭路1號",
-     "city": "臺北市",
-     "lat": "25.0847069488325",
-     "lng": "121.524399267913",
-     "on_sale": "Y",
-     "price": ""
-    }
-   ],
-   "matched_keywords": [
-    "宮崎駿"
-   ]
-  },
-  {
-   "uid": "68b5d5f926b32440a8964235",
-   "title": "2026風動室內樂團《無限》ACG電玩動漫音樂會",
-   "category": "音樂",
-   "start_date": "2026/10/31",
-   "end_date": "2026/12/13",
-   "organizer": [],
-   "performer": "",
-   "description": "",
-   "image": null,
-   "web": "https://www.opentix.life/program/1955916913608867841",
-   "tickets": "https://www.opentix.life/program/1955916913608867841",
-   "source_site": "OPENTIX兩廳院文化生活",
-   "cities": [
-    "桃園市",
-    "臺北市"
-   ],
-   "shows": [
-    {
-     "time": "2026/10/31 19:30:00",
-     "end_time": "2026/10/31 21:10:00",
-     "venue": "桃園展演中心展演廳",
-     "address": "桃園市桃園區中正路1188號",
-     "city": "桃園市",
-     "lat": "25.0175106",
-     "lng": "121.2986658",
-     "on_sale": "Y",
-     "price": ""
-    },
-    {
-     "time": "2026/12/13 19:30:00",
-     "end_time": "2026/12/13 21:10:00",
-     "venue": "臺北表演藝術中心 大劇院",
-     "address": "臺北市士林區劍潭路1號",
-     "city": "臺北市",
-     "lat": "25.0847069488325",
-     "lng": "121.524399267913",
-     "on_sale": "Y",
-     "price": ""
-    }
-   ],
-   "matched_keywords": [
-    "動漫",
-    "acg",
-    "電玩"
-   ]
-  },
   {
    "uid": "6ad91d1d26b3245efc7536ff",
    "title": "11月高雄市電影館｜我們，巴黎管弦樂團",
@@ -338,6 +246,74 @@
    ],
    "matched_keywords": [
     "配樂"
+   ]
+  },
+  {
+   "uid": "68b5d5f926b32440a8964233",
+   "title": "2026風動室內樂團《無限》宮崎駿動畫音樂精選",
+   "category": "音樂",
+   "start_date": "2026/12/13",
+   "end_date": "2026/12/13",
+   "organizer": [],
+   "performer": "",
+   "description": "",
+   "image": null,
+   "web": "https://www.opentix.life/program/1955833404180180992",
+   "tickets": "https://www.opentix.life/program/1955833404180180992",
+   "source_site": "OPENTIX兩廳院文化生活",
+   "cities": [
+    "臺北市"
+   ],
+   "shows": [
+    {
+     "time": "2026/12/13 14:30:00",
+     "end_time": "2026/12/13 16:10:00",
+     "venue": "臺北表演藝術中心 大劇院",
+     "address": "臺北市士林區劍潭路1號",
+     "city": "臺北市",
+     "lat": "25.0847069488325",
+     "lng": "121.524399267913",
+     "on_sale": "Y",
+     "price": ""
+    }
+   ],
+   "matched_keywords": [
+    "宮崎駿"
+   ]
+  },
+  {
+   "uid": "68b5d5f926b32440a8964235",
+   "title": "2026風動室內樂團《無限》ACG電玩動漫音樂會",
+   "category": "音樂",
+   "start_date": "2026/12/13",
+   "end_date": "2026/12/13",
+   "organizer": [],
+   "performer": "",
+   "description": "",
+   "image": null,
+   "web": "https://www.opentix.life/program/1955916913608867841",
+   "tickets": "https://www.opentix.life/program/1955916913608867841",
+   "source_site": "OPENTIX兩廳院文化生活",
+   "cities": [
+    "臺北市"
+   ],
+   "shows": [
+    {
+     "time": "2026/12/13 19:30:00",
+     "end_time": "2026/12/13 21:10:00",
+     "venue": "臺北表演藝術中心 大劇院",
+     "address": "臺北市士林區劍潭路1號",
+     "city": "臺北市",
+     "lat": "25.0847069488325",
+     "lng": "121.524399267913",
+     "on_sale": "Y",
+     "price": ""
+    }
+   ],
+   "matched_keywords": [
+    "動漫",
+    "acg",
+    "電玩"
    ]
   },
   {
