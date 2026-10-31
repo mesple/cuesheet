@@ -580,6 +580,26 @@ def _plain(md):
     return re.sub(r"[*_`#>\\[\\]]", "", md).strip()
 
 
+CLAMP_JS = r"""<script>
+(function(){
+  // 每張樂評卡的摘要裁到三行，結尾留「…（閱讀全文）」；視窗大小改變時重算
+  function fit(){
+    document.querySelectorAll('p.clamp3').forEach(function(p){
+      var t=p.querySelector('.t'); if(!t) return;
+      if(!t.dataset.full) t.dataset.full=t.textContent;
+      var full=t.dataset.full, lh=parseFloat(getComputedStyle(p).lineHeight)||24, max=lh*3+2;
+      t.textContent=full; if(p.offsetHeight<=max) return;
+      var lo=0, hi=full.length;
+      while(lo<hi){var m=(lo+hi+1)>>1; t.textContent=full.slice(0,m)+'…'; if(p.offsetHeight<=max) lo=m; else hi=m-1;}
+      t.textContent=full.slice(0,lo).replace(/[，、；：\s]+$/,'')+'…';
+    });
+  }
+  var r; window.addEventListener('resize',function(){clearTimeout(r);r=setTimeout(fit,150);});
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fit);} fit();
+})();
+</script>"""
+
+
 def build_home():
     """首頁（A 版報紙風，編輯 2026-10-30 定案）：頭條＋電子報／新聞／活動、樂評、社群雷達、新唱片＋In memoriam。
     內容從最新一期的單則資料自動取；活動由瀏覽器即時讀 events.json，每天自動更新。"""
@@ -657,7 +677,8 @@ def build_home():
         img = first_image(it) or ""
         by = f'<span class="by">{nm(it, it["byline"])}</span>' if it.get("byline") else ""
         # 首頁樂評：放完整摘要，文末接「（閱讀全文）」連到單則頁（編輯 2026-10-31 指定）
-        note = (f'<p>{nm(it, it["summary"])}<a class="h-more" href="item/{it["id"]}/">（閱讀全文）</a></p>' if with_note else "")
+        # 摘要限三行：由頁面程式依卡片寬度裁字，最後接「（閱讀全文）」（編輯 2026-10-31 指定）
+        note = (f'<p class="clamp3"><span class="t">{nm(it, it["summary"])}</span><a class="h-more" href="item/{it["id"]}/">（閱讀全文）</a></p>' if with_note else "")
         return (f'<div class="h-cover"><a href="item/{it["id"]}/"><img src="{escape(img)}" alt="{escape(it["title"])} 專輯封面" loading="lazy">'
                 f'<b>{nm(it, it["title"])}</b></a>{by}{note}</div>')
 
@@ -691,7 +712,8 @@ def build_home():
 <div><div class="sec">唱片架/試聽<a class="more-r" href="category/releases/">更多 →</a></div>{rel_html}</div>
 <div><div class="sec">In memoriam<a class="more-r" href="category/obituaries/">更多 →</a></div>{obit_html}</div>
 </section>
-{HOME_EVENTS_JS}"""
+{HOME_EVENTS_JS}
+{CLAMP_JS}"""
     latest = nl[0] if nl else {}
     html = page("Cue Sheet｜中文電影配樂電子報", latest.get("editor_note", "給配樂迷的電影音樂刊物"), SITE, "home",
                 ("", main_html), latest.get("image"), wide=True)
