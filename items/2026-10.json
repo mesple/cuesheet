@@ -1276,7 +1276,9 @@
      "caption": "專輯封面"
     }
    ],
-   "web": true
+   "web": true,
+   "spotify": "https://open.spotify.com/album/7ovDEJjPRNRow5sf7NXkvX",
+   "internal_note": "Spotify 連結由編輯提供（搜尋工具查無）；連到數位版專輯（本則是實體版）"
   },
   {
    "id": "2026-10-042",
