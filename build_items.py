@@ -234,6 +234,13 @@ NO_DATE_TYPES = ("樂評", "發行", "試聽")
 NO_LIST_DATE_TYPES = NO_DATE_TYPES + ("訪談",)   # 訪談列表不放日期，單則頁才放（編輯 2026-10-31 指定）
 
 
+def releases_order(rows):
+    """唱片架置頂：issues/*.json 的 releases_first 依序排最前，其餘維持原順序（編輯 2026-10-31 指定；唱片架/試聽頁與首頁共用）。"""
+    first = [f for d in sorted((json.load(open(f, encoding="utf-8")) for f in glob.glob("issues/*.json")), key=lambda d: d["date"], reverse=True)
+             for f in d.get("releases_first", [])]
+    return sorted(rows, key=lambda it: first.index(it["id"]) if it["id"] in first else len(first))
+
+
 def has_page(it):
     if it["type"] not in NO_PAGE_TYPES:
         return True
@@ -557,9 +564,7 @@ def main():
                     f'<button type="button" data-tag="{x}" aria-pressed="false">{x}</button>' for x in tags) + "</div>"
             if t == "發行":
                 # 唱片架置頂：issues/*.json 的 releases_first 依序排最前（編輯 2026-10-31 指定）
-                first = [f for d in sorted((json.load(open(f, encoding="utf-8")) for f in glob.glob("issues/*.json")), key=lambda d: d["date"], reverse=True)
-                         for f in d.get("releases_first", [])]
-                rows = sorted(rows, key=lambda it: first.index(it["id"]) if it["id"] in first else len(first))
+                rows = releases_order(rows)
                 listen = [it for it in shown if it["type"] == "試聽"]
                 col = lambda name, rs: (f'<div class="col"><div class="colhead">{name}</div><div class="items">'
                                         + "\n".join(row_html(it, composers, labels, 2, show_date=False) for it in rs) + "</div></div>")
@@ -791,7 +796,10 @@ def build_home():
     nm = lambda it, text: escape(show_name(text, composers, it.get("composers")))
 
     def pick(t, n):
-        rows = [it for it in shown if it["type"] == t and it["id"] not in used][:n]
+        rows = [it for it in shown if it["type"] == t and it["id"] not in used]
+        if t == "發行":
+            rows = releases_order(rows)
+        rows = rows[:n]
         used.update(it["id"] for it in rows)
         return rows
 
