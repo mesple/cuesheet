@@ -13,6 +13,19 @@ SITE = "https://mesple.github.io/cuesheet/"
 SUBSCRIBE_URL = "https://preview.mailerlite.io/forms/2740876/202321965174752394/share"
 TAGLINE = "一份給配樂迷的電影音樂刊物"
 
+# MailerLite 通用程式碼（編輯 2026-11-01 提供）：首頁彈出訂閱視窗、右上角「訂閱」點擊跳出表單都靠它。
+# 彈出視窗的顯示頁面、頻率在 MailerLite 後台設定，不在這裡。
+ML_FORM_ID = "HeZ91R"  # 「訂閱」連結點擊後跳出的表單
+ML_SNIPPET = """<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2740876');
+</script>
+<!-- End MailerLite Universal -->"""
+
 CSS = """
 :root{
   --bg:#F4F1E8; --paper:#FBFAF6; --ink:#1F1D18; --muted:#625E55; --soft:#4B4840;
@@ -88,7 +101,9 @@ def masthead(prefix, nav):
     up = prefix if prefix != "./" else ""
     navhtml = "".join(
         f'<a href="{up}{path}"' + (' aria-current="page"' if k == nav else "") + f'>{n}<small>{en}</small></a>' for k, n, en, path in NAV)
-    sub = f' · <a href="{SUBSCRIBE_URL}">訂閱</a>' if SUBSCRIBE_URL else ""
+    # 點擊時跳出 MailerLite 表單；腳本沒載入時照原連結開分享頁
+    sub = (f' · <a href="{SUBSCRIBE_URL}" onclick="if(window.ml){{ml(\'show\',\'{ML_FORM_ID}\',true);return false;}}">訂閱</a>'
+           if SUBSCRIBE_URL else "")
     return f"""<header class="mast"><div class="wrap">
   <div class="strip"><span id="today">Cue Sheet</span><span>{TAGLINE}{sub}</span></div>
   <div class="brand"><h1 class="title"><a href="{prefix}">Cue Sheet</a></h1><p class="kicker">FILM MUSIC NEWSLETTER</p></div>
@@ -120,6 +135,7 @@ def page(title, desc, url, nav, body, image=None, depth=None, kicker=None, wide=
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
 <style>{CSS}</style>
+{ML_SNIPPET}
 </head>
 <body>
 {masthead(prefix, nav)}
