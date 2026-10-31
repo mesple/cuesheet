@@ -94,6 +94,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.video .thumb img{width:150px;aspect-ratio:16/9;object-fit:cover}
 .twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
 .twocol .items .thumb img{width:110px}
+.twocol .items .it.listen{grid-template-columns:auto minmax(0,1fr)}   /* 精選試聽：截圖高 110、寬度依圖片比例（編輯 2026-10-31 指定） */
+.twocol .items .it.listen .thumb img{width:auto;height:110px}
 .items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
 .items .by a:hover{color:var(--teal)}
 .items .src{font-size:12px;color:var(--muted);margin-top:4px}
@@ -133,6 +135,7 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .items .thumb img{width:64px}
   .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
   .twocol .items .thumb img{width:80px}
+  .twocol .items .it.listen .thumb img{width:auto;height:70px}
   .items .it.video{grid-template-columns:110px minmax(0,1fr)}
   .items .it.video .thumb img{width:110px}
 }
@@ -405,7 +408,7 @@ def row_html(it, composers, labels, depth, show_date=True, show_by=True, show_co
         src = '<div class="src">來源：' + "・".join(
             f'<a href="{escape(u)}" target="_blank" rel="noopener">{escape(n)}</a>' for n, u in links) + "</div>"
     data_tags = escape(" ".join(it.get("tags", [])))
-    video = " video" if img and any(m["kind"] == "youtube" for m in it.get("media") or []) and it["type"] == "訪談" else ""
+    video = (" listen" if it["type"] == "試聽" and img else "") + (" video" if img and any(m["kind"] == "youtube" for m in it.get("media") or []) and it["type"] == "訪談" else "")
     return f"""<div class="it{'' if img else ' noimg'}{video}" data-tags="{data_tags}">{thumb}<div>
 {meta}
 <h3><a href="{escape(href)}"{tgt}>{escape(it["title"])}</a></h3>{by}
