@@ -77,7 +77,7 @@ footer b{font-family:"Noto Serif TC",Georgia,serif;color:var(--ink);font-size:14
 
 NAV = [("home", "首頁", "HOME", ""), ("news", "新聞", "NEWS", "category/news/"), ("reviews", "樂評", "REVIEWS", "category/reviews/"),
        ("releases", "唱片架/試聽", "NEW RELEASES", "category/releases/"), ("interviews", "訪談", "INTERVIEWS", "category/interviews/"),
-       ("community", "社群", "COMMUNITY", "category/community/"), ("composer", "作曲家", "COMPOSERS", "composer/"),
+       ("community", "社群雷達", "COMMUNITY RADAR", "category/community/"), ("composer", "作曲家", "COMPOSERS", "composer/"),
        ("event", "國內活動", "EVENTS", "event/"), ("newsletter", "電子報", "NEWSLETTER", "newsletter/")]  # 首頁放最左（編輯 2026-10-31 指定）；電子報放最右（編輯 2026-10-30 指定）；「全部分類」已拿掉
 
 DATE_JS = """<script>(function(){try{var d=new Date(Date.now()+8*3600e3),w="日一二三四五六";

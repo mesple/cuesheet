@@ -26,9 +26,11 @@ TYPES = [  # 類型, 網址代號, 英文, 說明
     ("訪談", "interviews", "Interviews", "作曲家親口講述的創作"),
     ("試聽", "listen", "Listen", "官方釋出的配樂音軌與影片"),
     ("訃聞", "obituaries", "In memoriam", "送別作曲家與電影音樂人"),
-    ("社群", "community", "Community", "論壇與社論裡的熱門話題"),
+    ("社群", "community", "Community Radar", "論壇與社論裡的熱門話題"),
 ]
 SLUG = {t: s for t, s, _, _ in TYPES}
+# 前台顯示的欄位名稱（編輯 2026-10-31 指定：社群改「社群雷達」；作曲家頁每則標欄位名）
+COLUMN = {"新聞": "新聞", "樂評": "樂評", "發行": "唱片架", "訪談": "訪談", "試聽": "精選試聽", "訃聞": "訃聞", "社群": "社群雷達"}
 
 EXTRA_CSS = """
 .crumb{font-size:13px;color:var(--muted);margin:22px 0 0}
@@ -53,6 +55,13 @@ h2.item-title{font-family:"Noto Serif TC",Georgia,serif;font-size:32px;line-heig
 .media img{display:block;width:100%;height:auto;border:1px solid var(--line);background:var(--paper)}
 .media.single img{max-width:360px}
 .media.single.wide img{max-width:100%}
+.media.sq figure{max-width:300px}
+.media.sq img{width:300px;height:300px;max-width:100%;object-fit:cover}   /* 新聞單則頁圖片一律 300x300（編輯 2026-10-31 指定） */
+.byline a{color:var(--teal);text-decoration:none}.byline a:hover{text-decoration:underline}
+.items .pill.col{background:var(--teal);color:var(--paper)}
+.items p.sum{font-size:15px;line-height:1.85;color:var(--ink)}
+.items .sum a{color:var(--teal)}
+.items .older{margin:18px 0 0;font-size:15px;font-weight:700}.items .older a{text-decoration:none}
 .media figcaption{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
 .yt{display:block;max-width:480px;text-decoration:none;color:#FBFAF6}
 .yt span{display:block;background:#28251D;color:#FBFAF6;font-size:13px;padding:6px 10px}
@@ -209,8 +218,8 @@ def media_html(it, title):
         fstyle = f' style="max-width:{int(m["width"])}px"' if m.get("width") else ""
         figs.append(f"<figure{fstyle}>{img}" + (f'<figcaption>{"　".join(cap)}</figcaption>' if cap else "") + "</figure>")
     cls = "multi" if len(figs) > 1 else "single"
-    if len(figs) == 1 and it["type"] in ("新聞",) and media[0]["kind"] == "image":
-        cls += " wide"
+    if it["type"] == "新聞" and all(m["kind"] == "image" for m in media):
+        cls += " sq"
     return f'<div class="media {cls}">' + "".join(figs) + "</div>"
 
 
@@ -269,7 +278,13 @@ def item_page(it, by_id, composers, labels, features):
         pills.append(f'<a class="pill plain" href="../../newsletter/{features[it["id"]]}/">{escape(issue_label(labels, features[it["id"]]))}本月專題</a>')
     byline = ""
     if it.get("byline"):
-        byline = f'<p class="byline">{escape(show_name(it["byline"], composers, codes))}</p>'
+        bl = escape(show_name(it["byline"], composers, codes))
+        if it["type"] == "樂評":   # 標題下的作曲家名直接連作曲家頁（編輯 2026-10-31 指定）
+            for c in codes:
+                if c in composers:
+                    n = escape(composers[c]["display"])
+                    bl = bl.replace(n, f'<a href="../../composer/{c}/">{n}</a>', 1)
+        byline = f'<p class="byline">{bl}</p>'
     date = "" if it["type"] in NO_DATE_TYPES else fmt_date(it)
     dateline = f'<p class="dateline">{date}</p>' if date else ""
     summary = show_name(it["summary"], composers, codes)
@@ -287,7 +302,7 @@ def item_page(it, by_id, composers, labels, features):
             top_media = media_html(dict(it, media=it["media"][:1]), title)
             more_media = '<div class="sec">圖片<span>Gallery</span></div>' + media_html(rest, title)
     boxes = []
-    if codes:
+    if codes and not (it["type"] == "樂評" and it.get("byline")):
         chips = "".join(f'<a class="chip" href="../../composer/{c}/">{escape(composers[c]["display"])}</a>' for c in codes if c in composers)
         boxes.append(f'<div class="box"><b>作曲家</b><div class="chips">{chips}</div></div>')
     if it.get("upcoming"):
@@ -310,7 +325,7 @@ def item_page(it, by_id, composers, labels, features):
     if it["type"] in ("發行", "試聽"):
         crumb = f'<p class="crumb"><a href="../../category/releases/">唱片架/試聽</a> › {"唱片架" if it["type"] == "發行" else "精選試聽"}</p>'
     else:
-        crumb = f'<p class="crumb"><a href="../../category/{slug}/">{it["type"]}</a></p>'
+        crumb = f'<p class="crumb"><a href="../../category/{slug}/">{COLUMN[it["type"]]}</a></p>'
     article = f"""<div class="toppad"></div>
 <article>
 {f'<div class="pills">{"".join(pills)}</div>' if pills else ""}
@@ -335,7 +350,7 @@ def item_page(it, by_id, composers, labels, features):
     return html.replace("</style>", EXTRA_CSS + "</style>", 1)
 
 
-def row_html(it, composers, labels, depth, show_date=True, show_by=True):
+def row_html(it, composers, labels, depth, show_date=True, show_by=True, show_col=False):
     """分類頁的一列。前台不顯示地區；樂評、唱片架、試聽不顯示日期（編輯 2026-10-31 指定）。
     沒有單則頁的條目（唱片架、試聽）：圖與標題直接連外，作曲家連作曲家頁，最後一行列來源。"""
     up = "../" * depth
@@ -344,6 +359,8 @@ def row_html(it, composers, labels, depth, show_date=True, show_by=True):
     img = first_image(it)
     thumb = f'<a class="thumb" href="{escape(href)}"{tgt}><img src="{img}" alt="" loading="lazy"></a>' if img else ""
     tags = "".join(f'<span class="pill">{escape(t)}</span>' for t in it.get("tags", []))
+    if show_col:   # 作曲家頁：每則標上欄位名稱（編輯 2026-10-31 指定）
+        tags = f'<span class="pill col">{COLUMN[it["type"]]}</span>' + tags
     date = "" if (not show_date or it["type"] in NO_LIST_DATE_TYPES) else fmt_date(it)
     meta = f'<div class="meta">{tags}{date}</div>' if (tags or date) else ""
     codes = [c for c in (it.get("composers") or []) if c in composers]
@@ -358,8 +375,10 @@ def row_html(it, composers, labels, depth, show_date=True, show_by=True):
         by = ""
     s = show_name(it.get("teaser") or it["summary"], composers, it.get("composers"))
     more = ""
-    if it["type"] == "訪談" and not external:
+    if it["type"] in ("訪談", "樂評") and not external:
         # 訪談：約 50 字摘要，文末接「閱讀全文」（編輯 2026-10-31 指定）
+        if it["type"] == "樂評":
+            s = s if len(s) <= 90 else s[:88] + "…"
         more = f' <a class="more" href="{escape(href)}">閱讀全文 →</a>'
     elif not external:
         s = s if len(s) <= 90 else s[:88] + "…"
@@ -373,6 +392,36 @@ def row_html(it, composers, labels, depth, show_date=True, show_by=True):
 {meta}
 <h3><a href="{escape(href)}"{tgt}>{escape(it["title"])}</a></h3>{by}
 <p>{escape(s)}{more}</p>{src}</div></div>"""
+
+
+def src_paren(it):
+    """來源用括號接在文末，不寫「來源」兩字（編輯 2026-10-31 指定）。"""
+    if not it.get("sources"):
+        return ""
+    return "（" + "、".join(f'<a href="{escape(x["url"])}" target="_blank" rel="noopener">{escape(x["name"])}</a>' for x in it["sources"]) + "）"
+
+
+def full_row(it, composers, depth):
+    """新聞、社群雷達列表（編輯 2026-10-31 指定）：短文全文放列表、文末括號附來源，不另列作曲家與接下來；
+    有長篇內文的才連單則頁，摘要後接「閱讀全文」。單則頁照常保留，供作曲家頁、首頁與相關內容連結。"""
+    up = "../" * depth
+    href = f'{up}item/{it["id"]}/'
+    long_ = bool(it.get("body"))
+    nm = lambda t: escape(show_name(t, composers, it.get("composers")))
+    img = first_image(it)
+    thumb = ""
+    if img:
+        im = f'<img src="{img}" alt="" loading="lazy">'
+        thumb = f'<a class="thumb" href="{href}">{im}</a>' if long_ else f'<span class="thumb">{im}</span>'
+    tags = "".join(f'<span class="pill">{escape(t)}</span>' for t in it.get("tags", []))
+    date = fmt_date(it)
+    meta = f'<div class="meta">{tags}{date}</div>' if (tags or date) else ""
+    title = f'<a href="{href}">{nm(it["title"])}</a>' if long_ else nm(it["title"])
+    tail = f' <a class="more" href="{href}">閱讀全文 →</a>' if long_ else src_paren(it)
+    return f"""<div class="it{'' if img else ' noimg'}" data-tags="{escape(" ".join(it.get("tags", [])))}">{thumb}<div>
+{meta}
+<h3>{title}</h3>
+<p class="sum">{nm(it["summary"])}{tail}</p></div></div>"""
 
 
 FILTER_JS = """<script>
@@ -429,6 +478,24 @@ def main():
                                         + "\n".join(row_html(it, composers, labels, 2, show_date=False) for it in rs) + "</div></div>")
                 body = f'<div class="toppad"></div><div class="twocol">{col("唱片架<span>Record Shelf</span>", rows)}{col("精選試聽<span>Take a Bite</span>", listen)}</div>'
                 ptitle, pdesc, wide = "唱片架/試聽", "新唱片、重發、實體版，以及官方釋出的配樂音軌與影片", True
+            elif t in ("新聞", "社群"):
+                recent = sorted({it["issue"] for it in rows}, reverse=True)[:2]   # 只列最近兩期（編輯 2026-10-31 指定）
+                older = [it for it in rows if it["issue"] not in recent]
+                cur = [it for it in rows if it["issue"] in recent]
+                more = '<p class="older"><a href="archive/">更早的' + COLUMN[t] + ' →</a></p>' if older else ""
+                body = (f'<div class="toppad"></div>{filters}<div class="items">'
+                        + "\n".join(full_row(it, composers, 2) for it in cur) + more + "</div>"
+                        + (FILTER_JS if filters else ""))
+                ptitle, pdesc, wide = COLUMN[t], desc, False
+                arch = f"category/{slug}/archive"
+                if os.path.isdir(arch):
+                    shutil.rmtree(arch)
+                if older:
+                    os.makedirs(arch, exist_ok=True)
+                    abody = (f'<div class="toppad"></div><p class="crumb"><a href="../">{COLUMN[t]}</a> › 更早的{COLUMN[t]}</p><div class="items">'
+                             + "\n".join(full_row(it, composers, 3) for it in older) + "</div>")
+                    ah = page(f"更早的{COLUMN[t]}｜Cue Sheet", f"Cue Sheet 較早各期的{COLUMN[t]}。", f"{SITE}{arch}/", slug, ("", abody), depth=3)
+                    open(f"{arch}/index.html", "w", encoding="utf-8").write(ah.replace("</style>", EXTRA_CSS + "</style>", 1))
             else:
                 body = (f'<div class="toppad"></div>{filters}<div class="items">'
                         + "\n".join(row_html(it, composers, labels, 2) for it in rows) + "</div>"
@@ -459,7 +526,7 @@ def main():
         alias = f'<p class="alias">{escape("、".join(dict.fromkeys(other)))}</p>' if other else ""
         main_html = (f'<div class="toppad"></div><h2 class="item-title">{escape(info["display"])}</h2>{alias}'
                      f'<div class="items" style="margin-top:14px">'
-                     + "\n".join(row_html(it, composers, labels, 2, show_by=False) for it in rows) + "</div>")
+                     + "\n".join(row_html(it, composers, labels, 2, show_by=False, show_col=True) for it in rows) + "</div>")
         os.makedirs(f"composer/{c}", exist_ok=True)
         html = page(f"{info['display']}｜Cue Sheet", f"Cue Sheet 刊出與 {info['display']} 相關的 {len(rows)} 則內容。",
                     f"{SITE}composer/{c}/", "composer", ("", main_html), depth=2, kicker="Cue Sheet · Composers")
