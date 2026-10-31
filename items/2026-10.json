@@ -1202,7 +1202,9 @@
    "media": [
     {
      "kind": "image",
-     "url": "https://mesple.github.io/cuesheet/images/2026-10/resident-evil-cd.jpg",
+     "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026f937fe73afb7b0f6ee82112",
+     "link": "https://open.spotify.com/album/5NsZRxx4oTXW5x3nfuhxre",
+     "hosting": "spotify",
      "caption": "專輯封面"
     }
    ],
@@ -1272,7 +1274,9 @@
    "media": [
     {
      "kind": "image",
-     "url": "https://mesple.github.io/cuesheet/images/2026-10/primetime.jpg",
+     "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02f90ef8fe553332ab0092f8e1",
+     "link": "https://open.spotify.com/album/7ovDEJjPRNRow5sf7NXkvX",
+     "hosting": "spotify",
      "caption": "專輯封面"
     }
    ],
