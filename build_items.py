@@ -62,6 +62,7 @@ h2.item-title{font-family:"Noto Serif TC",Georgia,serif;font-size:32px;line-heig
 .items .pill.col{background:var(--teal);color:var(--paper)}
 .items p.sum{font-size:15px;line-height:1.85;color:var(--ink)}
 .items .sum a{color:var(--teal)}
+.items .sum a.cl{text-decoration:none;border-bottom:1px dotted var(--teal)}
 .items .older{margin:18px 0 0;font-size:15px;font-weight:700}.items .older a{text-decoration:none}
 .media figcaption{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
 .yt{display:block;max-width:480px;text-decoration:none;color:#FBFAF6}
@@ -402,6 +403,34 @@ def src_paren(it):
     return "（" + "、".join(f'<a href="{escape(x["url"])}" target="_blank" rel="noopener">{escape(x["name"])}</a>' for x in it["sources"]) + "）"
 
 
+def link_composers(html_text, codes, composers, up):
+    """把已跳脫的文字中出現的作曲家名（顯示名或別名，含只寫姓氏）連到作曲家頁，每位只連第一次出現（編輯 2026-10-31 指定）。"""
+    cands = []
+    for c in codes or []:
+        info = composers.get(c)
+        if not info:
+            continue
+        for n in dict.fromkeys([info["display"], info.get("name")] + info.get("aliases", [])):
+            if n:
+                cands.append((escape(n), c))
+    cands.sort(key=lambda x: -len(x[0]))
+    spans, done = [], set()
+    for n, c in cands:
+        if c in done:
+            continue
+        pat = (r"(?<![A-Za-zÀ-ÿ])" if n[0].isascii() and n[0].isalpha() else "") + re.escape(n) + \
+              (r"(?![A-Za-zÀ-ÿ])" if n[-1].isascii() and n[-1].isalpha() else "")
+        for m in re.finditer(pat, html_text):
+            if any(m.start() < e and m.end() > b for b, e, _ in spans):
+                continue
+            spans.append((m.start(), m.end(), c))
+            done.add(c)
+            break
+    for b, e, c in sorted(spans, reverse=True):
+        html_text = html_text[:b] + f'<a class="cl" href="{up}composer/{c}/">{html_text[b:e]}</a>' + html_text[e:]
+    return html_text
+
+
 def full_row(it, composers, depth):
     """新聞、社群雷達列表（編輯 2026-10-31 指定）：短文全文放列表、文末括號附來源，不另列作曲家與接下來；
     有長篇內文的才連單則頁，摘要後接「閱讀全文」。單則頁照常保留，供作曲家頁、首頁與相關內容連結。"""
@@ -419,10 +448,13 @@ def full_row(it, composers, depth):
     meta = f'<div class="meta">{tags}{date}</div>' if (tags or date) else ""
     title = f'<a href="{href}">{nm(it["title"])}</a>' if long_ else nm(it["title"])
     tail = f' <a class="more" href="{href}">閱讀全文 →</a>' if long_ else src_paren(it)
+    summ = nm(it["summary"])
+    if it["type"] == "新聞":
+        summ = link_composers(summ, it.get("composers"), composers, up)
     return f"""<div class="it{'' if img else ' noimg'}" data-tags="{escape(" ".join(it.get("tags", [])))}">{thumb}<div>
 {meta}
 <h3>{title}</h3>
-<p class="sum">{nm(it["summary"])}{tail}</p></div></div>"""
+<p class="sum">{summ}{tail}</p></div></div>"""
 
 
 FILTER_JS = """<script>
