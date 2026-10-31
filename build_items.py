@@ -13,6 +13,7 @@ import json
 import os
 import re
 import shutil
+import unicodedata
 from html import escape
 
 import markdown
@@ -555,7 +556,10 @@ def main():
             by_c.setdefault(c, []).append(it)
     for c, rows in by_c.items():
         info = composers[c]
-        other = [n for n in [info.get("name")] + info.get("aliases", []) if n and n != info["display"]]
+        # 名字下方只列外文原名、全名與藝名；只是姓氏或只差重音符號的別名不列（編輯 2026-10-31 指定）
+        bare = lambda x: "".join(ch for ch in unicodedata.normalize("NFD", x) if unicodedata.category(ch) != "Mn").lower()
+        other = [n for n in [info.get("name")] + info.get("aliases", [])
+                 if n and n != info["display"] and n not in info["display"] and bare(n) != bare(info["display"])]
         alias = f'<p class="alias">{escape("、".join(dict.fromkeys(other)))}</p>' if other else ""
         main_html = (f'<div class="toppad"></div><h2 class="item-title">{escape(info["display"])}</h2>{alias}'
                      f'<div class="items" style="margin-top:14px">'
