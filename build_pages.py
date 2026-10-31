@@ -24,7 +24,13 @@ ML_SNIPPET = """<!-- MailerLite Universal -->
     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2740876');
 </script>
-<!-- End MailerLite Universal -->"""
+<!-- End MailerLite Universal -->
+<script>
+// 點「訂閱」：先叫 MailerLite 跳出表單；1 秒內沒出現（同一頁關過一次後 MailerLite 不再重開、或腳本被擋）就改開訂閱頁
+function cueSubscribe(a){try{ml('show','""" + ML_FORM_ID + """',true);}catch(e){}
+setTimeout(function(){var ok=[].some.call(document.querySelectorAll('iframe[src*="mailerlite"]'),function(f){return f.style.display!=='none'&&f.offsetHeight>0;});
+if(!ok)window.open(a.href,'_blank','noopener');},1000);return false;}
+</script>"""
 
 CSS = """
 :root{
@@ -102,7 +108,7 @@ def masthead(prefix, nav):
     navhtml = "".join(
         f'<a href="{up}{path}"' + (' aria-current="page"' if k == nav else "") + f'>{n}<small>{en}</small></a>' for k, n, en, path in NAV)
     # 點擊時跳出 MailerLite 表單；腳本沒載入時照原連結開分享頁
-    sub = (f' · <a href="{SUBSCRIBE_URL}" onclick="if(window.ml){{ml(\'show\',\'{ML_FORM_ID}\',true);return false;}}">訂閱</a>'
+    sub = (f' · <a href="{SUBSCRIBE_URL}" onclick="return cueSubscribe(this)">訂閱</a>'
            if SUBSCRIBE_URL else "")
     return f"""<header class="mast"><div class="wrap">
   <div class="strip"><span id="today">Cue Sheet</span><span>{TAGLINE}{sub}</span></div>
