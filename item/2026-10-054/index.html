@@ -98,6 +98,9 @@ h2.item-title{font-family:"Noto Serif TC",Georgia,serif;font-size:32px;line-heig
 .media figcaption{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
 .yt{display:block;max-width:480px;text-decoration:none;color:#FBFAF6}
 .yt span{display:block;background:#28251D;color:#FBFAF6;font-size:13px;padding:6px 10px}
+.media .yt img{max-width:none;width:100%;aspect-ratio:16/9;object-fit:cover;border:none}  /* 影音截圖與下方黑條同寬（編輯 2026-10-31 指定） */
+.items .more{font-size:14px;font-weight:700;color:var(--teal);text-decoration:none;white-space:nowrap}
+.items .more:hover{text-decoration:underline}
 .box{background:var(--paper);border:1px solid var(--line);padding:14px 16px;margin:22px 0 0;font-size:14px}
 .box b{display:block;font-size:12px;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;font-weight:700}
 .box ul{margin:0;padding-left:20px}
@@ -117,6 +120,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.items .it.video{grid-template-columns:150px minmax(0,1fr)}   /* 影音訪談：截圖放大 */
+.items .it.video .thumb img{width:150px;aspect-ratio:16/9;object-fit:cover}
 .twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
 .twocol .items .thumb img{width:110px}
 .items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
@@ -158,6 +163,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .items .thumb img{width:64px}
   .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
   .twocol .items .thumb img{width:80px}
+  .items .it.video{grid-template-columns:110px minmax(0,1fr)}
+  .items .it.video .thumb img{width:110px}
 }
 </style>
 </head>
@@ -165,7 +172,7 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 <header class="mast"><div class="wrap">
   <div class="strip"><span id="today">Cue Sheet</span><span>一份給配樂迷的電影音樂刊物 · <a href="https://preview.mailerlite.io/forms/2740876/202321965174752394/share">訂閱</a></span></div>
   <div class="brand"><h1 class="title"><a href="../../">Cue Sheet</a></h1><p class="kicker">FILM MUSIC NEWSLETTER</p></div>
-  <nav class="topnav" aria-label="網站"><a href="../../category/news/">新聞<small>NEWS</small></a><a href="../../category/reviews/">樂評<small>REVIEWS</small></a><a href="../../category/releases/">唱片架/試聽<small>NEW RELEASES</small></a><a href="../../category/interviews/" aria-current="page">訪談<small>INTERVIEWS</small></a><a href="../../category/community/">社群<small>COMMUNITY</small></a><a href="../../composer/">作曲家<small>COMPOSERS</small></a><a href="../../event/">國內活動<small>EVENTS</small></a><a href="../../newsletter/">電子報<small>NEWSLETTER</small></a></nav>
+  <nav class="topnav" aria-label="網站"><a href="../../">首頁<small>HOME</small></a><a href="../../category/news/">新聞<small>NEWS</small></a><a href="../../category/reviews/">樂評<small>REVIEWS</small></a><a href="../../category/releases/">唱片架/試聽<small>NEW RELEASES</small></a><a href="../../category/interviews/" aria-current="page">訪談<small>INTERVIEWS</small></a><a href="../../category/community/">社群<small>COMMUNITY</small></a><a href="../../composer/">作曲家<small>COMPOSERS</small></a><a href="../../event/">國內活動<small>EVENTS</small></a><a href="../../newsletter/">電子報<small>NEWSLETTER</small></a></nav>
 </div></header>
 <main><div class="wrap">
 <div class="narrow">

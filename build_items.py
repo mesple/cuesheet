@@ -56,6 +56,9 @@ h2.item-title{font-family:"Noto Serif TC",Georgia,serif;font-size:32px;line-heig
 .media figcaption{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
 .yt{display:block;max-width:480px;text-decoration:none;color:#FBFAF6}
 .yt span{display:block;background:#28251D;color:#FBFAF6;font-size:13px;padding:6px 10px}
+.media .yt img{max-width:none;width:100%;aspect-ratio:16/9;object-fit:cover;border:none}  /* 影音截圖與下方黑條同寬（編輯 2026-10-31 指定） */
+.items .more{font-size:14px;font-weight:700;color:var(--teal);text-decoration:none;white-space:nowrap}
+.items .more:hover{text-decoration:underline}
 .box{background:var(--paper);border:1px solid var(--line);padding:14px 16px;margin:22px 0 0;font-size:14px}
 .box b{display:block;font-size:12px;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;font-weight:700}
 .box ul{margin:0;padding-left:20px}
@@ -75,6 +78,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
+.items .it.video{grid-template-columns:150px minmax(0,1fr)}   /* 影音訪談：截圖放大 */
+.items .it.video .thumb img{width:150px;aspect-ratio:16/9;object-fit:cover}
 .twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
 .twocol .items .thumb img{width:110px}
 .items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
@@ -116,6 +121,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .items .thumb img{width:64px}
   .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
   .twocol .items .thumb img{width:80px}
+  .items .it.video{grid-template-columns:110px minmax(0,1fr)}
+  .items .it.video .thumb img{width:110px}
 }
 """
 
@@ -198,7 +205,9 @@ def media_html(it, title):
         elif m.get("credit"):
             c = escape(m["credit"])
             cap.append("圖片來源：" + (f'<a href="{m["credit_url"]}">{c}</a>' if m.get("credit_url") else c))
-        figs.append(f"<figure>{img}" + (f'<figcaption>{"　".join(cap)}</figcaption>' if cap else "") + "</figure>")
+        # media 可指定 width（px）：縮小單張圖，圖說跟著同寬（編輯 2026-10-31 指定）
+        fstyle = f' style="max-width:{int(m["width"])}px"' if m.get("width") else ""
+        figs.append(f"<figure{fstyle}>{img}" + (f'<figcaption>{"　".join(cap)}</figcaption>' if cap else "") + "</figure>")
     cls = "multi" if len(figs) > 1 else "single"
     if len(figs) == 1 and it["type"] in ("新聞",) and media[0]["kind"] == "image":
         cls += " wide"
@@ -210,6 +219,7 @@ PAGE_MIN_CHARS = 200              # 這兩類若內文達 200 字以上，才做
 
 
 NO_DATE_TYPES = ("樂評", "發行", "試聽")
+NO_LIST_DATE_TYPES = NO_DATE_TYPES + ("訪談",)   # 訪談列表不放日期，單則頁才放（編輯 2026-10-31 指定）
 
 
 def has_page(it):
@@ -334,7 +344,7 @@ def row_html(it, composers, labels, depth, show_date=True, show_by=True):
     img = first_image(it)
     thumb = f'<a class="thumb" href="{escape(href)}"{tgt}><img src="{img}" alt="" loading="lazy"></a>' if img else ""
     tags = "".join(f'<span class="pill">{escape(t)}</span>' for t in it.get("tags", []))
-    date = "" if (not show_date or it["type"] in NO_DATE_TYPES) else fmt_date(it)
+    date = "" if (not show_date or it["type"] in NO_LIST_DATE_TYPES) else fmt_date(it)
     meta = f'<div class="meta">{tags}{date}</div>' if (tags or date) else ""
     codes = [c for c in (it.get("composers") or []) if c in composers]
     if external and codes:
@@ -346,18 +356,23 @@ def row_html(it, composers, labels, depth, show_date=True, show_by=True):
         by = ""
     if not show_by:   # 作曲家頁：每則不再重複寫作曲家名
         by = ""
-    s = show_name(it["summary"], composers, it.get("composers"))
-    if not external:
+    s = show_name(it.get("teaser") or it["summary"], composers, it.get("composers"))
+    more = ""
+    if it["type"] == "訪談" and not external:
+        # 訪談：約 50 字摘要，文末接「閱讀全文」（編輯 2026-10-31 指定）
+        more = f' <a class="more" href="{escape(href)}">閱讀全文 →</a>'
+    elif not external:
         s = s if len(s) <= 90 else s[:88] + "…"
     src = ""
     if external and it.get("sources"):
         src = '<div class="src">來源：' + "・".join(
             f'<a href="{escape(x["url"])}" target="_blank" rel="noopener">{escape(x["name"])}</a>' for x in it["sources"]) + "</div>"
     data_tags = escape(" ".join(it.get("tags", [])))
-    return f"""<div class="it{'' if img else ' noimg'}" data-tags="{data_tags}">{thumb}<div>
+    video = " video" if img and any(m["kind"] == "youtube" for m in it.get("media") or []) and it["type"] == "訪談" else ""
+    return f"""<div class="it{'' if img else ' noimg'}{video}" data-tags="{data_tags}">{thumb}<div>
 {meta}
 <h3><a href="{escape(href)}"{tgt}>{escape(it["title"])}</a></h3>{by}
-<p>{escape(s)}</p>{src}</div></div>"""
+<p>{escape(s)}{more}</p>{src}</div></div>"""
 
 
 FILTER_JS = """<script>
@@ -689,7 +704,10 @@ def build_home():
         head = "｜".join(x for x in (it.get("byline") or "", label) if x)
         return (f'<span>{nm(it, head)}</span>' if head else "") + (f'<span class="desc">{nm(it, desc)}</span>' if desc else "")
 
-    reviews = pick("樂評", 4)
+    # 首頁樂評：最新一期 issues/*.json 有 home_reviews 時照編輯指定（編輯 2026-10-31 指定），沒有才取最新四則
+    home_rev = next((d["home_reviews"] for d in reversed(issue_files) if d.get("home_reviews")), [])
+    reviews = [by_id[r] for r in home_rev if r in by_id and r not in used][:4] or pick("樂評", 4)
+    used.update(it["id"] for it in reviews)
     talk = pick("社群", 3)
     rels = pick("發行", 4)
     obits = pick("訃聞", 4)
