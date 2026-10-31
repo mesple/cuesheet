@@ -504,7 +504,10 @@ HOME_CSS = """
 .h-cover{display:block;text-decoration:none;color:var(--ink)}
 .h-cover img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:var(--paper)}
 .h-cover b{display:block;font-family:"Noto Serif TC",Georgia,serif;font-size:18px;margin:8px 0 2px;line-height:1.35}
-.h-cover:hover b{color:var(--teal)}
+.h-cover a{text-decoration:none;color:inherit}
+.h-cover a:hover b{color:var(--teal)}
+.h-cover .h-more{color:var(--teal);font-size:13px;white-space:nowrap}
+.h-cover .h-more:hover{text-decoration:underline}
 .h-cover .by{font-size:13px;color:var(--teal)}
 .h-cover p{font-size:14px;line-height:1.7;margin:6px 0 0;color:var(--soft)}
 .h-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
@@ -519,6 +522,7 @@ HOME_CSS = """
 .h-rel img{width:70px;height:70px;object-fit:cover;display:block}
 .h-rel b{font-size:16px}.h-rel:hover b{color:var(--teal)}
 .h-rel span span,.h-obit span{display:block;margin-top:2px;font-size:13px;color:var(--muted)}
+.h-rel span span.desc{color:var(--soft);font-size:14px;line-height:1.65;margin-top:4px}
 .h-obit{display:block;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
 .h-obit b{font-size:16px}.h-obit:hover b{color:var(--teal)}
 @media (max-width:760px){
@@ -652,8 +656,17 @@ def build_home():
     def cover(it, with_note=True):
         img = first_image(it) or ""
         by = f'<span class="by">{nm(it, it["byline"])}</span>' if it.get("byline") else ""
-        note = f'<p>{nm(it, _first_sentence(it["summary"], 46))}</p>' if with_note else ""
-        return f'<a class="h-cover" href="item/{it["id"]}/"><img src="{escape(img)}" alt="{escape(it["title"])} 專輯封面" loading="lazy"><b>{nm(it, it["title"])}</b>{by}{note}</a>'
+        # 首頁樂評：放完整摘要，文末接「（閱讀全文）」連到單則頁（編輯 2026-10-31 指定）
+        note = (f'<p>{nm(it, it["summary"])}<a class="h-more" href="item/{it["id"]}/">（閱讀全文）</a></p>' if with_note else "")
+        return (f'<div class="h-cover"><a href="item/{it["id"]}/"><img src="{escape(img)}" alt="{escape(it["title"])} 專輯封面" loading="lazy">'
+                f'<b>{nm(it, it["title"])}</b></a>{by}{note}</div>')
+
+    def rel_lines(it):
+        """首頁唱片架：第一行作曲家｜唱片公司，第二行唱片說明（編輯 2026-10-31 指定）。"""
+        parts = it["summary"].split("｜")
+        label, desc = (parts[0], "｜".join(parts[1:])) if len(parts) > 1 else ("", it["summary"])
+        head = "｜".join(x for x in (it.get("byline") or "", label) if x)
+        return (f'<span>{nm(it, head)}</span>' if head else "") + (f'<span class="desc">{nm(it, desc)}</span>' if desc else "")
 
     reviews = pick("樂評", 4)
     talk = pick("社群", 3)
@@ -664,7 +677,7 @@ def build_home():
         f'<small>{escape("、".join(s["name"] for s in it.get("sources", [])[:2]))}</small></a>' for it in talk)
     rel_html = "".join(
         f'<a class="h-rel" href="{escape(item_href(it, "")[0])}"' + (' target="_blank" rel="noopener"' if item_href(it, "")[1] else "") + f'><img src="{escape(first_image(it) or "")}" alt="{escape(it["title"])} 專輯封面" loading="lazy">'
-        f'<span><b>{nm(it, it["title"])}</b><span>{nm(it, (it.get("byline") or "") + "｜" + it["summary"].split("｜")[0].split("。")[0])}</span></span></a>' for it in rels)
+        f'<span><b>{nm(it, it["title"])}</b>{rel_lines(it)}</span></a>' for it in rels)
     obit_html = "".join(
         f'<a class="h-obit" href="item/{it["id"]}/"><b>{nm(it, it["title"].split("：")[0])}</b><span>{nm(it, _first_sentence(it["summary"], 40))}</span></a>' for it in obits)
 
