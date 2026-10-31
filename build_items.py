@@ -655,7 +655,7 @@ HOME_CSS = """
 .h-row b{display:block;font-family:"Noto Serif TC",Georgia,serif;font-size:17px;line-height:1.4}
 .h-row:hover b{color:var(--teal)}
 .h-row span{font-size:13px;color:var(--muted)}
-.h-row .h-tag{display:inline-block;font-style:normal;font-family:"Noto Sans TC",sans-serif;font-size:12px;font-weight:700;line-height:1.5;background:var(--teal);color:var(--paper);padding:0 6px;margin-right:8px;vertical-align:2px}   /* 首頁新聞次類別：實心框放標題前（編輯 2026-10-31 指定） */
+.h-row .h-tag{display:inline-block;font-style:normal;font-family:"Noto Sans TC",sans-serif;font-size:12px;font-weight:700;line-height:1.5;background:var(--teal);color:var(--paper);padding:0 6px;margin:0 0 4px}   /* 首頁新聞次類別：實心框在第一行、標題在第二行（編輯 2026-10-31 指定） */
 .h-ev{display:grid;grid-template-columns:54px minmax(0,1fr);gap:8px;padding:8px 0;border-bottom:1px dotted var(--line);font-size:14px;color:var(--ink);text-decoration:none}
 .h-ev:hover{color:var(--teal)}
 .h-ev .d{font-family:Georgia,serif;font-weight:700;font-size:18px}
@@ -824,7 +824,7 @@ def build_home():
     nl_html = "".join(f'<a class="h-row" href="newsletter/{i["slug"]}/"><b>{escape(i["title"])}</b><span>{escape(i["label"])}</span></a>' for i in nl)
     news = pick("新聞", 4)
     news_html = "".join(
-        f'<a class="h-row" href="item/{it["id"]}/"><b>' + (f'<i class="h-tag">{escape(it["tags"][0])}</i>' if it.get("tags") else "") + f'{nm(it, it["title"])}</b></a>'
+        f'<a class="h-row" href="item/{it["id"]}/">' + (f'<i class="h-tag">{escape(it["tags"][0])}</i>' if it.get("tags") else "") + f'<b>{nm(it, it["title"])}</b></a>'
         for it in news)
     side = f"""<aside class="h-side">
 <div class="sec">電子報<a class="more-r" href="newsletter/">各期 →</a></div>{nl_html}
