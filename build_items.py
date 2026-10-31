@@ -56,7 +56,7 @@ h2.item-title{font-family:"Noto Serif TC",Georgia,serif;font-size:32px;line-heig
 .media.single img{max-width:360px}
 .media.single.wide img{max-width:100%}
 .media.sq figure{max-width:300px}
-.media.sq img{width:300px;height:300px;max-width:100%;object-fit:cover}   /* 新聞單則頁圖片一律 300x300（編輯 2026-10-31 指定） */
+.media.sq img{width:300px;height:auto;max-width:100%}   /* 新聞單則頁圖片寬 300、高度依原圖比例（編輯 2026-10-31 指定） */
 .byline a{color:var(--teal);text-decoration:none}.byline a:hover{text-decoration:underline}
 .items .pill.col{background:var(--teal);color:var(--paper)}
 .items p.sum{font-size:15px;line-height:1.85;color:var(--ink)}
