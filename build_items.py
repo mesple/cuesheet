@@ -475,8 +475,49 @@ FILTER_JS = """<script>
 </script>"""
 
 
+CJK = "\u4e00-\u9fff\u3400-\u4dbf"
+
+
+def lint(items, composers):
+    """寫稿規則檢查（編輯 2026-10-31 指定）：每次建站列出違規的單則，上線前修正。只提醒，不擋建站。
+    1. 標題不放日期（日期寫在摘要）
+    2. 新聞摘要要寫出作曲家名（列表才連得到作曲家頁）
+    3. 新聞、社群雷達的短文摘要不寫來源名（來源由程式接在文末括號）
+    4. 兩個中文字之間不空格"""
+    warns = []
+    for it in items:
+        if it.get("web") is not True:
+            continue
+        t, summ, i = it["title"], it["summary"], it["id"]
+        if re.search(r"\d{1,2}/\d{1,2}|\d{1,2}\s*月(\s*\d{1,2}\s*日)?(?!號)", t) and it["type"] in ("新聞", "社群", "訪談", "樂評"):
+            warns.append(f"{i} 標題含日期：{t}")
+        if it["type"] == "新聞":
+            names = [n for c in it.get("composers", []) if c in composers
+                     for n in [composers[c]["display"], composers[c].get("name")] + composers[c].get("aliases", []) if n]
+            if names and not any(n in show_name(summ, composers, it.get("composers")) for n in names):
+                warns.append(f"{i} 摘要沒寫到作曲家名（列表不會有連結）：{t}")
+        if it["type"] in ("新聞", "社群") and not it.get("body"):
+            for src in it.get("sources", []):
+                if src["name"] in summ and re.search(r"[（(][^（）()]*" + re.escape(src["name"]), summ):
+                    warns.append(f"{i} 摘要括號裡已寫來源「{src['name']}」，文末會重複：{t}")
+                    break
+        for field in (t, summ):
+            m = re.search(f"[{CJK}] +[{CJK}]", field)
+            if m:
+                warns.append(f"{i} 中文字之間有空格「{m.group(0)}」：{t}")
+                break
+    if warns:
+        print(f"寫稿規則檢查：{len(warns)} 則要修正")
+        for w in warns:
+            print("  ・" + w)
+    else:
+        print("寫稿規則檢查：通過")
+    return warns
+
+
 def main():
     items, composers, labels, features = load()
+    lint(items, composers)
     by_id = {it["id"]: it for it in items if it.get("web") is True}
     shown = sorted(by_id.values(), key=sort_key, reverse=True)
 
