@@ -1,6 +1,6 @@
 {
  "說明": "新聞搜尋補漏：民間主辦、未登錄文化部開放資料的活動。格式同 events.json；source 一律為「新聞」，source_links 列出確認用的主辦頁或新聞。時間未公布的場次 time 只寫日期並加 time_tbd。編輯每期更新，過期場次由 build_section.py 自動略過。 note 會顯示在電子報與活動頁給讀者看；只給編輯看的註記寫在 internal_note。 長期展覽用 run 欄位（start、end、venue、city），shows 留空；電子報與活動頁只列一筆並顯示展期。",
- "updated": "2026-10-27",
+ "updated": "2026-11-01",
  "events": [
   {
    "uid": "manual-mna-twilight-new-moon-2026",
@@ -179,6 +179,36 @@
     "city": "臺北市"
    },
    "shows": []
+  },
+  {
+   "uid": "manual-onesong-barry-morricone-2026",
+   "title": "灣聲映像館VIII：歐洲大師仙拚仙 John Barry v.s. Ennio Morricone",
+   "category": "音樂",
+   "organizer": [
+    "灣聲樂團"
+   ],
+   "performer": "灣聲樂團；指揮 葉政德；導聆 藍祖蔚",
+   "web": "https://www.onesongorchestra.com/concerts_reading.php?a=333",
+   "tickets": "https://tixfun.com/UTK0201_?PRODUCT_ID=Q01ZROKD",
+   "source": "新聞",
+   "source_links": [
+    "https://www.onesongorchestra.com/concerts_reading.php?a=333",
+    "https://www.verse.com.tw/article/onesongorchestra-year-end",
+    "https://n.yam.com/Article/20261015172142"
+   ],
+   "shows": [
+    {
+     "time": "2026/11/07 19:00:00",
+     "venue": "誠品表演廳",
+     "city": "臺北市"
+    },
+    {
+     "time": "2026/11/08 14:30:00",
+     "venue": "誠品表演廳",
+     "city": "臺北市"
+    }
+   ],
+   "internal_note": "11/1 新聞補漏補登。只列售票場；11/6 19:30、11/7 14:30、11/8 19:00 為企業場，未列。官網只寫執行單位「灣聲國際股份有限公司」，主辦依樂團名稱填。"
   }
  ]
 }
