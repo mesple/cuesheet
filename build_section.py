@@ -1,7 +1,7 @@
 """產生 Cue Sheet「近期國內電影音樂活動」欄目的 HTML 片段與預覽頁。
 
 用法：python build_section.py events.json 發刊日(YYYY-MM-DD) 天數 輸出檔 [線上活動頁網址] [--slim] [--pick=uid1,uid2]
---slim：配樂新訊版精簡版（以節目計算、每區最多 2 個節目，天數建議 30）；--pick 指定要優先放入的節目 uid
+--slim：配樂新訊版精簡版（以節目計算、北部最多 6 個、其他地區最多 2 個節目，天數建議 30）；--pick 指定要優先放入的節目 uid
 線上活動頁網址：https://mesple.github.io/cuesheet/event/
 """
 import json
@@ -128,9 +128,13 @@ def build(events, issue_date, days):
     return rows, dropped
 
 
+# 精簡版每區節目上限（編輯 2026-11-01 指定：北部節目多，放寬到 6 個）
+REGION_LIMITS = {"北部": 6}
+
+
 def build_slim(events, issue_date, days=30, per_region=2, pick=None, skip=None):
     """配樂新訊版精簡版（編輯 2026-10-25 指定）：以節目計算，同一節目在同一地區的所有場次合成一列；
-    每區最多 per_region 個節目，預設挑日期最近的；pick 為編輯指定的 uid 清單，有指定的優先。"""
+    每區最多 per_region 個節目（REGION_LIMITS 有列的地區以該值為準），預設挑日期最近的；pick 為編輯指定的 uid 清單，有指定的優先。"""
     start, end = issue_date, issue_date + timedelta(days=days)
     cands = {name: [] for name, _ in REGIONS}
     for ev in events:
@@ -152,8 +156,9 @@ def build_slim(events, issue_date, days=30, per_region=2, pick=None, skip=None):
     pick = pick or []
     for reg, lst in cands.items():
         lst.sort(key=lambda r: (0 if r[1].get("uid") in pick else 1, r[0]))
-        rows[reg] = sorted(lst[:per_region], key=lambda r: r[0])
-        more[reg] = [(r[1].get("uid"), r[1]["title"], f"{r[0].month}/{r[0].day}") for r in lst[per_region:]]
+        n = REGION_LIMITS.get(reg, per_region)
+        rows[reg] = sorted(lst[:n], key=lambda r: r[0])
+        more[reg] = [(r[1].get("uid"), r[1]["title"], f"{r[0].month}/{r[0].day}") for r in lst[n:]]
     return rows, more
 
 
@@ -234,7 +239,7 @@ def section_html(rows, issue_date, days, page_url, slim=False):
 <div style="font-size:14px;line-height:1.7;color:#55534C;margin-bottom:6px;">{issue_date.month}/{issue_date.day}–{end.month}/{end.day} 全台電影、動畫與遊戲音樂的音樂會與講座，依地區、日期排列。</div>"""]
     if slim:
         parts[-1] = parts[-1].replace("全台電影、動畫與遊戲音樂的音樂會與講座，依地區、日期排列。",
-                                      "全台電影、動畫與遊戲音樂活動精選，每區最多兩個節目，依地區、日期排列。")
+                                      "全台電影、動畫與遊戲音樂活動精選，北部最多六個、其他地區最多兩個節目，依地區、日期排列。")
     if page_url and page_url != "#":  # 線上活動頁建好才顯示；放在開頭說明下方，讓讀者先選地區（編輯 2026-10-18 指定）
         from urllib.parse import quote
         btn = ("display:inline-block;margin:6px 6px 0 0;padding:4px 12px;border:1px solid #01696F;"
