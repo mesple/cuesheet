@@ -156,9 +156,11 @@ footer b{font-family:"Noto Serif TC",Georgia,serif;color:var(--ink);font-size:14
 </script>
 <!-- End MailerLite Universal -->
 <script>
-// 點「訂閱」：首頁用 MailerLite 彈出視窗（HeZ91R 只設定在首頁顯示）；
-// 其他頁面、或彈出視窗沒出現時（腳本被擋、頻率限制），在本頁右側開訂閱面板，讀者不必離開頁面。
-function cueSubscribe(a){try{ml('show','HeZ91R',true);}catch(e){}
+// 點「訂閱」：每一頁都跳出 MailerLite 彈出視窗 HeZ91R。
+// HeZ91R 在 MailerLite 只設定在首頁「自動」跳出；讀者主動點擊時，先把這一頁的顯示限制放寬，再叫出視窗。
+// 視窗沒出現時（腳本被擋等），改在本頁右側開訂閱面板，讀者不必離開頁面。
+function cueSubscribe(a){try{var p=ml.fn&&ml.fn.popups&&ml.fn.popups['HeZ91R'];if(p&&p.settings)p.settings.visibility='all';
+ml('show','HeZ91R',true);}catch(e){}
 setTimeout(function(){var ok=[].some.call(document.querySelectorAll('iframe[src*="mailerlite.com"]'),function(f){return f.style.display!=='none'&&f.offsetHeight>0;});
 if(!ok)cueSubPanel(a.href);},800);return false;}
 function cueSubPanel(u){if(document.getElementById('cue-sub'))return;
