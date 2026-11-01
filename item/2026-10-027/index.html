@@ -189,10 +189,21 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 </script>
 <!-- End MailerLite Universal -->
 <script>
-// 點「訂閱」：先叫 MailerLite 跳出表單；1 秒內沒出現（同一頁關過一次後 MailerLite 不再重開、或腳本被擋）就改開訂閱頁
+// 點「訂閱」：首頁用 MailerLite 彈出視窗（HeZ91R 只設定在首頁顯示）；
+// 其他頁面、或彈出視窗沒出現時（腳本被擋、頻率限制），在本頁右側開訂閱面板，讀者不必離開頁面。
 function cueSubscribe(a){try{ml('show','HeZ91R',true);}catch(e){}
-setTimeout(function(){var ok=[].some.call(document.querySelectorAll('iframe[src*="mailerlite"]'),function(f){return f.style.display!=='none'&&f.offsetHeight>0;});
-if(!ok)window.open(a.href,'_blank','noopener');},1000);return false;}
+setTimeout(function(){var ok=[].some.call(document.querySelectorAll('iframe[src*="mailerlite.com"]'),function(f){return f.style.display!=='none'&&f.offsetHeight>0;});
+if(!ok)cueSubPanel(a.href);},800);return false;}
+function cueSubPanel(u){if(document.getElementById('cue-sub'))return;
+var w=document.createElement('div');w.id='cue-sub';
+w.innerHTML='<div style="position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:10000" data-x></div>'
++'<div style="position:fixed;top:0;right:0;height:100%;width:min(480px,100%);background:#fff;z-index:10001;box-shadow:-4px 0 20px rgba(0,0,0,.2)">'
++'<button type="button" data-x aria-label="關閉" style="position:absolute;top:8px;right:12px;border:0;background:none;font-size:28px;line-height:1;cursor:pointer;color:#222;z-index:1">×</button>'
++'<iframe src="'+u+'" title="訂閱 Cue Sheet" style="border:0;width:100%;height:100%"></iframe></div>';
+function close(){w.remove();document.removeEventListener('keydown',esc);}
+function esc(e){if(e.key==='Escape')close();}
+[].forEach.call(w.querySelectorAll('[data-x]'),function(el){el.onclick=close;});
+document.addEventListener('keydown',esc);document.body.appendChild(w);}
 </script>
 </head>
 <body>
