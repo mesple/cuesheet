@@ -193,8 +193,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 // 視窗沒出現時（腳本被擋等），改在本頁右側開訂閱面板，讀者不必離開頁面。
 function cueSubscribe(a){try{var p=ml.fn&&ml.fn.popups&&ml.fn.popups['HeZ91R'];if(p&&p.settings)p.settings.visibility='all';
 ml('show','HeZ91R',true);}catch(e){}
-setTimeout(function(){var ok=[].some.call(document.querySelectorAll('iframe[src*="mailerlite.com"]'),function(f){return f.style.display!=='none'&&f.offsetHeight>0;});
-if(!ok)cueSubPanel(a.href);},800);return false;}
+setTimeout(function(){if(!cuePopupShown())cueSubPanel(a.href);},3000);return false;}
+function cuePopupShown(){return [].some.call(document.querySelectorAll('iframe[src*="assets.mailerlite.com"]'),function(f){return f.style.display!=='none'&&f.offsetHeight>0;});}
 function cueSubPanel(u){if(document.getElementById('cue-sub'))return;
 var w=document.createElement('div');w.id='cue-sub';
 w.innerHTML='<div style="position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:10000" data-x></div>'
@@ -204,7 +204,9 @@ w.innerHTML='<div style="position:fixed;inset:0;background:rgba(0,0,0,.45);z-ind
 function close(){w.remove();document.removeEventListener('keydown',esc);}
 function esc(e){if(e.key==='Escape')close();}
 [].forEach.call(w.querySelectorAll('[data-x]'),function(el){el.onclick=close;});
-document.addEventListener('keydown',esc);document.body.appendChild(w);}
+document.addEventListener('keydown',esc);document.body.appendChild(w);
+// 彈出視窗晚一點才出現時，收掉面板，避免兩個疊在一起
+var n=0,t=setInterval(function(){if(!document.getElementById('cue-sub')||++n>20){clearInterval(t);return;}if(cuePopupShown()){clearInterval(t);close();}},500);}
 </script>
 </head>
 <body>
