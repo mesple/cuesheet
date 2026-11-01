@@ -28,10 +28,10 @@ ML_SNIPPET = """<!-- MailerLite Universal -->
 <script>
 // 點「訂閱」：每一頁都跳出 MailerLite 彈出視窗 HeZ91R。
 // HeZ91R 在 MailerLite 只設定在首頁「自動」跳出；讀者主動點擊時，先把這一頁的顯示限制放寬，再叫出視窗。
-// 視窗沒出現時（腳本被擋等），改在本頁右側開訂閱面板，讀者不必離開頁面。
+// 第一次點擊約 4 秒才出現（MailerLite 載入表單）；8 秒仍沒出現（腳本被擋等），改在本頁右側開訂閱面板，讀者不必離開頁面。
 function cueSubscribe(a){try{var p=ml.fn&&ml.fn.popups&&ml.fn.popups['""" + ML_FORM_ID + """'];if(p&&p.settings)p.settings.visibility='all';
 ml('show','""" + ML_FORM_ID + """',true);}catch(e){}
-setTimeout(function(){if(!cuePopupShown())cueSubPanel(a.href);},3000);return false;}
+setTimeout(function(){if(!cuePopupShown())cueSubPanel(a.href);},8000);return false;}
 function cuePopupShown(){return [].some.call(document.querySelectorAll('iframe[src*="assets.mailerlite.com"]'),function(f){return f.style.display!=='none'&&f.offsetHeight>0;});}
 function cueSubPanel(u){if(document.getElementById('cue-sub'))return;
 var w=document.createElement('div');w.id='cue-sub';
