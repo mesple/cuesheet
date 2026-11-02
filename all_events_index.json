@@ -891,15 +891,6 @@
 "start_date": "2027/05/22"
 },
 {
-"uid": "6a6b844f26b32427d06042fd",
-"category": "音樂",
-"title": "戰火中的靈魂—李昀陽鋼琴獨奏會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2082317893389787136",
-"start_date": "2026/11/02"
-},
-{
 "uid": "6a6b844f26b32427d06042fe",
 "category": "音樂",
 "title": "【2026 TSO 特別企劃】國王歌手與TSO的聖誕音樂會",
@@ -1140,7 +1131,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2080112539683344385",
-"start_date": "2026/11/02"
+"start_date": "2026/11/12"
 },
 {
 "uid": "6a7f726b26b32427d06043db",
@@ -1303,6 +1294,15 @@
 "description": "",
 "web": "https://www.opentix.life/program/2089192717915193344",
 "start_date": "2026/11/07"
+},
+{
+"uid": "6a87330526b32427d0604450",
+"category": "音樂",
+"title": "國樂尋音－TCO市民國樂團音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2087113618239275009",
+"start_date": "2027/01/30"
 },
 {
 "uid": "6a87330526b32427d0604451",
@@ -1924,15 +1924,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2090271128120614912",
 "start_date": "2026/12/22"
-},
-{
-"uid": "6aa042a626b324165c32e389",
-"category": "音樂",
-"title": "向海頓致敬",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2095368276681949185",
-"start_date": "2026/11/02"
 },
 {
 "uid": "6aa06cb626b324165c32e38f",
@@ -4068,6 +4059,114 @@
 "start_date": "2027/01/08"
 },
 {
+"uid": "6ae8c3f626b3245efc753765",
+"category": "音樂",
+"title": "這兒真好-邱奕勳／黃郁文 與 拉赫曼尼諾夫",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2104818056804900865",
+"start_date": "2026/12/19"
+},
+{
+"uid": "6ae8c3f626b3245efc753766",
+"category": "音樂",
+"title": "【ESO大師精選】命運迴旋——梵志登與ESO",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2115013521218473985",
+"start_date": "2027/01/22"
+},
+{
+"uid": "6ae8c3f626b3245efc753767",
+"category": "音樂",
+"title": "女高音蔡澐宣獨唱會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2109500733699264513",
+"start_date": "2026/12/17"
+},
+{
+"uid": "6ae8c3f626b3245efc753768",
+"category": "音樂",
+"title": "2027路耀祖小提琴獨奏會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2109856372308971521",
+"start_date": "2027/02/14"
+},
+{
+"uid": "6ae8c3f626b3245efc753769",
+"category": "音樂",
+"title": "《傳承．希望．愛》Unicque Taiwan 慈善音樂百老匯",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2112102874435055617",
+"start_date": "2027/01/23"
+},
+{
+"uid": "6ae8c3f626b3245efc75376a",
+"category": "音樂",
+"title": "《音樂無用III》樂耕農二十五週年音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2112364360358383617",
+"start_date": "2026/12/19"
+},
+{
+"uid": "6ae8c3f626b3245efc75376b",
+"category": "音樂",
+"title": "不惑之聲與喜悅女聲聖誕音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2113510317824221185",
+"start_date": "2026/12/11"
+},
+{
+"uid": "6ae8c3f626b3245efc75376c",
+"category": "音樂",
+"title": "【十載弦音】巫采蓉胡琴獨奏會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2114896588664922112",
+"start_date": "2027/01/09"
+},
+{
+"uid": "6ae8c3f626b3245efc75376d",
+"category": "音樂",
+"title": "林佳田男高音獻聲衛武營",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2115665451293696001",
+"start_date": "2027/02/03"
+},
+{
+"uid": "6ae8c3f626b3245efc75376e",
+"category": "音樂",
+"title": "義聲璀璨II - 女高音羅心汝及男中音李仁傑歌劇選粹音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2115683243310223361",
+"start_date": "2027/01/22"
+},
+{
+"uid": "6ae8c3f626b3245efc75376f",
+"category": "音樂",
+"title": "跨界節奏當代聲響",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2110258634365931520",
+"start_date": "2026/11/30"
+},
+{
+"uid": "6ae8c3f626b3245efc753770",
+"category": "音樂",
+"title": "國北教大131週年校慶音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2110268402502615041",
+"start_date": "2026/12/25"
+},
+{
 "uid": "68950a2f26b324477c8a1474",
 "category": "講座",
 "title": "生活工藝館-陶藝DIY手作體驗",
@@ -4761,15 +4860,6 @@
 "start_date": "2026/11/04"
 },
 {
-"uid": "6a6cd5aa26b32427d0604319",
-"category": "講座",
-"title": "2026秋天藝術節【藝術家對談】艾薩．霍克森 ✕ 維努里．佩雷拉 創作講座",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2077965990218698753",
-"start_date": "2026/11/02"
-},
-{
 "uid": "6a7761fb26b32427d0604391",
 "category": "講座",
 "title": "【幕名而來】菲利普.肯恩《人間樂園》節目導覽",
@@ -4914,6 +5004,15 @@
 "start_date": "2027/01/23"
 },
 {
+"uid": "6ae2b0e9647ad3bb538f9784",
+"category": "講座",
+"title": " 𝟐𝟎𝟐𝟔設計師交流之夜在台中#𝑽𝒐𝒍.12",
+"performer": "",
+"description": "THE 201 ART 順天建築•文化•藝術中心 已策辦12屆 Pecha Kucha Night x Taichung，今年也將集結各領域的創意人 / 創辦人上台，以 20x20 的方式，有別一般制式講座的形式，講述各自的設計、想法、理念，以及熱鬧的交流派對時間。THE 201 ART 邀請大家於2026年11月21日 週六晚上，共享這個一年一度的設計盛宴，一起Pecha Kucha！\r\n\r\n應 許 之 地 𝐏𝐑𝐎𝐌𝐈𝐒𝐄𝐃 𝐋𝐀𝐍𝐃 𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚𓎚\r\n⋮ ⁛ ⁘ ∴ ∵ ∶ ⁘ ⁙ ∴ ∵ ∶ ∷ Built Over Time 在 時 間 裡 ， 成 為 自 己 𓁵\r\n\r\n每個時代都有屬於自己的潮汐。資訊湧現、技術更新、觀點更迭，我們總被提醒著向前、更新、追趕，彷彿唯有不斷加速，才能抵達下一個未來。然而，真正具有影響力的創造，往往來自另一種速度。它來自時間。來自長期的觀察、研究、提問與實踐；來自一次次修正、累積與堅持，在反覆淬鍊之中，逐漸形成獨特的觀看方式。\r\n\r\n設計亦是如此。長期主義是一種以時間為核心的哲學。創作者從好奇與相信出發，歷經「觀察、研究、提問、實踐」的反覆淬鍊，將看似微小的選擇，累積成無可取代的複利，最終構築出獨一無二的設計哲學。本次設計師之夜，我們邀請不同領域的設計者，分享如何在時間裡建立自己的方法、判斷與信念，一同探尋那些沒有捷徑、在時間裡緩慢生成的獨特美學與世界觀。\r\n\r\n那片被稱為「應許之地」的所在，不是終點，而是一個值得用一生持續靠近的方向。\r\n",
+"web": "",
+"start_date": "2026/11/21"
+},
+{
 "uid": "6ae4d18826b3245efc753753",
 "category": "講座",
 "title": "Vox Nova《韓德爾-彌賽亞選粹》系列導聆",
@@ -4921,6 +5020,51 @@
 "description": "",
 "web": "https://www.opentix.life/program/2109898373781938177",
 "start_date": "2026/11/29"
+},
+{
+"uid": "6ae8c3fa26b3245efc753779",
+"category": "講座",
+"title": "【2026駐館藝術家開放工作室】「PRE-Remains」講座",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2112454172133060608",
+"start_date": "2026/12/06"
+},
+{
+"uid": "6ae8c3fa26b3245efc75377a",
+"category": "講座",
+"title": "2026戲劇獎人物講座｜女王的聆聽：導演與聲音之間",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2113604801189875713",
+"start_date": "2026/12/08"
+},
+{
+"uid": "6ae8c3fa26b3245efc75377b",
+"category": "講座",
+"title": "2026戲劇獎人物講座｜劇本生長的縫隙——從LAB到舞臺的劇本孵育",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2114920985226969089",
+"start_date": "2026/12/11"
+},
+{
+"uid": "6ae8c3fa26b3245efc75377c",
+"category": "講座",
+"title": "2026戲劇獎人物講座｜燈光與舞臺的相愛相殺",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2114922099559882753",
+"start_date": "2026/12/15"
+},
+{
+"uid": "6ae8c3fa26b3245efc75377d",
+"category": "講座",
+"title": "2026戲劇獎人物講座｜衣服之外，角色之間：服裝造型裡的創作與想像",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2114922782866280449",
+"start_date": "2026/12/30"
 },
 {
 "uid": "6920ec3b26b32445dce6f17a",
@@ -5704,15 +5848,6 @@
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19XNXK1",
 "start_date": "2027/02/13"
-},
-{
-"uid": "6a10c26626b3243414cccad2",
-"category": "演唱會",
-"title": "Jason Mraz ASIA TOUR 2026 IN TAIPEI",
-"performer": "",
-"description": "",
-"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AT93WA",
-"start_date": "2026/11/02"
 },
 {
 "uid": "6a10c26926b3243414cccad3",

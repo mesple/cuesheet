@@ -1,15 +1,15 @@
 {
- "run_at": "2026-11-02T07:40:57+08:00",
+ "run_at": "2026-11-03T07:43:57+08:00",
  "categories": {
   "音樂": {
-   "fetched": 452,
-   "baseline": 452,
+   "fetched": 463,
+   "baseline": 463,
    "attempts": 1,
    "error": null
   },
   "講座": {
-   "fetched": 95,
-   "baseline": 95,
+   "fetched": 100,
+   "baseline": 100,
    "attempts": 1,
    "error": null
   },
@@ -20,13 +20,13 @@
    "error": null
   },
   "演唱會": {
-   "fetched": 11,
-   "baseline": 11,
+   "fetched": 10,
+   "baseline": 10,
    "attempts": 1,
    "error": null
   }
  },
  "carried_over": [],
  "matched_events": 12,
- "candidates": 4
+ "candidates": 5
 }
