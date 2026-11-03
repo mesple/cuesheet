@@ -297,15 +297,6 @@
 "start_date": "2026/11/13"
 },
 {
-"uid": "6a3181c626b3243414ccd359",
-"category": "音樂",
-"title": "絢麗系列 — 歐拉夫森鋼琴獨奏會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2064685082194972673",
-"start_date": "2026/11/03"
-},
-{
 "uid": "6a319eb426b3243414ccd38f",
 "category": "音樂",
 "title": "BTS WORLD TOUR′ARIRANG′IN KAOHSIUNG",
@@ -700,15 +691,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2077712801896718336",
 "start_date": "2026/12/05"
-},
-{
-"uid": "6a67d88626b32427d06042c9",
-"category": "音樂",
-"title": "時代的軌跡─扎斯拉夫斯基獨奏",
-"performer": "",
-"description": "",
-"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BWXDX9",
-"start_date": "2026/11/03"
 },
 {
 "uid": "6a67d88826b32427d06042ca",
@@ -3897,15 +3879,6 @@
 "start_date": "2026/12/01"
 },
 {
-"uid": "6ae4d18126b3245efc753747",
-"category": "音樂",
-"title": "《眾聲匯聚》米特菁英培訓計畫年度音樂會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2108120765902880769",
-"start_date": "2027/01/03"
-},
-{
 "uid": "6ae4d18126b3245efc753748",
 "category": "音樂",
 "title": "2027 女高音蔣啟真獨唱會-《美聲的藝術》",
@@ -4165,6 +4138,51 @@
 "description": "",
 "web": "https://www.opentix.life/program/2110268402502615041",
 "start_date": "2026/12/25"
+},
+{
+"uid": "6aea158426b3245efc75377e",
+"category": "音樂",
+"title": "《這一頁，寫下我們》2026 台中少年兒童合唱團音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2114958761601798144",
+"start_date": "2026/12/11"
+},
+{
+"uid": "6aea158526b3245efc75377f",
+"category": "音樂",
+"title": "《燈塔》",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2111448549882028032",
+"start_date": "2026/12/20"
+},
+{
+"uid": "6aea158526b3245efc753780",
+"category": "音樂",
+"title": "「四季－鈴詠」",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2114973497213849601",
+"start_date": "2026/12/05"
+},
+{
+"uid": "6aea158526b3245efc753781",
+"category": "音樂",
+"title": "暗影・光影",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2115251312489586689",
+"start_date": "2026/12/19"
+},
+{
+"uid": "6aea158526b3245efc753782",
+"category": "音樂",
+"title": "憶起巴洛克V：笛聲悠悠的浪漫",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2115708065185161216",
+"start_date": "2027/01/24"
 },
 {
 "uid": "68950a2f26b324477c8a1474",
@@ -4885,15 +4903,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2077974359032700929",
 "start_date": "2026/11/22"
-},
-{
-"uid": "6a95b4e626b32434f4358099",
-"category": "講座",
-"title": "2026秋天藝術節：題外話",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2077968176053907457",
-"start_date": "2026/11/03"
 },
 {
 "uid": "6a95b4e626b32434f435809a",
