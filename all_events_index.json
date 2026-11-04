@@ -470,7 +470,7 @@
 {
 "uid": "6a5125ec26b32427d0604183",
 "category": "音樂",
-"title": "《光影與詩》馬利歐．凡薩戈、帕斯卡．羅傑與NSO",
+"title": "《光影與詩》馬利歐．凡薩戈、安德烈．古寧與NSO",
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2071788709521534976",
@@ -583,15 +583,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2074385131019624448",
 "start_date": "2027/01/10"
-},
-{
-"uid": "6a551c6126b32427d06041a0",
-"category": "音樂",
-"title": "大塊文章－張昊辰2026鋼琴獨奏會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2075055636831432704",
-"start_date": "2026/11/04"
 },
 {
 "uid": "6a57bdb526b32427d06041bb",
@@ -907,15 +898,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2077580038693351425",
 "start_date": "2026/11/21"
-},
-{
-"uid": "6a70ca6926b32427d0604333",
-"category": "音樂",
-"title": "『孟德爾頌之間』～創樂者藝術管弦樂與合唱篇",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2080549427189858305",
-"start_date": "2026/11/04"
 },
 {
 "uid": "6a736fd626b32427d0604350",
@@ -2349,15 +2331,6 @@
 "start_date": "2026/12/27"
 },
 {
-"uid": "6abaa0b326b324165c32e541",
-"category": "音樂",
-"title": "仰目",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2097175462601068545",
-"start_date": "2026/11/04"
-},
-{
 "uid": "6abaa0b326b324165c32e542",
 "category": "音樂",
 "title": "大漢天聲-陸軍樂隊民國115年訓練成果發表音樂會",
@@ -2590,15 +2563,6 @@
 "description": "",
 "web": "https://www.opentix.life/program/2102320948069896193",
 "start_date": "2026/12/27"
-},
-{
-"uid": "6abe953a26b324165c32e56b",
-"category": "音樂",
-"title": "北藝大2026秋冬系列《北藝大管樂團2026秋冬音樂會》",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2102388921162346497",
-"start_date": "2026/11/04"
 },
 {
 "uid": "6abe953a26b324165c32e56c",
@@ -4185,6 +4149,69 @@
 "start_date": "2027/01/24"
 },
 {
+"uid": "6aeb66f526b3245efc753787",
+"category": "音樂",
+"title": "日暮胭脂——KIM Bomi與高雄室內合唱團",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2113570407894147073",
+"start_date": "2026/12/17"
+},
+{
+"uid": "6aeb66f526b3245efc753788",
+"category": "音樂",
+"title": "《冬夜的光之洞窟》燭光音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2110650558829117441",
+"start_date": "2026/12/25"
+},
+{
+"uid": "6aeb66f526b3245efc753789",
+"category": "音樂",
+"title": "「蒔光」系列“Sing*ing”「青銀共賞」合唱音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2117528472935182337",
+"start_date": "2026/11/28"
+},
+{
+"uid": "6aeb66f526b3245efc75378a",
+"category": "音樂",
+"title": "一場單純的音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2117510514034548737",
+"start_date": "2027/01/24"
+},
+{
+"uid": "6aeb66f526b3245efc75378b",
+"category": "音樂",
+"title": "合唱．音樂劇—金牌指揮徐惠君與台北愛樂少年及兒童合唱團音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2108044209413971969",
+"start_date": "2026/12/27"
+},
+{
+"uid": "6aeb66f526b3245efc75378c",
+"category": "音樂",
+"title": "《人聲壯遊VII琥珀个歌》台北愛樂青年合唱團",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2117135115734577153",
+"start_date": "2027/01/10"
+},
+{
+"uid": "6aeb988a26b3245efc753790",
+"category": "音樂",
+"title": "2026高醫聲樂社冬季音樂會",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1I4GC7W",
+"start_date": "2026/12/03"
+},
+{
 "uid": "68950a2f26b324477c8a1474",
 "category": "講座",
 "title": "生活工藝館-陶藝DIY手作體驗",
@@ -4869,15 +4896,6 @@
 "start_date": "2026/08/20"
 },
 {
-"uid": "6a6cd5aa26b32427d0604318",
-"category": "講座",
-"title": "2026秋天藝術節【藝術家對談】共存的想像：菲利普．肯恩 × 李貞葳 × 法庫亞．佐坦",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2077963745139183617",
-"start_date": "2026/11/04"
-},
-{
 "uid": "6a7761fb26b32427d0604391",
 "category": "講座",
 "title": "【幕名而來】菲利普.肯恩《人間樂園》節目導覽",
@@ -5022,6 +5040,15 @@
 "start_date": "2026/11/21"
 },
 {
+"uid": "6ae459c7eb43549b707fe248",
+"category": "講座",
+"title": "到哪都能喝一杯，打造自己的深夜食堂",
+"performer": "",
+"description": "比才，愛吃愛煮，懂吃懂煮，可以從早上九點開始優雅喝酒的女子。\r\n\r\n酒與生活怎麼協調，與食物如何搭配，這些她很有心得。工作配酒、旅行配酒、到球場看比賽也配酒，這些她有很多實踐經驗。她很愛東京，很熟東京，山手線的播音是最能讓她平靜定心的白噪音。\r\n\r\n深夜食堂是漫畫家安倍夜郎的作品，是日劇，是電影；也是忙碌現代人經歷一整天的疲憊後，可以坐下來喘口氣，不想說話也沒關係的小店；更是每個人心裡最能放鬆的角落。\r\n\r\n深夜食堂是個所在，也是個狀態，可以隨處而在，隨興而在。\r\n\r\n於是這個晚上，比才將把深夜食堂的氣息帶進新光三越台北信義新天地A4 3F APUJAN專櫃，聊她喝什麼、怎麼喝，以及如何找到適合自己的居酒屋。恆器製酒也將提供現場讀者一杯酒（限已成年讀者），一份微醺的美好。\r\n\r\n講題：到哪都能喝一杯，打造自己的深夜食堂\r\n講者：比才\r\n時間：11/6（五）19:30-20:30 \r\n地點：新光三越台北信義新天地A4 3F APUJAN專櫃\r\n\r\n※免費參加，名額有限，敬請事先報名！報名後將以email聯繫確認。\r\n※未滿十八歲禁止飲酒，酒後不開車，安全有保障。",
+"web": "https://www.facebook.com/share/p/1ErmokDZYT/",
+"start_date": "2026/11/06"
+},
+{
 "uid": "6ae4d18826b3245efc753753",
 "category": "講座",
 "title": "Vox Nova《韓德爾-彌賽亞選粹》系列導聆",
@@ -5029,6 +5056,15 @@
 "description": "",
 "web": "https://www.opentix.life/program/2109898373781938177",
 "start_date": "2026/11/29"
+},
+{
+"uid": "6ae84963647ad3bb538f978b",
+"category": "講座",
+"title": "講座｜從一幅畫到一部漫畫：《四種花開》的圖像敘事與創作幕後",
+"performer": "",
+"description": "",
+"web": "https://www.accupass.com/event/2610270612481076400634",
+"start_date": "2026/11/22"
 },
 {
 "uid": "6ae8c3fa26b3245efc753779",
