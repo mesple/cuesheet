@@ -96,6 +96,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .twocol .items .thumb img{width:110px}
 .twocol .items .it.listen{grid-template-columns:auto minmax(0,1fr)}   /* 精選試聽：截圖高 110、寬度依圖片比例（編輯 2026-10-31 指定） */
 .twocol .items .it.listen .thumb img{width:auto;height:110px}
+.items .it.rev{grid-template-columns:110px minmax(0,1fr)}   /* 樂評封面與唱片架同大（編輯 2026-11-05 指定） */
+.items .it.rev .thumb img{width:110px}
 .items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
 .items .by a:hover{color:var(--teal)}
 .items .src{font-size:12px;color:var(--muted);margin-top:4px}
@@ -136,6 +138,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
   .twocol .items .thumb img{width:80px}
   .twocol .items .it.listen .thumb img{width:auto;height:70px}
+  .items .it.rev{grid-template-columns:80px minmax(0,1fr)}
+  .items .it.rev .thumb img{width:80px}
   .items .it.video{grid-template-columns:110px minmax(0,1fr)}
   .items .it.video .thumb img{width:110px}
 }
@@ -388,6 +392,9 @@ def row_html(it, composers, labels, depth, show_date=True, show_by=True, show_co
     if external and codes:
         by = '<div class="by">' + "、".join(
             f'<a href="{up}composer/{c}/">{escape(composers[c]["display"])}</a>' for c in codes) + "</div>"
+    elif it.get("byline") and it["type"] == "樂評" and codes:
+        # 樂評列表：作曲家名連作曲家頁（編輯 2026-11-05 指定）
+        by = f'<div class="by">{link_composers(escape(show_name(it["byline"], composers, codes)), codes, composers, up)}</div>'
     elif it.get("byline"):
         by = f'<div class="by">{escape(show_name(it["byline"], composers, it.get("composers")))}</div>'
     else:
@@ -412,7 +419,7 @@ def row_html(it, composers, labels, depth, show_date=True, show_by=True, show_co
         src = '<div class="src">來源：' + "・".join(
             f'<a href="{escape(u)}" target="_blank" rel="noopener">{escape(n)}</a>' for n, u in links) + "</div>"
     data_tags = escape(" ".join(it.get("tags", [])))
-    video = (" listen" if it["type"] == "試聽" and img else "") + (" video" if img and any(m["kind"] == "youtube" for m in it.get("media") or []) and it["type"] == "訪談" else "")
+    video = (" rev" if it["type"] == "樂評" and img else "") + (" listen" if it["type"] == "試聽" and img else "") + (" video" if img and any(m["kind"] == "youtube" for m in it.get("media") or []) and it["type"] == "訪談" else "")
     return f"""<div class="it{'' if img else ' noimg'}{video}" data-tags="{data_tags}">{thumb}<div>
 {meta}
 <h3><a href="{escape(href)}"{tgt}>{escape(it["title"])}</a></h3>{by}
