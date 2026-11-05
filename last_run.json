@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-05T07:49:11+08:00",
+ "run_at": "2026-11-06T07:49:51+08:00",
  "categories": {
   "音樂": {
    "fetched": 468,
@@ -8,8 +8,8 @@
    "error": null
   },
   "講座": {
-   "fetched": 100,
-   "baseline": 100,
+   "fetched": 99,
+   "baseline": 99,
    "attempts": 1,
    "error": null
   },
@@ -20,8 +20,8 @@
    "error": null
   },
   "演唱會": {
-   "fetched": 10,
-   "baseline": 10,
+   "fetched": 11,
+   "baseline": 11,
    "attempts": 1,
    "error": null
   }

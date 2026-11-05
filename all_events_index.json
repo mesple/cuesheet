@@ -495,15 +495,6 @@
 "start_date": "2026/12/30"
 },
 {
-"uid": "6a5125ec26b32427d0604188",
-"category": "音樂",
-"title": "《匠心之巔》準．馬寇爾、斯蒂凡．賈基夫與NSO",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2072943938696704001",
-"start_date": "2026/11/05"
-},
-{
 "uid": "6a5125ec26b32427d060418a",
 "category": "音樂",
 "title": "《一千零一夜》博雷科、諏訪內晶子與NSO",
@@ -587,7 +578,7 @@
 {
 "uid": "6a57bdb526b32427d06041bb",
 "category": "音樂",
-"title": "《光影與詩》馬利歐．凡薩戈、帕斯卡．羅傑與NSO-2026苗北藝術節",
+"title": "《光影與詩》馬利歐．凡薩戈、安德烈．古寧與NSO",
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2074403922534002689",
@@ -1395,15 +1386,6 @@
 "start_date": "2026/12/04"
 },
 {
-"uid": "6a8c790426b32434f435803e",
-"category": "音樂",
-"title": "弦上的微光—張明雄二胡音樂會",
-"performer": "",
-"description": "",
-"web": "https://www.opentix.life/program/2090294462783180801",
-"start_date": "2026/11/05"
-},
-{
 "uid": "6a8f1c0e26b32434f4358064",
 "category": "音樂",
 "title": "巔峰重逢 柴一與貝九",
@@ -2058,7 +2040,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2099349897746935809",
-"start_date": "2026/11/05"
+"start_date": "2026/11/08"
 },
 {
 "uid": "6aa99c2e26b324165c32e40d",
@@ -4212,6 +4194,24 @@
 "start_date": "2026/12/03"
 },
 {
+"uid": "6aecb87426b3245efc753792",
+"category": "音樂",
+"title": "金色童年，弦音飛揚-麗澤弦樂團音樂會",
+"performer": "",
+"description": "",
+"web": "https://www.opentix.life/program/2110697033891254273",
+"start_date": "2027/01/23"
+},
+{
+"uid": "6aece9f126b3245efc753798",
+"category": "音樂",
+"title": "傳愛在康橋 2027林口康橋管弦樂團年度公益音樂會",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1I5ROJP",
+"start_date": "2027/01/13"
+},
+{
 "uid": "68950a2f26b324477c8a1474",
 "category": "講座",
 "title": "生活工藝館-陶藝DIY手作體驗",
@@ -4815,15 +4815,6 @@
 "start_date": "2026/12/13"
 },
 {
-"uid": "6a304cfe26b3243414ccd312",
-"category": "講座",
-"title": "笛鼓樂團",
-"performer": "(中華民國)麥舒婷",
-"description": "辦理笛鼓的合奏課程，推動文藝氣息。\r\n",
-"web": "",
-"start_date": "2026/01/13"
-},
-{
 "uid": "6a34414826b3243414ccd45a",
 "category": "講座",
 "title": "【新月．藝文講座】中國藝術鑑賞．大清盛世的到來！",
@@ -5424,7 +5415,7 @@
 "performer": "",
 "description": "",
 "web": "https://www.opentix.life/program/2110284702401134593",
-"start_date": "2026/11/05"
+"start_date": "2026/12/16"
 },
 {
 "uid": "6ad7a1c726b3245efc7536d2",
@@ -5956,5 +5947,14 @@
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HK62YI",
 "start_date": "2026/12/12"
+},
+{
+"uid": "6aece9f126b3245efc753797",
+"category": "演唱會",
+"title": "寶吉祥歌之饗宴17-贊聲 陳怡婷演唱會",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1I1K8F9",
+"start_date": "2026/12/19"
 }
 ]
