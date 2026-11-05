@@ -842,7 +842,7 @@
      "kind": "image",
      "url": "https://mesple.github.io/cuesheet/images/2026-11/anna-meredith.jpg",
      "caption": "Anna Meredith",
-     "credit": "宣傳照"
+     "credit": "SoundCloud（Anna Meredith）"
     }
    ],
    "web": true,
@@ -850,7 +850,7 @@
     "2026-11-010"
    ],
    "spotify": "https://open.spotify.com/album/66Lhi3wLs9wDMvgw22cTSj",
-   "internal_note": "Podcast 專訪，作曲家照片由編輯提供（出處待補）"
+   "internal_note": "Podcast 專訪，作曲家照片由編輯提供（出處：SoundCloud）"
   },
   {
    "id": "2026-11-028",
@@ -910,11 +910,11 @@
      "kind": "image",
      "url": "https://mesple.github.io/cuesheet/images/2026-11/arnaud-toulon.jpg",
      "caption": "Arnaud Toulon",
-     "credit": "宣傳照"
+     "credit": "Instagram（Arnaud Toulon）"
     }
    ],
    "web": true,
-   "internal_note": "文字專訪，作曲家照片由編輯提供（出處待補）",
+   "internal_note": "文字專訪，作曲家照片由編輯提供（出處：Instagram）",
    "related": [
     "2026-11-008"
    ],
