@@ -195,12 +195,10 @@ def prime_picks(items, tpl=False):
         head = (f'<div style="font-family:{SERIF};font-size:19px;font-weight:700;line-height:1.35;">{esc(it["title"])}</div>'
                 f'<div style="font-size:13px;line-height:1.6;color:{C["muted"]};margin-top:2px;">{esc(it.get("byline", ""))}</div>')
         body = f'<div style="margin-top:6px;">{inline(text)}</div><div style="font-size:12px;margin-top:6px;">來源：{src_list(it)}</div>'
-        # 電腦：封面左、標題與摘要右。手機（540px 以下）：封面縮成 88px 與標題並排，摘要移到下方全寬（編輯 2026-11-05 指定）
-        mob = (f'<div class="m-only" style="display:none;max-height:0;overflow:hidden;mso-hide:all;font-size:15px;line-height:1.75;">{body}</div>')
         out.append(row(
             f'<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr>'
-            + (f'<td class="rvc" width="{W["review_cover"]}" valign="top" style="width:{W["review_cover"]}px;padding:4px 16px 0 0;">{cover}{cap}</td>' if (cover or tpl) else "")
-            + f'<td valign="top" style="font-size:15px;line-height:1.75;">{head}<div class="d-only">{body}</div></td></tr></table>{mob}',
+            + (f'<td class="stk" width="{W["review_cover"]}" valign="top" style="width:{W["review_cover"]}px;padding:4px 16px 0 0;">{cover}{cap}</td>' if (cover or tpl) else "")
+            + f'<td class="stk" valign="top" style="font-size:15px;line-height:1.75;">{head}{body}</td></tr></table>',
             "14px 28px 4px 28px"))
     return "".join(out)
 
@@ -413,11 +411,6 @@ def render(issue, by, email=True, tpl=False):
  td.stk{{display:block!important;width:auto!important;padding:0 0 10px 0!important;border-left:0!important}}
  .fbox{{padding:14px!important}}
  .big{{font-size:26px!important}}
- td.rvc{{width:88px!important;padding:4px 12px 0 0!important}}
- td.rvc img{{width:88px!important}}
- td.rvc div{{display:none!important}}
- .d-only{{display:none!important}}
- .m-only{{display:block!important;max-height:none!important;overflow:visible!important}}
  .shc{{max-width:50%!important;padding:0 8px 16px 0!important}}
 }}
 </style></head><body style="margin:0;padding:0;background:{C["page_bg"]};"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:{C["page_bg"]};"><tr><td align="center" style="padding:20px 10px;"><table width="{W["page"]}" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:{W["page"]}px;background:{C["paper"]};border:1px solid {C["frame"]};font-family:{FONT};color:{C["ink"]};">''']
