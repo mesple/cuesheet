@@ -749,7 +749,8 @@
     }
    ],
    "web": true,
-   "internal_note": "文字專訪，用作曲家照片；Whalefall 原聲帶 Spotify 搜尋工具查無，待確認：https://open.spotify.com/search/Whalefall%20Trapanese"
+   "internal_note": "文字專訪，用作曲家照片；Spotify 連結由編輯提供",
+   "spotify": "https://open.spotify.com/album/4pAhiOGLLxY946GmkpOinN"
   },
   {
    "id": "2026-11-025",
@@ -839,10 +840,9 @@
    "media": [
     {
      "kind": "image",
-     "url": "https://i.scdn.co/image/ab67616d00001e022407cf516109eb7300b310f6",
-     "caption": "專輯封面",
-     "link": "https://open.spotify.com/album/66Lhi3wLs9wDMvgw22cTSj",
-     "hosting": "spotify"
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/anna-meredith.jpg",
+     "caption": "Anna Meredith",
+     "credit": "宣傳照"
     }
    ],
    "web": true,
@@ -850,7 +850,7 @@
     "2026-11-010"
    ],
    "spotify": "https://open.spotify.com/album/66Lhi3wLs9wDMvgw22cTSj",
-   "internal_note": "Podcast 專訪，應放作曲家照片；待編輯提供 Anna Meredith 照片，暫用專輯封面"
+   "internal_note": "Podcast 專訪，作曲家照片由編輯提供（出處待補）"
   },
   {
    "id": "2026-11-028",
@@ -908,14 +908,13 @@
    "media": [
     {
      "kind": "image",
-     "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e027c60318b0617d97ebfeb5f4a",
-     "caption": "專輯封面",
-     "link": "https://open.spotify.com/album/13rRxVZtEZHQVsPo7RzxFB",
-     "hosting": "spotify"
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/arnaud-toulon.jpg",
+     "caption": "Arnaud Toulon",
+     "credit": "宣傳照"
     }
    ],
    "web": true,
-   "internal_note": "文字專訪，應放作曲家照片；待編輯提供 Arnaud Toulon 照片，暫用 Arco 專輯封面（原用的 YouTube 是配樂音軌，不是訪談）",
+   "internal_note": "文字專訪，作曲家照片由編輯提供（出處待補）",
    "related": [
     "2026-11-008"
    ],
