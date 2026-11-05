@@ -255,7 +255,8 @@ def interviews(items, tpl=False):
             media = yt_box(m["id"], it["title"], W["interview_media"]) + caption(f'圖片來源：YouTube（{esc(m.get("caption", ""))}）')
         elif m:
             link = m.get("link") or it.get("spotify") or "#"
-            lab = "點圖到 Spotify 聽｜圖片來源：Spotify" if m.get("hosting") == "spotify" or "spotify" in link else f"圖片來源：{esc(img_credit(m) or m.get('caption', ''))}"
+            # 作曲家照片：標攝影／出處；專輯封面（Spotify）：點圖聽（編輯 2026-11-05：文字／podcast 專訪放作曲家照片）
+            lab = "點圖到 Spotify 聽｜圖片來源：Spotify" if m.get("hosting") == "spotify" else f"圖片來源：{esc(img_credit(m) or m.get('caption', ''))}"
             media = (f'<a href="{esc(link)}"><img src="{esc(m["url"])}" alt="{esc(it["title"])}" width="{W["interview_cover"]}" style="display:block;width:100%;max-width:{W["interview_cover"]}px;height:auto;border:1px solid {C["frame"]};"></a>'
                      + caption(f"{TRI_G}{lab}" if "Spotify 聽" in lab else lab))
         else:

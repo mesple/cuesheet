@@ -89,19 +89,15 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .rel a:hover{border-color:var(--teal)}
 .rel small{display:block;font-size:12px;color:var(--muted)}
 .rel b{display:block;font-size:15px;line-height:1.45;margin-top:2px}
-.items .it{display:grid;grid-template-columns:88px minmax(0,1fr);gap:14px;padding:16px 0;border-top:1px dotted var(--line)}
+.items .it{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px dotted var(--line)}
 .items .it:first-child{border-top:none}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
-.items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
-.items .it.video{grid-template-columns:150px minmax(0,1fr)}   /* 影音訪談：截圖放大 */
-.items .it.video .thumb img{width:150px;aspect-ratio:16/9;object-fit:cover}
-.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
-.twocol .items .thumb img{width:110px}
+.items .thumb img{display:block;width:auto;height:160px;max-width:none;border:1px solid var(--line)}   /* 列表圖片一律高 160px、寬依比例（樂評、唱片架、訪談、新聞；編輯 2026-11-05 指定） */
+.items .it.wide{display:block}   /* 寬幅圖（media.wide，例：專題組圖）：圖放上方、滿欄寬 */
+.items .it.wide .thumb img{width:100%;height:auto;margin-bottom:12px}
 .twocol .items .it.listen{grid-template-columns:auto minmax(0,1fr)}   /* 精選試聽：截圖高 110、寬度依圖片比例（編輯 2026-10-31 指定） */
 .twocol .items .it.listen .thumb img{width:auto;height:110px}
-.items .it.cover{grid-template-columns:auto minmax(0,1fr)}   /* 樂評、唱片架封面：高 100px、寬依比例（編輯 2026-11-05 指定） */
-.items .it.cover .thumb img{width:auto;height:100px;max-width:none}
 .items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
 .items .by a:hover{color:var(--teal)}
 .items .src{font-size:12px;color:var(--muted);margin-top:4px}
@@ -137,15 +133,9 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .lead{font-size:17px}
   .media.multi{grid-template-columns:repeat(2,minmax(0,1fr))}
   .rel,.types{grid-template-columns:1fr}
-  .items .it{grid-template-columns:64px minmax(0,1fr)}
-  .items .thumb img{width:64px}
-  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
-  .twocol .items .thumb img{width:80px}
+  .items .thumb img{height:100px;max-width:45vw;object-fit:cover}   /* 手機：高 100px，寬幅圖最寬半個螢幕 */
+  .items .it.wide .thumb img{max-width:100%;height:auto}
   .twocol .items .it.listen .thumb img{width:auto;height:70px}
-  .items .it.cover{grid-template-columns:auto minmax(0,1fr)}
-  .items .it.cover .thumb img{width:auto;height:100px}
-  .items .it.video{grid-template-columns:110px minmax(0,1fr)}
-  .items .it.video .thumb img{width:110px}
 }
 """
 
@@ -232,6 +222,8 @@ def media_html(it, title):
         fstyle = f' style="max-width:{int(m["width"])}px"' if m.get("width") else ""
         figs.append(f"<figure{fstyle}>{img}" + (f'<figcaption>{"　".join(cap)}</figcaption>' if cap else "") + "</figure>")
     cls = "multi" if len(figs) > 1 else "single"
+    if any(m.get("wide") for m in media):
+        cls += " wide"   # 寬幅圖滿版（專題組圖，與首頁同寬；編輯 2026-11-05 指定）
     if it["type"] == "新聞" and all(m["kind"] == "image" for m in media):
         cls += " sq"
     return f'<div class="media {cls}">' + "".join(figs) + "</div>"
@@ -423,7 +415,7 @@ def row_html(it, composers, labels, depth, show_date=True, show_by=True, show_co
         src = '<div class="src">來源：' + "・".join(
             f'<a href="{escape(u)}" target="_blank" rel="noopener">{escape(n)}</a>' for n, u in links) + "</div>"
     data_tags = escape(" ".join(it.get("tags", [])))
-    video = (" cover" if it["type"] in ("樂評", "發行") and img else "") + (" listen" if it["type"] == "試聽" and img else "") + (" video" if img and any(m["kind"] == "youtube" for m in it.get("media") or []) and it["type"] == "訪談" else "")
+    video = (" listen" if it["type"] == "試聽" and img else "") + (" wide" if img and any(m.get("wide") for m in it.get("media") or []) else "")
     return f"""<div class="it{'' if img else ' noimg'}{video}" data-tags="{data_tags}">{thumb}<div>
 {meta}
 <h3><a href="{escape(href)}"{tgt}>{escape(it["title"])}</a></h3>{by}
@@ -485,7 +477,8 @@ def full_row(it, composers, depth):
     summ = nm(it["summary"])
     if it["type"] == "新聞":
         summ = link_composers(summ, it.get("composers"), composers, up)
-    return f"""<div class="it{'' if img else ' noimg'}" data-tags="{escape(" ".join(it.get("tags", [])))}">{thumb}<div>
+    wide = " wide" if img and any(m.get("wide") for m in it.get("media") or []) else ""
+    return f"""<div class="it{'' if img else ' noimg'}{wide}" data-tags="{escape(" ".join(it.get("tags", [])))}">{thumb}<div>
 {meta}
 <h3>{title}</h3>
 <p class="sum">{summ}{tail}</p></div></div>"""
@@ -584,10 +577,29 @@ def main():
                 # 唱片架置頂：issues/*.json 的 releases_first 依序排最前（編輯 2026-10-31 指定）
                 rows = releases_order(rows)
                 listen = [it for it in shown if it["type"] == "試聽"]
-                col = lambda name, rs: (f'<div class="col"><div class="colhead">{name}</div><div class="items">'
-                                        + "\n".join(row_html(it, composers, labels, 2, show_date=False) for it in rs) + "</div></div>")
-                body = f'<div class="toppad"></div><div class="twocol">{col("唱片架<span>Record Shelf</span>", rows)}{col("精選試聽<span>Take a Bite</span>", listen)}</div>'
+                # 累積多了：只列最近兩期，更早的放「更早的唱片架/試聽」頁，依期別分段（編輯 2026-11-05 指定，同新聞）
+                recent = sorted({it["issue"] for it in rows + listen}, reverse=True)[:2]
+                col = lambda name, rs, d=2: (f'<div class="col"><div class="colhead">{name}</div><div class="items">'
+                                             + "\n".join(row_html(it, composers, labels, d, show_date=False) for it in rs) + "</div></div>")
+                o_rel = [it for it in rows if it["issue"] not in recent]
+                o_lis = [it for it in listen if it["issue"] not in recent]
+                more = '<p class="older" style="margin-top:28px"><a href="archive/">更早的唱片架/試聽 →</a></p>' if (o_rel or o_lis) else ""
+                body = (f'<div class="toppad"></div><div class="twocol">{col("唱片架<span>Record Shelf</span>", [it for it in rows if it["issue"] in recent])}'
+                        f'{col("精選試聽<span>Take a Bite</span>", [it for it in listen if it["issue"] in recent])}</div>{more}')
                 ptitle, pdesc, wide = "唱片架/試聽", "新唱片、重發、實體版，以及官方釋出的配樂音軌與影片", True
+                arch = "category/releases/archive"
+                if os.path.isdir(arch):
+                    shutil.rmtree(arch)
+                if o_rel or o_lis:
+                    os.makedirs(arch, exist_ok=True)
+                    secs = []
+                    for iss in sorted({it["issue"] for it in o_rel + o_lis}, reverse=True):
+                        secs.append(f'<h2 class="pagehead" style="font-size:22px;margin:26px 0 8px">{escape(issue_label(labels, iss))}</h2>'
+                                    f'<div class="twocol">{col("唱片架<span>Record Shelf</span>", [it for it in o_rel if it["issue"] == iss], 3)}'
+                                    f'{col("精選試聽<span>Take a Bite</span>", [it for it in o_lis if it["issue"] == iss], 3)}</div>')
+                    abody = '<div class="toppad"></div><p class="crumb"><a href="../">唱片架/試聽</a> › 更早的唱片架/試聽</p>' + "".join(secs)
+                    ah = page("更早的唱片架/試聽｜Cue Sheet", "Cue Sheet 較早各期的唱片架與精選試聽。", f"{SITE}{arch}/", slug, ("", abody), depth=3, wide=True)
+                    open(f"{arch}/index.html", "w", encoding="utf-8").write(ah.replace("</style>", EXTRA_CSS + "</style>", 1))
             elif t in ("新聞", "社群"):
                 recent = sorted({it["issue"] for it in rows}, reverse=True)[:2]   # 只列最近兩期（編輯 2026-10-31 指定）
                 older = [it for it in rows if it["issue"] not in recent]

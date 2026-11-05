@@ -9,7 +9,7 @@
 <meta property="og:title" content="導演伊納利圖談《挖掘者》（Digger）的配樂｜Cue Sheet">
 <meta property="og:description" content="《Soundtracking with Edith Bowman》專訪：伊納利圖聽到 Cosmo Sheldrake 用瀕危鳥鳴做成的小品，當下就知道「這就是這部電影的聲音」。">
 <meta property="og:url" content="https://mesple.github.io/cuesheet/item/2026-11-026/">
-<meta property="og:image" content="https://mesple.github.io/cuesheet/images/2026-10/digger.jpg">
+<meta property="og:image" content="https://mesple.github.io/cuesheet/images/2026-11/cosmo-sheldrake.jpg">
 <meta property="og:locale" content="zh_TW">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
@@ -128,19 +128,15 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .rel a:hover{border-color:var(--teal)}
 .rel small{display:block;font-size:12px;color:var(--muted)}
 .rel b{display:block;font-size:15px;line-height:1.45;margin-top:2px}
-.items .it{display:grid;grid-template-columns:88px minmax(0,1fr);gap:14px;padding:16px 0;border-top:1px dotted var(--line)}
+.items .it{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px dotted var(--line)}
 .items .it:first-child{border-top:none}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
-.items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
-.items .it.video{grid-template-columns:150px minmax(0,1fr)}   /* 影音訪談：截圖放大 */
-.items .it.video .thumb img{width:150px;aspect-ratio:16/9;object-fit:cover}
-.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
-.twocol .items .thumb img{width:110px}
+.items .thumb img{display:block;width:auto;height:160px;max-width:none;border:1px solid var(--line)}   /* 列表圖片一律高 160px、寬依比例（樂評、唱片架、訪談、新聞；編輯 2026-11-05 指定） */
+.items .it.wide{display:block}   /* 寬幅圖（media.wide，例：專題組圖）：圖放上方、滿欄寬 */
+.items .it.wide .thumb img{width:100%;height:auto;margin-bottom:12px}
 .twocol .items .it.listen{grid-template-columns:auto minmax(0,1fr)}   /* 精選試聽：截圖高 110、寬度依圖片比例（編輯 2026-10-31 指定） */
 .twocol .items .it.listen .thumb img{width:auto;height:110px}
-.items .it.cover{grid-template-columns:auto minmax(0,1fr)}   /* 樂評、唱片架封面：高 100px、寬依比例（編輯 2026-11-05 指定） */
-.items .it.cover .thumb img{width:auto;height:100px;max-width:none}
 .items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
 .items .by a:hover{color:var(--teal)}
 .items .src{font-size:12px;color:var(--muted);margin-top:4px}
@@ -176,15 +172,9 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .lead{font-size:17px}
   .media.multi{grid-template-columns:repeat(2,minmax(0,1fr))}
   .rel,.types{grid-template-columns:1fr}
-  .items .it{grid-template-columns:64px minmax(0,1fr)}
-  .items .thumb img{width:64px}
-  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
-  .twocol .items .thumb img{width:80px}
+  .items .thumb img{height:100px;max-width:45vw;object-fit:cover}   /* 手機：高 100px，寬幅圖最寬半個螢幕 */
+  .items .it.wide .thumb img{max-width:100%;height:auto}
   .twocol .items .it.listen .thumb img{width:auto;height:70px}
-  .items .it.cover{grid-template-columns:auto minmax(0,1fr)}
-  .items .it.cover .thumb img{width:auto;height:100px}
-  .items .it.video{grid-template-columns:110px minmax(0,1fr)}
-  .items .it.video .thumb img{width:110px}
 }
 </style>
 <!-- MailerLite Universal -->
@@ -233,11 +223,11 @@ var n=0,t=setInterval(function(){if(!document.getElementById('cue-sub')||++n>20)
 
 
 <p class="dateline">2026 年 10 月 5 日</p>
-<div class="media single"><figure><a href="https://open.spotify.com/album/3IuB2UZ4le2dBMroYF5L3U"><img src="https://mesple.github.io/cuesheet/images/2026-10/digger.jpg" alt="專輯封面" loading="lazy"></a></figure></div>
+<div class="media single"><figure><img src="https://mesple.github.io/cuesheet/images/2026-11/cosmo-sheldrake.jpg" alt="Cosmo Sheldrake" loading="lazy"><figcaption>Cosmo Sheldrake　圖片來源：<a href="https://floodmagazine.com/62661/premiere-cosmo-sheldrake-reveals-animated-eggs-and-soldiersvideo/">FLOOD Magazine</a></figcaption></figure></div>
 
 <div class="body"><p>（10/5 補記）《Soundtracking with Edith Bowman》專訪導演伊納利圖（Alejandro G. Iñárritu）。他說寫劇本時通常會先找到一兩首能引導自己的音樂，這次卻怎麼也找不到，直到聽見 Cosmo Sheldrake 用英國瀕危鳥類的鳴唱取樣做成的小品：沒有任何樂器，只有鳥鳴，「好笑、可愛、天真，卻又憂鬱」，他當下就知道「這就是這部電影的聲音」。Sheldrake 從沒寫過電影配樂，兩人從他手邊的小樣開始，慢慢摸出這份音樂的邊界。伊納利圖形容這份木質、手工感的音樂要像「對的胡椒」，只少量點綴；音效則以賈克・大地的電影為參照，讓水滴、敲擊聲和音樂「像表親一樣共舞」，光音效就做了一年。10 月號重磅點評評過這張原聲。</p></div>
 
-<div class="box"><b>作曲家</b><div class="chips"><a class="chip" href="../../composer/cosmo-sheldrake/">Cosmo Sheldrake</a></div></div><div class="box"><b>來源</b><ul><li><a href="https://audioboom.com/posts/8960432-alejandro-gonzalez-inarritu-on-the-music-of-digger">Soundtracking with Edith Bowman</a></li></ul></div>
+<div class="box"><b>作曲家</b><div class="chips"><a class="chip" href="../../composer/cosmo-sheldrake/">Cosmo Sheldrake</a></div></div><div class="box"><b>來源</b><ul><li><a href="https://audioboom.com/posts/8960432-alejandro-gonzalez-inarritu-on-the-music-of-digger">Soundtracking with Edith Bowman</a></li><li><a href="https://open.spotify.com/album/3IuB2UZ4le2dBMroYF5L3U">Spotify</a></li></ul></div>
 </article>
 </div>
 </div></main>

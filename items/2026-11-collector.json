@@ -35,7 +35,8 @@
      "kind": "image",
      "url": "https://mesple.github.io/cuesheet/images/2026-11/feature-nature-composers.jpg",
      "caption": "左起：Joseph Trapanese、Rebekka Karijord、Cosmo Sheldrake",
-     "credit": "joecomposer.com、Spotify 藝人頁、FLOOD Magazine"
+     "credit": "joecomposer.com、Spotify 藝人頁、FLOOD Magazine",
+     "wide": true
     }
    ],
    "web": true,
@@ -740,12 +741,15 @@
    ],
    "media": [
     {
-     "kind": "youtube",
-     "id": "b8arnrdXWzg",
-     "caption": "Joseph Trapanese - Topic"
+     "kind": "image",
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/joseph-trapanese.jpg",
+     "caption": "Joseph Trapanese",
+     "credit": "joecomposer.com",
+     "credit_url": "https://www.joecomposer.com/"
     }
    ],
-   "web": true
+   "web": true,
+   "internal_note": "文字專訪，用作曲家照片；Whalefall 原聲帶 Spotify 搜尋工具查無，待確認：https://open.spotify.com/search/Whalefall%20Trapanese"
   },
   {
    "id": "2026-11-025",
@@ -769,17 +773,18 @@
    "media": [
     {
      "kind": "image",
-     "url": "https://i.scdn.co/image/ab67616d00001e02dc1e93733bdd104372ad5511",
-     "caption": "專輯封面",
-     "link": "https://open.spotify.com/album/1K3hgxkA6Yy9uIqejUAFwx",
-     "hosting": "spotify"
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/rebekka-karijord.jpg",
+     "caption": "Rebekka Karijord",
+     "credit": "Spotify 藝人頁",
+     "credit_url": "https://open.spotify.com/artist/4oPxnYcUKmm0pH33ibXd6u"
     }
    ],
    "web": true,
    "internal_note": "date 待確認（原文未讀到發表日），暫用發刊日",
    "related": [
     "2026-11-014"
-   ]
+   ],
+   "spotify": "https://open.spotify.com/album/1K3hgxkA6Yy9uIqejUAFwx"
   },
   {
    "id": "2026-11-026",
@@ -803,12 +808,14 @@
    "media": [
     {
      "kind": "image",
-     "url": "https://mesple.github.io/cuesheet/images/2026-10/digger.jpg",
-     "caption": "專輯封面",
-     "link": "https://open.spotify.com/album/3IuB2UZ4le2dBMroYF5L3U"
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/cosmo-sheldrake.jpg",
+     "caption": "Cosmo Sheldrake",
+     "credit": "FLOOD Magazine",
+     "credit_url": "https://floodmagazine.com/62661/premiere-cosmo-sheldrake-reveals-animated-eggs-and-soldiersvideo/"
     }
    ],
-   "web": true
+   "web": true,
+   "spotify": "https://open.spotify.com/album/3IuB2UZ4le2dBMroYF5L3U"
   },
   {
    "id": "2026-11-027",
@@ -841,7 +848,9 @@
    "web": true,
    "related": [
     "2026-11-010"
-   ]
+   ],
+   "spotify": "https://open.spotify.com/album/66Lhi3wLs9wDMvgw22cTSj",
+   "internal_note": "Podcast 專訪，應放作曲家照片；待編輯提供 Anna Meredith 照片，暫用專輯封面"
   },
   {
    "id": "2026-11-028",
@@ -874,7 +883,8 @@
     }
    ],
    "web": true,
-   "internal_note": "date 待確認（原文未讀到發表日），暫用發刊日"
+   "internal_note": "影片專訪（Film Music Institute「Film Music Live with LAURA KARPMAN」）",
+   "spotify": "https://open.spotify.com/album/0LbPJsVrXiffnlusQQzadr"
   },
   {
    "id": "2026-11-029",
@@ -897,16 +907,19 @@
    ],
    "media": [
     {
-     "kind": "youtube",
-     "id": "RJw-TRfR19g",
-     "caption": "Arnaud Toulon - Topic，〈First Flight〉"
+     "kind": "image",
+     "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e027c60318b0617d97ebfeb5f4a",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/13rRxVZtEZHQVsPo7RzxFB",
+     "hosting": "spotify"
     }
    ],
    "web": true,
-   "internal_note": "date 待確認（原文未讀到發表日），暫用發刊日",
+   "internal_note": "文字專訪，應放作曲家照片；待編輯提供 Arnaud Toulon 照片，暫用 Arco 專輯封面（原用的 YouTube 是配樂音軌，不是訪談）",
    "related": [
     "2026-11-008"
-   ]
+   ],
+   "spotify": "https://open.spotify.com/album/13rRxVZtEZHQVsPo7RzxFB"
   }
  ]
 }

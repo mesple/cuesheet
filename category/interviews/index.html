@@ -127,19 +127,15 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .rel a:hover{border-color:var(--teal)}
 .rel small{display:block;font-size:12px;color:var(--muted)}
 .rel b{display:block;font-size:15px;line-height:1.45;margin-top:2px}
-.items .it{display:grid;grid-template-columns:88px minmax(0,1fr);gap:14px;padding:16px 0;border-top:1px dotted var(--line)}
+.items .it{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px dotted var(--line)}
 .items .it:first-child{border-top:none}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
-.items .thumb img{display:block;width:88px;height:auto;border:1px solid var(--line)}
-.items .it.video{grid-template-columns:150px minmax(0,1fr)}   /* 影音訪談：截圖放大 */
-.items .it.video .thumb img{width:150px;aspect-ratio:16/9;object-fit:cover}
-.twocol .items .it{grid-template-columns:110px minmax(0,1fr)}   /* 唱片架/試聽圖放大 25% */
-.twocol .items .thumb img{width:110px}
+.items .thumb img{display:block;width:auto;height:160px;max-width:none;border:1px solid var(--line)}   /* 列表圖片一律高 160px、寬依比例（樂評、唱片架、訪談、新聞；編輯 2026-11-05 指定） */
+.items .it.wide{display:block}   /* 寬幅圖（media.wide，例：專題組圖）：圖放上方、滿欄寬 */
+.items .it.wide .thumb img{width:100%;height:auto;margin-bottom:12px}
 .twocol .items .it.listen{grid-template-columns:auto minmax(0,1fr)}   /* 精選試聽：截圖高 110、寬度依圖片比例（編輯 2026-10-31 指定） */
 .twocol .items .it.listen .thumb img{width:auto;height:110px}
-.items .it.cover{grid-template-columns:auto minmax(0,1fr)}   /* 樂評、唱片架封面：高 100px、寬依比例（編輯 2026-11-05 指定） */
-.items .it.cover .thumb img{width:auto;height:100px;max-width:none}
 .items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
 .items .by a:hover{color:var(--teal)}
 .items .src{font-size:12px;color:var(--muted);margin-top:4px}
@@ -175,15 +171,9 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .lead{font-size:17px}
   .media.multi{grid-template-columns:repeat(2,minmax(0,1fr))}
   .rel,.types{grid-template-columns:1fr}
-  .items .it{grid-template-columns:64px minmax(0,1fr)}
-  .items .thumb img{width:64px}
-  .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
-  .twocol .items .thumb img{width:80px}
+  .items .thumb img{height:100px;max-width:45vw;object-fit:cover}   /* 手機：高 100px，寬幅圖最寬半個螢幕 */
+  .items .it.wide .thumb img{max-width:100%;height:auto}
   .twocol .items .it.listen .thumb img{width:auto;height:70px}
-  .items .it.cover{grid-template-columns:auto minmax(0,1fr)}
-  .items .it.cover .thumb img{width:auto;height:100px}
-  .items .it.video{grid-template-columns:110px minmax(0,1fr)}
-  .items .it.video .thumb img{width:110px}
 }
 </style>
 <!-- MailerLite Universal -->
@@ -225,19 +215,19 @@ var n=0,t=setInterval(function(){if(!document.getElementById('cue-sub')||++n>20)
 </div></header>
 <main><div class="wrap">
 <div class="narrow">
-<div class="toppad"></div><div class="items"><div class="it video" data-tags=""><a class="thumb" href="../../item/2026-11-029/"><img src="https://img.youtube.com/vi/RJw-TRfR19g/mqdefault.jpg" alt="" loading="lazy"></a><div>
+<div class="toppad"></div><div class="items"><div class="it" data-tags=""><a class="thumb" href="../../item/2026-11-029/"><img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e027c60318b0617d97ebfeb5f4a" alt="" loading="lazy"></a><div>
 
 <h3><a href="../../item/2026-11-029/">Arnaud Toulon 談《再見未來男孩》（Arco）</a></h3>
 <p>首部長片就拿凱薩獎的 Toulon，談人聲合唱與改了 35 版的主題。 <a class="more" href="../../item/2026-11-029/">閱讀全文 →</a></p></div></div>
-<div class="it video" data-tags=""><a class="thumb" href="../../item/2026-11-028/"><img src="https://img.youtube.com/vi/usKdDyLJDYc/mqdefault.jpg" alt="" loading="lazy"></a><div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-11-028/"><img src="https://img.youtube.com/vi/usKdDyLJDYc/mqdefault.jpg" alt="" loading="lazy"></a><div>
 
 <h3><a href="../../item/2026-11-028/">Laura Karpman 談《伊甸園東》（East of Eden）</a></h3>
 <p>Karpman 談用配樂引導觀眾同理 Cathy，以及當自己導演時的拉鋸。 <a class="more" href="../../item/2026-11-028/">閱讀全文 →</a></p></div></div>
-<div class="it" data-tags=""><a class="thumb" href="../../item/2026-11-025/"><img src="https://i.scdn.co/image/ab67616d00001e02dc1e93733bdd104372ad5511" alt="" loading="lazy"></a><div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-11-025/"><img src="https://mesple.github.io/cuesheet/images/2026-11/rebekka-karijord.jpg" alt="" loading="lazy"></a><div>
 
 <h3><a href="../../item/2026-11-025/">Rebekka Karijord 談《雪山之虎：丹增諾蓋》（Tenzing）</a></h3>
 <p>Karijord 把犛牛鈴、溪水聲與藏戲歌聲，變成聖母峰對丹增的呼喚。 <a class="more" href="../../item/2026-11-025/">閱讀全文 →</a></p></div></div>
-<div class="it" data-tags=""><a class="thumb" href="../../item/2026-11-001/"><img src="https://mesple.github.io/cuesheet/images/2026-11/feature-nature-composers.jpg" alt="" loading="lazy"></a><div>
+<div class="it wide" data-tags=""><a class="thumb" href="../../item/2026-11-001/"><img src="https://mesple.github.io/cuesheet/images/2026-11/feature-nature-composers.jpg" alt="" loading="lazy"></a><div>
 
 <h3><a href="../../item/2026-11-001/">自然音景的三種面貌</a></h3>
 <p>三部與自然相關的電影，三種配樂切角：樂器造海、現地錄音描山、鳥鳴鯨歌評論人類。 <a class="more" href="../../item/2026-11-001/">閱讀全文 →</a></p></div></div>
@@ -245,15 +235,15 @@ var n=0,t=setInterval(function(){if(!document.getElementById('cue-sub')||++n>20)
 
 <h3><a href="../../item/2026-11-027/">Anna Meredith 與兩位導演談《就是柳柳的他》（Wicker）</a></h3>
 <p>Meredith 用弦樂寫村民、低音直笛寫柳條丈夫，第一段試樣就讓導演落淚。 <a class="more" href="../../item/2026-11-027/">閱讀全文 →</a></p></div></div>
-<div class="it video" data-tags=""><a class="thumb" href="../../item/2026-11-024/"><img src="https://img.youtube.com/vi/b8arnrdXWzg/mqdefault.jpg" alt="" loading="lazy"></a><div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-11-024/"><img src="https://mesple.github.io/cuesheet/images/2026-11/joseph-trapanese.jpg" alt="" loading="lazy"></a><div>
 
 <h3><a href="../../item/2026-11-024/">Joseph Trapanese 談《逃出鯨吞》（Whalefall）</a></h3>
 <p>Trapanese 談最私人的配樂：父子與鯨魚三個主題，小提琴面向後牆演奏出深海距離。 <a class="more" href="../../item/2026-11-024/">閱讀全文 →</a></p></div></div>
-<div class="it" data-tags=""><a class="thumb" href="../../item/2026-11-026/"><img src="https://mesple.github.io/cuesheet/images/2026-10/digger.jpg" alt="" loading="lazy"></a><div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-11-026/"><img src="https://mesple.github.io/cuesheet/images/2026-11/cosmo-sheldrake.jpg" alt="" loading="lazy"></a><div>
 
 <h3><a href="../../item/2026-11-026/">導演伊納利圖談《挖掘者》（Digger）的配樂</a></h3>
 <p>伊納利圖談為何選中 Cosmo Sheldrake 的瀕危鳥鳴，當作《挖掘者》的聲音。 <a class="more" href="../../item/2026-11-026/">閱讀全文 →</a></p></div></div>
-<div class="it video" data-tags=""><a class="thumb" href="../../item/2026-10-054/"><img src="https://img.youtube.com/vi/whH1xeCYPnE/mqdefault.jpg" alt="" loading="lazy"></a><div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-054/"><img src="https://img.youtube.com/vi/whH1xeCYPnE/mqdefault.jpg" alt="" loading="lazy"></a><div>
 
 <h3><a href="../../item/2026-10-054/">Olivier Derivière 談一年兩部大作</a></h3>
 <p>法國遊戲作曲家 Derivière 談《Dying Light: The Beast》與《Resonance》，音樂如何即時回應玩家。 <a class="more" href="../../item/2026-10-054/">閱讀全文 →</a></p></div></div>
@@ -265,7 +255,7 @@ var n=0,t=setInterval(function(){if(!document.getElementById('cue-sub')||++n>20)
 
 <h3><a href="../../item/2026-10-055/">Hans Zimmer 與 HBO《哈利波特》</a></h3>
 <p>Hans Zimmer 說 HBO《哈利波特》影集的音樂會盡量遠離電影版，也談接手 John Williams 的壓力。 <a class="more" href="../../item/2026-10-055/">閱讀全文 →</a></p></div></div>
-<div class="it video" data-tags=""><a class="thumb" href="../../item/2026-10-061/"><img src="https://img.youtube.com/vi/edxEPWtwBRc/mqdefault.jpg" alt="" loading="lazy"></a><div>
+<div class="it" data-tags=""><a class="thumb" href="../../item/2026-10-061/"><img src="https://img.youtube.com/vi/edxEPWtwBRc/mqdefault.jpg" alt="" loading="lazy"></a><div>
 
 <h3><a href="../../item/2026-10-061/">Austin Wintory 拆解他的協作式作曲流程</a></h3>
 <p>葛萊美與 BAFTA 得獎作曲家 Austin Wintory 接受 GDC Side Quest 專訪，談作品與創作哲學。 <a class="more" href="../../item/2026-10-061/">閱讀全文 →</a></p></div></div></div></div>
