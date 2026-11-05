@@ -668,7 +668,7 @@ HOME_CSS = """
 .h-deck{font-size:18px;color:var(--soft);margin:0 0 16px;line-height:1.6}
 .h-pics{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:8px}
 .h-pics img{width:100%;height:220px;object-fit:cover;display:block}
-.h-pics.n1{grid-template-columns:minmax(0,1fr)}.h-pics.n1 img{height:380px}
+.h-pics.n1{grid-template-columns:minmax(0,1fr)}.h-pics.n1 img{height:auto;object-fit:contain}   /* 單張主圖完整顯示，不裁切（編輯 2026-11-05 指定） */
 .h-pics.n2{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
 .h-credit{font-size:12px;color:var(--muted);margin-top:6px}
 .h-credit a{color:var(--muted)}
@@ -723,7 +723,7 @@ HOME_CSS = """
   .h-side{padding-left:0;margin-top:28px}
   .h-pics{grid-template-columns:repeat(2,minmax(0,1fr))}
   .h-pics img:first-child{grid-column:span 2}
-  .h-pics.n1 img{height:260px}
+  .h-pics.n1 img{height:auto}
   .h-head{font-size:28px}
   .h-body{columns:1}
   .h-second{grid-template-columns:minmax(0,1fr);gap:12px}
