@@ -715,13 +715,16 @@ HOME_CSS = """
 .h-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
 .h-two > div > .sec:first-child{margin-top:0}
 .h-rel{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
-.h-rel img{width:auto;height:100px;display:block}   /* 唱片架封面高 100px、寬依比例（編輯 2026-11-05 指定） */
+.h-rel{gap:16px;padding:14px 0}
+.h-rel img{width:auto;height:160px;display:block}   /* 首頁唱片架封面高 160px，與上方樂評卡片成比例；手機 110px（編輯 2026-11-05 指定） */
+.h-rel b{font-family:"Noto Serif TC",Georgia,serif;font-size:18px;line-height:1.35}
 .h-rel b{font-size:16px}.h-rel:hover b{color:var(--teal)}
 .h-rel span span,.h-obit span{display:block;margin-top:2px;font-size:13px;color:var(--muted)}
 .h-rel span span.desc{color:var(--soft);font-size:14px;line-height:1.65;margin-top:4px}
 .h-obit{display:block;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
 .h-obit b{font-size:16px}.h-obit:hover b{color:var(--teal)}
 @media (max-width:760px){
+  .h-rel img{height:110px}
   .h-grid,.h-two,.h-three{grid-template-columns:minmax(0,1fr)}
   .h-lead{padding-right:0;border-right:none}
   .h-side{padding-left:0;margin-top:28px}

@@ -160,22 +160,22 @@ def feature(items, tpl=False):
         parts = []
         m = first_media(it, "image")
         if m and tpl:
-            parts.append('<div style="margin:0 0 16px;">' + placeholder(W["banner"], 226, f'主圖　寬 {W["banner"]}px、高依原圖（寬幅組圖建議 1200×400）<br>放 GitHub images/YYYY-MM/') + "</div>")
-            parts.append(f'<div style="font-size:11px;line-height:1.5;color:{C["muted"]};margin:-10px 0 16px;">圖說。圖片來源：○○</div>')
+            parts.append('<div style="margin:0 0 6px;">' + placeholder(W["banner"], 226, f'主圖　寬 {W["banner"]}px、高依原圖（寬幅組圖建議 1200×400）<br>放 GitHub images/YYYY-MM/') + "</div>")
+            parts.append(f'<div style="font-size:11px;line-height:1.5;color:{C["muted"]};margin:0 0 16px;">圖說。圖片來源：○○</div>')
         elif m:
-            parts.append(f'<img src="{esc(m["url"])}" alt="{esc(m.get("caption") or it["title"])}" width="{W["banner"]}" style="display:block;width:100%;max-width:{W["banner"]}px;height:auto;border:0;margin:0 0 16px;background:#3A372F;">')
+            parts.append(f'<img src="{esc(m["url"])}" alt="{esc(m.get("caption") or it["title"])}" width="{W["banner"]}" style="display:block;width:100%;max-width:{W["banner"]}px;height:auto;border:0;margin:0 0 6px;background:#3A372F;">')
             cap = esc(m.get("caption", ""))
             cr = esc(img_credit(m))
             if m.get("credit_url"):
                 cr = a(m["credit_url"], cr)
-            parts.append(f'<div style="font-size:11px;line-height:1.5;color:{C["muted"]};margin:-10px 0 16px;">{cap}{"。圖片來源：" + cr if cr else ""}</div>')
+            parts.append(f'<div style="font-size:11px;line-height:1.5;color:{C["muted"]};margin:0 0 16px;">{cap}{"。圖片來源：" + cr if cr else ""}</div>')
         parts.append(f'<div class="big" style="font-family:{SERIF};font-size:34px;font-weight:700;line-height:1.2;">{esc(it["title"])}</div>')
         if it.get("deck"):
             parts.append(f'<div style="font-size:16px;line-height:1.6;color:{C["muted"]};margin-top:6px;">{esc(it["deck"])}</div>')
         parts.append(md_blocks(it.get("body") or it["summary"]))
         if it.get("sources"):
             parts.append(f'<div style="font-size:12px;margin-top:14px;">來源：{src_list(it)}</div>')
-        out.append(row(f'<div style="background:{C["feature_bg"]};border:1px solid {C["frame"]};padding:20px;">' + "".join(parts) + "</div>", "0 28px 6px 28px"))
+        out.append(row(f'<div class="fbox" style="background:{C["feature_bg"]};border:1px solid {C["frame"]};padding:20px;">' + "".join(parts) + "</div>", "0 28px 6px 28px"))
     return "".join(out)
 
 
@@ -192,12 +192,15 @@ def prime_picks(items, tpl=False):
             cover = ""
         cap = caption(f'圖片來源：{esc(img_credit(m))}') if (m and img_credit(m)) or tpl else ""
         text = it.get("body") or it["summary"]
+        head = (f'<div style="font-family:{SERIF};font-size:19px;font-weight:700;line-height:1.35;">{esc(it["title"])}</div>'
+                f'<div style="font-size:13px;line-height:1.6;color:{C["muted"]};margin-top:2px;">{esc(it.get("byline", ""))}</div>')
+        body = f'<div style="margin-top:6px;">{inline(text)}</div><div style="font-size:12px;margin-top:6px;">來源：{src_list(it)}</div>'
+        # 電腦：封面左、標題與摘要右。手機（540px 以下）：封面縮成 88px 與標題並排，摘要移到下方全寬（編輯 2026-11-05 指定）
+        mob = (f'<div class="m-only" style="display:none;max-height:0;overflow:hidden;mso-hide:all;font-size:15px;line-height:1.75;">{body}</div>')
         out.append(row(
             f'<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr>'
-            + (f'<td class="stk" width="{W["review_cover"]}" valign="top" style="width:{W["review_cover"]}px;padding:4px 16px 0 0;">{cover}{cap}</td>' if (cover or tpl) else "")
-            + f'<td class="stk" valign="top" style="font-size:15px;line-height:1.75;"><div style="font-family:{SERIF};font-size:19px;font-weight:700;line-height:1.35;">{esc(it["title"])}</div>'
-            f'<div style="font-size:13px;line-height:1.6;color:{C["muted"]};margin-top:2px;">{esc(it.get("byline", ""))}</div>'
-            f'<div style="margin-top:6px;">{inline(text)}</div><div style="font-size:12px;margin-top:6px;">來源：{src_list(it)}</div></td></tr></table>',
+            + (f'<td class="rvc" width="{W["review_cover"]}" valign="top" style="width:{W["review_cover"]}px;padding:4px 16px 0 0;">{cover}{cap}</td>' if (cover or tpl) else "")
+            + f'<td valign="top" style="font-size:15px;line-height:1.75;">{head}<div class="d-only">{body}</div></td></tr></table>{mob}',
             "14px 28px 4px 28px"))
     return "".join(out)
 
@@ -215,7 +218,7 @@ def record_shelf(items, tpl=False):
             img = placeholder(W["shelf_cover"], W["shelf_cover"], "封面待補")
         cr = img_credit(m) if m else ("Spotify／廠牌" if tpl else "")
         line = "｜".join(x for x in (it.get("byline"), it["summary"]) if x)
-        cards.append(f'<div style="display:inline-block;vertical-align:top;width:100%;max-width:{W["shelf_card"]}px;box-sizing:border-box;padding:0 12px 18px 0;font-size:13px;line-height:1.6;">'
+        cards.append(f'<div class="shc" style="display:inline-block;vertical-align:top;width:100%;max-width:{W["shelf_card"]}px;box-sizing:border-box;padding:0 12px 18px 0;font-size:13px;line-height:1.6;">'
                      f'{img}<div style="font-size:10px;color:{C["muted"]};margin-top:3px;">圖片來源：{esc(cr)}</div>'
                      f'<div style="font-size:16px;font-weight:700;margin-top:8px;line-height:1.4;">{esc(it["title"])}</div>'
                      f'<div style="color:{C["body"]};">{inline(line)}</div>'
@@ -408,6 +411,14 @@ def render(issue, by, email=True, tpl=False):
  .kick td{{display:block!important}}
  .webl{{display:block!important;text-align:left!important;padding:4px 0 0 0!important;white-space:normal!important}}
  td.stk{{display:block!important;width:auto!important;padding:0 0 10px 0!important;border-left:0!important}}
+ .fbox{{padding:14px!important}}
+ .big{{font-size:26px!important}}
+ td.rvc{{width:88px!important;padding:4px 12px 0 0!important}}
+ td.rvc img{{width:88px!important}}
+ td.rvc div{{display:none!important}}
+ .d-only{{display:none!important}}
+ .m-only{{display:block!important;max-height:none!important;overflow:visible!important}}
+ .shc{{max-width:50%!important;padding:0 8px 16px 0!important}}
 }}
 </style></head><body style="margin:0;padding:0;background:{C["page_bg"]};"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:{C["page_bg"]};"><tr><td align="center" style="padding:20px 10px;"><table width="{W["page"]}" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:{W["page"]}px;background:{C["paper"]};border:1px solid {C["frame"]};font-family:{FONT};color:{C["ink"]};">''']
     o.append(masthead(issue, email))
