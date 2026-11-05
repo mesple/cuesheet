@@ -134,8 +134,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .twocol .items .thumb img{width:110px}
 .twocol .items .it.listen{grid-template-columns:auto minmax(0,1fr)}   /* 精選試聽：截圖高 110、寬度依圖片比例（編輯 2026-10-31 指定） */
 .twocol .items .it.listen .thumb img{width:auto;height:110px}
-.items .it.rev{grid-template-columns:110px minmax(0,1fr)}   /* 樂評封面與唱片架同大（編輯 2026-11-05 指定） */
-.items .it.rev .thumb img{width:110px}
+.items .it.cover{grid-template-columns:auto minmax(0,1fr)}   /* 樂評、唱片架封面：高 100px、寬依比例（編輯 2026-11-05 指定） */
+.items .it.cover .thumb img{width:auto;height:100px;max-width:none}
 .items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
 .items .by a:hover{color:var(--teal)}
 .items .src{font-size:12px;color:var(--muted);margin-top:4px}
@@ -176,8 +176,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .twocol .items .it{grid-template-columns:80px minmax(0,1fr)}
   .twocol .items .thumb img{width:80px}
   .twocol .items .it.listen .thumb img{width:auto;height:70px}
-  .items .it.rev{grid-template-columns:80px minmax(0,1fr)}
-  .items .it.rev .thumb img{width:80px}
+  .items .it.cover{grid-template-columns:auto minmax(0,1fr)}
+  .items .it.cover .thumb img{width:auto;height:100px}
   .items .it.video{grid-template-columns:110px minmax(0,1fr)}
   .items .it.video .thumb img{width:110px}
 }
@@ -221,11 +221,11 @@ var n=0,t=setInterval(function(){if(!document.getElementById('cue-sub')||++n>20)
 </div></header>
 <main><div class="wrap">
 <div class="narrow">
-<div class="toppad"></div><h2 class="item-title">George Fenton</h2><div class="items" style="margin-top:14px"><div class="it rev" data-tags=""><a class="thumb" href="../../item/2026-11-003/"><img src="https://i.scdn.co/image/ab67616d00001e02e6c7a75fd3f17918bd1d09e8" alt="" loading="lazy"></a><div>
+<div class="toppad"></div><h2 class="item-title">George Fenton</h2><div class="items" style="margin-top:14px"><div class="it cover" data-tags=""><a class="thumb" href="../../item/2026-11-003/"><img src="https://i.scdn.co/image/ab67616d00001e02e6c7a75fd3f17918bd1d09e8" alt="" loading="lazy"></a><div>
 <div class="meta"><span class="pill col">樂評</span></div>
 <h3><a href="../../item/2026-11-003/">安娜與國王 Anna and the King</a></h3>
 <p>Movie Wave 的 Fenton 系列最後一篇：二胡與小提琴共舞、黃金時代式的史詩動作段落，評者視為他在好萊塢的最佳作品。 <a class="more" href="../../item/2026-11-003/">閱讀全文 →</a></p></div></div>
-<div class="it rev" data-tags=""><a class="thumb" href="../../item/2026-11-002/"><img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e028afde1c4d3f6e9918b53b137" alt="" loading="lazy"></a><div>
+<div class="it cover" data-tags=""><a class="thumb" href="../../item/2026-11-002/"><img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e028afde1c4d3f6e9918b53b137" alt="" loading="lazy"></a><div>
 <div class="meta"><span class="pill col">樂評</span></div>
 <h3><a href="../../item/2026-11-002/">絕代寵妓 Dangerous Beauty</a></h3>
 <p>Movie Wave 的 Fenton 回顧系列之一：一向偏好英式克制的 Fenton 放手寫大型浪漫管弦樂，〈The Verdict / End Titles〉是他最動人的終… <a class="more" href="../../item/2026-11-002/">閱讀全文 →</a></p></div></div>
