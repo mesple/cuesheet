@@ -132,8 +132,7 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .items .it.noimg{grid-template-columns:minmax(0,1fr)}
 .items .it[hidden]{display:none}  /* 篩選用：display:grid 會蓋過 hidden，要明寫 */
 .items .thumb img{display:block;width:auto;height:160px;max-width:none;border:1px solid var(--line)}   /* 列表圖片一律高 160px、寬依比例（樂評、唱片架、訪談、新聞；編輯 2026-11-05 指定） */
-.items .it.wide{display:block}   /* 寬幅圖（media.wide，例：專題組圖）：圖放上方、滿欄寬 */
-.items .it.wide .thumb img{width:100%;height:auto;margin-bottom:12px}
+/* 寬幅圖（media.wide，例：專題組圖）在列表也與其他圖同高 160px、寬依比例（編輯 2026-11-05 指定）；單則頁才滿欄 */
 .twocol .items .it.listen{grid-template-columns:auto minmax(0,1fr)}   /* 精選試聽：截圖高 110、寬度依圖片比例（編輯 2026-10-31 指定） */
 .twocol .items .it.listen .thumb img{width:auto;height:110px}
 .items .by a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--line)}
@@ -174,7 +173,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
   .media.multi{grid-template-columns:repeat(2,minmax(0,1fr))}
   .rel,.types{grid-template-columns:1fr}
   .items .thumb img{height:100px;max-width:45vw;object-fit:cover}   /* 手機：高 100px，寬幅圖最寬半個螢幕 */
-  .items .it.wide .thumb img{max-width:100%;height:auto}
+  .items .it.wide{display:block}   /* 手機：寬幅圖放在文字上方，高 100px、不裁切 */
+  .items .it.wide .thumb img{height:100px;width:auto;max-width:100%;object-fit:contain;margin-bottom:10px}
   .twocol .items .it.listen .thumb img{width:auto;height:70px}
 }
 </style>
