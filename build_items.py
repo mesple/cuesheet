@@ -50,6 +50,10 @@ h2.item-title{font-family:"Noto Serif TC",Georgia,serif;font-size:32px;line-heig
 .body h2{font-family:"Noto Serif TC",Georgia,serif;font-size:21px;margin:30px 0 8px}
 .body ul{padding-left:22px}
 .body li{margin:4px 0}
+.body table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.7;margin:8px 0 16px}   /* 專題比較表（與電子報同款：表頭下實線、列間點線） */
+.body th{text-align:left;padding:7px 10px 7px 0;border-bottom:1px solid var(--ink);vertical-align:top}
+.body td{padding:7px 10px 7px 0;border-bottom:1px dotted var(--line);vertical-align:top}
+.body td:first-child{font-weight:700}
 .media{display:grid;gap:14px;margin:6px 0 22px}
 .media.multi{grid-template-columns:repeat(3,minmax(0,1fr))}
 .media figure{margin:0}
@@ -311,7 +315,7 @@ def item_page(it, by_id, composers, labels, features):
     summary = show_name(it["summary"], composers, codes)
     body = ""
     if it.get("body"):
-        body = '<div class="body">' + markdown.markdown(show_name(it["body"], composers, codes)) + "</div>"
+        body = '<div class="body">' + markdown.markdown(show_name(it["body"], composers, codes), extensions=["tables"]) + "</div>"
     lead = f'<p class="lead">{escape(summary)}</p>'
     deck = ""
     top_media, more_media = media_html(it, title), ""
@@ -710,8 +714,8 @@ HOME_CSS = """
 .h-talk small{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
 .h-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
 .h-two > div > .sec:first-child{margin-top:0}
-.h-rel{display:grid;grid-template-columns:70px minmax(0,1fr);gap:12px;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
-.h-rel img{width:70px;height:70px;object-fit:cover;display:block}
+.h-rel{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.h-rel img{width:auto;height:100px;display:block}   /* 唱片架封面高 100px、寬依比例（編輯 2026-11-05 指定） */
 .h-rel b{font-size:16px}.h-rel:hover b{color:var(--teal)}
 .h-rel span span,.h-obit span{display:block;margin-top:2px;font-size:13px;color:var(--muted)}
 .h-rel span span.desc{color:var(--soft);font-size:14px;line-height:1.65;margin-top:4px}

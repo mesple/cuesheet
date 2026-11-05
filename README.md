@@ -12,9 +12,13 @@
 
 ## 新增一期電子報
 
-1. 用 `python tools/web_version.py 電子報版.html newsletter/YYYY-MM-xxx/index.html` 由電子報版產生網站版（拿掉網頁版連結與退訂，活動欄加「已結束」標示），放到 `newsletter/YYYY-MM-collector/index.html`（深度聆聽版，每月 5 日）或 `newsletter/YYYY-MM-news/index.html`（配樂新訊版，每月 20 日），特刊用 `newsletter/YYYY-MM-special/`，圖片放 `images/YYYY-MM/`。
-2. 在 `newsletter/issues.json` 加一筆（`editor_note` 是刊頭下方的編者的話，也是首頁與列表頁的摘要）。
-3. 執行 `python build_pages.py`，更新首頁與電子報列表。
+版面規格見 **`docs/版面規範.md`**（唯一依據，改版面先改規範、經編輯同意）。電子報不手排 HTML，由資料產生：
+
+1. 單則寫進 `items/YYYY-MM-xxx.json`，該期刊頭、欄目組成、週末cue一下、頁尾寫進 `issues/YYYY-MM-xxx.json`（欄位見規範第五節）。圖片放 `images/YYYY-MM/`。
+2. `python tools/build_newsletter.py YYYY-MM-collector`（或 `-news`）：產生 `out/cue_sheet_YYYY-MM-xxx.html`（電子報版，匯入 MailerLite）與 `newsletter/YYYY-MM-xxx/index.html`（網站版）。審稿時改資料檔再重跑。
+3. 在 `newsletter/issues.json` 加一筆（`editor_note` 是刊頭下方的編者的話，也是首頁與列表頁的摘要）。
+4. 執行 `python build_items.py`、`python build_pages.py`，更新單則頁、首頁與電子報列表。
+5. 空白版型：`python tools/build_newsletter.py --template`，輸出到 `templates/`。
 
 ## 活動資料
 

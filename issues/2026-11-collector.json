@@ -75,7 +75,7 @@
   ]
  },
  "html": "newsletter/2026-11-collector/index.html",
- "note": "11 月號深度聆聽版：電子報版面以 newsletter/2026-11-collector/index.html 為準，本檔記錄每欄的單則組成。",
+ "note": "11 月號深度聆聽版：電子報由 tools/build_newsletter.py 從本檔與 items/2026-11-collector.json 產生。",
  "home_reviews": [
   "2026-11-003",
   "2026-11-002",
@@ -87,5 +87,7 @@
   "2026-11-013",
   "2026-11-017",
   "2026-11-019"
- ]
+ ],
+ "sources_footer": "Movie Wave、Movie Music UK、Reel Music、filmmusik2000、Celluloid Tunes、MundoBSO、UnderScores、Film Music Reporter、La-La Land Records、On the Score、The Film Scorer、Soundtracking with Edith Bowman（Podcast）、joecomposer.com、FLOOD Magazine、YouTube（各官方與 Topic 頻道）、Spotify（專輯封面、藝人照片與收聽連結）。",
+ "cutoff": "2026 年 11 月 3 日（臺北時間）。"
 }
