@@ -15,6 +15,12 @@
    ],
    "imdb": []
   },
+  "alex-belcher": {
+   "display": "Alex Belcher",
+   "name": "Alex Belcher",
+   "aliases": [],
+   "imdb": []
+  },
   "alexandre-desplat": {
    "display": "Alexandre Desplat",
    "name": "Alexandre Desplat",
@@ -23,10 +29,26 @@
    ],
    "imdb": []
   },
+  "anna-meredith": {
+   "display": "Anna Meredith",
+   "name": "Anna Meredith",
+   "aliases": [
+    "Meredith"
+   ],
+   "imdb": []
+  },
   "ari-balouzian": {
    "display": "Ari Balouzian",
    "name": "Ari Balouzian",
    "aliases": [],
+   "imdb": []
+  },
+  "arnaud-toulon": {
+   "display": "Arnaud Toulon",
+   "name": "Arnaud Toulon",
+   "aliases": [
+    "Toulon"
+   ],
    "imdb": []
   },
   "arturo-cardelus": {
@@ -97,6 +119,14 @@
    "aliases": [],
    "imdb": []
   },
+  "dario-marianelli": {
+   "display": "Dario Marianelli",
+   "name": "Dario Marianelli",
+   "aliases": [
+    "Marianelli"
+   ],
+   "imdb": []
+  },
   "dave-porter": {
    "display": "Dave Porter",
    "name": "Dave Porter",
@@ -125,6 +155,14 @@
    "display": "Emily Bear",
    "name": "Emily Bear",
    "aliases": [],
+   "imdb": []
+  },
+  "ennio-morricone": {
+   "display": "Ennio Morricone",
+   "name": "Ennio Morricone",
+   "aliases": [
+    "Morricone"
+   ],
    "imdb": []
   },
   "fabio-massimo-capogrosso": {
@@ -168,6 +206,12 @@
    "imdb": [
     "nm0006070"
    ]
+  },
+  "gilles-alonzo": {
+   "display": "Gilles Alonzo",
+   "name": "Gilles Alonzo",
+   "aliases": [],
+   "imdb": []
   },
   "halfdan-e": {
    "display": "Halfdan E.",
@@ -325,6 +369,20 @@
    "aliases": [],
    "imdb": []
   },
+  "joseph-trapanese": {
+   "display": "Joseph Trapanese",
+   "name": "Joseph Trapanese",
+   "aliases": [
+    "Trapanese"
+   ],
+   "imdb": []
+  },
+  "julien-schickel": {
+   "display": "Julien Schickel",
+   "name": "Julien Schickel",
+   "aliases": [],
+   "imdb": []
+  },
   "kao-min-lun": {
    "display": "高敏倫",
    "name": "",
@@ -394,6 +452,12 @@
     "nm3232216"
    ]
   },
+  "lorenzo-perelmuter": {
+   "display": "Lorenzo Perelmuter",
+   "name": "Lorenzo Perelmuter",
+   "aliases": [],
+   "imdb": []
+  },
   "lukas-frank": {
    "display": "Lukas Frank",
    "name": "Lukas Frank",
@@ -415,6 +479,12 @@
   "margaret-hermant": {
    "display": "Margaret Hermant",
    "name": "Margaret Hermant",
+   "aliases": [],
+   "imdb": []
+  },
+  "matteo-di-stefano": {
+   "display": "Matteo Di Stefano",
+   "name": "Matteo Di Stefano",
    "aliases": [],
    "imdb": []
   },
@@ -476,6 +546,12 @@
    "aliases": [],
    "imdb": []
   },
+  "murray-gold": {
+   "display": "Murray Gold",
+   "name": "Murray Gold",
+   "aliases": [],
+   "imdb": []
+  },
   "nami-melumad": {
    "display": "Nami Melumad",
    "name": "Nami Melumad",
@@ -532,6 +608,20 @@
    "aliases": [],
    "imdb": []
   },
+  "raul-refree": {
+   "display": "Raül Refree",
+   "name": "Raül Refree",
+   "aliases": [],
+   "imdb": []
+  },
+  "rebekka-karijord": {
+   "display": "Rebekka Karijord",
+   "name": "Rebekka Karijord",
+   "aliases": [
+    "Karijord"
+   ],
+   "imdb": []
+  },
   "ricky-ho": {
    "display": "何國杰",
    "name": "Ricky Ho",
@@ -546,6 +636,14 @@
    "display": "Robert Glasper",
    "name": "Robert Glasper",
    "aliases": [],
+   "imdb": []
+  },
+  "roger-goula": {
+   "display": "Roger Goula",
+   "name": "Roger Goula",
+   "aliases": [
+    "Goula"
+   ],
    "imdb": []
   },
   "rupert-gregson-williams": {

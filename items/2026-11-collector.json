@@ -1,0 +1,912 @@
+{
+ "issue": "2026-11-collector",
+ "items": [
+  {
+   "id": "2026-11-001",
+   "issue": "2026-11-collector",
+   "type": "訪談",
+   "region": "全球",
+   "date": "2026-11-05",
+   "title": "自然音景的三種面貌",
+   "summary": "鯨腹、聖母峰與生態危機：《逃出鯨吞》《雪山之虎：丹增諾蓋》《挖掘者》三部配樂，自然該由樂器代言，還是自己發聲？",
+   "teaser": "三部與自然相關的電影，三種配樂切角：樂器造海、現地錄音描山、鳥鳴鯨歌評論人類。",
+   "body": "鯨腹、聖母峰與生態危機，三部電影的配樂不約而同指向自然，卻又見解各異，究竟自然該由樂器代言，還是自己發聲？從海洋到山岳，從洪荒之力到輕巧譏諷，我們聽見作曲家與導演採取不同的切角，用樂聲定錨環境，用自然音響評論劇情。\n\n《逃出鯨吞》（Whalefall）的 Joseph Trapanese 用樂器造出海洋：低音弦樂與銅管撐起鯨魚的重量，微分音（Microtonal playing）小提琴、玻璃音樂採樣與合成器描繪深海的神祕。音樂既隨鯨魚下潛而下行，也替粗礪的父子互動添上溫柔。\n\n《雪山之虎：丹增諾蓋》（Tenzing）的 Rebekka Karijord 則讓現地錄下的風、溪流與犛牛鈴，處理採樣後，和管弦樂共同描景。弦樂滑音帶出冰雪凶險，亡妻歌聲經處理後化為山的召喚；自然不只在眼前，也住進人物的記憶。\n\n《挖掘者》（Digger）更將瀕危鳥鳴、鯨魚歌唱的田野錄音編成音樂。Cosmo Sheldrake 拿自然當素材，就是要讓這些聲音對人類的貪婪與掠奪做出評論。前兩部多從自然走向人的內心，這部則用音樂告訴觀眾，受害者其實不只人類。\n\n樂器可以讓人感受自然的威脅，還能進一步召喚情感，來自自然界的真實錄音也絕非白描。這正是電影音樂最值得玩味之處，看電影時，不妨留意，你的哪些感覺，被喚醒了。\n\n## 三部配樂的聲音設計\n\n- **《逃出鯨吞》（Whalefall）**　以樂器、樂器採樣與電子處理，營造水下景深、鯨魚重量與自然的神祕感。與劇情的關係：兼有平行與情感對位。\n- **《雪山之虎：丹增諾蓋》（Tenzing）**　現地環境與生活聲響，加上管弦樂、歌聲及人聲採樣。與劇情的關係：主要是呼應與延伸；把山轉化為心理與精神空間。\n- **《挖掘者》（Digger）**　將生物錄音直接組織成音樂，但全片也使用傳統配器。與劇情的關係：有主題上的對照與評論：人類掠奪自然，配樂卻讓其他生命發聲。",
+   "composers": [
+    "joseph-trapanese",
+    "rebekka-karijord",
+    "cosmo-sheldrake"
+   ],
+   "sources": [
+    {
+     "name": "On the Score（Joseph Trapanese）",
+     "url": "https://onthescore.com/joseph-trapanese-finds-himself-in-the-belly-of-a-whalefall/"
+    },
+    {
+     "name": "On the Score（Rebekka Karijord）",
+     "url": "https://onthescore.com/rebekka-krijord-summits-tenzing/"
+    },
+    {
+     "name": "Soundtracking with Edith Bowman（伊納利圖）",
+     "url": "https://audioboom.com/posts/8960432-alejandro-gonzalez-inarritu-on-the-music-of-digger"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/feature-nature-composers.jpg",
+     "caption": "左起：Joseph Trapanese、Rebekka Karijord、Cosmo Sheldrake",
+     "credit": "joecomposer.com、Spotify 藝人頁、FLOOD Magazine"
+    }
+   ],
+   "web": true,
+   "related": [
+    "2026-11-024",
+    "2026-11-025",
+    "2026-11-026"
+   ],
+   "internal_note": "本期專題，編輯撰稿；類型暫列「訪談」（取材自三篇專訪）。"
+  },
+  {
+   "id": "2026-11-002",
+   "issue": "2026-11-collector",
+   "type": "樂評",
+   "region": "歐洲",
+   "date": "2026-10-11",
+   "title": "絕代寵妓 Dangerous Beauty",
+   "byline": "George Fenton",
+   "summary": "Movie Wave 的 Fenton 回顧系列之一：一向偏好英式克制的 Fenton 放手寫大型浪漫管弦樂，〈The Verdict / End Titles〉是他最動人的終曲之一。",
+   "body": "George Fenton 10 月 5 日辭世後，Movie Wave 的 James Southall 連寫十二篇回顧，這是其中一篇。1998 年這部 16 世紀威尼斯名妓的電影評價不差，卻幾乎沒上院線；一向偏好英式克制的 Fenton 在這裡放手寫大型浪漫管弦樂，與《很久很久以前》（Ever After）、《安娜與國王》並列他世紀末的三部代表作。吉他在〈Venice Proud and Pretty〉輕盈引出主題，〈Marco's Homecoming〉是全編制的冒險詼諧曲；兩場詩歌決鬥，一場愈走愈雄壯，一場在結尾轉暗。〈The Verdict / End Titles〉把所有主題收攏，Southall 認為是 Fenton 寫過最動人的終曲之一，整份配樂他百聽不厭",
+   "composers": [
+    "george-fenton"
+   ],
+   "sources": [
+    {
+     "name": "Movie Wave 10/11",
+     "url": "https://www.movie-wave.net/dangerous-beauty/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e028afde1c4d3f6e9918b53b137",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/0Pv3Mvl8An7Ir8iVIkPFsc",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/0Pv3Mvl8An7Ir8iVIkPFsc"
+  },
+  {
+   "id": "2026-11-003",
+   "issue": "2026-11-collector",
+   "type": "樂評",
+   "region": "歐洲",
+   "date": "2026-10-18",
+   "title": "安娜與國王 Anna and the King",
+   "byline": "George Fenton",
+   "summary": "Movie Wave 的 Fenton 系列最後一篇：二胡與小提琴共舞、黃金時代式的史詩動作段落，評者視為他在好萊塢的最佳作品。",
+   "body": "Southall 的 Fenton 系列最後一篇。他承認 1999 年這部電影不受評論與觀眾青睞，卻認為導演 Andy Tennant 放手讓 Fenton 寫，成就了他在好萊塢的最佳作品。愛情主題在〈Arrival at the Palace〉首度響起，〈Anna Returns〉最壯闊；二胡（Karen Han 演奏）與小提琴彼此共舞，〈The Execution〉旋律優美而動人，〈Rajah Attack〉〈The Bridge〉的動作段落回到黃金時代的史詩格局；終曲〈I Have Danced With a King〉以憂傷重現兩人的主題。他說 Fenton「什麼都能寫」，在英國電影作曲家中僅次於 John Barry",
+   "composers": [
+    "george-fenton"
+   ],
+   "sources": [
+    {
+     "name": "Movie Wave 10/18",
+     "url": "https://www.movie-wave.net/anna-and-the-king/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://i.scdn.co/image/ab67616d00001e02e6c7a75fd3f17918bd1d09e8",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/6dF8g9VSjj0Ol5xHsXiEcW",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/6dF8g9VSjj0Ol5xHsXiEcW"
+  },
+  {
+   "id": "2026-11-004",
+   "issue": "2026-11-collector",
+   "type": "樂評",
+   "region": "歐洲",
+   "date": "2026-10-20",
+   "title": "Sense and Sensibility",
+   "byline": "Roger Goula",
+   "summary": "新版《理性與感性》：Movie Music UK 認為 Goula 不重做 Patrick Doyle 是對的決定，配樂細緻苦甜，但重氣氛、輕主題。",
+   "body": "Georgia Oakley 執導的新版《理性與感性》。Jonathan Broxton 認為 Goula 沒有去重做 Patrick Doyle 1995 年的經典，是「毫無疑問正確的決定」；他用兩姊妹各自的樂器與人聲記號，拉出理性與情感的拉扯，〈Rage – Lost〉甚至出現呼喊與吟唱。評者也提醒，討厭近年英國古裝劇那種偽極簡古典聲響的人，可能會覺得太相似，重氣氛、輕主題；但對他而言這份配樂施了「細緻、苦甜的魔法」，結尾的和解段落雖不及 Doyle 的〈Throw the Coins〉，也足夠動人",
+   "composers": [
+    "roger-goula"
+   ],
+   "sources": [
+    {
+     "name": "Movie Music UK",
+     "url": "https://moviemusicuk.us/2026/10/20/sense-and-sensibility-roger-goula/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://i.scdn.co/image/ab67616d00001e0282f91327723b65483ed7a80b",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/2zjPl2s1bsBW50YydiVcoy",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/2zjPl2s1bsBW50YydiVcoy"
+  },
+  {
+   "id": "2026-11-005",
+   "issue": "2026-11-collector",
+   "type": "樂評",
+   "region": "北美",
+   "date": "2026-11-05",
+   "title": "Wildwood",
+   "byline": "Dario Marianelli",
+   "summary": "Laika 定格動畫奇幻史詩：MundoBSO 形容 Marianelli 的管弦與合唱豐沛、有靈感，讓故事更寬廣。",
+   "body": "Laika 的定格動畫奇幻史詩，Marianelli 繼《酷寶：魔弦傳說》後再與導演 Travis Knight 合作（Universal，65 分鐘）。MundoBSO 認為音樂主動參與了冒險感、視覺的豐富與情感深度：一整片管弦與合唱的調色盤裡，魔法、神祕與冒險並存，呼應主角 Prue 穿越禁忌森林時不斷湧現的驚奇；抒情、敘事能量與細緻的旋律感兼具。評者形容這份配樂豐沛、有靈感、動人，不只在美學與戲劇上替電影加分，更讓故事變得更寬廣、更好懂",
+   "composers": [
+    "dario-marianelli"
+   ],
+   "sources": [
+    {
+     "name": "MundoBSO",
+     "url": "https://www.mundobso.com/bso/wildwood-el-bosque-salvaje"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02616ed1abe375a25574d627d1",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/4QEB0kfFzFgXUX8AxH39De",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/4QEB0kfFzFgXUX8AxH39De",
+   "internal_note": "date 待確認（原文未讀到發表日），暫用發刊日"
+  },
+  {
+   "id": "2026-11-006",
+   "issue": "2026-11-collector",
+   "type": "樂評",
+   "region": "北美",
+   "date": "2026-11-05",
+   "title": "泥面人 Clayface",
+   "byline": "Volker Bertelmann",
+   "summary": "MundoBSO 指出 Bertelmann 把 DC 角色電影帶往恐怖片：陰鬱執拗的主題、弦樂與電子聲響描繪身分崩解。",
+   "body": "James Watkins 執導的 DC 角色電影（WaterTower，70 分鐘）。MundoBSO 指出，Bertelmann 把 DC 宇宙帶往恐怖片而不是一般的超級英雄片：主角主題強硬、陰鬱而執拗，關心的是破碎的身分，而非任何英雄抱負；粗糙的質地、壓抑的脈動與情緒不穩的氛圍，映照角色一步步崩解，弦樂與電子聲響則描繪肉體與心理的變形、人性的流失。結果是一份黑暗、講究、氛圍濃厚的配樂，自然融入角色最悲劇、最駭人的那一面",
+   "composers": [
+    "volker-bertelmann"
+   ],
+   "sources": [
+    {
+     "name": "MundoBSO",
+     "url": "https://www.mundobso.com/bso/clayface"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a02088315f66b38364a30a30",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/3bz8ZlzTN77QCgjjDopO3M",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/3bz8ZlzTN77QCgjjDopO3M",
+   "internal_note": "date 待確認（原文未讀到發表日），暫用發刊日"
+  },
+  {
+   "id": "2026-11-007",
+   "issue": "2026-11-collector",
+   "type": "樂評",
+   "region": "歐洲",
+   "date": "2026-11-05",
+   "title": "吉勒摩·戴托羅之皮諾丘 Guillermo del Toro's Pinocchio",
+   "byline": "Alexandre Desplat",
+   "summary": "filmmusik2000 回顧：Desplat 不用銅管，以木管與打擊撐起全片，配器精巧，但評者認為少了一條清楚的戲劇主線。",
+   "body": "filmmusik2000 回顧這部奧斯卡最佳動畫片：吉勒摩·戴托羅把故事搬到墨索里尼時代的義大利，Desplat 不用銅管，全片以木管與打擊撐起，跳躍的木管段落刻畫小木偶的孩子氣與叛逆，諷刺墨索里尼的〈Big Baby Il Duce March〉也是這份配樂的一部分。評者讚賞 88 分鐘裡處處是精心配器、環環相扣的動機細節，但也直言總覺得少了一條更清楚的戲劇主線或一段撐起全片的旋律，「從來沒有超過各部分的總和」；他也替 Desplat 緩頰，認為電影本身頻頻轉換類型，音樂很難一路跟上",
+   "composers": [
+    "alexandre-desplat"
+   ],
+   "sources": [
+    {
+     "name": "filmmusik2000",
+     "url": "https://www.filmmusik2000.de/guillermo-del-toros-pinocchio-alexandre-desplat-musik-aus-feinem-holz"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02d5bda0325188b09547821cd6",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/7GQqZap38LT44AcbZriYqt",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/7GQqZap38LT44AcbZriYqt",
+   "internal_note": "date 待確認（原文未讀到發表日），暫用發刊日"
+  },
+  {
+   "id": "2026-11-008",
+   "issue": "2026-11-collector",
+   "type": "樂評",
+   "region": "歐洲",
+   "date": "2026-11-05",
+   "title": "Adieu monde cruel",
+   "byline": "Arnaud Toulon",
+   "summary": "Celluloid Tunes 稱這部法國片是「今年最好的配樂之一」：獨奏雙簧管開場，回到 1960 年代 Delerue、Legrand 的苦甜優雅。",
+   "body": "Celluloid Tunes 的「On-the-go」短評一次介紹五張冷門佳作，以這部坎城影評人週的法國片為首。Thor Joachim Haga 原本不認識 Toulon，卻認為這是「毫無疑問今年最好的配樂之一」：獨奏雙簧管開場，回到 1960 年代 Delerue、Lai、Legrand 那種苦甜優雅，室內樂團的小提琴、單簧管、雙簧管輪流獨奏，旋律毫不迴避。同篇另推薦《Onslaught》《La Frappe》《Garance》等四張",
+   "composers": [
+    "arnaud-toulon"
+   ],
+   "sources": [
+    {
+     "name": "Celluloid Tunes",
+     "url": "https://celluloidtunes.no/adieu-monde-cruel-onslaught-and-more/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://i.scdn.co/image/ab67616d00001e028d0a1300d4fd7057da69377e",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/4yRWxsWwILuBGcf0EaYY5n",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/4yRWxsWwILuBGcf0EaYY5n",
+   "internal_note": "date 待確認（原文未讀到發表日），暫用發刊日",
+   "related": [
+    "2026-11-029"
+   ]
+  },
+  {
+   "id": "2026-11-009",
+   "issue": "2026-11-collector",
+   "type": "樂評",
+   "region": "歐洲",
+   "date": "2026-10-26",
+   "title": "Les Survivants du Che",
+   "byline": "Gilles Alonzo、Julien Schickel、Matteo Di Stefano",
+   "summary": "法國紀錄片配樂：Reel Music 認為緊繃的弦樂與木管、勾勒南美風景的原聲吉他，令人佩服多於令人享受，但基調始終一致。",
+   "body": "Christophe Dimitri Réveille 執導的法國紀錄片，追蹤切・格瓦拉 1967 年在玻利維亞遇害後，倖存的游擊隊員在數千名士兵追捕下逃亡 2,400 公里的經過，以訪談、檔案影像與動畫重現交織（Pentacle Productions，41 軌、65 分鐘）。Reel Music 的 Alan Rogers 指出，三位作曲家的管弦樂由法國樂團 Ensemble Hors-Champ 演奏：低音域的弦樂與木管堆疊緊張感，弦樂顫音添上不安，原聲吉他則勾勒南美風景，也替一路緊繃的懸疑帶來喘息。他認為這份配樂令人佩服多於令人享受，但通篇維持一致的基調",
+   "composers": [
+    "gilles-alonzo",
+    "julien-schickel",
+    "matteo-di-stefano"
+   ],
+   "sources": [
+    {
+     "name": "Reel Music",
+     "url": "https://reelmusic.wordpress.com/2026/10/26/weekly-recommendations-w-e-11th-september-2026-hope-les-survivants-du-che/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c020b0f5f5994d974ead2987",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/5KdTrQy8U31ySJVQCqi0s6",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/5KdTrQy8U31ySJVQCqi0s6"
+  },
+  {
+   "id": "2026-11-010",
+   "issue": "2026-11-collector",
+   "type": "發行",
+   "region": "歐洲",
+   "date": "2026-10-30",
+   "title": "就是柳柳的他 Wicker",
+   "byline": "Anna Meredith",
+   "summary": "Mercury Classics｜Olivia Colman、Alexander Skarsgård 主演的奇幻愛情喜劇，入選今年金馬影展；10/30 數位發行。",
+   "composers": [
+    "anna-meredith"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/10/22/wicker-soundtrack-album-details/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://i.scdn.co/image/ab67616d00001e022407cf516109eb7300b310f6",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/66Lhi3wLs9wDMvgw22cTSj",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/66Lhi3wLs9wDMvgw22cTSj",
+   "related": [
+    "2026-11-027"
+   ]
+  },
+  {
+   "id": "2026-11-011",
+   "issue": "2026-11-collector",
+   "type": "發行",
+   "region": "北美",
+   "date": "2026-10-23",
+   "title": "克拉拉與太陽 Klara and the Sun",
+   "byline": "Michael Giacchino",
+   "summary": "Mutant｜改編石黑一雄小說的電影，10/23 數位原聲帶。",
+   "composers": [
+    "michael-giacchino"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/10/22/klara-and-the-sun-soundtrack-album-details/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://i.scdn.co/image/ab67616d00001e02854604b5c4c7ff9ec80aec62",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/0Ai7CxavFzssOsoFCHzxrO",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/0Ai7CxavFzssOsoFCHzxrO",
+   "internal_note": "電子報寫「臺灣緊急撤檔」，網站不放，待編輯確認"
+  },
+  {
+   "id": "2026-11-012",
+   "issue": "2026-11-collector",
+   "type": "發行",
+   "region": "歐洲",
+   "date": "2026-10-17",
+   "title": "黑球 La Bola Negra",
+   "byline": "Raül Refree",
+   "summary": "Lakeshore｜Los Javis 執導、橫跨西班牙近百年的坎城片，7 軌 EP，含 Penélope Cruz 演唱曲。",
+   "composers": [
+    "raul-refree"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/10/17/la-bola-negra-soundtrack-album-released/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02edae344cafe9e8dd51cea774",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/2OppR8olxf8pvYR8YFJkul",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/2OppR8olxf8pvYR8YFJkul"
+  },
+  {
+   "id": "2026-11-013",
+   "issue": "2026-11-collector",
+   "type": "發行",
+   "region": "北美",
+   "date": "2026-10-16",
+   "title": "袒裎相見 You Can See Everything",
+   "byline": "Ari Balouzian",
+   "summary": "A24 Music｜A24 紀錄片，10/16 數位發行。",
+   "composers": [
+    "ari-balouzian"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/10/15/you-can-see-everything-soundtrack-album-details/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cf2f69ce37ed4fc3fe1d56b2",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/5ganODBC3oQquPyGiNv9bt",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/5ganODBC3oQquPyGiNv9bt"
+  },
+  {
+   "id": "2026-11-014",
+   "issue": "2026-11-collector",
+   "type": "發行",
+   "region": "全球",
+   "date": "2026-10-08",
+   "title": "雪山之虎：丹增諾蓋 Tenzing",
+   "byline": "Rebekka Karijord",
+   "summary": "Milan Records｜雪巴登山家丹增・諾蓋登上聖母峰的故事，24 軌，倫敦當代管弦樂團演奏。",
+   "composers": [
+    "rebekka-karijord"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/10/08/tenzing-soundtrack-album-details/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://i.scdn.co/image/ab67616d00001e02dc1e93733bdd104372ad5511",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/1K3hgxkA6Yy9uIqejUAFwx",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/1K3hgxkA6Yy9uIqejUAFwx",
+   "related": [
+    "2026-11-025"
+   ]
+  },
+  {
+   "id": "2026-11-015",
+   "issue": "2026-11-collector",
+   "type": "發行",
+   "region": "歐洲",
+   "date": "2026-10-26",
+   "title": "L'Affaire Marie-Claire（Women on Trial）",
+   "byline": "Philippe Rombi",
+   "summary": "Music Box Records｜重現 1972 年法國博比尼墮胎審判的劇情片，CD 與數位版。",
+   "composers": [
+    "philippe-rombi"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/10/26/women-on-trial-soundtrack-album-announced/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0262894104770fea871e5f42d7",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/7l8NMm1WIqzIYWs5DWPcmQ",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/7l8NMm1WIqzIYWs5DWPcmQ"
+  },
+  {
+   "id": "2026-11-016",
+   "issue": "2026-11-collector",
+   "type": "發行",
+   "region": "歐洲",
+   "date": "2026-10-30",
+   "title": "失控撞劫 Colisión（Collision Course）",
+   "byline": "Federico Jusid、Lorenzo Perelmuter",
+   "summary": "Netflix Music｜西班牙 Netflix 驚悚片，10/30 數位發行。",
+   "composers": [
+    "federico-jusid",
+    "lorenzo-perelmuter"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/10/30/collision-course-soundtrack-album-released/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026824e4a54d9959135fcac5b7",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/3JGkN5bXQBC0mL16iHkvvF",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "spotify": "https://open.spotify.com/album/3JGkN5bXQBC0mL16iHkvvF"
+  },
+  {
+   "id": "2026-11-017",
+   "issue": "2026-11-collector",
+   "type": "發行",
+   "region": "北美",
+   "date": "2026-10-19",
+   "title": "美國鼠譚2 An American Tail: Fievel Goes West（擴充版）",
+   "byline": "James Horner",
+   "summary": "Intrada 2CD｜1991 年動畫重新母帶擴充版，收錄未發行配樂與全部歌曲。",
+   "composers": [
+    "james-horner"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/10/19/expanded-an-american-tail-fievel-goes-west-soundtrack-album-announced/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/fievel-goes-west.jpg",
+     "caption": "專輯封面",
+     "credit": "Intrada"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-018",
+   "issue": "2026-11-collector",
+   "type": "發行",
+   "region": "北美",
+   "date": "2026-11-05",
+   "title": "航站情緣 The Terminal（擴充重製版）",
+   "byline": "John Williams",
+   "summary": "La-La Land Records 限量 3,000 張｜新增約 14 分鐘未發行音樂，總長 78 分鐘，11 月中旬出貨。",
+   "composers": [
+    "john-williams"
+   ],
+   "sources": [
+    {
+     "name": "La-La Land Records",
+     "url": "https://lalalandrecords.com/terminal-the-expanded-and-remastered-limited-edition/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/terminal.jpg",
+     "caption": "專輯封面",
+     "credit": "La-La Land Records"
+    }
+   ],
+   "web": true,
+   "internal_note": "date 待確認（11 月中旬出貨），暫用發刊日"
+  },
+  {
+   "id": "2026-11-019",
+   "issue": "2026-11-collector",
+   "type": "發行",
+   "region": "歐洲",
+   "date": "2026-10-28",
+   "title": "1900（Novecento）50 週年重製版",
+   "byline": "Ennio Morricone",
+   "summary": "Quartet Records｜貝托魯奇史詩鉅作 50 週年，重新母帶處理 CD，附新撰解說。",
+   "composers": [
+    "ennio-morricone"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/10/28/novecento-1900-50th-anniversary-remastered-edition-soundtrack-album-announced/"
+    },
+    {
+     "name": "Quartet Records",
+     "url": "https://quartetrecords.com/product/novecento/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/novecento.jpg",
+     "caption": "專輯封面",
+     "credit": "Quartet Records"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-020",
+   "issue": "2026-11-collector",
+   "type": "發行",
+   "region": "歐洲",
+   "date": "2026-10-30",
+   "title": "Doctor Who: The 60th Anniversary Specials",
+   "byline": "Murray Gold",
+   "summary": "Silva Screen｜BBC《超時空奇俠》60 週年特別篇配樂首度發行：11/23 數位、11/27 3CD。",
+   "composers": [
+    "murray-gold"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/10/30/doctor-who-the-60th-anniversary-specials-soundtrack-album-announced/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/doctor-who-60th.jpg",
+     "caption": "專輯封面",
+     "credit": "Silva Screen Records"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-021",
+   "issue": "2026-11-collector",
+   "type": "試聽",
+   "region": "北美",
+   "date": "2026-10-20",
+   "title": "Desert Chant",
+   "byline": "Hans Zimmer、Timothée Chalamet",
+   "summary": "《沙丘：第三部》原聲帶首支曲目，從 Timothée Chalamet 的哼唱一路堆疊成史詩般的戰歌。",
+   "composers": [
+    "hans-zimmer"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/10/20/timothee-chalamets-hans-zimmers-desert-chant-from-dune-part-3-soundtrack-released/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "youtube",
+     "id": "E-HiL25I2gA",
+     "caption": "《沙丘：第三部》原聲帶首支曲目（Timothée Chalamet - Topic）"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-022",
+   "issue": "2026-11-collector",
+   "type": "試聽",
+   "region": "北美",
+   "date": "2026-10-22",
+   "title": "Haymitch Meets Snow",
+   "byline": "James Newton Howard",
+   "summary": "《The Hunger Games: Sunrise on the Reaping》配樂專輯首支曲目，專輯 11/20 由 MCA 發行。",
+   "composers": [
+    "james-newton-howard"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/10/22/the-hunger-games-sunrise-on-the-reaping-score-album-details/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "youtube",
+     "id": "uJIET9dyry4",
+     "caption": "James Newton Howard - Topic"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-023",
+   "issue": "2026-11-collector",
+   "type": "試聽",
+   "region": "北美",
+   "date": "2026-10-17",
+   "title": "Desert Chase",
+   "byline": "Alex Belcher",
+   "summary": "Apple 原創電影《Matchbox The Movie》配樂選曲，Lakeshore Records 官方頻道釋出。",
+   "composers": [
+    "alex-belcher"
+   ],
+   "sources": [
+    {
+     "name": "Lakeshore Records（YouTube）",
+     "url": "https://www.youtube.com/watch?v=8LsKcElN-2c"
+    }
+   ],
+   "media": [
+    {
+     "kind": "youtube",
+     "id": "8LsKcElN-2c",
+     "caption": "Lakeshore Records 官方頻道"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-024",
+   "issue": "2026-11-collector",
+   "type": "訪談",
+   "region": "北美",
+   "date": "2026-10-20",
+   "title": "Joseph Trapanese 談《逃出鯨吞》（Whalefall）",
+   "summary": "On the Score 專訪：Trapanese 說這是他「目前最私人的配樂」，談父子與鯨魚三個主題，以及讓小提琴面向錄音室後牆演奏的深海聲響。",
+   "teaser": "Trapanese 談最私人的配樂：父子與鯨魚三個主題，小提琴面向後牆演奏出深海距離。",
+   "body": "On the Score 專訪。Trapanese 說這是他「目前最私人的配樂」，整段工作期間都在想自己的父親、想自己當父親。一開始想讓音樂「待在鯨魚肚子裡」陪主角，直到讓音樂把主角帶出鯨腹、去經歷他的悲傷，電影才說得通。全片三個主題：父親 Mitt、兒子 Jay，以及第三幕才出現、象徵兩人和解的「鯨魚／自然」主題，片尾組曲把三者當成主歌、副歌與橋段。〈Monterey Canyon〉裡他讓小提琴面向錄音室後牆演奏微分音，營造深海的距離感，並加入 Jonny Rogers 的玻璃樂器取樣。原聲帶 10/16 由 Hollywood Records 數位發行，Mutant 另出 CD",
+   "composers": [
+    "joseph-trapanese"
+   ],
+   "sources": [
+    {
+     "name": "On the Score",
+     "url": "https://onthescore.com/joseph-trapanese-finds-himself-in-the-belly-of-a-whalefall/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "youtube",
+     "id": "b8arnrdXWzg",
+     "caption": "Joseph Trapanese - Topic"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-025",
+   "issue": "2026-11-collector",
+   "type": "訪談",
+   "region": "全球",
+   "date": "2026-11-05",
+   "title": "Rebekka Karijord 談《雪山之虎：丹增諾蓋》（Tenzing）",
+   "summary": "On the Score 專訪：Karijord 用犛牛鈴、轉經輪、溪水聲做成音色庫，把藏戲歌手的呼喚處理成山峰本身的聲音。",
+   "teaser": "Karijord 把犛牛鈴、溪水聲與藏戲歌聲，變成聖母峰對丹增的呼喚。",
+   "body": "On the Score 專訪。挪威作曲家 Karijord 說，導演 Jennifer Peedom 要的是一個「敢在情感上走到底」的人，並把山本身當成音樂角色；她們刻意避開陽剛的登山動作片配樂。她先和現場錄音師收集犛牛鈴、轉經輪、經幡與溪水聲，搭配老藏族打擊樂做成音色庫，再請飾演丹增妻子 Dawa 的藏戲歌手 Thinley Lhamo 錄下劇本裡那句「她在叫你回家」的旋律，經效果處理後成為貫穿全片、彷彿山峰本身的呼喚。丹增的主題用撥奏與切分音，旋律刻意「偏離拍點」，象徵他不被框住的個性。攻頂段落中，〈Being Received〉的旋律從低音提琴一路傳到合唱卻始終不落在和弦上，直到登頂後一片靜默、〈Top of the World〉才終於解決。她也提到好萊塢大片中女性作曲家只占約 4–7%，感謝導演給她「第一次機會」",
+   "composers": [
+    "rebekka-karijord"
+   ],
+   "sources": [
+    {
+     "name": "On the Score",
+     "url": "https://onthescore.com/rebekka-krijord-summits-tenzing/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://i.scdn.co/image/ab67616d00001e02dc1e93733bdd104372ad5511",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/1K3hgxkA6Yy9uIqejUAFwx",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "internal_note": "date 待確認（原文未讀到發表日），暫用發刊日",
+   "related": [
+    "2026-11-014"
+   ]
+  },
+  {
+   "id": "2026-11-026",
+   "issue": "2026-11-collector",
+   "type": "訪談",
+   "region": "全球",
+   "date": "2026-10-05",
+   "title": "導演伊納利圖談《挖掘者》（Digger）的配樂",
+   "summary": "《Soundtracking with Edith Bowman》專訪：伊納利圖聽到 Cosmo Sheldrake 用瀕危鳥鳴做成的小品，當下就知道「這就是這部電影的聲音」。",
+   "teaser": "伊納利圖談為何選中 Cosmo Sheldrake 的瀕危鳥鳴，當作《挖掘者》的聲音。",
+   "body": "（10/5 補記）《Soundtracking with Edith Bowman》專訪導演伊納利圖（Alejandro G. Iñárritu）。他說寫劇本時通常會先找到一兩首能引導自己的音樂，這次卻怎麼也找不到，直到聽見 Cosmo Sheldrake 用英國瀕危鳥類的鳴唱取樣做成的小品：沒有任何樂器，只有鳥鳴，「好笑、可愛、天真，卻又憂鬱」，他當下就知道「這就是這部電影的聲音」。Sheldrake 從沒寫過電影配樂，兩人從他手邊的小樣開始，慢慢摸出這份音樂的邊界。伊納利圖形容這份木質、手工感的音樂要像「對的胡椒」，只少量點綴；音效則以賈克・大地的電影為參照，讓水滴、敲擊聲和音樂「像表親一樣共舞」，光音效就做了一年。10 月號重磅點評評過這張原聲。",
+   "composers": [
+    "cosmo-sheldrake"
+   ],
+   "sources": [
+    {
+     "name": "Soundtracking with Edith Bowman",
+     "url": "https://audioboom.com/posts/8960432-alejandro-gonzalez-inarritu-on-the-music-of-digger"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://mesple.github.io/cuesheet/images/2026-10/digger.jpg",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/3IuB2UZ4le2dBMroYF5L3U"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-027",
+   "issue": "2026-11-collector",
+   "type": "訪談",
+   "region": "歐洲",
+   "date": "2026-10-30",
+   "title": "Anna Meredith 與兩位導演談《就是柳柳的他》（Wicker）",
+   "summary": "《Soundtracking with Edith Bowman》：導演與 Anna Meredith 談片中婚禮舞曲的「小故障」，以及用弦樂代表村民、直笛代表柳條丈夫。",
+   "teaser": "Meredith 用弦樂寫村民、低音直笛寫柳條丈夫，第一段試樣就讓導演落淚。",
+   "body": "《Soundtracking with Edith Bowman》10/30 播出，導演 Alex Huston Fischer、Eleanor Wilson 與作曲家 Anna Meredith 三人同台。導演說找暫用音樂時，除了 Meredith 自己的作品，什麼都對不上，所以要的是一份能當「角色」的大膽配樂。她接下的第一件事是片中的婚禮舞曲：一週內寫好讓編舞照著排，刻意在樂句裡放進愈滾愈大的「小故障」，村民的舞步也跟著古怪起來。整部片只用原聲樂器：弦樂代表村民，直笛代表柳條丈夫與漁婦。直笛是許多人小學學的第一種樂器，她找來低音、倍低音直笛，讓它不再尖細；她自己吹奏的第一段河岸試樣，讓兩位導演當場落淚。隨著劇情推進，村民的弦樂逐漸滲進直笛的世界。",
+   "composers": [
+    "anna-meredith"
+   ],
+   "sources": [
+    {
+     "name": "Soundtracking with Edith Bowman",
+     "url": "https://audioboom.com/posts/8971176-alex-huston-fischer-eleanor-wilson-anna-meredith-on-the-score-for-wicker"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://i.scdn.co/image/ab67616d00001e022407cf516109eb7300b310f6",
+     "caption": "專輯封面",
+     "link": "https://open.spotify.com/album/66Lhi3wLs9wDMvgw22cTSj",
+     "hosting": "spotify"
+    }
+   ],
+   "web": true,
+   "related": [
+    "2026-11-010"
+   ]
+  },
+  {
+   "id": "2026-11-028",
+   "issue": "2026-11-collector",
+   "type": "訪談",
+   "region": "北美",
+   "date": "2026-11-05",
+   "title": "Laura Karpman 談《伊甸園東》（East of Eden）",
+   "summary": "兩場訪談：Karpman 談如何以同理心看待《伊甸園東》的 Cathy，也談身兼導演執導短片《Cosmic Symphony》的拉鋸。",
+   "teaser": "Karpman 談用配樂引導觀眾同理 Cathy，以及當自己導演時的拉鋸。",
+   "body": "兩場訪談。On the Score 的「Film Music Live」視訊節目談 Netflix 影集《伊甸園東》與愛情喜劇《The Love Hypothesis》；The Film Scorer 的第二次專訪則從她自己執導的短片《Cosmic Symphony》聊起——身兼導演時，作曲的她「被釋放、自由」，卻也得和「導演 Laura」的顧慮拉鋸。談《伊甸園東》時，重點是她如何以同理心看待 Cathy，不把她當成單純的「怪物」，刻意用配樂引導觀眾的視角，也談到這種做法常被貶為「操控」",
+   "composers": [
+    "laura-karpman"
+   ],
+   "sources": [
+    {
+     "name": "On the Score",
+     "url": "https://onthescore.com/laura-karpman-finds-new-range-with-east-of-eden-while-solving-the-romcom-equation-of-the-love-hypothesis-on-a-new-film-music-live-videocast/"
+    },
+    {
+     "name": "The Film Scorer",
+     "url": "https://thefilmscorer.com/an-interview-with-laura-karpman-part-2/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "youtube",
+     "id": "usKdDyLJDYc",
+     "caption": "Film Music Institute"
+    }
+   ],
+   "web": true,
+   "internal_note": "date 待確認（原文未讀到發表日），暫用發刊日"
+  },
+  {
+   "id": "2026-11-029",
+   "issue": "2026-11-collector",
+   "type": "訪談",
+   "region": "歐洲",
+   "date": "2026-11-05",
+   "title": "Arnaud Toulon 談《再見未來男孩》（Arco）",
+   "summary": "UnderScores 長篇專訪：首部長片就拿下凱薩獎的 Toulon，談人聲合唱、改到第 35 版的主題，以及 24 把弦樂疊成 48 把的錄音。",
+   "teaser": "首部長片就拿凱薩獎的 Toulon，談人聲合唱與改了 35 版的主題。",
+   "body": "UnderScores 長篇專訪（Pierre-Edouard Clamour 訪問）。Toulon 本科學的是聲音後製，作曲原是興趣，首部長片《再見未來男孩》就拿下凱薩獎最佳電影音樂。導演要音樂「承擔電影的形上學」，第一通電話就決定用人聲合唱，因為人聲是「最不受時間限制的樂器」；Arco 的主題改到第 35 版才定案，Iris 的主題原本只是補空檔的過門，卻被導演和製片一致認為最重要。錄音只有 24 把弦樂，旋律與伴奏分開錄再疊成 48 把的效果；合唱最後選了一個唱法「難以在地圖上定位」的烏克蘭東正教合唱團。他刻意少聽電影配樂，改從古典曲目取法。他也提到剛完成的《Adieu monde cruel》，參照的是 Delerue 與 Herrmann——就是本期重磅點評裡 Celluloid Tunes 盛讚的那張",
+   "composers": [
+    "arnaud-toulon"
+   ],
+   "sources": [
+    {
+     "name": "UnderScores",
+     "url": "https://www.underscores.fr/rencontres/interviews/2026/10/entretien-avec-arnaud-toulon/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "youtube",
+     "id": "RJw-TRfR19g",
+     "caption": "Arnaud Toulon - Topic，〈First Flight〉"
+    }
+   ],
+   "web": true,
+   "internal_note": "date 待確認（原文未讀到發表日），暫用發刊日",
+   "related": [
+    "2026-11-008"
+   ]
+  }
+ ]
+}
