@@ -117,6 +117,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .filters{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
 .filters button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--soft);padding:3px 10px;cursor:pointer}
 .filters button[aria-pressed="true"]{border-color:var(--teal);background:var(--teal);color:var(--paper)}
+.filters a.fl{font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--soft);padding:3px 10px;text-decoration:none}
+.filters a.fl.on{border-color:var(--teal);background:var(--teal);color:var(--paper)}
 .types{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .type-card{background:var(--paper);border:1px solid var(--line);padding:16px}
 .type-card h3{margin:0;font-size:18px}
@@ -362,7 +364,7 @@ def item_page(it, by_id, composers, labels, features):
 </article>
 {rel_html}"""
     desc = summary if len(summary) <= 120 else summary[:118] + "…"
-    html = page(f"{title}｜Cue Sheet", desc, f"{SITE}item/{it['id']}/", slug, ("", article),
+    html = page(f"{title}｜Cue Sheet", desc, f"{SITE}item/{it['id']}/", "news" if slug == "obituaries" else slug, ("", article),
                 depth=2, kicker=f"Cue Sheet · {dict((t, e) for t, _, e, _ in TYPES)[it['type']]}")
     img = first_image(it)
     if img:
@@ -572,7 +574,12 @@ def main():
             if t == "新聞":
                 tags = [x for x in ("獎項", "音樂活動", "新案", "新片", "其他") if any(x in it.get("tags", []) for it in rows)]
                 filters = '<div class="filters"><button type="button" data-tag="" aria-pressed="true">全部</button>' + "".join(
-                    f'<button type="button" data-tag="{x}" aria-pressed="false">{x}</button>' for x in tags) + "</div>"
+                    f'<button type="button" data-tag="{x}" aria-pressed="false">{x}</button>' for x in tags) + '<a class="fl" href="../obituaries/">訃聞</a></div>'
+            if t == "訃聞":
+                # 訃聞放在「新聞」底下當篩選（編輯 2026-11-05 指定）：選單亮「新聞」，篩選列與新聞頁相同、「訃聞」為選取狀態
+                ntags = [x for x in ("獎項", "音樂活動", "新案", "新片", "其他") if any(x in it.get("tags", []) for it in shown if it["type"] == "新聞")]
+                filters = ('<div class="filters"><a class="fl" href="../news/">全部</a>' + "".join(f'<a class="fl" href="../news/?tag={x}">{x}</a>' for x in ntags)
+                           + '<a class="fl on" href="./" aria-current="page">訃聞</a></div>')
             if t == "發行":
                 # 唱片架置頂：issues/*.json 的 releases_first 依序排最前（編輯 2026-10-31 指定）
                 rows = releases_order(rows)
@@ -621,10 +628,10 @@ def main():
             else:
                 body = (f'<div class="toppad"></div>{filters}<div class="items">'
                         + "\n".join(row_html(it, composers, labels, 2) for it in rows) + "</div>"
-                        + (FILTER_JS if filters else ""))
+                        + (FILTER_JS if filters and t != "訃聞" else ""))
                 ptitle, pdesc, wide = t, desc, False
             os.makedirs(f"category/{slug}", exist_ok=True)
-            html = page(f"{ptitle}｜Cue Sheet", f"Cue Sheet 的{ptitle}：{pdesc}。", f"{SITE}category/{slug}/", slug,
+            html = page(f"{ptitle}｜Cue Sheet", f"Cue Sheet 的{ptitle}：{pdesc}。", f"{SITE}category/{slug}/", "news" if slug == "obituaries" else slug,
                         ("", body), depth=2, wide=wide)
             open(f"category/{slug}/index.html", "w", encoding="utf-8").write(html.replace("</style>", EXTRA_CSS + "</style>", 1))
         latest = "".join(f'<li><a href="../item/{it["id"]}/">{escape(it["title"])}</a></li>' for it in rows[:3])

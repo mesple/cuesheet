@@ -155,6 +155,8 @@ a.chip:hover{border-color:var(--teal);color:var(--teal)}
 .filters{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
 .filters button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--soft);padding:3px 10px;cursor:pointer}
 .filters button[aria-pressed="true"]{border-color:var(--teal);background:var(--teal);color:var(--paper)}
+.filters a.fl{font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--soft);padding:3px 10px;text-decoration:none}
+.filters a.fl.on{border-color:var(--teal);background:var(--teal);color:var(--paper)}
 .types{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .type-card{background:var(--paper);border:1px solid var(--line);padding:16px}
 .type-card h3{margin:0;font-size:18px}
@@ -215,7 +217,7 @@ var n=0,t=setInterval(function(){if(!document.getElementById('cue-sub')||++n>20)
 </div></header>
 <main><div class="wrap">
 <div class="narrow">
-<div class="toppad"></div><div class="filters"><button type="button" data-tag="" aria-pressed="true">全部</button><button type="button" data-tag="獎項" aria-pressed="false">獎項</button><button type="button" data-tag="音樂活動" aria-pressed="false">音樂活動</button><button type="button" data-tag="新案" aria-pressed="false">新案</button><button type="button" data-tag="新片" aria-pressed="false">新片</button><button type="button" data-tag="其他" aria-pressed="false">其他</button></div><div class="items"><div class="it noimg" data-tags="音樂活動"><div>
+<div class="toppad"></div><div class="filters"><button type="button" data-tag="" aria-pressed="true">全部</button><button type="button" data-tag="獎項" aria-pressed="false">獎項</button><button type="button" data-tag="音樂活動" aria-pressed="false">音樂活動</button><button type="button" data-tag="新案" aria-pressed="false">新案</button><button type="button" data-tag="新片" aria-pressed="false">新片</button><button type="button" data-tag="其他" aria-pressed="false">其他</button><a class="fl" href="../obituaries/">訃聞</a></div><div class="items"><div class="it noimg" data-tags="音樂活動"><div>
 <div class="meta"><span class="pill">音樂活動</span>2026 年 10 月 27 日</div>
 <h3>Max Richter 首度在烏茲別克演出</h3>
 <p class="sum">追蹤作曲家 <a class="cl" href="../../composer/max-richter/">Max Richter</a> 將於 10/27 在塔什干國際論壇宮演出《In A Landscape》，是他首次在烏茲別克登台（原訂 4/21，延期後舊票有效）。同月 10/22–23 蘇格蘭室內樂團另在愛丁堡、格拉斯哥演出他的《Recomposed: Vivaldi》。（<a href="https://acdf.uz/news/on-27-october-2026-the-palace-of-international-forums-uzbekistan-will-host-a-concert-by-max-richter" target="_blank" rel="noopener">ACDF 烏茲別克藝文發展基金會</a>、<a href="https://bachtrack.com/22/291/view/441591" target="_blank" rel="noopener">Bachtrack（蘇格蘭場）</a>）</p></div></div>

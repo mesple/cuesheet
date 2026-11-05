@@ -809,14 +809,15 @@
    "media": [
     {
      "kind": "image",
-     "url": "https://mesple.github.io/cuesheet/images/2026-11/cosmo-sheldrake.jpg",
-     "caption": "Cosmo Sheldrake",
-     "credit": "FLOOD Magazine",
-     "credit_url": "https://floodmagazine.com/62661/premiere-cosmo-sheldrake-reveals-animated-eggs-and-soldiersvideo/"
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/alejandro-inarritu.jpg",
+     "caption": "伊納利圖（Alejandro G. Iñárritu）",
+     "credit": "Martin Kraft，CC BY-SA 4.0，Wikimedia Commons",
+     "credit_url": "https://commons.wikimedia.org/w/index.php?curid=171381544"
     }
    ],
    "web": true,
-   "spotify": "https://open.spotify.com/album/3IuB2UZ4le2dBMroYF5L3U"
+   "spotify": "https://open.spotify.com/album/3IuB2UZ4le2dBMroYF5L3U",
+   "internal_note": "受訪者是導演，配圖用導演照片（編輯 2026-11-05 指定）；作品 Spotify 為 Digger 原聲帶"
   },
   {
    "id": "2026-11-027",
