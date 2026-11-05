@@ -1734,13 +1734,15 @@
    "media": [
     {
      "kind": "image",
-     "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e027b13d6ab12c9071e753e1dd9",
-     "link": "https://open.spotify.com/album/4shJ0WvC6r1OAaUaklvGlR",
-     "hosting": "spotify",
-     "caption": "專輯封面"
+     "url": "https://mesple.github.io/cuesheet/images/2026-10/daniel-rojas.jpg",
+     "caption": "Daniel Rojas",
+     "credit": "John Nacion/Variety via Getty Images / Netflix（What's on Netflix）",
+     "credit_url": "https://www.whats-on-netflix.com/interviews/best-of-the-best-netflix-maitreyi-ramakrishnan-composer/"
     }
    ],
-   "teaser": "Daniel Rojas 談 Netflix《Best of the Best》：不用大編制管弦樂團，改用合成器與吉他寫友情。"
+   "teaser": "Daniel Rojas 談 Netflix《Best of the Best》：不用大編制管弦樂團，改用合成器與吉他寫友情。",
+   "spotify": "https://open.spotify.com/album/4shJ0WvC6r1OAaUaklvGlR",
+   "internal_note": "文字專訪，改放作曲家照片（編輯 2026-11-05 提供，取自來源網頁）；來源加 Spotify"
   },
   {
    "id": "2026-10-057",
