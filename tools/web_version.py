@@ -42,7 +42,8 @@ def strip_email_only(html):
     # 1. 前標右側的網頁版連結（整個右側 td）
     html = re.sub(r'<td[^>]*>\s*<a [^>]*>沒看到完整內容？請到網頁版</a>\s*</td>', "", html)
     # 2. 頁尾退訂
-    html = re.sub(r'\s*<br>\s*不想再收到 Cue Sheet？<a [^>]*>取消訂閱</a>', "", html)
+    html = re.sub(r'\s*<br>\s*不想再收到 Cue Sheet？<a [^>]*>取消訂閱</a>', "", html)   # 11/8 以前的舊版頁尾
+    html = re.sub(r'<div data-cs-unsub[^>]*>.*?</div>', "", html, flags=re.S)
     return html
 
 

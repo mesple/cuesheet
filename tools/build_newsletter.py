@@ -361,12 +361,37 @@ def events(issue):
     return bs.section_html(rows, d, 30, SITE + "event/", slim=True)
 
 
+SUBSCRIBE_URL = "https://preview.mailerlite.io/forms/2740876/202321965174752394/share"
+SUB_ASK = "還不是訂戶嗎？"   # 電子報版、網站版共用
+
+
+def subscribe_box():
+    """訂閱框（編輯 2026-11-08 指定）：頁尾之前，置中；兩版都放。
+    每行控制在 16 字內，手機 390px 寬也不會斷行（不靠 media query，Outlook 等不支援的信箱也一樣）。"""
+    return (f'<tr><td class="pad" style="padding:30px 28px 6px 28px;">'
+            f'<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:{C["feature_bg"]};border:1px solid {C["frame"]};">'
+            f'<tr><td class="fbox" align="center" style="padding:26px 20px 24px 20px;text-align:center;">'
+            f'<div style="font-size:12px;letter-spacing:.16em;color:{C["muted"]};">SUBSCRIBE</div>'
+            f'<div data-cs-ask style="margin:6px 0 14px;font-size:20px;font-weight:700;line-height:1.5;color:{C["ink"]};">{SUB_ASK}</div>'
+            + "".join(f'<div style="margin:0 0 10px;line-height:1.6;"><div style="font-size:15px;font-weight:700;color:{C["ink"]};">{a}</div>'
+                      f'<div style="font-size:14px;color:{C["body"]};">{b}</div></div>'
+                      for a, b in (("深度聆聽版｜每月 5 日", "樂評、新唱片、試聽與作曲家專訪"),
+                                   ("配樂新訊版｜每月 20 日", "新案、獎項、論壇話題與全台活動")))
+            + f'<div style="margin-top:4px;font-size:14px;line-height:1.6;color:{C["body"]};">兩份可以分開訂，完全免費。</div>'
+            f'<table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:18px auto 0;"><tr>'
+            f'<td style="background:{C["link"]};"><a href="{SUBSCRIBE_URL}" style="display:inline-block;padding:12px 30px;'
+            f'font-family:{FONT};font-size:16px;font-weight:700;letter-spacing:.08em;color:#FFFFFF;text-decoration:none;">免費訂閱 Cue Sheet</a></td>'
+            f'</tr></table></td></tr></table></td></tr>')
+
+
 def footer(issue, email):
-    unsub = '<br>不想再收到 Cue Sheet？<a href="{$unsubscribe}" style="color:#7A7974;">取消訂閱</a>' if email else ""
-    return (f'<tr><td class="pad" style="padding:24px 28px 22px 28px;"><div style="border-top:3px double {C["ink"]};padding-top:10px;font-size:11px;line-height:1.7;color:{C["muted"]};">'
+    unsub = (f'<div data-cs-unsub style="margin-top:14px;text-align:center;font-size:13px;line-height:1.6;color:{C["muted"]};">'
+             f'不想再收到 Cue Sheet？<a href="{{$unsubscribe}}" style="color:{C["muted"]};text-decoration:underline;">取消訂閱</a></div>') if email else ""
+    return (subscribe_box() +
+            f'<tr><td class="pad" style="padding:24px 28px 22px 28px;"><div style="border-top:3px double {C["ink"]};padding-top:10px;font-size:11px;line-height:1.7;color:{C["muted"]};">'
             f'<b>本期使用來源</b>：{esc(issue.get("sources_footer", ""))}<br>'
             f'<b>資料蒐集截止</b>：{esc(issue.get("cutoff", ""))}<br>'
-            f'Cue Sheet 為非營利樂迷刊物，文字為編輯摘要與評論，圖片版權屬原權利人，連結皆指向原始來源。{unsub}</div></td></tr>')
+            f'Cue Sheet 為非營利樂迷刊物，文字為編輯摘要與評論，圖片版權屬原權利人，連結皆指向原始來源。</div>{unsub}</td></tr>')
 
 
 # ---------------------------------------------------------------- 組版
