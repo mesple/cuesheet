@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T07:43:06+08:00",
+ "updated": "2026-11-16T10:43:19+08:00",
  "source": "文化部藝文活動開放資料（政府資料開放授權條款）",
  "events": [
   {
@@ -111,40 +111,6 @@
    "matched_keywords": [
     "電影",
     "樂團"
-   ]
-  },
-  {
-   "uid": "6abfe67d26b324165c32e580",
-   "title": "《海的那一端，風正吹來》｜精選宮崎駿動畫經典配樂",
-   "category": "音樂",
-   "start_date": "2026/11/15",
-   "end_date": "2026/11/15",
-   "organizer": [],
-   "performer": "",
-   "description": "",
-   "image": null,
-   "web": "https://www.opentix.life/program/2101909771166461952",
-   "tickets": "https://www.opentix.life/program/2101909771166461952",
-   "source_site": "OPENTIX兩廳院文化生活",
-   "cities": [
-    "臺中市"
-   ],
-   "shows": [
-    {
-     "time": "2026/11/15 14:30:00",
-     "end_time": "2026/11/15 16:30:00",
-     "venue": "臺中市中山堂",
-     "address": "臺中市北區學士路98號",
-     "city": "臺中市",
-     "lat": "24.155298",
-     "lng": "120.682756",
-     "on_sale": "Y",
-     "price": ""
-    }
-   ],
-   "matched_keywords": [
-    "配樂",
-    "宮崎駿"
    ]
   },
   {
