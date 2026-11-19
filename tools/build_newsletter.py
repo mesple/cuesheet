@@ -34,7 +34,8 @@ C = dict(
     teal_bg="#01696F", teal_title="#FFFFFF", teal_text="#E6F2F1", weblink="#8A877E",
 )
 W = dict(page=760, banner=678, review_cover=160, shelf_cover=160, shelf_card=172, bite_thumb=222,
-         interview_media=270, interview_cover=200, eurasia_img=190, portrait=108)
+         interview_media=270, interview_cover=200, eurasia_img=190, portrait=108,
+         community_img=200)  # 社群雷達附圖 200px，與右側文字約等高（編輯 2026-11-19 指定）
 L = f"color:{C['link']};"
 EDITION = {"collector": "深度聆聽版", "news": "配樂新訊版", "special": "特刊"}
 MONTHS = "JANUARY FEBRUARY MARCH APRIL MAY JUNE JULY AUGUST SEPTEMBER OCTOBER NOVEMBER DECEMBER".split()
@@ -103,6 +104,22 @@ def first_media(item, kind=None):
     return None
 
 
+def credit_line(m, cap=""):
+    """圖說：「圖說。圖片來源：○○」；沒有圖說只寫來源。credit_prefix 可改「圖片」「插圖」等（例：Gemini 生成、Cue Sheet 自繪）。
+    Wikimedia Commons 圖：credit（攝影者）· license（連 credit_url）· Wikimedia Commons。"""
+    cr = esc(img_credit(m))
+    if m.get("license"):
+        lic = a(m["credit_url"], esc(m["license"])) if m.get("credit_url") else esc(m["license"])
+        cr = f'{cr} · {lic} · Wikimedia Commons'
+    elif m.get("credit_url") and cr:
+        cr = a(m["credit_url"], cr)
+    prefix = m.get("credit_prefix", "圖片來源")
+    src = f'{prefix}：{cr}' if cr else ""
+    if m.get("license"):
+        src = cr
+    return "。".join(x for x in (esc(cap), src) if x)
+
+
 def img_credit(m):
     if m.get("hosting") == "spotify":
         return "Spotify"
@@ -164,11 +181,7 @@ def feature(items, tpl=False):
             parts.append(f'<div style="font-size:11px;line-height:1.5;color:{C["muted"]};margin:0 0 16px;">圖說。圖片來源：○○</div>')
         elif m:
             parts.append(f'<img src="{esc(m["url"])}" alt="{esc(m.get("caption") or it["title"])}" width="{W["banner"]}" style="display:block;width:100%;max-width:{W["banner"]}px;height:auto;border:0;margin:0 0 6px;background:#3A372F;">')
-            cap = esc(m.get("caption", ""))
-            cr = esc(img_credit(m))
-            if m.get("credit_url"):
-                cr = a(m["credit_url"], cr)
-            parts.append(f'<div style="font-size:11px;line-height:1.5;color:{C["muted"]};margin:0 0 16px;">{cap}{"。圖片來源：" + cr if cr else ""}</div>')
+            parts.append(f'<div style="font-size:11px;line-height:1.5;color:{C["muted"]};margin:0 0 16px;">{credit_line(m, m.get("caption", ""))}</div>')
         parts.append(f'<div class="big" style="font-family:{SERIF};font-size:34px;font-weight:700;line-height:1.2;">{esc(it["title"])}</div>')
         if it.get("deck"):
             parts.append(f'<div style="font-size:16px;line-height:1.6;color:{C["muted"]};margin-top:6px;">{esc(it["deck"])}</div>')
@@ -273,6 +286,7 @@ def interviews(items, tpl=False):
 
 
 def news_flash(items):
+    """快訊不放圖（編輯 2026-11-19 指定：放圖版面不整齊）；item 有 media 也不顯示。"""
     if not items:
         return ""
     half = (len(items) + 1) // 2
@@ -284,9 +298,36 @@ def news_flash(items):
                f'<td class="stk" width="50%" valign="top" style="padding:0 0 0 10px;border-left:1px solid {C["frame"]};">{ol(items[half:], half + 1)}</td></tr></table>')
 
 
-def community(items):
-    ps = "".join(f'<p style="margin:0 0 12px;font-size:15px;line-height:1.75;"><strong>{esc(it["title"])}</strong>{inline(it["summary"])}（{src_list(it)}）</p>' for it in items)
-    return row(ps)
+def community(items, tpl=False):
+    """社群雷達：段落；summary 可用空行分段，來源接在最後一段。
+    有圖（media image）的則改左圖右文：左欄 214px、圖寬 200px，與右側文字約等高；手機上下排（編輯 2026-11-19 指定）。"""
+    P = 'margin:0 0 12px;font-size:15px;line-height:1.75;'
+    out = []
+    for it in items:
+        paras = [x.strip() for x in re.split(r"\n\s*\n", it["summary"].strip()) if x.strip()]
+        texts = [inline(x) for x in paras]
+        texts[0] = f'<strong>{esc(it["title"])}</strong>' + texts[0]
+        texts[-1] += f'（{src_list(it)}）'
+        m = first_media(it, "image")
+        if not m:
+            out.extend(f'<p style="{P}">{t}</p>' for t in texts)
+            continue
+        cw = W["community_img"]
+        if tpl:
+            im = placeholder(cw, cw, f'附圖 寬 {cw}px<br>高度約與右側文字相同')
+            cap = "圖片來源：○○"
+        else:
+            im = (f'<img src="{esc(m["url"])}" alt="{esc(m.get("alt") or m.get("caption") or it["title"])}" width="{cw}" '
+                  f'style="display:block;width:100%;max-width:{cw}px;height:auto;border:1px solid {C["frame"]};">')
+            if m.get("link"):
+                im = f'<a href="{esc(m["link"])}">{im}</a>'
+            cap = credit_line(m, m.get("caption", ""))
+        body = "".join(f'<div style="{"margin-top:12px;" if k else ""}">{t}</div>' for k, t in enumerate(texts))
+        out.append(f'<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 12px;"><tr>'
+                   f'<td class="stk" width="{cw + 14}" valign="top" style="width:{cw + 14}px;padding:4px 14px 0 0;">{im}'
+                   f'<div style="margin-top:3px;font-size:11px;line-height:1.4;color:{C["muted"]};">{cap}</div></td>'
+                   f'<td class="stk" valign="top" style="font-size:15px;line-height:1.75;">{body}</td></tr></table>')
+    return row("".join(out))
 
 
 def eurasia(heads, others, tpl=False):
@@ -298,7 +339,10 @@ def eurasia(heads, others, tpl=False):
         if m:
             im = placeholder(W["eurasia_img"], 120, f'附圖 寬 {W["eurasia_img"]}px') if tpl else \
                 f'<img src="{esc(m["url"])}" alt="{esc(m.get("caption", ""))}" width="{W["eurasia_img"]}" style="display:block;width:100%;max-width:{W["eurasia_img"]}px;height:auto;border:1px solid {C["frame"]};">'
-            cr = "圖：○○（來源）" if tpl else f'圖：{esc(m.get("caption", ""))}（{a(m["credit_url"], esc(m.get("credit", ""))) if m.get("credit_url") else esc(m.get("credit", ""))}）'
+            # 圖源：Spotify 封面、Wikimedia Commons 或 GitHub images/；圖說「圖說。圖片來源：○○」，Commons 標攝影者與授權（編輯 2026-11-18 指定）
+            if not tpl and m.get("link"):
+                im = f'<a href="{esc(m["link"])}">{im}</a>'
+            cr = "圖說。圖片來源：○○" if tpl else credit_line(m, m.get("caption", ""))
             out.append(f'<div style="font-size:0;line-height:0;border-top:1px solid {C["frame"]};padding-top:14px;margin-bottom:6px;">'
                        f'<div style="display:inline-block;vertical-align:top;width:100%;max-width:206px;box-sizing:border-box;padding:0 16px 12px 0;font-size:14px;line-height:1.5;">{im}'
                        f'<div style="margin-top:4px;font-size:11px;line-height:1.4;color:{C["muted"]};">{cr}</div></div>'
@@ -455,7 +499,7 @@ def render(issue, by, email=True, tpl=False):
             items = pick(name)
             o.append({"重磅點評": lambda: prime_picks(items, tpl), "唱片架": lambda: record_shelf(items, tpl),
                       "精選試聽": lambda: take_a_bite(items, tpl), "作曲家專訪": lambda: interviews(items, tpl),
-                      "快訊": lambda: news_flash(items), "社群雷達": lambda: community(items),
+                      "快訊": lambda: news_flash(items), "社群雷達": lambda: community(items, tpl),
                       "歐亞觀察": lambda: eurasia(items, pick(name, "list"), tpl),
                       "In memoriam": lambda: memoriam(items, pick(name, "brief"), tpl)}[name]())
     o.append(footer(issue, email))
