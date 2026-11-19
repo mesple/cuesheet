@@ -69,7 +69,10 @@
     }
    ],
    "web": true,
-   "internal_note": "本期專題（編輯 11/18 選定），文字為編輯 11/19 定稿。"
+   "internal_note": "本期專題（編輯 11/18 選定），文字為編輯 11/19 定稿。",
+   "tags": [
+    "音樂活動"
+   ]
   },
   {
    "id": "2026-11-102",
@@ -96,7 +99,10 @@
      "url": "https://www.jwfan.com/forums/index.php?/topic/38555-star-wars-50th-anniversary-logo-with-newly-arranged-music-by-john-williams/"
     }
    ],
-   "web": true
+   "web": true,
+   "tags": [
+    "其他"
+   ]
   },
   {
    "id": "2026-11-103",
@@ -128,7 +134,10 @@
      "url": "https://www.billboard.com/lists/2026-hollywood-music-in-media-awards-full-winners-list/"
     }
    ],
-   "web": true
+   "web": true,
+   "tags": [
+    "獎項"
+   ]
   },
   {
    "id": "2026-11-104",
@@ -150,7 +159,10 @@
      "url": "https://deadline.com/2026/11/deadline-launches-sound-and-screen-film-streaming-site-1237218575/"
     }
    ],
-   "web": true
+   "web": true,
+   "tags": [
+    "音樂活動"
+   ]
   },
   {
    "id": "2026-11-105",
@@ -177,7 +189,10 @@
      "url": "https://www.grammy.com/news/grammy-nominees-to-be-unveiled-monday-nov-16/"
     }
    ],
-   "web": true
+   "web": true,
+   "tags": [
+    "獎項"
+   ]
   },
   {
    "id": "2026-11-106",
@@ -235,7 +250,10 @@
     }
    ],
    "web": false,
-   "internal_note": "多位作曲家接案合併成一則，只放電子報、不上網站（編輯 2026-11-20 指定）。"
+   "internal_note": "多位作曲家接案合併成一則，只放電子報、不上網站（編輯 2026-11-20 指定）。",
+   "tags": [
+    "新案"
+   ]
   },
   {
    "id": "2026-11-107",
@@ -254,7 +272,10 @@
      "url": "https://www.broadwayworld.com/chicago/article/ENCANTO-and-AMADEUS-in-Movie-Nights-to-Take-Place-at-Lyric-Opera-of-Chicago-20261109"
     }
    ],
-   "web": true
+   "web": true,
+   "tags": [
+    "音樂活動"
+   ]
   },
   {
    "id": "2026-11-108",
@@ -386,7 +407,10 @@
      "credit_url": "https://soundtrackworld.com/2026/11/music-of-hollywood-goldsmith-poledouris-prague/"
     }
    ],
-   "web": true
+   "web": true,
+   "tags": [
+    "音樂活動"
+   ]
   },
   {
    "id": "2026-11-113",
@@ -431,7 +455,10 @@
     }
    ],
    "web": true,
-   "internal_note": "網站版標題／摘要依寫稿規則調整，與已寄出電子報略有不同。"
+   "internal_note": "網站版標題／摘要依寫稿規則調整，與已寄出電子報略有不同。",
+   "tags": [
+    "獎項"
+   ]
   },
   {
    "id": "2026-11-114",
@@ -455,7 +482,10 @@
      "url": "https://awardswatch.com/fatherland-la-bola-negra-lead-39th-european-film-awards-nominations/"
     }
    ],
-   "web": true
+   "web": true,
+   "tags": [
+    "獎項"
+   ]
   },
   {
    "id": "2026-11-115",
@@ -480,7 +510,10 @@
      "url": "https://www.gamespress.com/en-GB/THE-FLIGHT-JOE-HENSON-AND-ALEXIS-SMITH-PRESENTED-WITH-IVOR-NOVELLO-AWA"
     }
    ],
-   "web": true
+   "web": true,
+   "tags": [
+    "獎項"
+   ]
   },
   {
    "id": "2026-11-116",
@@ -504,7 +537,10 @@
     }
    ],
    "web": true,
-   "internal_note": "網站版標題／摘要依寫稿規則調整，與已寄出電子報略有不同。"
+   "internal_note": "網站版標題／摘要依寫稿規則調整，與已寄出電子報略有不同。",
+   "tags": [
+    "獎項"
+   ]
   },
   {
    "id": "2026-11-117",
@@ -532,7 +568,10 @@
      "url": "https://www.khaleejtimes.com/entertainment/ramayana-part-1-review-ranbir-kapoor-yash-sai-pallavi"
     }
    ],
-   "web": true
+   "web": true,
+   "tags": [
+    "新片"
+   ]
   },
   {
    "id": "2026-11-118",
@@ -552,7 +591,10 @@
     }
    ],
    "web": true,
-   "internal_note": "date 待確認：只確定為 11 月的活動。 網站版標題／摘要依寫稿規則調整，與已寄出電子報略有不同。"
+   "internal_note": "date 待確認：只確定為 11 月的活動。 網站版標題／摘要依寫稿規則調整，與已寄出電子報略有不同。",
+   "tags": [
+    "音樂活動"
+   ]
   },
   {
    "id": "2026-11-119",
@@ -576,7 +618,10 @@
     }
    ],
    "web": true,
-   "internal_note": "date 待確認：只確定為 11 月的活動。"
+   "internal_note": "date 待確認：只確定為 11 月的活動。",
+   "tags": [
+    "音樂活動"
+   ]
   },
   {
    "id": "2026-11-120",
@@ -595,7 +640,10 @@
      "url": "https://instytutpolski.pl/tokyo/wajda-100-concert/"
     }
    ],
-   "web": true
+   "web": true,
+   "tags": [
+    "音樂活動"
+   ]
   },
   {
    "id": "2026-11-121",
@@ -613,7 +661,10 @@
     }
    ],
    "web": true,
-   "internal_note": "date 待確認：只確定為 11 月的活動。"
+   "internal_note": "date 待確認：只確定為 11 月的活動。",
+   "tags": [
+    "音樂活動"
+   ]
   },
   {
    "id": "2026-11-122",
@@ -638,7 +689,10 @@
     }
    ],
    "web": false,
-   "internal_note": "多位作曲家接案合併成一則，只放電子報、不上網站（編輯 2026-11-20 指定）。"
+   "internal_note": "多位作曲家接案合併成一則，只放電子報、不上網站（編輯 2026-11-20 指定）。",
+   "tags": [
+    "新案"
+   ]
   },
   {
    "id": "2026-11-123",

@@ -46,6 +46,7 @@ h2.item-title{font-family:"Noto Serif TC",Georgia,serif;font-size:32px;line-heig
 .dateline{font-size:13px;color:var(--muted);margin:0 0 18px}
 .deck{font-size:18px;line-height:1.6;color:var(--soft);margin:0 0 8px}
 .lead{font-size:18px;line-height:1.85;margin:0 0 18px}
+.subl{display:block;padding-left:1em;text-indent:-1em;margin-top:2px}
 .body{font-size:16px;line-height:1.9}
 .body h2{font-family:"Noto Serif TC",Georgia,serif;font-size:21px;margin:30px 0 8px}
 .body ul{padding-left:22px}
@@ -310,12 +311,12 @@ def item_page(it, by_id, composers, labels, features):
     body = ""
     if it.get("body"):
         body = '<div class="body">' + markdown.markdown(show_name(it["body"], composers, codes), extensions=["tables"]) + "</div>"
-    lead = f'<p class="lead">{escape(summary)}</p>'
+    lead = f'<p class="lead">{breaks(escape(summary))}</p>'
     deck = ""
     top_media, more_media = media_html(it, title), ""
     if it.get("body"):
         # 長文：摘要當副標，第一張圖放上面，其餘圖放文末
-        deck, lead = ("" if it["type"] in ("樂評", "訪談") else f'<p class="deck">{escape(summary)}</p>'), ""
+        deck, lead = ("" if it["type"] in ("樂評", "訪談") else f'<p class="deck">{breaks(escape(summary))}</p>'), ""
         if len(it.get("media") or []) > 1:
             rest = dict(it, media=it["media"][1:])
             top_media = media_html(dict(it, media=it["media"][:1]), title)
@@ -459,6 +460,23 @@ def link_composers(html_text, codes, composers, up):
     return html_text
 
 
+def breaks(h):
+    """已跳脫的摘要：空行分段改 <br><br>，「- 」開頭的行改成「· 」子清單（得獎名單等，編輯 2026-11-20 指定）。"""
+    if "\n" not in h:
+        return h
+    out = []
+    for k, para in enumerate(h.strip().split("\n\n")):
+        lines = [l.strip() for l in para.split("\n") if l.strip()]
+        seg = ""
+        for l in lines:
+            if l.startswith("- "):
+                seg += '<span class="subl">· ' + l[2:] + "</span>"
+            else:
+                seg += (" " if seg else "") + l
+        out.append(seg)
+    return "<br><br>".join(out)
+
+
 def full_row(it, composers, depth):
     """新聞、社群雷達列表（編輯 2026-10-31 指定）：短文全文放列表、文末括號附來源，不另列作曲家與接下來；
     有長篇內文的才連單則頁，摘要後接「閱讀全文」。單則頁照常保留，供作曲家頁、首頁與相關內容連結。"""
@@ -479,6 +497,7 @@ def full_row(it, composers, depth):
     summ = nm(it["summary"])
     if it["type"] == "新聞":
         summ = link_composers(summ, it.get("composers"), composers, up)
+    summ = breaks(summ)
     wide = " wide" if img and any(m.get("wide") for m in it.get("media") or []) else ""
     return f"""<div class="it{'' if img else ' noimg'}{wide}" data-tags="{escape(" ".join(it.get("tags", [])))}">{thumb}<div>
 {meta}
