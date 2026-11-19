@@ -874,10 +874,12 @@ def build_home():
         body2 = _plain((second.get("body") or second["summary"]).split("\n\n")[0])
         body2 = body2 if len(body2) <= 150 else body2[:148] + "…"
         pic2 = f'<a href="item/{second["id"]}/"><img src="{escape(img2)}" alt="{escape(second["title"])}" loading="lazy"></a>' if img2 else ""
+        # 沒有長文時，摘要已在 h-deck2，不再重複放第一段（編輯 2026-11-20 指出重複）
+        body2_html = f'<p class="h-body2">{nm(second, body2)}</p>' if second.get("body") else ""
         second_html = f"""<div class="h-second{'' if img2 else ' noimg'}">{pic2}<div>
 <h3 class="h-head2"><a href="item/{second['id']}/">{nm(second, second['title'])}</a></h3>
 <p class="h-deck2">{nm(second, second['summary'])}</p>
-<p class="h-body2">{nm(second, body2)}</p>
+{body2_html}
 <a class="h-read" href="item/{second['id']}/">閱讀全文 →</a></div></div>"""
 
     # 頭條
@@ -893,7 +895,7 @@ def build_home():
 <h2 class="h-head"><a href="item/{lead['id']}/">{nm(lead, lead['title'])}</a></h2>
 <p class="h-deck">{nm(lead, lead['summary'])}</p>
 {f'<div class="h-pics n{len(imgs)}">{pics}</div><div class="h-credit">{credit}</div>' if imgs else ''}
-<div class="h-body"><p>{nm(lead, _plain(body))}</p></div>
+{f'<div class="h-body"><p>{nm(lead, _plain(body))}</p></div>' if lead.get("body") else ''}
 <a class="h-read" href="item/{lead['id']}/">閱讀全文 →</a>
 {second_html}
 </article>"""
