@@ -285,13 +285,25 @@ def interviews(items, tpl=False):
     return "".join(out)
 
 
+def flash_li(it):
+    """快訊一則。summary 若有「- 」開頭的行，改成導言＋子清單（每行「· 類別：內容」，懸掛縮排），來源另起一行（編輯 2026-11-20 指定：得獎名單、新案速覽用）。"""
+    lines = it["summary"].strip().split("\n")
+    subs = [l.strip()[2:] for l in lines if l.strip().startswith("- ")]
+    if not subs:
+        return f'<li style="margin-bottom:10px;"><strong>{esc(it["title"])}：</strong>{inline(it["summary"])}（{src_list(it)}）</li>'
+    lead = " ".join(l.strip() for l in lines if l.strip() and not l.strip().startswith("- "))
+    sub = "".join(f'<div style="margin-top:3px;padding-left:1em;text-indent:-1em;">· {inline(x)}</div>' for x in subs)
+    head = f'<strong>{esc(it["title"])}：</strong>' if lead else f'<strong>{esc(it["title"])}</strong>'
+    return f'<li style="margin-bottom:12px;">{head}{inline(lead)}{sub}<div style="margin-top:3px;">（{src_list(it)}）</div></li>'
+
+
 def news_flash(items):
     """快訊不放圖（編輯 2026-11-19 指定：放圖版面不整齊）；item 有 media 也不顯示。"""
     if not items:
         return ""
     half = (len(items) + 1) // 2
     def ol(chunk, start):
-        lis = "".join(f'<li style="margin-bottom:10px;"><strong>{esc(it["title"])}：</strong>{inline(it["summary"])}（{src_list(it)}）</li>' for it in chunk)
+        lis = "".join(flash_li(it) for it in chunk)
         return f'<ol start="{start}" style="margin:0;padding-left:22px;font-size:14px;line-height:1.7;">{lis}</ol>'
     return row(f'<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;"><tr>'
                f'<td class="stk" width="50%" valign="top" style="padding:0 10px 0 0;">{ol(items[:half], 1)}</td>'
