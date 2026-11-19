@@ -34,6 +34,18 @@
       "image": "images/2026-11/feature-nature-composers.jpg",
       "cover": "images/2026-11/feature-nature-composers.jpg",
       "cover_credit": "左起：Joseph Trapanese、Rebekka Karijord、Cosmo Sheldrake｜圖片來源：joecomposer.com、Spotify 藝人頁、FLOOD Magazine"
+    },
+    {
+      "slug": "2026-11-news",
+      "label": "2026 年 11 月號 · 配樂新訊版",
+      "date": "2026-11-20",
+      "title": "電影音樂走進音樂廳",
+      "special": false,
+      "editor_note": "《大白鯊》裡的樂段，成了美國樂團的徵才曲目，電影音樂正一步步走進音樂廳。John Williams 為《星際大戰》50 週年重新動筆、好萊塢媒體音樂獎（HMMA）得獎者出爐，葛萊美也宣布入圍名單。歲末的電影音樂圈越來越熱鬧，一日完售的《星際效應》電影音樂會，11 月底就要登場，你搶到票了嗎？",
+      "edition": "news",
+      "image": "images/2026-11/fmp_feature_2026-11-news.jpg",
+      "cover": "images/2026-11/fmp_feature_2026-11-news.jpg",
+      "cover_credit": "圖片：Gemini 生成"
     }
   ]
 }
