@@ -1,0 +1,728 @@
+{
+ "issue": "2026-11-news",
+ "items": [
+  {
+   "id": "2026-11-101",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "全球",
+   "date": "2026-11-20",
+   "title": "電影音樂走進音樂廳",
+   "summary": "美國樂團徵選考《大白鯊》與《哈利波特》，澳洲最賣座的古典演出是電影音樂會，洛杉磯愛樂聘久石讓為駐團作曲家；臺灣的電影音樂會也在成長，曲目卻仍狹窄。",
+   "teaser": "樂團徵選考 John Williams、電影音樂會撐起票房，電影音樂正一步步走進音樂廳。",
+   "body": "匹茲堡交響樂團的低音提琴手 Michael Banks，徵選第一輪拉的不是貝多芬，而是《大白鯊》的〈Shark Cage Fugue〉。《紐約時報》10 月底報導，美國樂團的徵選曲目越來越常出現 John Williams；豎琴手報考底特律交響樂團，得先練熟《哈利波特：神秘的魔法石》的〈Fluffy’s Harp〉。一位受訪的豎琴手說得直接：電影音樂會就是樂團賺錢的方式。\n\n澳洲 ABC 新聞引述當地現場表演產業協會（Live Performance Australia）統計，2024 年當地最受歡迎的古典音樂演出，是《星際大戰》、《馴龍高手》、《神鬼奇航》等電影音樂會。這些演出顯著地帶動了音樂會的成長。\n\n電影音樂也不只是用來補貼票房。洛杉磯愛樂請久石讓當五年駐團作曲家，要他寫新作、錄音、做教育推廣；Philharmonia 愛樂管弦樂團明年 2 月將為 John Williams 舉辦 95 歲音樂會，排進他的中提琴協奏曲英國首演；布拉格電影音樂節乾脆拿掉銀幕，整晚只演 Jerry Goldsmith 與 Basil Poledouris 的配樂組曲，照樣近乎滿座。\n\n社群討論區 JWFan 有樂迷認為，樂團擁抱電影音樂多半是為了賣票；《紐約時報》也提到，仍有人抱持老派想法，覺得拉得好史特勞斯、馬勒、貝多芬，自然拉得好《星際大戰》。\n\n臺灣的電影音樂會也在穩健成長中，5 年來，「電影 Live」音樂會一場接一場，去年底 Alexandre Desplat 來臺的 3 場音樂會、今年 9 月的《Hans Zimmer Live》口碑大爆炸，帶動 4 場《星際效應》電影交響音樂會一日完售。儘管如此，電影音樂仍是小眾中的小眾。認真來看，國內電影音樂會的曲目不是星際大戰、就是哈利波特、久石讓，曲目相當狹窄，加上以管弦樂為基礎寫電影音樂的作曲家，逐漸退出第一線，未來電影音樂會能演奏、能賣座的曲目恐怕會更有限。\n\n看看本刊的「[國內活動](https://mesple.github.io/cuesheet/event/)」，快快掌握你身邊有哪些電影音樂會。下次走進音樂廳，台上演奏的也許是 Hans Zimmer 或 John Williams，你會為它買票嗎？",
+   "composers": [
+    "john-williams",
+    "joe-hisaishi",
+    "jerry-goldsmith",
+    "basil-poledouris",
+    "hans-zimmer",
+    "alexandre-desplat"
+   ],
+   "sources": [
+    {
+     "name": "The New York Times",
+     "url": "https://www.nytimes.com/2026/10/28/arts/music/to-get-an-orchestra-job-study-jaws-as-much-as-mahler.html"
+    },
+    {
+     "name": "JWFan",
+     "url": "https://www.jwfan.com/forums/index.php?/topic/38529-to-get-an-orchestra-job-study-jaws-as-much-as-mahler-ny-times-article/"
+    },
+    {
+     "name": "ABC",
+     "url": "https://www.abc.net.au/news/2026-05-14/how-hollywood-became-a-new-home-for-classical-music/106669938"
+    },
+    {
+     "name": "LA Phil",
+     "url": "https://www.laphil.com/posts/joe-hisaishi-named-la-phil-composer-in-residence-for-the-hollywood-bowl-and-the-ford-in-five-year-artistic-partnership"
+    },
+    {
+     "name": "Gramophone",
+     "url": "https://www.gramophone.co.uk/content/news/joe-hisaishi-named-la-phil-composer-in-residence-for-the-hollywood-bowl-and-the-ford"
+    },
+    {
+     "name": "JWFan：Williams 95 歲音樂會",
+     "url": "https://www.jwfan.com/forums/index.php?/topic/38511-concert-john-williams-at-95-star-wars-at-50-caleb-young-conducting-at-the-royal-festival-hall-feb-9-2027/"
+    },
+    {
+     "name": "Soundtrack World",
+     "url": "https://soundtrackworld.com/2026/11/music-of-hollywood-goldsmith-poledouris-prague/"
+    },
+    {
+     "name": "中時新聞網",
+     "url": "https://www.chinatimes.com/realtimenews/20260819003483-260404"
+    },
+    {
+     "name": "MNA 牛耳藝術",
+     "url": "https://ticket.mna.com.tw/UTK0201_?PRODUCT_ID=P1FZYU6O"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/fmp_feature_2026-11-news.jpg",
+     "caption": "",
+     "credit": "Gemini 生成",
+     "credit_prefix": "圖片",
+     "alt": "音樂廳舞台上，樂譜化成金色五線譜流向海浪，浪中一片鯊魚鰭，夜空有貓頭鷹飛過",
+     "wide": true
+    }
+   ],
+   "web": true,
+   "internal_note": "本期專題（編輯 11/18 選定），文字為編輯 11/19 定稿。"
+  },
+  {
+   "id": "2026-11-102",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "北美",
+   "date": "2026-11-12",
+   "title": "星際大戰 50 週年：John Williams 為新標誌重新配器",
+   "summary": "Lucasfilm 11/12 公布「Star Wars 50」週年標誌，十幾秒的片頭音樂是 John Williams 親自編寫、在 Sony 錄音棚新錄的版本。2027/2/19 修復版 1977 年《星際大戰》全球重映，含 IMAX 70mm；4 月好萊塢露天劇場由 Anthony Daniels 主持 Skywalker Saga 音樂會。JWFan 樂迷當天就逐小節比對，聽出片頭借用了錄音室版本的銅管，也有人惋惜不是一首更長的週年組曲。",
+   "composers": [
+    "john-williams"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/11/12/star-wars-50th-anniversary-logo-to-feature-newly-orchestrated-score-by-john-williams/"
+    },
+    {
+     "name": "StarWars.com",
+     "url": "https://www.starwars.com/news/star-wars-50-campaign"
+    },
+    {
+     "name": "JWFan",
+     "url": "https://www.jwfan.com/forums/index.php?/topic/38555-star-wars-50th-anniversary-logo-with-newly-arranged-music-by-john-williams/"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-103",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "北美",
+   "date": "2026-11-18",
+   "title": "HMMA 揭曉：Göransson《The Odyssey》拿下劇情片配樂",
+   "summary": "第 17 屆好萊塢媒體音樂獎 11/18 在好萊塢 Avalon 頒獎，Göransson 拿下他的第八座 HMMA。主要得獎：\n- 劇情片配樂：Ludwig Göransson《The Odyssey》\n- 科幻／奇幻片配樂：Daniel Pemberton《Project Hail Mary》\n- 動畫片配樂：Dario Marianelli《Wildwood》\n- 紀錄片配樂：Kris Bowers《The Eyes of Ghana》\n- 影集配樂：David Fleming《Widow's Bay》\n- 獨立電影配樂：Raül Refree《La Bola Negra》\n- 劇情片歌曲：Diane Warren〈One Right Here〉\n- 動畫片歌曲：Taylor Swift、Jack Antonoff〈I Knew It, I Knew You〉（《Toy Story 5》）\n- 遊戲配樂：Brian Tyler、Stephen Lukach《Assassin's Creed Black Flag Resynced》\n- 遊戲歌曲：Lana Del Rey、David Arnold〈First Light〉（《007 First Light》）",
+   "composers": [
+    "ludwig-goransson",
+    "daniel-pemberton",
+    "dario-marianelli",
+    "kris-bowers",
+    "david-fleming",
+    "raul-refree"
+   ],
+   "sources": [
+    {
+     "name": "Awards Radar",
+     "url": "https://awardsradar.com/2026/11/19/winners-announced-for-the-17th-annual-hollywood-music-in-media-awards/"
+    },
+    {
+     "name": "AwardsWatch",
+     "url": "https://awardswatch.com/the-odyssey-la-bola-negra-diane-warren-taylor-swift-take-top-hollywood-music-in-media-awards-hmma/"
+    },
+    {
+     "name": "Billboard",
+     "url": "https://www.billboard.com/lists/2026-hollywood-music-in-media-awards-full-winners-list/"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-104",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "北美",
+   "date": "2026-11-10",
+   "title": "Deadline 開放 Sound & Screen 串流站",
+   "summary": "收錄 11/6 在 UCLA Royce Hall 的現場演出與座談：Daniel Pemberton、Kris Bowers、Michael Abels、Rebekka Karijord、Son Lux 等人在管弦樂團伴奏下演出自己的配樂，David Byrne 也與 Pemberton 談《Musk》片尾曲。",
+   "composers": [
+    "daniel-pemberton",
+    "kris-bowers",
+    "michael-abels",
+    "rebekka-karijord"
+   ],
+   "sources": [
+    {
+     "name": "Deadline",
+     "url": "https://deadline.com/2026/11/deadline-launches-sound-and-screen-film-streaming-site-1237218575/"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-105",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "北美",
+   "date": "2026-11-16",
+   "title": "第 69 屆葛萊美獎公布入圍",
+   "summary": "11/16 公布，2027/2/7 在洛杉磯頒獎。\n- 視覺媒體配樂原聲帶：Ludwig Göransson《The Odyssey》、《The Mandalorian & Grogu》；Jonny Greenwood《One Battle After Another》；Daniel Pemberton《Project Hail Mary》；David Fleming《Widow's Bay》\n- 遊戲配樂：Gordy Haab《Star Wars: Zero Company》、Toma Otowa《Ghost of Yotei》、John Paesano、The Flight、David Fleming\n- 影視歌曲（節錄）：Taylor Swift〈I Knew It, I Knew You〉（《Toy Story 5》）、Andrew Bird〈Need Someone〉（《The Pitt》）",
+   "composers": [
+    "ludwig-goransson",
+    "jonny-greenwood",
+    "daniel-pemberton",
+    "david-fleming",
+    "gordy-haab"
+   ],
+   "sources": [
+    {
+     "name": "Film Music Reporter",
+     "url": "https://filmmusicreporter.com/2026/11/16/69th-grammy-awards-nominations-announced/"
+    },
+    {
+     "name": "Recording Academy",
+     "url": "https://www.grammy.com/news/grammy-nominees-to-be-unveiled-monday-nov-16/"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-106",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "北美",
+   "date": "2026-11-12",
+   "title": "新案速覽",
+   "summary": "- Carter Burwell：Joel Coen《Jack of Spades》（Netflix）\n- Trent Reznor、Atticus Ross：Jeremy Saulnier《Slayground》\n- Dario Marianelli：皮克斯動畫《Gatto》（以威尼斯貓為主角）\n- Raye：Benny Safdie《Lizard Music》（首度為電影配樂）\n- Joseph Shirley：Michael B. Jordan 自導自演《The Thomas Crown Affair》\n- Marcelo Zarvos：David O. Russell《Madden》\n- Tyler Bates：Ti West《Ebenezer》\n- Kris Bowers：迪士尼動畫《Hexed》\n- 另有 Steven Price《Way of the Warrior Kid》、Pinar Toprak《Bad Day》、Rachel Portman《A Dog's Perfect Christmas》",
+   "composers": [
+    "carter-burwell",
+    "trent-reznor",
+    "atticus-ross",
+    "dario-marianelli",
+    "joseph-shirley",
+    "marcelo-zarvos",
+    "tyler-bates",
+    "kris-bowers",
+    "steven-price",
+    "pinar-toprak",
+    "rachel-portman"
+   ],
+   "sources": [
+    {
+     "name": "FMR：Burwell",
+     "url": "https://filmmusicreporter.com/2026/11/02/carter-burwell-scoring-joel-coens-jack-of-spades/"
+    },
+    {
+     "name": "FMR：Reznor 與 Ross",
+     "url": "https://filmmusicreporter.com/2026/10/20/trent-reznor-atticus-ross-scoring-jeremy-saulniers-slayground/"
+    },
+    {
+     "name": "FMR：Marianelli",
+     "url": "https://filmmusicreporter.com/2026/11/12/dario-marianelli-to-score-pixar-animation-studios-gatto/"
+    },
+    {
+     "name": "FMR：Raye",
+     "url": "https://filmmusicreporter.com/2026/10/30/raye-to-compose-music-for-benny-safdies-lizard-music/"
+    },
+    {
+     "name": "FMR：Shirley",
+     "url": "https://filmmusicreporter.com/2026/11/12/joseph-shirley-scoring-michael-b-jordans-the-thomas-crown-affair/"
+    },
+    {
+     "name": "FMR：Zarvos",
+     "url": "https://filmmusicreporter.com/2026/11/04/marcelo-zarvos-scoring-david-o-russells-madden/"
+    },
+    {
+     "name": "FMR：Bates",
+     "url": "https://filmmusicreporter.com/2026/10/23/tyler-bates-scoring-ti-wests-ebenezer/"
+    },
+    {
+     "name": "FMR：Bowers",
+     "url": "https://filmmusicreporter.com/2026/10/16/kris-bowers-scoring-disneys-hexed/"
+    }
+   ],
+   "web": false,
+   "internal_note": "多位作曲家接案合併成一則，只放電子報、不上網站（編輯 2026-11-20 指定）。"
+  },
+  {
+   "id": "2026-11-107",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "北美",
+   "date": "2026-11-09",
+   "title": "芝加哥抒情歌劇院上演《魔法滿屋》電影音樂會",
+   "summary": "11/28–29 由 Gonzalo Farias 指揮抒情歌劇院管弦樂團演出 Germaine Franco 的配樂與 Lin-Manuel Miranda 的歌曲；2027 年 1 月接著是加入合唱團的《阿瑪迪斯》。",
+   "composers": [
+    "germaine-franco"
+   ],
+   "sources": [
+    {
+     "name": "BroadwayWorld",
+     "url": "https://www.broadwayworld.com/chicago/article/ENCANTO-and-AMADEUS-in-Movie-Nights-to-Take-Place-at-Lyric-Opera-of-Chicago-20261109"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-108",
+   "issue": "2026-11-news",
+   "type": "社群",
+   "region": "全球",
+   "date": "2026-11-03",
+   "title": "擴充版原聲帶，究竟該收多完整？",
+   "summary": "《航站情緣》擴充版 11/3 公布，讓 JWFan 樂迷又談起老問題：擴充版要收到多完整？La-La Land 這張限量 3,000 張的單張 CD 由 Mike Matessino 製作、作曲家核可，前段依電影順序排出 63 分鐘配樂，後段附上替代版本與電影版本，全長 78 分鐘，其中 14 分鐘首度發行。有會員一看就叫好：只有一張、不重複收舊版原聲帶，這樣才對；也有人發現廠牌從不寫「complete」，資深會員則說明，電影裡聽得到的、舊專輯收過的都在裡面，再加上未用曲與替代版本。\n\n但「全部收錄」只是起點。2019 年一篇《大白鯊3》樂評就抱怨 Intrada 2CD 的第一張 CD 混進未用曲與替代版本，電影實際用的版本反而放到第二張；另一串討論裡，也有樂迷寧可聽《E.T. 外星人》《大白鯊2》的原版專輯，覺得那本身就是完整的聆聽體驗。擴充版其實也是一種編輯：哪個版本當正文、哪些放附錄？它要重現電影，還是讓音樂離開銀幕也能自成一篇？",
+   "composers": [
+    "john-williams"
+   ],
+   "sources": [
+    {
+     "name": "JWFan：航站情緣",
+     "url": "https://www.jwfan.com/forums/index.php?/topic/38536-the-terminal-2004-expanded-edition-from-la-la-land-records-2026/"
+    },
+    {
+     "name": "JWFan：大白鯊3",
+     "url": "https://www.jwfan.com/forums/index.php?/topic/30354-score-jaws-3-d-1983-alan-parker/"
+    },
+    {
+     "name": "JWFan：原版專輯與擴充版",
+     "url": "https://www.jwfan.com/forums/index.php?/topic/30335-for-which-scores-do-you-prefer-the-ost-over-expanded-releases/"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-109",
+   "issue": "2026-11-news",
+   "type": "社群",
+   "region": "全球",
+   "date": "2026-10-20",
+   "title": "Williams 中提琴協奏曲英國首演",
+   "summary": "愛樂管弦樂團 2027/2/9 在皇家節日音樂廳推出 John Williams 95 歲音樂會，Caleb Young 指揮、Antoine Tamestit 獨奏。樂迷先釐清這是 2009 年為波士頓交響樂團寫的舊作，也開玩笑說主辦單位對 Williams 過 95 歲生日很有把握，最期待的是終於能有正式錄音。",
+   "composers": [
+    "john-williams"
+   ],
+   "sources": [
+    {
+     "name": "JWFan",
+     "url": "https://www.jwfan.com/forums/index.php?/topic/38511-concert-john-williams-at-95-star-wars-at-50-caleb-young-conducting-at-the-royal-festival-hall-feb-9-2027/"
+    }
+   ],
+   "web": true,
+   "internal_note": "網站版標題／摘要依寫稿規則調整，與已寄出電子報略有不同。"
+  },
+  {
+   "id": "2026-11-110",
+   "issue": "2026-11-news",
+   "type": "社群",
+   "region": "全球",
+   "date": "2026-11-03",
+   "title": "Williams 聯篇歌曲《Seven for Luck》終於有錄音",
+   "summary": "John Williams 將近三十年前依美國詩人 Rita Dove 詩作寫的聯篇歌曲《Seven for Luck》，11/10 首度以錄音數位發行，由鋼琴家 Simone Pedroni、女高音 Maria Grazia Aschei 等人演出。JWFan 樂迷先討論封面：有人認為是 AI 生成，也有會員指出底圖是攝影師 Art Streiber 的照片，只是後製粗糙；會員也釐清，專輯裡只有《Seven for Luck》是首次錄音，其他曲目先前都有人錄過。聽完的人說音樂水準比封面和曲目錯字讓人預期的好，也有人嫌女高音的英文咬字不清。",
+   "composers": [
+    "john-williams"
+   ],
+   "sources": [
+    {
+     "name": "JWFan",
+     "url": "https://www.jwfan.com/forums/index.php?/topic/38535-john-williams-seven-for-luck-other-music-for-film-and-the-concert-stage-2026/"
+    }
+   ],
+   "web": true,
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/seven-for-luck.jpg",
+     "link": "https://open.spotify.com/album/6ppswU8WZh9sLXHvKddf1f",
+     "alt": "《Seven for Luck》專輯封面",
+     "caption": "",
+     "hosting": "spotify"
+    }
+   ],
+   "spotify": "https://open.spotify.com/album/6ppswU8WZh9sLXHvKddf1f"
+  },
+  {
+   "id": "2026-11-111",
+   "issue": "2026-11-news",
+   "type": "社群",
+   "region": "全球",
+   "date": "2026-10-18",
+   "title": "用 AI 救回沒出版的配樂？",
+   "summary": "Film Score Monthly 論壇 10 月有兩串討論碰到同一件事。有會員問誰願意出錢重錄 Brian May 的《The Road Warrior》（《Mad Max 2》）配樂，不少人說若由 Intrada 或 Quartet 發起募資就支持，但原始總譜已毀於水災，只能聽音重建；有人貼出用 AI 從電影聲軌分離出的音樂，馬上被指出混進了引擎聲和槍聲。另一串則有樂迷用 AI 去除對白與音效，逐集修復 Mark Snow《X 檔案》未發行的配樂，會員稱讚之餘也追問是否全靠 AI 完成。",
+   "composers": [
+    "brian-may",
+    "mark-snow"
+   ],
+   "sources": [
+    {
+     "name": "FSM：The Road Warrior",
+     "url": "https://www.filmscoremonthly.com/community/topicid/164079/"
+    },
+    {
+     "name": "FSM：X 檔案",
+     "url": "https://www.filmscoremonthly.com/community/topicid/164089/"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-112",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "歐洲",
+   "date": "2026-11-04",
+   "title": "布拉格電影音樂節回歸：Goldsmith 與 Poledouris 之夜",
+   "summary": "停辦多年的布拉格電影音樂節 10/4 在 Rudolfinum 音樂廳重新登場，推出 Jerry Goldsmith 與 Basil Poledouris 專場。岩崎宙平指揮赫拉德茨－克拉洛韋愛樂，下半場加入合唱團；全場沒有銀幕，只有音樂。上半場從《魔鬼總動員》到《星艦迷航記》，壓軸的《機器戰警》是樂評人心中全晚最高點；下半場合唱團撐起《神鬼傳奇》組曲，接著是《王者之劍》、《獵殺紅色十月》，以《星艦戰將》作結。近乎滿座的觀眾證明冷門曲目也有市場，下一檔是 2027 年 2 月的《星際效應》。",
+   "composers": [
+    "jerry-goldsmith",
+    "basil-poledouris"
+   ],
+   "sources": [
+    {
+     "name": "Soundtrack World",
+     "url": "https://soundtrackworld.com/2026/11/music-of-hollywood-goldsmith-poledouris-prague/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/fmp-goldsmith-poledouris.jpg",
+     "link": "https://soundtrackworld.com/2026/11/music-of-hollywood-goldsmith-poledouris-prague/",
+     "alt": "布拉格 Rudolfinum 音樂廳，赫拉德茨－克拉洛韋愛樂演出 Goldsmith 與 Poledouris 專場",
+     "caption": "2026 年 10 月 4 日，布拉格 Rudolfinum 音樂廳",
+     "credit": "Film Music Prague 官方網頁",
+     "credit_url": "https://soundtrackworld.com/2026/11/music-of-hollywood-goldsmith-poledouris-prague/"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-113",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "亞洲",
+   "date": "2026-11-05",
+   "title": "金馬 63：最佳原創電影音樂五組入圍",
+   "summary": "第 63 屆金馬獎 11/22（日）晚間在臺北流行音樂中心頒獎，今年起改在星期日舉行。最佳原創電影音樂入圍五組：何國杰與 Isabel Latorre Sáez《滄海琴聲》、林強《女孩》、侯志堅等四人《功夫》、何堅良與福多瑪《我們不是陌生人》、片山凉太《黑潮》。典禮上會現場演唱三首入圍最佳原創電影歌曲：9m88〈輕輕放下〉（《雙囍》）、Ian Hannz〈世界好壞〉（《善男信女》）、洪佩瑜與片山凉太〈一去不返〉（《黑潮》）；李佳薇則在追思單元為逝世影人演唱。何國杰的《滄海琴聲》也入圍了好萊塢媒體音樂獎動畫配樂，最後由 Dario Marianelli《Wildwood》獲獎。典禮晚間 6:30 開始，台視直播，網路由 MyVideo 獨家播出，海外可看金馬 YouTube。",
+   "composers": [
+    "ricky-ho",
+    "lim-giong",
+    "ho-chien-liang"
+   ],
+   "sources": [
+    {
+     "name": "台灣電影網",
+     "url": "https://taiwancinema.bamid.gov.tw/InfoNew/InfoNewContent/?ContentUrl=95253"
+    },
+    {
+     "name": "華視新聞",
+     "url": "https://news.cts.com.tw/cts/entertain/202610/202610013085119.html"
+    },
+    {
+     "name": "華視新聞",
+     "url": "https://news.cts.com.tw/cts/entertain/202611/202611053097672.html"
+    },
+    {
+     "name": "金馬執委會",
+     "url": "https://www.goldenhorse.org.tw/"
+    }
+   ],
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://mesple.github.io/cuesheet/images/2026-11/gha63.jpg",
+     "link": "https://www.goldenhorse.org.tw/",
+     "alt": "第 63 屆金馬獎主視覺「再見江湖」",
+     "caption": "第 63 屆金馬獎主視覺「再見江湖」",
+     "credit": "臺北金馬影展執行委員會",
+     "credit_url": "https://www.goldenhorse.org.tw/"
+    }
+   ],
+   "web": true,
+   "internal_note": "網站版標題／摘要依寫稿規則調整，與已寄出電子報略有不同。"
+  },
+  {
+   "id": "2026-11-114",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "歐洲",
+   "date": "2026-11-14",
+   "title": "歐洲電影獎公布入圍",
+   "summary": "歐洲作曲家獎入圍 Volker Bertelmann《Bunker》、Tara Nome Doyle《Rose》、Alberto Iglesias《Amarga Navidad》，2027/1/16 在雅典頒獎。",
+   "composers": [
+    "volker-bertelmann",
+    "alberto-iglesias"
+   ],
+   "sources": [
+    {
+     "name": "Deadline",
+     "url": "https://deadline.com/2026/11/european-film-awards-2026-nominations-1237223704/"
+    },
+    {
+     "name": "AwardsWatch",
+     "url": "https://awardswatch.com/fatherland-la-bola-negra-lead-39th-european-film-awards-nominations/"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-115",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "歐洲",
+   "date": "2026-11-17",
+   "title": "首屆 Ivors Composer Awards：Oliver Coates 拿下最佳電影配樂",
+   "summary": "11/17 在倫敦 Grosvenor House 頒獎，Coates 在 Daniel Pemberton《Project Hail Mary》與《Effi o Blaenau》之中勝出。主要得獎：\n- 電影配樂：Oliver Coates《The History of Sound》\n- 電視配樂：Patrick Jonsson《Mint》\n- 紀錄片配樂：Jessica Dannheisser《The Last Musician of Auschwitz》\n- 遊戲配樂：The Flight（Joe Henson、Alexis Smith）《007 First Light》\n- 年度作曲家：Daniel Pemberton\n- 學院院士：Ludovico Einaudi\n- 創新獎：Max Richter",
+   "composers": [
+    "oliver-coates",
+    "daniel-pemberton",
+    "max-richter"
+   ],
+   "sources": [
+    {
+     "name": "The Ivors Academy",
+     "url": "https://ivorsacademy.com/news/winners-announced-for-the-ivors-composer-awards-2026/"
+    },
+    {
+     "name": "Games Press",
+     "url": "https://www.gamespress.com/en-GB/THE-FLIGHT-JOE-HENSON-AND-ALEXIS-SMITH-PRESENTED-WITH-IVOR-NOVELLO-AWA"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-116",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "亞洲",
+   "date": "2026-11-10",
+   "title": "金雞獎最佳音樂：高小陽《萬桐書》",
+   "summary": "第 39 屆中國金雞獎在廈門頒獎，高小陽以《萬桐書》獲最佳音樂；同組入圍還有《給阿嬤的情書》、《10 間敢死隊》、胡偉立《鏢人：風起大漠》。",
+   "composers": [
+    "gao-xiaoyang"
+   ],
+   "sources": [
+    {
+     "name": "福建省人民政府",
+     "url": "http://fj.gov.cn/szf/hd/202611/t20261111_7247915.htm"
+    },
+    {
+     "name": "搜狐",
+     "url": "https://www.sohu.com/a/1100049519_121447823"
+    }
+   ],
+   "web": true,
+   "internal_note": "網站版標題／摘要依寫稿規則調整，與已寄出電子報略有不同。"
+  },
+  {
+   "id": "2026-11-117",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "亞洲",
+   "date": "2026-11-05",
+   "title": "《Ramayana》上映，Zimmer 首次為印度電影配樂",
+   "summary": "Nitesh Tiwari 執導的印度史詩片《Ramayana》第一部 11/5 起全球上映，由 Hans Zimmer 與 A.R. Rahman 首度合作配樂；Rahman 說這份配樂前後花了三年半，Khaleej Times 影評把兩人的配樂列為全片最大的優點之一。第二部預定 2027 年排燈節上映。",
+   "composers": [
+    "hans-zimmer",
+    "ar-rahman"
+   ],
+   "sources": [
+    {
+     "name": "Outlook India",
+     "url": "https://www.outlookindia.com/art-entertainment/hans-zimmer-signed-on-for-ramayana-before-pitch-even-finished-producer-reveals"
+    },
+    {
+     "name": "Bollywood Hungama",
+     "url": "https://www.bollywoodhungama.com/?p=2178376"
+    },
+    {
+     "name": "Khaleej Times",
+     "url": "https://www.khaleejtimes.com/entertainment/ramayana-part-1-review-ranbir-kapoor-yash-sai-pallavi"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-118",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "歐洲",
+   "date": "2026-11",
+   "title": "久石讓率皇家愛樂歐洲巡演",
+   "summary": "久石讓率皇家愛樂 11/23 倫敦皇家亞伯特音樂廳起，續往慕尼黑、琉森、斯圖加特、柏林、漢堡（12/2），同月也在 DG 發行《蒼鷺與少年》交響組曲錄音。",
+   "composers": [
+    "joe-hisaishi"
+   ],
+   "sources": [
+    {
+     "name": "Music News",
+     "url": "https://musicnews.lflc.jp/articles/26a2d25237d3bc5b"
+    }
+   ],
+   "web": true,
+   "internal_note": "date 待確認：只確定為 11 月的活動。 網站版標題／摘要依寫稿規則調整，與已寄出電子報略有不同。"
+  },
+  {
+   "id": "2026-11-119",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "歐洲",
+   "date": "2026-11",
+   "title": "巴黎首演《美女與野獸》電影音樂會",
+   "summary": "Frank Strobel 指揮法國廣播愛樂與合唱團，為考克多《美女與野獸》80 週年現場演出 Georges Auric 的配樂。",
+   "composers": [
+    "georges-auric"
+   ],
+   "sources": [
+    {
+     "name": "Théâtre du Châtelet",
+     "url": "https://www.chatelet.com/en/programmation/26-27/cine-concert-beauty-and-the-beast/"
+    },
+    {
+     "name": "Radio France",
+     "url": "https://www.maisondelaradioetdelamusique.fr/evenement/cine-concert-la-belle-et-la-bete"
+    }
+   ],
+   "web": true,
+   "internal_note": "date 待確認：只確定為 11 月的活動。"
+  },
+  {
+   "id": "2026-11-120",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "亞洲",
+   "date": "2026-11-14",
+   "title": "華依達百歲冥誕音樂會在東京、大阪",
+   "summary": "波蘭 AUKSO 室內樂團 11/14、11/16 演出，選奏 Wojciech Kilar 等人為《下水道》《應許之地》《大理石人》寫的音樂。",
+   "composers": [
+    "wojciech-kilar"
+   ],
+   "sources": [
+    {
+     "name": "波蘭廣報文化中心",
+     "url": "https://instytutpolski.pl/tokyo/wajda-100-concert/"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-121",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "歐洲",
+   "date": "2026-11",
+   "title": "鹿特丹愛樂《哈利波特：消失的密室》",
+   "summary": "11/18–22 在 de Doelen 連演五場電影音樂會。",
+   "composers": [],
+   "sources": [
+    {
+     "name": "Rotterdam Philharmonic",
+     "url": "https://www.rotterdamsphilharmonisch.nl/en/filmconcert"
+    }
+   ],
+   "web": true,
+   "internal_note": "date 待確認：只確定為 11 月的活動。"
+  },
+  {
+   "id": "2026-11-122",
+   "issue": "2026-11-news",
+   "type": "新聞",
+   "region": "歐洲",
+   "date": "2026-11-10",
+   "title": "歐洲作曲家新案",
+   "summary": "Federico Jusid 配樂 Apple TV《12 12 12》；Fernando Velázquez 再與 Oriol Paulo 合作《Proxies》。",
+   "composers": [
+    "federico-jusid",
+    "fernando-velazquez"
+   ],
+   "sources": [
+    {
+     "name": "FMR：Jusid",
+     "url": "https://filmmusicreporter.com/2026/11/10/federico-jusid-scoring-apple-tvs-12-12-12/"
+    },
+    {
+     "name": "FMR：Velázquez",
+     "url": "https://filmmusicreporter.com/2026/11/04/fernando-velazquez-scoring-oriol-paulos-proxies/"
+    }
+   ],
+   "web": false,
+   "internal_note": "多位作曲家接案合併成一則，只放電子報、不上網站（編輯 2026-11-20 指定）。"
+  },
+  {
+   "id": "2026-11-123",
+   "issue": "2026-11-news",
+   "type": "訃聞",
+   "region": "亞洲",
+   "date": "2026-10-17",
+   "title": "Deva（1950–2026）",
+   "summary": "泰米爾電影作曲家 Deva（本名 Devanesan Chokkalingam）10/17 在清奈因心臟驟停辭世，享年 75 歲。他為四百多部電影寫歌配樂，《Annamalai》《Baashha》《Vaalee》都是代表作，Rajinikanth 電影開場那段標誌音樂也出自他手。他把清奈街頭的 gaana 民間歌謠帶進主流電影，被稱為「Thenisai Thendral」，泰米爾納德邦政府以國家禮儀為他送行",
+   "composers": [
+    "deva"
+   ],
+   "sources": [
+    {
+     "name": "India Today",
+     "url": "https://www.indiatoday.in/movies/regional-cinema/story/tamil-composer-deva-death-gaana-chennai-hospital-mattukkara-mannaru-3019457-2026-10-17"
+    },
+    {
+     "name": "The Indian Express",
+     "url": "https://indianexpress.com/article/entertainment/tamil/music-composer-deva-thenisai-thendral-devanesan-chokkalingam-dead-rajinikanth-intro-music-10925635/"
+    },
+    {
+     "name": "The Straits Times",
+     "url": "https://www.straitstimes.com/life/entertainment/popular-tamil-music-composer-deva-dies-aged-75"
+    }
+   ],
+   "web": true,
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Deva_Music_Director.jpg/330px-Deva_Music_Director.jpg",
+     "alt": "Deva（1950–2026） 肖像",
+     "caption": "",
+     "credit": "Santhosh2903",
+     "license": "CC BY-SA 4.0",
+     "credit_url": "https://commons.wikimedia.org/wiki/File:Deva_Music_Director.jpg",
+     "grayscale": true
+    }
+   ]
+  },
+  {
+   "id": "2026-11-124",
+   "issue": "2026-11-news",
+   "type": "訃聞",
+   "region": "北美",
+   "date": "2026-10-01",
+   "title": "Del Casher（1937–2026）",
+   "summary": "吉他手、作曲家 Del Casher 10/1 因癌症辭世，享年 88 歲，消息到 11 月初才公開。1966 年他在 Vox 擔任顧問時，發現音箱的可變音色旋鈕轉動時會發出像人聲、像小號的「哇哇」聲，說服 Thomas Organ 工程師 Brad Plunkett 等人把電路改成腳踩踏板，這就是後來的 Cry Baby 哇音踏板。透過作曲家 Vic Mizzy，環球影業請他帶著原型踏板錄《The Ghost and Mr. Chicken》（1966）、《The Shakiest Gun in the West》（1968）與《The Traveling Saleslady》的配樂，MGM 的 Tony Curtis 喜劇《Don't Make Waves》（1967）也用上了。1971 年，Isaac Hayes 的〈Theme from Shaft〉以哇音吉他貫穿全曲，拿下奧斯卡最佳原創歌曲。他還為兒童節目《The New Zoo Revue》寫了兩百多集音樂，為 NBC 洛杉磯新聞寫的主題曲用了 18 年",
+   "composers": [
+    "del-casher"
+   ],
+   "sources": [
+    {
+     "name": "Billboard",
+     "url": "https://www.billboard.com/music/music-news/del-casher-death-inventor-guitar-wah-wah-pedal-dies-obituary-1236377908"
+    },
+    {
+     "name": "Guitar Player",
+     "url": "https://www.guitarplayer.com/guitarists/del-casher-wah-wah-pedal-inventor-whose-creation-shaped-jimi-hendrix-and-eric-claptons-guitar-sounds-dies-at-88-i-would-just-like-guitar-players-to-think-of-me-once-in-a-while"
+    },
+    {
+     "name": "Rolling Stone",
+     "url": "https://www.yahoo.com/entertainment/celebrity/deaths-obituaries/articles/del-casher-guitarist-invented-wah-191311811.html"
+    }
+   ],
+   "web": true
+  },
+  {
+   "id": "2026-11-125",
+   "issue": "2026-11-news",
+   "type": "訃聞",
+   "region": "亞洲",
+   "date": "2026-11-12",
+   "title": "Jayanta Mukherjee",
+   "summary": "Jayanta Mukherjee，印度電影製作人，作曲家 Hemant Kumar 之子，11/12 於孟買辭世",
+   "composers": [],
+   "sources": [
+    {
+     "name": "The Indian Express",
+     "url": "https://indianexpress.com/article/entertainment/bollywood/moushumi-chatterjees-husband-producer-jayanta-mukherjee-dies-in-mumbai-10961708/"
+    }
+   ],
+   "web": false,
+   "internal_note": "同期辭世者一行帶過；電影製作人，非作曲家，不上網站。"
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "issue": "2026-11-news",
+ "label": "2026 年 11 月號 · 配樂新訊版",
+ "edition": "news",
+ "kicker": "FILM MUSIC NEWSLETTER · NOVEMBER 2026 · 配樂新訊版",
+ "date": "2026-11-20",
+ "editor_note": "《大白鯊》裡的樂段，成了美國樂團的徵才曲目，電影音樂正一步步走進音樂廳。John Williams 為《星際大戰》50 週年重新動筆、好萊塢媒體音樂獎（HMMA）得獎者出爐，葛萊美也宣布入圍名單。歲末的電影音樂圈越來越熱鬧，一日完售的《星際效應》電影音樂會，11 月底就要登場，你搶到票了嗎？",
+ "feature": [
+  "2026-11-101"
+ ],
+ "sections": [
+  {
+   "section": "本期專題",
+   "items": [
+    "2026-11-101"
+   ]
+  },
+  {
+   "section": "快訊",
+   "items": [
+    "2026-11-102",
+    "2026-11-103",
+    "2026-11-104",
+    "2026-11-105",
+    "2026-11-106",
+    "2026-11-107"
+   ]
+  },
+  {
+   "section": "社群雷達",
+   "items": [
+    "2026-11-108",
+    "2026-11-109",
+    "2026-11-110",
+    "2026-11-111"
+   ]
+  },
+  {
+   "section": "歐亞觀察",
+   "items": [
+    "2026-11-112",
+    "2026-11-113"
+   ],
+   "list": [
+    "2026-11-114",
+    "2026-11-115",
+    "2026-11-116",
+    "2026-11-117",
+    "2026-11-118",
+    "2026-11-119",
+    "2026-11-120",
+    "2026-11-121",
+    "2026-11-122"
+   ]
+  },
+  {
+   "section": "In memoriam",
+   "items": [
+    "2026-11-123",
+    "2026-11-124"
+   ],
+   "brief": [
+    "2026-11-125"
+   ]
+  }
+ ],
+ "html": "newsletter/2026-11-news/index.html",
+ "note": "11 月號配樂新訊版：定稿 HTML 為手工修改（GitHub 未連線期間）；本檔與 items/2026-11-news.json 於 2026-11-20 由定稿 HTML 反向重建，供網站單則頁使用。已寄出的電子報以 newsletter/2026-11-news/index.html 為準。",
+ "sources_footer": "The New York Times、ABC、中時新聞網、LA Phil、Gramophone、Film Music Reporter、StarWars.com、Awards Radar、Billboard、Deadline、AwardsWatch、Recording Academy、BroadwayWorld、JWFan、Soundtrack World、台灣電影網、華視新聞、福建省人民政府、搜狐、Music News（lflc）、Théâtre du Châtelet、Radio France、波蘭廣報文化中心（東京）、Rotterdam Philharmonic、金馬執委會、Outlook India、Bollywood Hungama、Khaleej Times、Film Score Monthly、The Ivors Academy、Games Press、India Today、The Indian Express、The Straits Times、Billboard、Guitar Player、Rolling Stone、Wikimedia Commons（訃聞肖像，授權標示於各圖下方）、Film Music Prague（音樂會照片）、Spotify（專輯封面）、文化部藝文活動開放資料",
+ "cutoff": "2026 年 11 月 16 日（葛萊美入圍 11/18、Ivors 與 HMMA 得獎名單 11/19 補）"
+}

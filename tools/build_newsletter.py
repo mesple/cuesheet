@@ -285,16 +285,16 @@ def interviews(items, tpl=False):
     return "".join(out)
 
 
-def flash_li(it):
+def flash_li(it, li_style="margin-bottom:10px;", li_style_sub="margin-bottom:12px;"):
     """快訊一則。summary 若有「- 」開頭的行，改成導言＋子清單（每行「· 類別：內容」，懸掛縮排），來源另起一行（編輯 2026-11-20 指定：得獎名單、新案速覽用）。"""
     lines = it["summary"].strip().split("\n")
     subs = [l.strip()[2:] for l in lines if l.strip().startswith("- ")]
     if not subs:
-        return f'<li style="margin-bottom:10px;"><strong>{esc(it["title"])}：</strong>{inline(it["summary"])}（{src_list(it)}）</li>'
+        return f'<li style="{li_style}"><strong>{esc(it["title"])}：</strong>{inline(it["summary"])}（{src_list(it)}）</li>'
     lead = " ".join(l.strip() for l in lines if l.strip() and not l.strip().startswith("- "))
     sub = "".join(f'<div style="margin-top:3px;padding-left:1em;text-indent:-1em;">· {inline(x)}</div>' for x in subs)
     head = f'<strong>{esc(it["title"])}：</strong>' if lead else f'<strong>{esc(it["title"])}</strong>'
-    return f'<li style="margin-bottom:12px;">{head}{inline(lead)}{sub}<div style="margin-top:3px;">（{src_list(it)}）</div></li>'
+    return f'<li style="{li_style_sub}">{head}{inline(lead)}{sub}<div style="margin-top:3px;">（{src_list(it)}）</div></li>'
 
 
 def news_flash(items):
@@ -363,7 +363,7 @@ def eurasia(heads, others, tpl=False):
             out.append(f'<div style="font-size:15px;line-height:1.75;margin-top:6px;">{inline(it.get("body") or it["summary"])}</div>'
                        f'<div style="font-size:12px;margin-top:6px;">來源：{src_list(it)}</div>')
     if others:
-        lis = "".join(f'<li style="margin:0 0 10px;"><strong>{esc(it["title"])}：</strong>{inline(it["summary"])}（{src_list(it)}）</li>' for it in others)
+        lis = "".join(flash_li(it, "margin:0 0 10px;", "margin:0 0 12px;") for it in others)  # 得獎名單同快訊改子清單
         out.append(f'<div style="font-family:{SERIF};font-size:22px;font-weight:700;line-height:1.35;margin-top:20px;">其他歐亞動態</div>'
                    f'<ol style="margin:8px 0 8px;padding-left:22px;font-size:14px;line-height:1.7;">{lis}</ol>')
     return row("".join(out))

@@ -15,6 +15,12 @@
    ],
    "imdb": []
   },
+  "alberto-iglesias": {
+   "display": "Alberto Iglesias",
+   "name": "Alberto Iglesias",
+   "aliases": [],
+   "imdb": []
+  },
   "alex-belcher": {
    "display": "Alex Belcher",
    "name": "Alex Belcher",
@@ -34,6 +40,14 @@
    "name": "Anna Meredith",
    "aliases": [
     "Meredith"
+   ],
+   "imdb": []
+  },
+  "ar-rahman": {
+   "display": "A.R. Rahman",
+   "name": "A.R. Rahman",
+   "aliases": [
+    "Rahman"
    ],
    "imdb": []
   },
@@ -93,6 +107,20 @@
    "aliases": [],
    "imdb": []
   },
+  "brian-may": {
+   "display": "Brian May",
+   "name": "Brian May",
+   "aliases": [],
+   "imdb": []
+  },
+  "carter-burwell": {
+   "display": "Carter Burwell",
+   "name": "Carter Burwell",
+   "aliases": [
+    "Burwell"
+   ],
+   "imdb": []
+  },
   "christopher-benstead": {
    "display": "Christopher Benstead",
    "name": "Christopher Benstead",
@@ -145,6 +173,18 @@
    "aliases": [],
    "imdb": []
   },
+  "del-casher": {
+   "display": "Del Casher",
+   "name": "Del Casher",
+   "aliases": [],
+   "imdb": []
+  },
+  "deva": {
+   "display": "Deva",
+   "name": "Deva",
+   "aliases": [],
+   "imdb": []
+  },
   "duncan-sheik": {
    "display": "Duncan Sheik",
    "name": "Duncan Sheik",
@@ -179,6 +219,14 @@
    ],
    "imdb": []
   },
+  "fernando-velazquez": {
+   "display": "Fernando Velázquez",
+   "name": "Fernando Velázquez",
+   "aliases": [
+    "Velázquez"
+   ],
+   "imdb": []
+  },
   "finneas": {
    "display": "Finneas",
    "name": "Finneas O'Connell",
@@ -199,6 +247,12 @@
    "aliases": [],
    "imdb": []
   },
+  "gao-xiaoyang": {
+   "display": "高小陽",
+   "name": "",
+   "aliases": [],
+   "imdb": []
+  },
   "george-fenton": {
    "display": "George Fenton",
    "name": "George Fenton",
@@ -207,9 +261,27 @@
     "nm0006070"
    ]
   },
+  "georges-auric": {
+   "display": "Georges Auric",
+   "name": "Georges Auric",
+   "aliases": [],
+   "imdb": []
+  },
+  "germaine-franco": {
+   "display": "Germaine Franco",
+   "name": "Germaine Franco",
+   "aliases": [],
+   "imdb": []
+  },
   "gilles-alonzo": {
    "display": "Gilles Alonzo",
    "name": "Gilles Alonzo",
+   "aliases": [],
+   "imdb": []
+  },
+  "gordy-haab": {
+   "display": "Gordy Haab",
+   "name": "Gordy Haab",
    "aliases": [],
    "imdb": []
   },
@@ -345,6 +417,14 @@
    "aliases": [],
    "imdb": []
   },
+  "joe-hisaishi": {
+   "display": "久石讓",
+   "name": "Joe Hisaishi",
+   "aliases": [
+    "Joe Hisaishi"
+   ],
+   "imdb": []
+  },
   "john-barry": {
    "display": "John Barry",
    "name": "John Barry",
@@ -366,6 +446,20 @@
   "john-williams": {
    "display": "John Williams",
    "name": "John Williams",
+   "aliases": [],
+   "imdb": []
+  },
+  "jonny-greenwood": {
+   "display": "Jonny Greenwood",
+   "name": "Jonny Greenwood",
+   "aliases": [
+    "Greenwood"
+   ],
+   "imdb": []
+  },
+  "joseph-shirley": {
+   "display": "Joseph Shirley",
+   "name": "Joseph Shirley",
    "aliases": [],
    "imdb": []
   },
@@ -417,6 +511,14 @@
    ],
    "imdb": []
   },
+  "kris-bowers": {
+   "display": "Kris Bowers",
+   "name": "Kris Bowers",
+   "aliases": [
+    "Bowers"
+   ],
+   "imdb": []
+  },
   "laura-karpman": {
    "display": "Laura Karpman",
    "name": "Laura Karpman",
@@ -458,9 +560,23 @@
    "aliases": [],
    "imdb": []
   },
+  "ludwig-goransson": {
+   "display": "Ludwig Göransson",
+   "name": "Ludwig Göransson",
+   "aliases": [
+    "Göransson"
+   ],
+   "imdb": []
+  },
   "lukas-frank": {
    "display": "Lukas Frank",
    "name": "Lukas Frank",
+   "aliases": [],
+   "imdb": []
+  },
+  "marcelo-zarvos": {
+   "display": "Marcelo Zarvos",
+   "name": "Marcelo Zarvos",
    "aliases": [],
    "imdb": []
   },
@@ -479,6 +595,12 @@
   "margaret-hermant": {
    "display": "Margaret Hermant",
    "name": "Margaret Hermant",
+   "aliases": [],
+   "imdb": []
+  },
+  "mark-snow": {
+   "display": "Mark Snow",
+   "name": "Mark Snow",
    "aliases": [],
    "imdb": []
   },
@@ -570,6 +692,14 @@
    "aliases": [],
    "imdb": []
   },
+  "oliver-coates": {
+   "display": "Oliver Coates",
+   "name": "Oliver Coates",
+   "aliases": [
+    "Coates"
+   ],
+   "imdb": []
+  },
   "olivier-arson": {
    "display": "Olivier Arson",
    "name": "Olivier Arson",
@@ -605,6 +735,12 @@
   "pinar-toprak": {
    "display": "Pinar Toprak",
    "name": "Pinar Toprak",
+   "aliases": [],
+   "imdb": []
+  },
+  "rachel-portman": {
+   "display": "Rachel Portman",
+   "name": "Rachel Portman",
    "aliases": [],
    "imdb": []
   },
@@ -686,6 +822,12 @@
    "aliases": [],
    "imdb": []
   },
+  "steven-price": {
+   "display": "Steven Price",
+   "name": "Steven Price",
+   "aliases": [],
+   "imdb": []
+  },
   "terence-blanchard": {
    "display": "Terence Blanchard",
    "name": "Terence Blanchard",
@@ -745,6 +887,12 @@
   "will-van-de-crommert": {
    "display": "Will Van de Crommert",
    "name": "Will Van de Crommert",
+   "aliases": [],
+   "imdb": []
+  },
+  "wojciech-kilar": {
+   "display": "Wojciech Kilar",
+   "name": "Wojciech Kilar",
    "aliases": [],
    "imdb": []
   },
