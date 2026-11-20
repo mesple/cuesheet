@@ -474,7 +474,11 @@ def breaks(h):
             else:
                 seg += (" " if seg else "") + l
         out.append(seg)
-    return "<br><br>".join(out)
+    res = out[0]
+    for seg in out[1:]:
+        # 前一段以子清單（block）結尾時只需一個換行，否則留空行
+        res += ("<br>" if res.endswith("</span>") else "<br><br>") + seg
+    return res
 
 
 def full_row(it, composers, depth):
@@ -724,6 +728,7 @@ HOME_CSS = """
 .h-head2 a{color:var(--ink);text-decoration:none}.h-head2 a:hover{color:var(--teal)}
 .h-deck2{font-size:16px;color:var(--soft);margin:0 0 10px;line-height:1.6}
 .h-body2{font-size:15px;line-height:1.85;margin:0 0 4px}
+.h-deck .subl,.h-deck2 .subl{display:block;padding-left:1em;text-indent:-1em;margin-top:2px}
 .h-row{display:block;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
 .h-row b{display:block;font-family:"Noto Serif TC",Georgia,serif;font-size:17px;line-height:1.4}
 .h-row:hover b{color:var(--teal)}
@@ -878,7 +883,7 @@ def build_home():
         body2_html = f'<p class="h-body2">{nm(second, body2)}</p>' if second.get("body") else ""
         second_html = f"""<div class="h-second{'' if img2 else ' noimg'}">{pic2}<div>
 <h3 class="h-head2"><a href="item/{second['id']}/">{nm(second, second['title'])}</a></h3>
-<p class="h-deck2">{nm(second, second['summary'])}</p>
+<p class="h-deck2">{breaks(nm(second, second['summary']))}</p>
 {body2_html}
 <a class="h-read" href="item/{second['id']}/">閱讀全文 →</a></div></div>"""
 
@@ -893,7 +898,7 @@ def build_home():
         body = (lead.get("body") or lead["summary"]).split("\n\n")[0]
         lead_html = f"""<article class="h-lead">
 <h2 class="h-head"><a href="item/{lead['id']}/">{nm(lead, lead['title'])}</a></h2>
-<p class="h-deck">{nm(lead, lead['summary'])}</p>
+<p class="h-deck">{breaks(nm(lead, lead['summary']))}</p>
 {f'<div class="h-pics n{len(imgs)}">{pics}</div><div class="h-credit">{credit}</div>' if imgs else ''}
 {f'<div class="h-body"><p>{nm(lead, _plain(body))}</p></div>' if lead.get("body") else ''}
 <a class="h-read" href="item/{lead['id']}/">閱讀全文 →</a>
