@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-20T11:58:05+08:00",
+ "run_at": "2026-11-21T11:57:22+08:00",
  "categories": {
   "音樂": {
    "fetched": 34,
@@ -8,8 +8,8 @@
    "error": "疑似資料不完整：34 筆，基準 468 筆（共試 4 次），沿用上次資料"
   },
   "講座": {
-   "fetched": 78,
-   "baseline": 78,
+   "fetched": 77,
+   "baseline": 77,
    "attempts": 1,
    "error": null
   },
