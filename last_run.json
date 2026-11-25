@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-24T14:56:52+08:00",
+ "run_at": "2026-11-25T13:25:48+08:00",
  "categories": {
   "音樂": {
    "fetched": 31,
@@ -8,16 +8,16 @@
    "error": "疑似資料不完整：31 筆，基準 468 筆（共試 4 次），沿用上次資料"
   },
   "講座": {
-   "fetched": 72,
-   "baseline": 72,
+   "fetched": 71,
+   "baseline": 71,
    "attempts": 1,
    "error": null
   },
   "電影": {
-   "fetched": 38,
-   "baseline": 84,
-   "attempts": 4,
-   "error": "疑似資料不完整：38 筆，基準 84 筆（共試 4 次），沿用上次資料"
+   "fetched": 42,
+   "baseline": 42,
+   "attempts": 1,
+   "error": null
   },
   "演唱會": {
    "fetched": 11,
@@ -27,8 +27,7 @@
   }
  },
  "carried_over": [
-  "音樂",
-  "電影"
+  "音樂"
  ],
  "matched_events": 9,
  "candidates": 0
