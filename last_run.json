@@ -1,11 +1,11 @@
 {
- "run_at": "2026-11-25T13:25:48+08:00",
+ "run_at": "2026-11-26T13:00:11+08:00",
  "categories": {
   "音樂": {
-   "fetched": 31,
+   "fetched": 30,
    "baseline": 468,
    "attempts": 4,
-   "error": "疑似資料不完整：31 筆，基準 468 筆（共試 4 次），沿用上次資料"
+   "error": "疑似資料不完整：30 筆，基準 468 筆（共試 4 次），沿用上次資料"
   },
   "講座": {
    "fetched": 71,
@@ -14,8 +14,8 @@
    "error": null
   },
   "電影": {
-   "fetched": 42,
-   "baseline": 42,
+   "fetched": 53,
+   "baseline": 53,
    "attempts": 1,
    "error": null
   },

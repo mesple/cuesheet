@@ -699,7 +699,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HF16BD",
-"start_date": "2026/11/25"
+"start_date": "2026/11/28"
 },
 {
 "uid": "6ad658f626b3245efc7536bb",
@@ -718,15 +718,6 @@
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HF16BR",
 "start_date": "2026/11/28"
-},
-{
-"uid": "6ad7bb5f26b3245efc7536ee",
-"category": "電影",
-"title": "11月高雄市電影館｜沙央",
-"performer": "",
-"description": "",
-"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE0PV",
-"start_date": "2026/11/25"
 },
 {
 "uid": "6ad7bb5f26b3245efc7536ef",
@@ -798,7 +789,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3OZ",
-"start_date": "2026/11/25"
+"start_date": "2026/11/27"
 },
 {
 "uid": "6ad91d1d26b3245efc753701",
@@ -807,7 +798,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3P6",
-"start_date": "2026/11/25"
+"start_date": "2026/11/26"
 },
 {
 "uid": "6ad91d1d26b3245efc753702",
@@ -816,7 +807,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3PD",
-"start_date": "2026/11/25"
+"start_date": "2026/11/26"
 },
 {
 "uid": "6ad91d1d26b3245efc753704",
@@ -834,7 +825,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3PY",
-"start_date": "2026/11/25"
+"start_date": "2026/11/26"
 },
 {
 "uid": "6ad91d1d26b3245efc753706",
@@ -843,7 +834,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3Q5",
-"start_date": "2026/11/25"
+"start_date": "2026/11/26"
 },
 {
 "uid": "6ada767326b3245efc753712",
@@ -852,7 +843,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3QC",
-"start_date": "2026/11/25"
+"start_date": "2026/11/26"
 },
 {
 "uid": "6ada767326b3245efc753713",
@@ -861,7 +852,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3QJ",
-"start_date": "2026/11/25"
+"start_date": "2026/11/26"
 },
 {
 "uid": "6ada767326b3245efc753714",
@@ -906,7 +897,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1I7E1FQ",
-"start_date": "2026/11/25"
+"start_date": "2026/11/26"
 },
 {
 "uid": "6afc0ec726b3245efc753806",
@@ -1015,6 +1006,114 @@
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVC77I",
 "start_date": "2026/12/01"
+},
+{
+"uid": "6b06a61326b3245efc75387d",
+"category": "電影",
+"title": "12月高雄市電影館｜善男信女",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVC77V",
+"start_date": "2026/12/01"
+},
+{
+"uid": "6b06a61326b3245efc75387e",
+"category": "電影",
+"title": "12月高雄市電影館｜第四幕",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVC782",
+"start_date": "2026/12/01"
+},
+{
+"uid": "6b06a61326b3245efc75387f",
+"category": "電影",
+"title": "12月高雄市電影館｜盧丹的惡魔",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVC789",
+"start_date": "2026/12/01"
+},
+{
+"uid": "6b06a61326b3245efc753880",
+"category": "電影",
+"title": "12月高雄市電影館｜窗外有藍天 4K經典數位修復",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVC78G",
+"start_date": "2026/12/01"
+},
+{
+"uid": "6b06a61326b3245efc753881",
+"category": "電影",
+"title": "12月高雄市電影館｜與達賴喇嘛談心：尋找幸福的智慧",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVC78W",
+"start_date": "2026/12/03"
+},
+{
+"uid": "6b06a61326b3245efc753882",
+"category": "電影",
+"title": "12月高雄市電影館｜蕭邦！蕭邦！",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVC793",
+"start_date": "2026/12/02"
+},
+{
+"uid": "6b06a61326b3245efc753883",
+"category": "電影",
+"title": "12月高雄市電影館｜當風吹來奈義町",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVC79A",
+"start_date": "2026/12/04"
+},
+{
+"uid": "6b06a61326b3245efc753884",
+"category": "電影",
+"title": "12月高雄市電影館｜日光",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVC79H",
+"start_date": "2026/12/04"
+},
+{
+"uid": "6b06a61326b3245efc753885",
+"category": "電影",
+"title": "12月高雄市電影館｜袒裎相見",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCC28",
+"start_date": "2026/12/04"
+},
+{
+"uid": "6b06a61326b3245efc753886",
+"category": "電影",
+"title": "12月高雄市電影館｜比爾艾文斯三重奏變",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCC2F",
+"start_date": "2026/12/01"
+},
+{
+"uid": "6b06a61326b3245efc753887",
+"category": "電影",
+"title": "12月高雄市電影館｜黑牢城 黑白版",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCC3D",
+"start_date": "2026/12/10"
+},
+{
+"uid": "6b06a61326b3245efc753888",
+"category": "電影",
+"title": "12月高雄市電影館｜燕尾蝶 4K全新修復版",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCC3K",
+"start_date": "2026/12/06"
 },
 {
 "uid": "681fa5d226b3242b74a3ba7f",
