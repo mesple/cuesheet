@@ -77,7 +77,7 @@
  "html": "newsletter/2026-11-collector/index.html",
  "note": "11 月號深度聆聽版：電子報由 tools/build_newsletter.py 從本檔與 items/2026-11-collector.json 產生。",
  "home_reviews": [
-  "2026-11-003",
+  "web-2026-001",
   "2026-11-002",
   "2026-11-007",
   "2026-11-008"
