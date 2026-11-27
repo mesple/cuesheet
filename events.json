@@ -1,41 +1,7 @@
 {
- "updated": "2026-11-26T13:00:11+08:00",
+ "updated": "2026-11-27T13:01:39+08:00",
  "source": "文化部藝文活動開放資料（政府資料開放授權條款）",
  "events": [
-  {
-   "uid": "6ad91d1d26b3245efc7536ff",
-   "title": "11月高雄市電影館｜我們，巴黎管弦樂團",
-   "category": "電影",
-   "start_date": "2026/11/26",
-   "end_date": "2026/11/26",
-   "organizer": [],
-   "performer": "",
-   "description": "",
-   "image": null,
-   "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3OS",
-   "tickets": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3OS",
-   "source_site": "年代",
-   "cities": [
-    "高雄市"
-   ],
-   "shows": [
-    {
-     "time": "2026/11/26 18:40:00",
-     "end_time": "2026/11/26 23:59:00",
-     "venue": "內惟藝術中心 Reel two 2廳",
-     "address": "高雄市鼓山區馬卡道路329號",
-     "city": "高雄市",
-     "lat": null,
-     "lng": null,
-     "on_sale": "Y",
-     "price": "260"
-    }
-   ],
-   "matched_keywords": [
-    "電影",
-    "樂團"
-   ]
-  },
   {
    "uid": "6a97065526b32434f43580a0",
    "title": "Octacelli大提琴重奏電影配樂音樂會",
