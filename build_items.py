@@ -749,8 +749,7 @@ HOME_CSS = """
 .h-cover .h-more:hover{text-decoration:underline}
 .h-cover .by{font-size:13px;color:var(--teal)}
 .h-cover p{font-size:14px;line-height:1.7;margin:6px 0 0;color:var(--soft)}
-.h-iv{display:block;text-decoration:none;color:var(--ink)}   /* 首頁訪談：影片截圖＋標題＋約 50 字摘要 */
-.h-iv img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--paper);margin-bottom:8px}
+.h-iv{display:block;text-decoration:none;color:var(--ink)}   /* 首頁訪談：純文字，標題＋約 50 字摘要，不放圖（編輯 2026-11-29 指定） */
 .h-iv b{display:block;font-family:"Noto Serif TC",Georgia,serif;font-size:18px;line-height:1.4;margin-bottom:6px}
 .h-iv:hover b{color:var(--teal)}
 .h-iv span{display:block;font-size:14px;line-height:1.75;color:var(--soft)}
@@ -957,7 +956,7 @@ def build_home():
         f'<a class="h-rel" href="{escape(item_href(it, "")[0])}"' + (' target="_blank" rel="noopener"' if item_href(it, "")[1] else "") + f'><img src="{escape(first_image(it) or "")}" alt="{escape(it["title"])} 專輯封面" loading="lazy">'
         f'<span><b>{nm(it, it["title"])}</b>{rel_lines(it)}</span></a>' for it in rels)
     iv_html = "".join(
-        f'<a class="h-iv" href="item/{it["id"]}/"><img src="{escape(first_image(it) or "")}" alt="{escape(it["title"])}" loading="lazy">'
+        f'<a class="h-iv" href="item/{it["id"]}/">'
         f'<b>{nm(it, it["title"])}</b><span>{nm(it, it.get("teaser") or _first_sentence(it["summary"], 60))}<i>（閱讀全文）</i></span></a>' for it in interviews)
     obit_html = "".join(
         f'<a class="h-obit" href="item/{it["id"]}/"><b>{nm(it, it["title"].split("：")[0])}</b><span>{nm(it, _first_sentence(it["summary"], 40))}</span></a>' for it in obits)
