@@ -749,6 +749,12 @@ HOME_CSS = """
 .h-cover .h-more:hover{text-decoration:underline}
 .h-cover .by{font-size:13px;color:var(--teal)}
 .h-cover p{font-size:14px;line-height:1.7;margin:6px 0 0;color:var(--soft)}
+.h-iv{display:block;text-decoration:none;color:var(--ink)}   /* 首頁訪談：影片截圖＋標題＋約 50 字摘要 */
+.h-iv img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--paper);margin-bottom:8px}
+.h-iv b{display:block;font-family:"Noto Serif TC",Georgia,serif;font-size:18px;line-height:1.4;margin-bottom:6px}
+.h-iv:hover b{color:var(--teal)}
+.h-iv span{display:block;font-size:14px;line-height:1.75;color:var(--soft)}
+.h-iv i{font-style:normal;color:var(--teal);font-size:13px;white-space:nowrap}
 .h-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
 .h-talk{display:block;text-decoration:none;color:var(--ink)}
 .h-talk b{display:block;font-family:"Noto Serif TC",Georgia,serif;font-size:18px;line-height:1.4;margin-bottom:6px}
@@ -940,6 +946,7 @@ def build_home():
     home_rev = next((d["home_reviews"] for d in reversed(issue_files) if d.get("home_reviews")), [])
     reviews = [by_id[r] for r in home_rev if r in by_id and r not in used][:4] or pick("樂評", 4)
     used.update(it["id"] for it in reviews)
+    interviews = pick("訪談", 3)   # 首頁訪談三則（編輯 2026-11-29 提出首頁缺訪談）
     talk = pick("社群", 3)
     rels = pick("發行", 4)
     obits = pick("訃聞", 4)
@@ -949,6 +956,9 @@ def build_home():
     rel_html = "".join(
         f'<a class="h-rel" href="{escape(item_href(it, "")[0])}"' + (' target="_blank" rel="noopener"' if item_href(it, "")[1] else "") + f'><img src="{escape(first_image(it) or "")}" alt="{escape(it["title"])} 專輯封面" loading="lazy">'
         f'<span><b>{nm(it, it["title"])}</b>{rel_lines(it)}</span></a>' for it in rels)
+    iv_html = "".join(
+        f'<a class="h-iv" href="item/{it["id"]}/"><img src="{escape(first_image(it) or "")}" alt="{escape(it["title"])}" loading="lazy">'
+        f'<b>{nm(it, it["title"])}</b><span>{nm(it, it.get("teaser") or _first_sentence(it["summary"], 60))}<i>（閱讀全文）</i></span></a>' for it in interviews)
     obit_html = "".join(
         f'<a class="h-obit" href="item/{it["id"]}/"><b>{nm(it, it["title"].split("：")[0])}</b><span>{nm(it, _first_sentence(it["summary"], 40))}</span></a>' for it in obits)
 
@@ -957,6 +967,7 @@ def build_home():
 {side}
 </div>
 {f'<section class="band"><div class="sec">樂評<a class="more-r" href="category/reviews/">全部樂評 →</a></div><div class="h-four">' + "".join(cover(it) for it in reviews) + '</div></section>' if reviews else ''}
+{f'<section class="band"><div class="sec">訪談<a class="more-r" href="category/interviews/">全部訪談 →</a></div><div class="h-three">' + iv_html + '</div></section>' if interviews else ''}
 {f'<section class="band"><div class="sec">社群雷達<a class="more-r" href="category/community/">更多 →</a></div><div class="h-three">' + talk_html + '</div></section>' if talk else ''}
 <section class="band h-two">
 <div><div class="sec">唱片架/試聽<a class="more-r" href="category/releases/">更多 →</a></div>{rel_html}</div>
