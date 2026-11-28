@@ -849,7 +849,7 @@ CLAMP_JS = r"""<script>
 
 
 def build_home():
-    """首頁（A 版報紙風，編輯 2026-10-30 定案）：頭條＋電子報／新聞／活動、樂評、社群雷達、新唱片＋In memoriam。
+    """首頁（A 版報紙風，編輯 2026-10-30 定案）：頭條＋電子報（三期）／新聞／活動、樂評、社群雷達、新唱片＋In memoriam。
     內容從最新一期的單則資料自動取；活動由瀏覽器即時讀 events.json，每天自動更新。"""
     items, composers, labels, features = load()
     shown = sorted([it for it in items if it.get("web") is True], key=sort_key, reverse=True)
@@ -912,7 +912,7 @@ def build_home():
 </article>"""
 
     # 側欄：電子報、新聞、活動
-    nl = sorted(labels.values(), key=lambda x: x["date"], reverse=True)[:2]
+    nl = sorted(labels.values(), key=lambda x: x["date"], reverse=True)[:3]   # 首頁電子報三期（編輯 2026-11-29 指定）
     nl_html = "".join(f'<a class="h-row" href="newsletter/{i["slug"]}/"><b>{escape(i["title"])}</b><span>{escape(i["label"])}</span></a>' for i in nl)
     news = pick("新聞", 4)
     news_html = "".join(
