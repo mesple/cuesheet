@@ -417,30 +417,32 @@
    "issue": "2026-11-news",
    "type": "新聞",
    "region": "亞洲",
-   "date": "2026-11-05",
-   "title": "金馬 63：最佳原創電影音樂五組入圍",
-   "summary": "第 63 屆金馬獎 11/22（日）晚間在臺北流行音樂中心頒獎，今年起改在星期日舉行。最佳原創電影音樂入圍五組：\n- 何國杰、Isabel Latorre Sáez《滄海琴聲》\n- 林強《女孩》\n- 侯志堅等四人《功夫》\n- 何堅良、福多瑪《我們不是陌生人》\n- 片山凉太《黑潮》\n\n典禮上會現場演唱三首入圍最佳原創電影歌曲：\n- 9m88〈輕輕放下〉（《雙囍》）\n- Ian Hannz〈世界好壞〉（《善男信女》）\n- 洪佩瑜、片山凉太〈一去不返〉（《黑潮》）\n\n李佳薇則在追思單元為逝世影人演唱。何國杰的《滄海琴聲》也入圍了好萊塢媒體音樂獎動畫配樂，最後由 Dario Marianelli《Wildwood》獲獎。典禮晚間 6:30 開始，台視直播，網路由 MyVideo 獨家播出，海外可看金馬 YouTube。",
+   "date": "2026-11-22",
+   "title": "金馬 63 揭曉：《我們不是陌生人》、〈一去不返〉拿下配樂與歌曲獎",
+   "summary": "第 63 屆金馬獎 11/22（日）晚間在臺北流行音樂中心頒獎，最佳原創電影音樂由何堅良、福多瑪《我們不是陌生人》獲得；最佳原創電影歌曲是《黑潮》的〈一去不返〉（詞：葛大為；曲：片山凉太；唱：片山凉太、洪佩瑜），兩人當晚也在典禮上現場演唱了這首歌。兩獎由高捷、王識賢頒發。\n\n最佳原創電影音樂入圍：\n- 何堅良、福多瑪《我們不是陌生人》（得獎）\n- 何國杰、Isabel Latorre Sáez《滄海琴聲》\n- 林強《女孩》\n- 侯志堅等四人《功夫》\n- 片山凉太《黑潮》\n\n片山凉太同時入圍音樂與歌曲兩項，最後以歌曲獲獎。何國杰的《滄海琴聲》與配樂獎擦身而過，影片則拿下最佳動畫片與最佳改編劇本；它稍早也入圍好萊塢媒體音樂獎動畫配樂，最後由 Dario Marianelli《Wildwood》獲獎。",
    "composers": [
+    "ho-chien-liang",
+    "fu-duo-ma",
+    "ryota-katayama",
     "ricky-ho",
-    "lim-giong",
-    "ho-chien-liang"
+    "lim-giong"
    ],
    "sources": [
     {
-     "name": "台灣電影網",
-     "url": "https://taiwancinema.bamid.gov.tw/InfoNew/InfoNewContent/?ContentUrl=95253"
-    },
-    {
-     "name": "華視新聞",
-     "url": "https://news.cts.com.tw/cts/entertain/202610/202610013085119.html"
-    },
-    {
-     "name": "華視新聞",
-     "url": "https://news.cts.com.tw/cts/entertain/202611/202611053097672.html"
+     "name": "中央社",
+     "url": "https://www.cna.com.tw/news/amov/202611225003.aspx"
     },
     {
      "name": "金馬執委會",
-     "url": "https://www.goldenhorse.org.tw/"
+     "url": "https://www.goldenhorse.org.tw/63ghawards/programme/"
+    },
+    {
+     "name": "中天新聞",
+     "url": "https://ctinews.com/news/items/8knJ7gZEWo"
+    },
+    {
+     "name": "台灣電影網",
+     "url": "https://taiwancinema.bamid.gov.tw/InfoNew/InfoNewContent/?ContentUrl=95253"
     }
    ],
    "media": [
@@ -455,9 +457,12 @@
     }
    ],
    "web": true,
-   "internal_note": "網站版標題／摘要依寫稿規則調整，與已寄出電子報略有不同。 11/20 編輯要求網站版入圍名單改條列。",
+   "internal_note": "網站版標題／摘要依寫稿規則調整，與已寄出電子報略有不同。 11/20 編輯要求網站版入圍名單改條列。 11/28 編輯要求頒獎後改為得獎結果、日期改 11/22 讓它排在最新；入圍版內容見已寄出電子報與 2026-10-062。",
    "tags": [
     "獎項"
+   ],
+   "related": [
+    "2026-10-062"
    ]
   },
   {
