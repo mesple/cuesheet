@@ -234,15 +234,6 @@
 "start_date": "2026/01/01"
 },
 {
-"uid": "69a1faab26b32454e437cbac",
-"category": "講座",
-"title": "115年度快樂魚池-兒童美語研習",
-"performer": "(中華民國)南投縣魚池鄉立圖書館",
-"description": "參加對象：小一至小六\r\n報名方式：即日起至請逕洽圖書館櫃台報名\r\n洽詢電話：049-2897450",
-"web": "https://www.facebook.com/yuchihlibrary",
-"start_date": "2026/03/07"
-},
-{
 "uid": "69baf75126b3242a48a9dc6a",
 "category": "講座",
 "title": "英語讀書會(27場)",
@@ -259,15 +250,6 @@
 "description": "誠摯邀請你走進國際演講會\r\n線上報名 https://forms.gle/HJmX5RAnitr6SYdT8",
 "web": "https://www.facebook.com/NLPICH",
 "start_date": "2026/01/07"
-},
-{
-"uid": "69c4502326b3242a48a9de5f",
-"category": "講座",
-"title": "弦琴驛站二胡班",
-"performer": "(中華民國)尤豐勳",
-"description": "二胡作為東方最具代表性的拉弦樂器之一，其音色優美且具深度。本活動透過尤豐勳老師的專業導引，帶領學員走進國樂殿堂，在掌握演奏技藝的同時，提升對傳統音樂脈絡的認知與鑑賞能力。",
-"web": "",
-"start_date": "2026/03/07"
 },
 {
 "uid": "69c6e4b226b3242a48a9dee8",
@@ -756,24 +738,6 @@
 "start_date": "2026/11/28"
 },
 {
-"uid": "6ad91d1d26b3245efc753700",
-"category": "電影",
-"title": "11月高雄市電影館｜告別的年代",
-"performer": "",
-"description": "",
-"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3OZ",
-"start_date": "2026/11/27"
-},
-{
-"uid": "6ad91d1d26b3245efc753701",
-"category": "電影",
-"title": " 11月高雄市電影館｜有用的人",
-"performer": "",
-"description": "",
-"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3P6",
-"start_date": "2026/11/27"
-},
-{
 "uid": "6ad91d1d26b3245efc753704",
 "category": "電影",
 "title": "11月高雄市電影館｜放送禁止：一夫三妻",
@@ -789,7 +753,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3PY",
-"start_date": "2026/11/27"
+"start_date": "2026/11/29"
 },
 {
 "uid": "6ad91d1d26b3245efc753706",
@@ -798,7 +762,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3Q5",
-"start_date": "2026/11/27"
+"start_date": "2026/11/28"
 },
 {
 "uid": "6ada767326b3245efc753712",
@@ -807,7 +771,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3QC",
-"start_date": "2026/11/27"
+"start_date": "2026/11/28"
 },
 {
 "uid": "6ada767326b3245efc753713",
@@ -816,7 +780,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFE3QJ",
-"start_date": "2026/11/27"
+"start_date": "2026/11/28"
 },
 {
 "uid": "6ada767326b3245efc753714",
@@ -825,7 +789,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFEF32",
-"start_date": "2026/11/27"
+"start_date": "2026/11/28"
 },
 {
 "uid": "6ada767326b3245efc753715",
@@ -834,7 +798,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFEF39",
-"start_date": "2026/11/27"
+"start_date": "2026/11/28"
 },
 {
 "uid": "6ada767326b3245efc753716",
@@ -843,7 +807,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HFEF3G",
-"start_date": "2026/11/27"
+"start_date": "2026/11/28"
 },
 {
 "uid": "6aeeeff126b3245efc7537a7",
@@ -861,7 +825,7 @@
 "performer": "",
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1I7E1FQ",
-"start_date": "2026/11/27"
+"start_date": "2026/11/28"
 },
 {
 "uid": "6afc0ec726b3245efc753806",
@@ -1132,6 +1096,78 @@
 "description": "",
 "web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCC4T",
 "start_date": "2026/12/24"
+},
+{
+"uid": "6b09554d26b3245efc7538ab",
+"category": "電影",
+"title": "12月高雄市電影館｜見晴世代",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCH2S",
+"start_date": "2026/12/25"
+},
+{
+"uid": "6b09554d26b3245efc7538ac",
+"category": "電影",
+"title": "12月高雄市電影館｜正義女聲",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCH2Z",
+"start_date": "2026/12/31"
+},
+{
+"uid": "6b09554d26b3245efc7538ad",
+"category": "電影",
+"title": "12月高雄市電影館｜年輕歲月",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCH36",
+"start_date": "2026/12/31"
+},
+{
+"uid": "6b09554d26b3245efc7538ae",
+"category": "電影",
+"title": "12月高雄市電影館｜白色情迷",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCH3D",
+"start_date": "2026/12/02"
+},
+{
+"uid": "6b09554d26b3245efc7538af",
+"category": "電影",
+"title": "12月高雄市電影館｜藍色情挑",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCH3K",
+"start_date": "2026/12/05"
+},
+{
+"uid": "6b09554d26b3245efc7538b0",
+"category": "電影",
+"title": "12月高雄市電影館｜肯尼斯布萊納之哈姆雷特",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCH3R",
+"start_date": "2026/12/19"
+},
+{
+"uid": "6b09554d26b3245efc7538b1",
+"category": "電影",
+"title": "12月高雄市電影館｜金法尤物 4K修復",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCH3Y",
+"start_date": "2026/12/19"
+},
+{
+"uid": "6b09554d26b3245efc7538b2",
+"category": "電影",
+"title": "12月高雄市電影館｜燃燒歲月 4K修復",
+"performer": "",
+"description": "",
+"web": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IVCH45",
+"start_date": "2026/12/20"
 },
 {
 "uid": "681fa5d226b3242b74a3ba7f",
